@@ -58,6 +58,7 @@ lectures:
     - Synchronization (Locks)
     - Synchronization (Race Conditions)
     - Synchronization (Deadlock & Wisdom)
+    - Minimum Spanning Trees
     - Complexity Classes
     - P, NP, NP-Complete
     - Finale
@@ -189,14 +190,14 @@ assignments:
 
     EX9 ForkJoin: 
         group: programming
-        due: 2026-03-27 23:59:00
+        due: 2026-02-27 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
 
     EX10 Concurrency:
         group: programming
-        due: 2026-03-13 23:59:00
+        due: 2026-03-06 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
