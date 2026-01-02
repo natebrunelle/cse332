@@ -1,18 +1,18 @@
 Special Dates:
-  Courses begin: 2024-09-25
-  Courses end: 2024-12-06
+  Courses begin: 2026-01-05
+  Courses end: 2026-03-13
   Veterans Day: 2024-11-11
-  Thanksgiving Day: 2024-11-28
-  Native American Heritage Day: 2024-11-29
+  MLK Day: 2026-01-19
+  Presidents Day: 2026-02-16
   Midterm Exam: 2024-11-01
-  Final Exam: 2024-12-12
+  Final Exam: 2026-03-19
 meta:
   timezone: America/New_York
   name: Algorithms
   lecture exam: true
   home: https://www.cs.virginia.edu/~njb2b/cs3100/s23/
   final:
-    start: 2024-12-12 08:30:00
+    start: 2026-03-19 12:30:00
     duration: 110
     room: NA
 
@@ -37,8 +37,7 @@ labs:
 lectures:
     - Intro; ADTs; Stacks & Queues
     - Algorithm Analysis 1
-    - Algorithm Analysis 2
-    - Algorithm Analysis 3
+    - Algorithm Analysis 2 
     - Recurrences
     - Priority Queues 1 (ADT)
     - Priority Queues 2 (Binary Heap)
@@ -47,10 +46,8 @@ lectures:
     - Dictionaries (AVL Trees 2)
     - Dictionaries (Hashing)
     - Dictionaries (Hashing 2)
-    - Dictionaries (Hashing 3)
     - Sorting 1
     - Sorting 2
-    - Decision Trees
     - Graphs 1 (Intro to Graphs)
     - Graphs 2 (Traversals)
     - Graphs 3 (Shortest path)

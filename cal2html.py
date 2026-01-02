@@ -74,7 +74,7 @@ def raw2cal(data, links=None):
                 isexam = True
             else:
                 ans.append({
-                    "title":k if hasClass else k+"<br>(no class)",
+                    "title":k if hasClass else k+" (no class)",
                     "kind":"special",
                     "day":d
                 })
@@ -195,22 +195,37 @@ def raw2cal(data, links=None):
         # handle assignments
         for task,ent in data['assignments'].items():
             if task[0] == '.': continue
-            if 'due' not in ent: continue
-            if ent['due'].date() != d: continue
-            group = ent.get('group', re.match('^[A-Za-z]*',task).group(0))
-            tmp = dict(data['assignments'].get('.groups',{}).get(group,{}))
-            tmp.update(ent)
-            ent = tmp
-            ans.append({
-                'title':ent.get('title', task),
-                'kind':'assignment',
-                'group':group,
-                'from':ent['due']-timedelta(0,900),
-                'to':ent['due'],
-                'slug':task,
-            })
-            if 'hide' in ent: ans[-1]['hide'] = ent['hide']
-            if 'link' in ent: ans[-1]['link'] = ent['link']
+            if 'out' in ent and ent['out'].date() == d:
+                ans.append({
+                    'title': task,
+                    'kind': 'out-date',
+                    'from':ent['out']-timedelta(0,900),
+                    'to': ent['out'],
+                    'slug': task,
+                })
+            if 'due' in ent and ent['due'].date() == d:
+                group = ent.get('group', re.match('^[A-Za-z]*',task).group(0))
+                tmp = dict(data['assignments'].get('.groups',{}).get(group,{}))
+                tmp.update(ent)
+                ent = tmp
+                ans.append({
+                    'title':ent.get('title', task),
+                    'kind':'assignment',
+                    'group':group,
+                    'from':ent['due']-timedelta(0,900),
+                    'to':ent['due'],
+                    'slug':task,
+                })
+                if 'hide' in ent: ans[-1]['hide'] = ent['hide']
+                if 'link' in ent: ans[-1]['link'] = ent['link']
+            if 'last' in ent and ent['last'].date() == d:
+                ans.append({
+                    'title': task,
+                    'kind': 'last-date',
+                    'from':ent['last']-timedelta(0,900),
+                    'to': ent['last'],
+                    'slug': task,
+                })
             
         return ans
 
@@ -373,7 +388,7 @@ END:VEVENT'''.format(
 
 def slug2asgn(slug, group, raw):
     ans = {}
-    ans.update(raw['assignments'].get('.groups').get(group,{}))
+    # ans.update(raw['assignments'].get('.groups').get(group,{}))
     ans.update(raw['assignments'][slug])
     return ans
     
@@ -449,7 +464,7 @@ if __name__ == '__main__':
     raw = yamlfile('cal.yaml')
     links = yamlfile('links.yaml') if os.path.exists('links.yaml') else {print('no links.yaml')}
     cal = raw2cal(raw, links)
-    with open('schedule.html', 'w') as fh:
+    with open('calendar.html', 'w') as fh:
         fh.write(cal2html(cal))
 
     with open('markdown/cal.ics', 'w') as fh:

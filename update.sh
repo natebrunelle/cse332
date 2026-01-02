@@ -1,15 +1,21 @@
 #!/bin/bash
 
-here="$(dirname "$(readlink -m "$0")")/"
-self="$(readlink -m "$0")"
+realpath_py() {
+    python3 -c 'import os,sys; print(os.path.realpath(sys.argv[1]))' "$1"
+}
+
+self="$(realpath_py "$0")"
+here="$(dirname "$self")/"
+target="$(realpath_py "$here/demo_site")/"
+
 cd "$here"
-target="$(readlink -f "$here""/demo_site/")/"
-remote=brunelle@attu.cs.washington.edu:/cse/web/courses/cse332/24au
+
+remote=brunelle@attu.cs.washington.edu:/cse/web/courses/cse332/26wi
 if [ "$#" -gt 0 ] && [ "$1" != 'test' ]
 then
-	remote="$1"@attu.cs.washington.edu:/cse/web/courses/cse332/24au
+	remote="$1"@attu.cs.washington.edu:/cse/web/courses/cse332/26wi
 fi
-mkdir -p "$target"files
+mkdir -p "${target}files"
 
 #if ls ~/.local/pandoc*/bin/pandoc
 #then pd="$(ls  ~/.local/pandoc*/bin/pandoc | tail -1)"
@@ -20,8 +26,9 @@ which python3 || module load python3
 
 if [ "$#" -lt 1 ] || [ "$1" != 'test' ]
 then
-    git commit -a -m 'autocommit caused by update'
     git pull
+    git add -A
+    git commit -m 'autocommit caused by update'
     git push
 elif [ "$1" = 'test' ]
 then
@@ -30,6 +37,28 @@ fi
 
 if [ -n "$1" ]; then always=1; else always=; fi
 
+case "$(uname)" in
+    Darwin*)  # macOS
+        get_datetime() {
+            stat -f "%Sm" -t "%Y-%m-%d %H:%M" "$1"
+        }
+        sed_inplace() {
+            sed -i '' "$@"
+        }
+        ;;
+    Linux*)   # GNU/Linux
+        get_datetime() {
+            stat -c '%y' "$1" | cut -d':' -f-2
+        }
+        sed_inplace() {
+            sed -i "$@"
+        }
+        ;;
+    *)
+        echo "Unsupported OS: $(uname)" >&2
+        exit 1
+        ;;
+esac
 
 # copies, with permission fix (644 for files, 755 for dirs), making dirs if needed
 # also runs markdown, fixing links, if applicable
@@ -45,35 +74,38 @@ function upfile_inner() {
     fi
     if [ "${src%.md}" != "$src" ]
     then
-        tail="$(readlink -f "$src")"
+        tail="$(realpath_py "$src")"
         tail="${tail#${here}markdown/}"
         prefix="$(dirname "$(echo "$tail" | sed 's;[^/]*/;../;g')")"
         if [ "${#prefix}" -lt 2 ]; then prefix=''; else prefix=$prefix/; fi
-        datetime="$(stat -c '%y' "$src" | cut -d':' -f-2)"
+        datetime="$(get_datetime "$src")"
 
         python3 $here/env.py "$src" | \
         $pd --standalone \
             --to=html5 \
             --from=markdown+inline_code_attributes+smart \
             --number-sections \
-            --title-prefix="CSE332" \
+            --title-prefix="CSE417" \
             --table-of-contents --toc-depth=3 \
             --css=${prefix}style.css \
-            --katex='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/' \
+            --katex='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/' \
             --html-q-tags \
             --template=${here}template.html \
             --variable=year:${datetime:0:4} \
             --variable=datetime:"$datetime" \
             -o "$dst"
-        sed -i \
-            -e 's;</?colgroup>;;g' -e 's;<col [^>]*/>;;g' \
+        sed_inplace \
+            -e 's;</?colgroup>;;g' \
+            -e 's;<col [^>]*/>;;g' \
             -e 's/<span class="co">\&#39;/<span class="st">\&#39;/g' \
             -e 's/<span class="co">\&quot;/<span class="st">\&quot;/g' \
             -e 's/<table style="width:[^"]*">/<table>/g' \
             "$dst"
-        sed -i 's/XXXX-XX-XX/'"$datetime"'/g' "$dst"
-        sed -i "s;\(href=[\"']\)\.\?/;\1$prefix;g" "$dst"
-        sed -i 's/<a href="'"$(basename "$dst")"'">\([^<]*\)<\/a>/<span class="visited">\1<\/span>/g' "$dst"
+
+        sed_inplace 's/XXXX-XX-XX/'"$datetime"'/g' "$dst"
+        sed_inplace "s;\(href=[\"']\)\./;\1${prefix};g" "$dst"
+        sed_inplace "s;\(href=[\"']\)/;\1${prefix};g" "$dst"
+        sed_inplace 's/<a href="'"$(basename "$dst")"'">\([^<]*\)<\/a>/<span class="visited">\1<\/span>/g' "$dst"
         chmod 664 "$dst"
         #touch --date="$(stat -c "%y" "$src")" "$dst"
     else
@@ -84,7 +116,7 @@ function upfile_inner() {
 
 # computes destination and checks if update needed
 function upfile() {
-    src=$(readlink -f "$1")
+    src="$(realpath_py "$1")"
     tail=${src#${here}markdown/}
     if [ "$tail" = "$src" ];
     then
@@ -112,21 +144,27 @@ function upfile() {
 
 
 # cross-link cal.yaml and the various files it makes
-if [ cal.yaml -nt schedule.html ] \
-|| [ links.yaml -nt schedule.html ] \
-|| [ cal2html.py -nt schedule.html ] \
+if [ cal.yaml -nt calendar.html ] \
+|| [ links.yaml -nt calendar.html ] \
+|| [ cal2html.py -nt calendar.html ] \
 || [ cal.yaml -nt markdown/cal.ics ] \
 || [ cal.yaml -nt assignments.json ]
 then
-    echo "doing schedule"
+    echo "doing calendar"
     python3 cal2html.py
     scp "assignments.json" "/var/www/html/cs4102/meta/"
     scp "coursegrade.json" "/var/www/html/cs4102/meta/"
     scp "course.json" "/var/www/html/cs4102/meta/"
 fi
-if [ schedule.html -nt markdown/schedule.md ]
+if [ calendar.html -nt markdown/calendar.md ]
 then
-    touch --date="$(stat -c "%y" schedule.html)" markdown/schedule.md
+    if stat -c %y calendar.html >/dev/null 2>&1; then
+        # Linux (GNU stat)
+        touch --date="$(stat -c %y calendar.html)" markdown/calendar.md
+    else
+        # macOS / BSD
+        touch -r calendar.html markdown/calendar.md
+    fi
 fi
 
 # move all files to the destination tree, compiling as needed
