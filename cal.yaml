@@ -177,7 +177,7 @@ assignments:
         
     EX8 Shortest Paths:
         group: programming
-        due: 2026-02-27 23:59:00
+        due: 2026-03-02 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
