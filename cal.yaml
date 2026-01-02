@@ -88,18 +88,45 @@ reading:
         - "Weiss 6.4-6.5"
     Algorithm Analysis 3:
         - "Weiss 2.1-2.4"
-    Dictionaries 1 (ADT & Binary Search Trees):
+    Dictionaries (ADT & Binary Search Trees):
         - "Weiss 4.1-4.3, 4.6"
-    Dictionries 2 (AVL Trees):
-            - " Weiss 4.4"
-    Dictionaries 3 (B-Trees):
-        - "Weiss 4.7"
-    Dictionaries 4 (B-Trees cont.):
-        - "Weiss 4.7"
-    Dictionaries 5 (Hashing):
+    Dictionaries (AVL Trees 1):
+            - "Weiss 4.4"
+    Dictionaries (AVL Trees 2):
+            - "Weiss 4.4"
+    Dictionaries (Hashing):
         - "Weiss 5.1-5.5"
-    Dictionaries 6 (Hashing cont.):
+    Dictionaries (Hashing 2):
         - "Weiss 5.1-5.5"
+    Sorting 1:
+        - "Weiss 7.1-7.3, 7.5-7.7"
+    Sorting 2:
+        - "Weiss 7.8-7.11"
+    Graphs 1 (Intro to Graphs):
+        - "Weiss 9.1"
+    Graphs 2 (Traversals):
+        - "Weiss 9.2"
+    Graphs 3 (Shortest path):
+        - "Weiss 9.3"
+    Parallelism 1 (Fork-Join):
+        - "Grossman 2.1-3.4"
+    Parallelism 2 (Parallel Prefix):
+        - "Grossman 5.1-5.2"
+    Parallel Analysis & Amdahl's Law:
+        - "Grossman 3.5-4.3"
+    Synchronization (Locks):
+        - "Grossman 6"
+    Synchronization (Race Conditions):
+        - "Grossman 7.1"
+    Synchronization (Deadlock & Wisdom):
+        - "Grossman 8 & 9"
+    Minimum Spanning Trees:
+        - "Weiss 9.5"
+    Complexity Classes:
+        - "Weiss 9.6.3 & 9.7"
+    P, NP, NP-Complete:
+        - "Weiss 9.6.3 & 9.7"
+
 
 assignments:
     ".groups":
