@@ -237,10 +237,100 @@ assignments:
         weight: 1
         files: 'something.java'
 
-    Resub1:
+    CC1 Running Time:
         group: programming
-        due: 2024-07-29 23:59:00
+        due: 2026-01-15 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
 
-    Resub2:
+    CC2 Heaps:
         group: programming
-        due: 2024-08-17 23:59:00
+        due: 2026-01-15 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC3 Recurrences:
+        group: programming
+        due: 2026-01-22 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC4 AVL Trees:
+        group: programming
+        due: 2026-01-29 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC5 Hash Tables:
+        group: programming
+        due: 2026-02-05 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC6 Sorting:
+        group: programming
+        due: 2026-02-05 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC8 Graph Definitions and Data Structures:
+        group: programming
+        due: 2026-02-12 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC9 Graph Traversals:
+        group: programming
+        due: 2026-02-12 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC10 Shortest Paths:
+        group: programming
+        due: 2026-02-19 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC11 Fork Join:
+        group: programming
+        due: 2026-02-19 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC12 Race Conditions and Mutual Exclusion:
+        group: programming
+        due: 2026-02-19 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC13 Parallel Prefix:
+        group: programming
+        due: 2026-02-26 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC14 Race Conditions and Mutual Exclusion:
+        group: programming
+        due: 2026-02-26 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
+
+    CC15 Minimum Spanning Trees:
+        group: programming
+        due: 2026-02-26 23:59:00
+        writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
+        weight: 1
+        files: 'something.java'
