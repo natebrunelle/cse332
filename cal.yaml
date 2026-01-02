@@ -48,10 +48,9 @@ lectures:
     - Dictionaries (Hashing 2)
     - Sorting 1
     - Sorting 2
-    - Decision Trees
-    - Midterm Exam
     - Graphs 1 (Intro to Graphs)
     - Graphs 2 (Traversals)
+    - Midterm Exam
     - Graphs 3 (Shortest path)
     - Minimum Spanning Trees
     - Parallelism 1 (Fork-Join)
@@ -69,11 +68,11 @@ labs:
     - S2 Algorithm Analysis and Heaps
     - S3 Recurrences
     - S4 AVL Trees
-    - S5 Hashing
-    - S6 Sorting
-    - S7 Graphs
-    - S8 ForkJoin 
-    - S9 Concurrency & Two-Pass parallel
+    - S5 Hashing and Sorting
+    - S6 Graphs 
+    - S7 Writing parallel Programs
+    - S8 Parallel Prefix Work and Span
+    - S9 Concurrency
     - S10 P/NP & Final Review
 
 reading:
