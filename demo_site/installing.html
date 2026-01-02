@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>CSE417 - Python, Java, and LaTeX Setup</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+  <link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">CSE 417 &ndash; Python, Java, and LaTeX Setup</span>
+        <ul class="nav pull-right doc-info">
+                    <li><p class="navbar-text"><a href="index.html">Home</a></p></li>
+          <li><p class="navbar-text"><a href="syllabus.html">Syllabus</a></p></li>
+          <li><p class="navbar-text"><a href="calendar.html">Calendar</a></p></li>
+          <li><p class="navbar-text"><a href="tasks.html">Tasks</a></p></li>
+          <li><p class="navbar-text"><a href="oh.html">Office Hours</a></p></li>
+          <li><p class="navbar-text"><a href="guides.html">Guides</a></p></li>
+          <li><p class="navbar-text"><a href="staff.html">Staff</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div id="TOC" class="span3">
+        <div class="well toc">
+        <ul>
+          <li class="nav-header">Table of Contents</li>
+        </ul>
+        <ul>
+        <li><a href="#installing-python3-and-pycharm"><span class="toc-section-number">1</span> Installing Python3 and PyCharm</a><ul>
+        <li><a href="#windows"><span class="toc-section-number">1.1</span> Windows</a></li>
+        <li><a href="#mac-os-x"><span class="toc-section-number">1.2</span> Mac OS X</a></li>
+        </ul></li>
+        <li><a href="#installing-java-and-eclipse"><span class="toc-section-number">2</span> Installing Java and Eclipse</a></li>
+        <li><a href="#register-for-overleaf"><span class="toc-section-number">3</span> Register for Overleaf</a><ul>
+        <li><a href="#setting-up-a-repository"><span class="toc-section-number">3.1</span> Setting Up a Repository</a></li>
+        </ul></li>
+        </ul>
+        </div>
+      </div>
+            <div class="span9">
+            <!--<blockquote style="background-color:#fbb; font-size:150%">This page is from a previous offering of the course. It has been left up for archival purposes.</blockquote>-->
+      <blockquote style="background-color:#fbb; font-size:150%">This page is under construction. Any content you see now is subject to change until the first day of class. Expect some links to be broken until that time.</blockquote> 
+      <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
+      <p>For the programming assignments this semester you will be required to use either Python3 or Java. For written assignments you will be required to use LaTeX (a document-writing <q>programming language</q>). If you already have some version of Python3/Java on your machine and an IDE you’re comfortable with (perhaps left over from cs1110 or cs2100), you should be good to go for the programming assignments. If you need to install, Instructions follow. No downloads are necessary to use LaTeX if you use Overleaf (an online LaTeX environment), and setup instructions follow as well.</p>
+      <h1 id="installing-python3-and-pycharm"><span class="header-section-number">1</span> Installing Python3 and PyCharm</h1>
+      <p>Follow these directions to download Python 3.10.6 (the latest stable release as of this writing) and PyCharm Community Edition 2022.2.1 (you’re welcome to use any IDE that you want, we semi-arbitrarily picked PyCharm).</p>
+      <h2 id="windows"><span class="header-section-number">1.1</span> Windows</h2>
+      <ol type="1">
+      <li><p>Install Python 3:</p>
+      <ol type="1">
+      <li><p>Download <a href="https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe">the executable x86-64 installer from python.org</a>.</p></li>
+      <li><p>Run the installer.</p></li>
+      <li><p>Choose the <q>Custom Installation</q> option.</p></li>
+      <li><p>If asked, check <q>Add Python to environment variables</q> and <q>Install for all users</q>; leave all other options at their default values.</p></li>
+      </ol></li>
+      <li><p>Install PyCharm Community Edition:</p>
+      <ol type="1">
+      <li><p>Download <a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&amp;code=PCC">the executable installer from jetbrains.com</a>.</p></li>
+      <li><p>Run the installer.</p></li>
+      <li><p>If asked, check <q>Create associations</q> - <q>.py</q>; leave all other options at their default values.</p></li>
+      </ol></li>
+      </ol>
+      <h2 id="mac-os-x"><span class="header-section-number">1.2</span> Mac OS X</h2>
+      <ol type="1">
+      <li><p>Install Python3:</p>
+      <ol type="1">
+      <li><p>Download <a href="https://www.python.org/ftp/python/3.10.6/python-3.10.6-macos11.pkg">the installer from python.org</a>.</p></li>
+      <li><p>Run the installer.</p></li>
+      <li><p>Choose the <q>Custom Installation</q> option.</p></li>
+      <li><p>If asked, check <q>Add Python to environment variables</q> and <q>Install for all users</q>; leave all other options at their default values.</p></li>
+      </ol></li>
+      <li><p>Install PyCharm Community Edition:</p>
+      <ol type="1">
+      <li><p>Download the dmg disk image from jetbrains.com. <a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac&amp;code=PCC">For Intel Processors</a> <a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=macM1&amp;code=PCC">For Apple Silicon Processors</a>.</p></li>
+      <li><p>Drag the icon to the Applications folder.</p></li>
+      </ol></li>
+      </ol>
+      <h1 id="installing-java-and-eclipse"><span class="header-section-number">2</span> Installing Java and Eclipse</h1>
+      <p>I recommend that you follow CS2100’s <a href="https://markfloryan.github.io/dsa1/homeworks/BasicJava1/power.pdf">installation instructions</a> (you do not need to complete the Power.java task).</p>
+      <h1 id="register-for-overleaf"><span class="header-section-number">3</span> Register for Overleaf</h1>
+      <p>Visit <a href="https://www.overleaf.com">https://www.overleaf.com</a> and register for an Overleaf account (if you don’t already have one). UVA has a site license to Overleaf, so if you register with your <span class="citation" data-cites="virginia.edu">@virginia.edu</span> email address you will have full access to all the Overleaf features for free.</p>
+      <h2 id="setting-up-a-repository"><span class="header-section-number">3.1</span> Setting Up a Repository</h2>
+      <p>For each written problem set you will set up a repository by following these steps:</p>
+      <ol type="1">
+      <li>Download the template file from the problem set’s page (template files are just .zip files)</li>
+      <li>In Overleaf, click on <em>Create First Project</em> or <em>New Project in Overleaf</em> and select <em>Upload Project</em> from the menu.</li>
+      <li>Click <em>Select a .zip file</em> then select the file you downloaded in step 1</li>
+      </ol>
+            </div>
+    </div>
+  </div>
+  <footer>
+          Copyright © 2026 Nathan Brunelle and Glenn Sun.
+              <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
+      </p>
+        <p>Last updated 2026-01-02 09:55</p>
+  </footer>
+</body>
+</html>
