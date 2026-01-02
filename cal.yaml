@@ -184,28 +184,28 @@ assignments:
     
     EX11 MSTs:
         group: programming
-        due: 2025-03-13 23:59:00
+        due: 2026-03-13 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
 
     EX9 ForkJoin: 
         group: programming
-        due: 2024-03-09 23:59:00
+        due: 2026-03-09 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
 
     EX10 Concurrency:
         group: programming
-        due: 2024-12-02 23:59:00
+        due: 2026-03-13 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
 
     EX12 P and NP:
         group: programming
-        due: 2024-12-06 23:59:00
+        due: 2026-03-13 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
