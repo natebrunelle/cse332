@@ -121,14 +121,14 @@ assignments:
             
     EX0 Generics:
         group: programming
-        due: 2024-10-02 23:59:00
+        due: 2026-01-12 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
         
     EX1 Running Time:
         group: programming
-        due: 2024-10-09 23:59:00
+        due: 2024-01-16 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
         weight: 1
         files: 'something.java'
