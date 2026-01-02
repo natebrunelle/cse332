@@ -12,9 +12,16 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"EX2 Recurrences":
+,"EX2 Heaps":
   {"group":"programming"
-  ,"due":"2026-01-20 23:59"
+  ,"due":"2026-01-23 23:59"
+  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+  ,"weight":1
+  ,"files":"something.java"
+  }
+,"EX3 Recurrences":
+  {"group":"programming"
+  ,"due":"2026-01-30 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
