@@ -8,6 +8,7 @@ All tasks will be submitted and graded on [Gradescope](https://www.gradescope.co
 # Exercises
 
 Some exercises may require submitting to multiple gradescope assignments (e.g. if there is a programming component as well as a written component). The assignment instructions will make it clear when this is the case.
+<!--
 
 ## Exercise 0
 
@@ -183,21 +184,6 @@ The objectives of this exercise are:
 
 Instructions for this exercise apear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-<!-- # Resubmissions
-
-## Resubmission 1
-
-For this resubmission you may resubmit any assignment which covered content through the midterm exam. This includes EX0, EX1, EX2, EX3, and EX4. To indicate which assignment you would like to resubmit, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSezOKB4d5Wmzi7ajoXrYkL8NGjoieqshK-xGqklqBuZOUcs3A/viewform?usp=sf_link). Please do so by Thursday, 7/25. 
-
-If you choose to resubmit a programming exercise (EX0, EX3, EX4) then we will extend your deadline for that exercise until Monday 7/29. Written exercises (EX1, EX2) have different versions for the resubmission with slightly alterred questions. We will enable you to submit to these altered version if you choose to resubmit one of those exercises.
-
-Resubmitting is completely optional. If you are satisfied with your current grades then you're welcome to ignore the resubmissions. If you choose to resubmit an assignment, the new submission's grade will replace the original, whether lower or higher.
-
-
-## Resubmission 2
-
-For this resubmission you may resubmit any assignment which covered content after the midterm exam. This includes EX5, EX6, EX7, EX8,EX9, EX10, EX11, and EX12. To indicate which assignment you would like to resubmit, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSeQ003KeFzOuBVsthEmmY23IKdxArkP8wiosMfpbDYadQzkxg/viewform?usp=sf_link). Please do so by Friday, 8/16 at 12:00pm (so shortly after the conclusion of the final exam).
-
 -->
 
 # Exams
@@ -205,7 +191,7 @@ For this resubmission you may resubmit any assignment which covered content afte
 ## Exam 1
 
 The Midterm Exam will be held on Friday November 1 during our normal lecture session.
-
+<!--
 
 Here are [sample solutions](files/cse332_midterm_au24_soln.pdf) for the midterm.
 
@@ -260,8 +246,6 @@ The exam will cover all material from the beginning of the quarter up through AV
 
 ### Past Exams
 
-<!--I have drafted a practice exam that is representative of this quarter's midterm: [24su practice midterm](files/cse332-midterm-24su-sample.pdf) and [Solution](files/cse332-midterm-24su-sample-soln.pdf)
--->
 
 Below I have several quarters' midterm exams. Be advised that the question style, length, difficulty, and content may differ among quarters. Most notably, prior quarters covered two data structures that have been omitted from the course this quarter - Tries and B-Trees. In lieue of those, the autumn 2024 exam will cover hash tables and hashing. Questions relating to hashing can be found within the sample final exams below.
 
@@ -292,10 +276,13 @@ Past Exams:
 - [CSE 332 15wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-15wi-A.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-15wi-A-soln.pdf)
 - [CSE 332 14sp Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp-soln.pdf)
 - [CSE 332 13au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au-soln.pdf)
+-->
 
 ## Exam 2
 
-The Final Exam will be held at 8:30am on December 12 in CSE2 room G20 (our regular lecture meeting space).
+The Final Exam will be held at 12:30pm-2:20pm on March 19. The location is TBD
+
+<!--
 
 ### Policies
 
@@ -359,9 +346,6 @@ The final exam will cover:
 
 Note: You will likely be asked to write java code using ForkJoin and/or threads. We will not require your syntax to be perfectly correct, but it should be correct enough that we can verify the code's would be correct if syntax issues were fixed. That is, we expect edge cases and other considerations of an algorithm to be correct, but don't necessarily expect all keywords or semicolons to be perfect.
 
-<!--The final exam is not designed to be cumulative in that there may be questions designed to specifically test on content from the midterm. However, knowledge of all content from the midterm will be assumed, and so some questions may incidentally involve midterm material. For example, a question relating to sorting may involve evaluating the running time of code. A question involving graphs may require knowledge of trees.
--->
-
 ### Past Exams
 
 I have created a [sample final exam](files/cse332-frankenfinal-24au.pdf) (with [solutions](files/cse332-frankenfinal-24au-soln.pdf)) for your reference. This exam was generated by: 1) removing the section on hashing from 24 summer final (since that was midterm material this quarter), adding in the cumulative questions from the winter 2024 final, then adding couple more questions to pre-existing sections to compensate the length fro the removal of the hashing section (including a hashing question that was added to the cumulative section).
@@ -377,4 +361,4 @@ We have provided links to past exams below. Be advised that in other quarters th
 - [CSE 332 19wi](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-final-19wi.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-final-19wi-soln.pdf)
 - [CSE 332 18au](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-final-18au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-final-18au-soln.pdf)
 - [CSE 332 18wi](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-final-18wi.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-final-18wi-soln.pdf)
-
+-->
