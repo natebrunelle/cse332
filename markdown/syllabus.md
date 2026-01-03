@@ -6,11 +6,11 @@ title: Syllabus
 
 ## Meetings
 
-In Person lectures will be held in [CSE2 (Gates Hall)](https://www.washington.edu/maps/#!/CSE2) room G20 at 12:30pm-1:20pm. 
+In Person lectures will be held Mondays, Wednesdays, and Fridays in [CSE2 (Gates Hall)](https://www.washington.edu/maps/#!/CSE2) room G20 at 12:30pm-1:20pm and room G10 at 3:30pm-4:20pm. 
 
 Lecture attendance is optional, but strongly encouraged. In the event you are unable to attend a lecture, recordings of lectures are automatically posted to Canvas under the Panopto tool.
 
-<!--Both offerings of the course will share the same assignments, deadlines, TA office hours, etc. I will do my best to cover the same content in lectures on the same days, but since different people may learn different topics at different rates, there may be occasional drift. --> 
+Both offerings of the course will share the same assignments, deadlines, TA office hours, etc. I will do my best to cover the same content in lectures on the same days, but since different people may learn different topics at different rates, there may be occasional drift. 
 
 ## Contact
 
@@ -18,15 +18,14 @@ Lecture attendance is optional, but strongly encouraged. In the event you are un
 |--------|------------|-----|
 | Name | Nathan Brunelle | [Profiles](staff.html) |
 | Location | Allen Center (CSE) 434 | [See Calendar](oh.html) |
-| Office Hours | Mon 9am-10am, Tue 12pm-2pm, MWF after class | [See Calendar](oh.html) |
-| Phone |  | (none) |
+| Office Hours | MWF 1:30pm-3:00pm | [See Calendar](oh.html) |
 | Email | <a href="mailto:brunelle@cs.washington.edu?subject=CSE332">brunelle@cs.washington.edu</a> | use Ed Discussion Board |
 
 For communication about course content, the Ed Discussion Board is preferred to email.
-For communication about personal circumstances, email or is preferred.
+For communication about personal circumstances, email to Nathan Brunelle is preferred.
 If you email, include either "CSE 332", "332", or "Data Structures" in the subject line to prevent your email from skipping my inbox and never getting read.
 
-Our TAs are students too, with duties and work outside of their TAing. Please do not ask them to act as your TA except at the scheduled on-the-clock times they have listed as their office hours. They are also kind people; please don't put them in the position of having to say no or (worse) being nice to you at the expense of their own schooling.
+Our TAs are students too, with duties and work outside of their TAing. Please do not ask them to act as your TA except in section or at the scheduled times they have listed as their office hours. They are also kind people; please don't put them in the position of having to say no or (worse) being nice to you at the expense of their own schooling.
 
 
 ## Readings
@@ -42,8 +41,8 @@ textbook. We will use a set of free on-line notes for the material on parallelis
 ## Lectures
 
 I do my best to make lectures as valuable, engaging, and enlightening as possible for all
-students. For a schedule of lecture topics, please see the [course webpage](schedule.html).
-Although we believe nearly all students will benefit from attending all classes, we also respect that as mature (ideally) college students, you are entrusted to figure out how best to learn and make use of your time here. Hence, I will not have any in-class activities which impact your grade with the exception of the already-posted in-class exams (midterm and final). I will make a best effort to post all lecture materials (recordings, slides documents, etc.) on the course webpage, including video recordings of lectures. Be advised that there are occasional technical difficulties which sometimes cause the recordings to fail, and even when they do succeed these recordings may not be an adequate substitute for attending class live.
+students. For a schedule of lecture topics, please see the [course webpage](calendar.html).
+Although we believe nearly all students will benefit from attending all classes, we also respect that as mature (ideally) college students, you are entrusted to figure out how best to learn and make use of your time here. Hence, I will not have any in-class activities which impact your grade with the exception of the already-posted exams (midterm and final). I will make a best effort to post all lecture materials (recordings, slides documents, etc.) on the course webpage, including video recordings of lectures. Be advised that there are occasional technical difficulties which sometimes cause the recordings to fail, and even when they do succeed these recordings may not be an adequate substitute for attending class live.
 
 
 
@@ -51,9 +50,8 @@ Although we believe nearly all students will benefit from attending all classes,
 
 All assignments will be posted and submitted either in class (for exams) or on Gradescope. All grading will be conducted on Gradescope. You will be asked to perform three kinds of evaluations:
 
-- **Exercises**: These are intended to help you to gain experience and familiarity with course concepts by applying them to novel scenarios beyond those presented in lecture and section. These will sometimes be written assignments, but most will be programming tasks (perhaps paired with written activities).  
-<!--- **Resubmissions**: Whereas some courses allow for a small number of assignments to be dropped, in this course all content is required by at least one course listing this one as a prerequisite. For this reason we feel the course should not provide a way for a student to "skip" the experience with a topic. In interest of providing flexibility, you will be able to resubmit 2 assignments - one from the assignments due before the midterm, one from after the midterm. The resubmitted assignment will be graded from scratch, with the new grade replacing the original. -->
-- **Exams**: These are timed and proctored in-class and close-resource exams.These are intended to evaluate the quality of your learning of the most important topics in the course, and to motivate you to study, review, and retroactively reflect upon all that you've learned. Lists of topics and links to past exams will be provided in advance of each exam.
+- **Exercises**: These are intended to help you to gain experience and familiarity with course concepts by applying them to novel scenarios beyond those presented in lecture and section. These will sometimes be written assignments, but most will be programming tasks (perhaps paired with written activities). You will have at least one exercise due per week. Several weeks will have two excercises due. In all cases the exercises will be released as soon as you can reasonably begin making progress on them, and you will have roughtly one week to complete them.
+- **Concept Checks**: These are intended to help you to identify conceptual gaps or misconceptions on course content early so that they may more easily be corrected. Each concept check will relate to just one course topic. Each course topic may be covered in one or across several lectures. Each concept checks is due on the day of the first section the occurs after we finish discussing the concept in lecture. For example, if we finish discussing a concept on a Friday, the concept check for that topic will be due on the following Thursday. The intention is that you are able to attempt the concept check, then ask questions in section before the deadline.  - **Exams**: These are timed and proctored in-class and close-resource exams.These are intended to evaluate the quality of your learning of the most important topics in the course, and to motivate you to study, review, and retroactively reflect upon all that you've learned. Lists of topics and links to past exams will be provided in advance of each exam.
 
 # Grading
 
@@ -61,7 +59,8 @@ We will consider the grade assigned by the following weighted average (of percen
 
 Task                        Weight  Comments
 -------------------------  -------- ----------------------------------------------
-Exercises                   60%     There will be 13 total, each counting for 5%, with the lowest exercise (other than EX12[^EX12]) grade being dropped.
+Exercises                   54%     There will be 13 total, each counting for 4.5%, with the lowest exercise (other than EX12[^EX12]) grade being dropped.
+Concept Checks              6%      There will be 18 total, each counting for 0.33%. 
 Exams                       40%     There will be 2 total, a midterm (counting for 15%) and a cumulative final exam (counting for 25%).
 
 [^EX12]: The P vs. NP material will not be included on the final exam, meaning that the ONLY place were that material is assessed is on EX12. For this reason, EX12 is not eligible to be dropped.
@@ -70,7 +69,7 @@ This numerical calculation is to be considered a **guideline** on your score in 
 
 ## Gradepoint Guarantee
 
-To help you to keep track of your standing in the course and to interpret grades as they are returned, we will provide the following "Gradepoint Guarantees". If you score in the course using the weighted average above is at or above the thresholds below, we guarantee you will receive a course GPA that is at least the amount shown. At the end of the quarter we may adjust these thresholds in order to maintain consistent grading with past offerings of the course, but we guarantee we will only relax them. That is, your final GPA may possibly be higher than those given, but will definitely not be lower.
+To help you to keep track of your standing in the course and to interpret grades as they are returned, we will provide the following "Gradepoint Guarantees". If your score in the course using the weighted average above is at or above the thresholds below, we guarantee you will receive a course GPA that is at least the amount shown. At the end of the quarter we may adjust these thresholds in order to maintain consistent grading with past offerings of the course, but we guarantee we will only relax them. That is, your final GPA may possibly be higher than those given, but will definitely not be lower.
  
 If your grade is           Then your course GPA will be
 -------------------------  -------------------------------------
@@ -91,9 +90,9 @@ To ensure that we can respond to these requests before the deadline, please subm
 
 ## Regrades
 
-We acknowledge that professors and TAs are people (glad to get that confession off of my chest!), and people make mistakes. For this reason, you are able to request regrades on exercises and the midterm within either one week of your grade being returned or by Thursday December 12, whichever date is sooner. You will only have 48 hours to submit regrade requests for the final exam.
+We acknowledge that professors and TAs are people (glad to get that confession off of my chest!), and people make mistakes. For this reason, you are able to request regrades on exercises and the midterm within either one week of your grade being returned or by Wednesday March 18, whichever date is sooner. You will only have 48 hours to submit regrade requests for the final exam.
 
-Please only submit a regrade request if you believe the rubric was misapplied to your submission or if there was a keying error for the task. In the case of a misapplication of the rubric, identify specifically what in your submission demonstrates the misapplication and suggest how you believe the rubric should be correctly applied. In the case of a keying error, state and justify why you believe your answer should be considered correct. Disagreement with the existance or weighting of a rubric item is not considered a valid reason for a regrade request.
+Please only submit a regrade request if you believe the rubric was misapplied to your submission or if there was a keying error for the task. In the case of a misapplication of the rubric, identify specifically what in your submission demonstrates the misapplication and suggest how you believe the rubric should be correctly applied. In the case of a keying error, state and justify why you believe your answer should be considered correct. Rubrics are produced and revised throughout the grading process to ensure they reflect the learning objectives of the course and can be applied equitably to all submissions. As such, disagreement with the existance or weighting of a rubric item is not considered a valid reason for a regrade request.
 
 # Miscellanea
 
