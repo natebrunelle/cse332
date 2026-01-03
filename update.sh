@@ -85,7 +85,7 @@ function upfile_inner() {
             --to=html5 \
             --from=markdown+inline_code_attributes+smart \
             --number-sections \
-            --title-prefix="CSE417" \
+            --title-prefix="CSE332" \
             --table-of-contents --toc-depth=3 \
             --css=${prefix}style.css \
             --katex='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/' \
