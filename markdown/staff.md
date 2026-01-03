@@ -6,8 +6,6 @@ title: Course Staff
 
 ## Nathan Brunelle
 
-## Nathan Brunelle
-
 <img src="files/staff/nathan.jpg" alt="Nathan Brunelle" height="200"/>
 
 Hi, I’m Nathan! I grew up in Virginia Beach, VA, then moved to Charlottesville, VA for college. I earned my B.A. in Math and Computer Science, my M.C.S. in Computer Science, and my Ph.D. in Computer science all from the University of Virginia (UVA). I remained at UVA as teaching faculty for 6 years before joining UW in autumn 2023. This is my third year teaching in the Allen School. When I’m not teaching I enjoy baking, crocheting, biking, gardening, and being a dad to my newborn son Robin! Please ask me about my cross-country road trip with my spouse (Sarah) and dog (Bucky), how we baked ~1000 cookies in one day in our home kitchen, the relationship between math and crochet, my summer in a fisheries lab, or anything else that’s on your mind!
