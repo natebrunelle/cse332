@@ -2,39 +2,67 @@
 title: Course Staff
 ...
 
+# Instructor
+
+## Nathan Brunelle
+
 
 # TAs
 
 
 
-## Juliette Park
+## Zach Bi
 
-Hello!
-My name is Juliette and I’m majoring in Computer Science with a minor in Slavic Literatures. I do research at the Sauro Lab and build websites for Web Impact. Outside school, I love to be a grandma (buy cardigans, make tea, and read) and give my dog kisses. I really look forward to the quarter and what you will all achieve!  
+Hello, my name is Zachary. I’m a current Junior studying CS: DS and I’ve TAed a lot, but this is my first time doing the major version of DSA. I used to do a lot of Leetcode and working out but I dropped all my hobbies to prioritize sleeping, working on my car, and playing badminton weekly. I look forward to a great quarter with y’all.  
 
-## Charles Hamilton-Eppler
+## Masa Nakura
 
-Hey, all! Charles here. This is my second time TA-ing 332 and my third time overall. In my free time, I like to go hiking and take photos. Excited to meet you all!
+Hi, I'm Masa! I'm a 4th year BS/MS student. In my free time, I enjoy playing and watching soccer, trying out new food, and spending time with friends. Looking forward to meeting everyone!
 
-## Mohamed Awadalla
+## Kabir Rajkotia
 
-Hello! I'm Mohamed, a senior at the Allen School. This is my 6th time TAing 332 and I'm super excited for my final year here. In my free time, I like playing sports and watching F1.
+Hi! I’m Kabir, a junior majoring in Computer Science at UW. Outside coursework, I enjoy playing the drums, board games and getting outdoors for the occasional hike. Looking forward to meeting you all this quarter!
 
-## Chandni Rajasekaran
+## Michael Whitmeyer
 
-Hi! My name is Chandni and I am currently a BS/MS student majoring in computer science. I am super excited to TA this course for the sixth time, since I've come to see that everything I've learned in this class has been very applicable to internship preparation. Outside of school, I really enjoy drawing and baking. As a shameless plug, I have an instagram account where I post my photorealistic color pencil drawings (username: @chandnidraws). I can't wait to meet everyone this quarter!
+Hi, my name is Michael, and I am a PhD student studying complexity. I am very passionate about teaching, especially math and theoretical computer science, and I hope to make that into a career after my PhD. Outside of that, I love to climb and play board games. Looking forward to meeting you all, and feel free to reach out about anything!
 
-## Hana Smahi
-Hi everyone! I’m Hana, and I’m currently a second-year student majoring in Computer Science. I’m excited to be one of your 332 TAs this quarter, and I look forward to meeting all of you! I love exploring the outdoors of the PNW through hiking, cycling, paddle boarding, and nature photography. I’m also an avid swimmer, reader, and a huge fan of comedy tv-shows (I’ve watched the office 8 times – and I’m itching to watch it again, don’t judge me). Feel free to reach out if you have any related questions or just want to chat!
+## Merav
 
-## Amanda Yuan
+Hey, I’m Merav! I’m in my junior year and I’m majoring in computer science. This is my 6th quarter as a TA (but my first in CSE 332). Outside of school I love hiking, baking (especially brownies), and going to the beach whenever its warm enough. I’m excited to meet all of you throughout the quarter and feel free to reach out to me anytime! 
 
-Hi, I'm Amanda. I'm a BSMS student and this will be my eigth time TA-ing for CSE 332. I like salted caramel and large hair claws. Best of luck this quarter!
+## Vicky
 
-## Sarah Chen
+Hi everyone! I'm Vicky, a second-year Computer Science major. I'll be one of your TAs this quarter :D. Outside of classes, I enjoy skiing, playing games (lately Clair Obscur E33), making playlists, doodling, and going on little spontaneous outdoor adventures. Looking forward to learning and working with you all this quarter! 🧡
 
-Hi everyone! My name is Sarah, and I’m a third-year majoring in Computer Science. This is my second time TA-ing for CSE 332. I’m from Bellevue, WA, but I grew up in Silicon Valley. Outside of school, I love listening to music (especially 90’s alternative/rock – I’m a huge fan of RHCP, Nirvana, Pearl Jam, Radiohead, Green Day, etc.), playing my guitars, teaching karate, hanging out with my dog (Leo), and reading new books.  So excited to meet all of you! :)
+## Albert Du
 
-## Yafqa Khan
+Hi friends! I'm Albert, a second year CS student and second time TA. These days, you might catch me reading about urban planning or finding new shortcuts around campus. I'm excited to meet everyone! Feel free to reach out or drop by my office hours to chat!
 
-Hello! My name is Yafqa, and I’m excited to be your TA this term. I’m passionate about technology and enjoy exploring various fields within computer science. In my free time, I like reading, coding, and hiking. If you ever have any questions about the course or just want to chat about tech, books, or outdoor adventures, feel free to reach out! Looking forward to getting to know everyone!
+## Jacklyn Cui
+
+I'm Jacklyn! It was great to serve as a fifth-time TA for one of my favorite (and personally considered the most important) courses at the Allen School! Apart from doing Accessibility and HCI-related research, I also enjoy traveling and outdoor activities! Feel free to ping me if you have good recs on where to travel!
+
+## Lim
+
+Hi! I'm Zhi Yang (Lim), fifth-year master's student, and I'm from Malaysia. This will be my 9th quarter TAing but second for 332. Outside of school, you will probably see me bouldering at SBP or playing badminton/table tennis at the IMA. I used to run a small YouTube channel solving Leetcode problems (RIP for now, but maybe a resurrection is in the cards!). Looking forward to meeting everyone!
+
+## Andrew
+
+Hello! This is my second year at UW and I am very excited to TA CSE 332. Outside of coursework, I enjoy running, backpacking, and exploring Seattle. I also really enjoy playing board games and watching sports.
+
+## Ben
+
+Hi, I'm Ben! I'm a junior studying Computer Science and Math. Apart from doing robotics and medicine related research, I love skiing and playing soccer. Always feel free to reach out with any questions or concerns. I'm excited to meet everyone this quarter!
+
+## Rubee
+
+Hello everyone! I am Rubee majoring in CS and Math. I come from Beijing and this is my fourth time teaching this course! Outside school I like to crochet and listen to music. You may see me in CS labs all the time during school days. Feel free to reach out to me if you have any questions and looking forward to see you all!
+
+## Tony
+
+Hello! I'm Tony, a third year majoring in CS, and this is my second time as a 332 TA. In my free time, I like playing soccer and looking at maps. If you have any questions, please don't hesitate to reach out to me. Looking forward to meeting everyone!
+
+## Hana
+
+Hello there! I'm Hana and I'm excited to be back for my sixth quarter as a 332 TA. Outside of computer science, I love reading and being outdoors. Please don't hesitate to reach out or stop by office hours whether it's a course related question or sharing good reads/hike spots (and there may be candy...not a bribe...). Looking forward to meeting you all!
