@@ -190,7 +190,7 @@ Instructions for this exercise apear in Gradescope. To submit you will provide y
 
 ## Exam 1
 
-The Midterm Exam will be held on Friday November 1 during our normal lecture session.
+The Midterm Exam will be held on Wednesday February 11 during our normal lecture session.
 <!--
 
 Here are [sample solutions](files/cse332_midterm_au24_soln.pdf) for the midterm.
