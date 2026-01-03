@@ -192,8 +192,7 @@ Concept checks are submitted on Gradescope. Each is autograded, with feedback pr
 
 It will be a viable strategy to simply "guess and check" solutions until you receive full credit, but we recommend making earnest attempts at all concept checks to maximize their usefulness helping you to self-assess your understanding. If you are ever unsure why any answer is marked correct/incorrect, we encourage you to reach out on Ed, in office hours, or in section!
 
-We do not intend for these to be time-consuming, but instead hope that they will result in a net savings of time since they will offer some confidence in your understanding of course materials before you're called upon to apply them i
-n an exercise or exam.
+We do not intend for these to be time-consuming, but instead hope that they will result in a net savings of time since they will offer some confidence in your understanding of course materials before you're called upon to apply them in an exercise or exam.
 
 
 # Exams
