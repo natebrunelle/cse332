@@ -10,7 +10,7 @@ target="$(realpath_py "$here/demo_site")/"
 
 cd "$here"
 
-remote=brunelle@bicycle.cs.washington.edu:/cse/web/courses/cse332/26wi
+remote=brunelle@attu.cs.washington.edu:/cse/web/courses/cse332/26wi
 if [ "$#" -gt 0 ] && [ "$1" != 'test' ]
 then
 	remote="$1"@attu.cs.washington.edu:/cse/web/courses/cse332/26wi
