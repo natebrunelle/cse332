@@ -194,6 +194,42 @@ It will be a viable strategy to simply "guess and check" solutions until you rec
 
 We do not intend for these to be time-consuming, but instead hope that they will result in a net savings of time since they will offer some confidence in your understanding of course materials before you're called upon to apply them in an exercise or exam.
 
+<!--
+	CC0 Getting to know you
+
+    CC1 Running Time
+
+    CC2 Heaps
+
+    CC3 Recurrences
+
+    CC4 AVL Trees
+
+    CC5 Hash Tables
+
+    CC6 Sorting
+
+    CC8 Graph Definitions and Data Structures
+
+    CC9 Graph Traversals
+
+    CC10 Shortest Paths
+
+    CC11 Fork Join
+
+    CC12 Race Conditions and Mutual Exclusion
+
+    CC13 Parallel Prefix
+
+    CC14 Race Conditions and Mutual Exclusion
+
+    CC15 Work, Span, and Ahmdal's law
+
+    CC16 Deadlock
+
+    CC17 Minimum Spanning Trees
+-->
+
 
 # Exams
 
