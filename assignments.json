@@ -1,31 +1,28 @@
-{"CC0 Getting to know you":
-  {"group":"programming"
-  ,"due":"2026-01-08 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
-,"EX0 Generics":
+{"EX0 Generics":
   {"group":"programming"
   ,"due":"2026-01-14 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC1 Running Time":
-  {"group":"programming"
-  ,"due":"2026-01-15 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
-,"CC2 Heaps":
-  {"group":"programming"
-  ,"due":"2026-01-15 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
+,"CC0":{"group":"programming"
+       ,"due":"2026-01-15 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
+,"CC1":{"group":"programming"
+       ,"due":"2026-01-15 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
+,"CC2":{"group":"programming"
+       ,"due":"2026-01-15 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
 ,"EX1 Running Time":
   {"group":"programming"
   ,"due":"2026-01-16 23:59"
@@ -33,13 +30,12 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC3 Recurrences":
-  {"group":"programming"
-  ,"due":"2026-01-22 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
+,"CC3":{"group":"programming"
+       ,"due":"2026-01-22 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
 ,"EX2 Heaps":
   {"group":"programming"
   ,"due":"2026-01-23 23:59"
@@ -54,27 +50,24 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC4 AVL Trees":
-  {"group":"programming"
-  ,"due":"2026-01-29 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
-,"CC5 Hash Tables":
-  {"group":"programming"
-  ,"due":"2026-02-05 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
-,"CC6 Sorting":
-  {"group":"programming"
-  ,"due":"2026-02-05 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
+,"CC4":{"group":"programming"
+       ,"due":"2026-01-29 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
+,"CC5":{"group":"programming"
+       ,"due":"2026-02-05 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
+,"CC6":{"group":"programming"
+       ,"due":"2026-02-05 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
 ,"EX4 AVL":
   {"group":"programming"
   ,"due":"2026-02-06 23:59"
@@ -82,20 +75,18 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC8 Graph Definitions and Data Structures":
-  {"group":"programming"
-  ,"due":"2026-02-12 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
-,"CC9 Graph Traversals":
-  {"group":"programming"
-  ,"due":"2026-02-12 23:59"
-  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
-  ,"weight":1
-  ,"files":"something.java"
-  }
+,"CC8":{"group":"programming"
+       ,"due":"2026-02-12 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
+,"CC9":{"group":"programming"
+       ,"due":"2026-02-12 23:59"
+       ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+       ,"weight":1
+       ,"files":"something.java"
+       }
 ,"EX5 Hashing":
   {"group":"programming"
   ,"due":"2026-02-13 23:59"
@@ -110,21 +101,21 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC10 Shortest Paths":
+,"CC10":
   {"group":"programming"
   ,"due":"2026-02-19 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC11 Fork Join":
+,"CC11":
   {"group":"programming"
   ,"due":"2026-02-19 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC12 Race Conditions and Mutual Exclusion":
+,"CC12":
   {"group":"programming"
   ,"due":"2026-02-19 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
@@ -145,14 +136,14 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC13 Parallel Prefix":
+,"CC13":
   {"group":"programming"
   ,"due":"2026-02-26 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC15 Work, Span, and Ahmdal's law":
+,"CC15":
   {"group":"programming"
   ,"due":"2026-02-26 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
@@ -166,21 +157,21 @@
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC14 Race Conditions and Mutual Exclusion":
+,"CC14":
   {"group":"programming"
   ,"due":"2026-03-05 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC16 Deadlock":
+,"CC16":
   {"group":"programming"
   ,"due":"2026-03-05 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
   }
-,"CC17 Minimum Spanning Trees":
+,"CC17":
   {"group":"programming"
   ,"due":"2026-03-05 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"

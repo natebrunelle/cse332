@@ -2,10 +2,12 @@
 title: Tasks
 ...
 
-All tasks will be submitted and graded on [Gradescope](https://www.gradescope.com/courses/1208996).
+
 
 
 # Exercises
+
+All exercises will be submitted and graded on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1208996).
 
 Some exercises may require submitting to multiple gradescope assignments (e.g. if there is a programming component as well as a written component). The assignment instructions will make it clear when this is the case.
 <!--
@@ -188,6 +190,8 @@ Instructions for this exercise apear in Gradescope. To submit you will provide y
 
 # Concept Checks
 
+All concept checks will be submitted and graded on this [Gradescope for concept checks](https://www.gradescope.com/courses/1210525).
+
 Concept checks are submitted on Gradescope. Each is autograded, with feedback provided instantaneously. You also have unlimited submissions. This means you can, and should, continuously reattempt each concept check until you receive full credit.
 
 It will be a viable strategy to simply "guess and check" solutions until you receive full credit, but we recommend making earnest attempts at all concept checks to maximize their usefulness helping you to self-assess your understanding. If you are ever unsure why any answer is marked correct/incorrect, we encourage you to reach out on Ed, in office hours, or in section!
@@ -232,6 +236,8 @@ We do not intend for these to be time-consuming, but instead hope that they will
 
 
 # Exams
+
+The course staff will scann, upload and grade exams on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1208996).
 
 ## Exam 1
 

@@ -4,7 +4,8 @@ title: Home
 
 Handy links:
 
-- [Gradescope](https://www.gradescope.com/courses/1208996)
+- [Gradescope for exams+exercises](https://www.gradescope.com/courses/1208996)
+- [Gradescope for Concept Checks](https://www.gradescope.com/courses/1210525)
 - [Ed Board](https://edstem.org/us/courses/90035)
 - [Lecture Recordings](https://canvas.uw.edu/courses/1861793/external_tools/21130)
 - [Extension Request](TODO.html) (requires login with your UW netid)
