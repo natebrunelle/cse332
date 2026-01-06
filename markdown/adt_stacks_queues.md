@@ -78,11 +78,17 @@ The final vocabulary term we presented was an **implementation of a data structu
 
 # Review of Queue Data Structures
 
-We'll now provide an illustration of each of the queue data structures presented in class.
+We'll now provide an illustration of each of the queue data structures presented in class. In exercise 0 you will build stacks which behave similarly to the queue data structures.
 
 ## Linked Nodes Queue
 
 
-Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a linked nodes queue. You may download the source of the pptx by clicking [this link](files/slides/linked_nodes_queue.pptx).
+Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a linked nodes queue. You may download the source pptx by clicking [this link](files/slides/linked_nodes_queue.pptx).
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRvO7uNIbHZCXEmIe4PvTCN_jpe2g6kwjXVN3x71tCIPec1FOzo2SVEACWvxbG3YQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="An embedding of the slide deck linked to above"></iframe>
+
+## Circular Array Queue
+
+Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a circular array queue. You may download the source pptx by clicking [this link](files/slides/linked_nodes_queue.pptx). Note that this does not demonstrate resizing, as this is a challenge we've reserved for exercise 0.
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQT_ZBGJSmRZYFv3vQQg7H_GB8POpZkFF8oL8TdZhd6t3CbcJdcD10R8Qf8JAUwwA/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="An embedding of the slide deck linked to above"></iframe>
