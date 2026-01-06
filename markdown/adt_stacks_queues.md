@@ -84,4 +84,5 @@ We'll now provide an illustration of each of the queue data structures presented
 
 
 Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a linked nodes queue. You may download the source of the pptx by clicking [this link](files/slides/linked_nodes_queue.pptx).
+
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRvO7uNIbHZCXEmIe4PvTCN_jpe2g6kwjXVN3x71tCIPec1FOzo2SVEACWvxbG3YQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="An embedding of the slide deck linked to above"></iframe>
