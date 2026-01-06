@@ -82,4 +82,4 @@ We'll now provide an illustration of each of the queue data structures presented
 
 ## Linked Nodes Queue
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSYYm38gdVmnz_1fZ0gRDD6n1zNTI0Jf_bnPdBtx4ll017Hpu992EfaBuJ0129hA/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTSYYm38gdVmnz_1fZ0gRDD6n1zNTI0Jf_bnPdBtx4ll017Hpu992EfaBuJ0129hA/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
