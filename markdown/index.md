@@ -8,7 +8,7 @@ Handy links:
 - [Gradescope for Concept Checks](https://www.gradescope.com/courses/1210525)
 - [Ed Board](https://edstem.org/us/courses/90035)
 - [Lecture Recordings](https://canvas.uw.edu/courses/1861793/external_tools/21130)
-- [Extension Request](TODO.html) (requires login with your UW netid)
+- [Extension Request](https://forms.gle/XeR2iRYCcK54MGCB6) (requires login with your  CSE id)
 
 # Course Description
 

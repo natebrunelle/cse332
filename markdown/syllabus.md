@@ -82,7 +82,7 @@ If your grade is           Then your course GPA will be
 
 To facilitate timely feedback, exercises will not be accepted late. That being said, we are happy to consider any request for a deadline extension. These deadline extensions are intended to either grant submission flexibility for students who experience hardship during the open window of the assignment, or to grant a small amount of extra time to students who began the assignment in a timely manner, have made substantial progress before the deadline, but would have their grade be a more accurate reflection of their understanding if a minimal amount of extra time was allotted.
 
-To submit an extension request, fill out [this google form](TODO.html), providing either:
+To submit an extension request, fill out [this google form](https://forms.gle/XeR2iRYCcK54MGCB6), providing either:
 
 1) The hardship experienced (a high-level description like "ER visit" is fine, details are unnecessary), as well as the approximate amount of time lost due to the hardship and a suggested replacement deadline.
 1) A description of when you started the assignment, how much progress you've made, where you've gotten stuck, and a suggested replacement deadline.
