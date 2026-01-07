@@ -26,7 +26,7 @@ This assignment has three main parts. The first involves setting up your java pr
 
 For this exercise, you will need:
 
-- [cse332 VSCode Profile](files/exercises/cse332-Java.code-profile) - Our recommended configuration profile for VSCode. This disables gen-AI tools for you.
+- [cse332 VSCode Profile](files/exercises/cse332-Java.code-profile) - Our recommended configuration profile for VSCode. This disables gen-AI tools for you. (right click to download)
 - [Starter Code](/files/exercises/ex0.zip) - which contains various classes that will be needed for this assignment.
 - [Specification](https://docs.google.com/document/d/e/2PACX-1vREnpEvlsTQpkNX5wwHHIpAvwnPKN7sG-GQFsek39qXZj4QOng2ZxMhfJOZRec3jw/pub) - which contains all instructions for what to do for this assignment.
 - [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
@@ -200,9 +200,20 @@ It will be a viable strategy to simply "guess and check" solutions until you rec
 
 We do not intend for these to be time-consuming, but instead hope that they will result in a net savings of time since they will offer some confidence in your understanding of course materials before you're called upon to apply them in an exercise or exam.
 
-<!--
-	CC0 Getting to know you
 
+## CC0 Getting to know you
+
+Concept check 0 is available on the course web page! There is not specific course material referenced by this concept check. Instead, this concept check is intended to do the following:
+
+1. Introduce you to how concept checks will work in this course
+1. Give you an opportunity to introduce yourself to us by providing some info
+1. Introduce you to the course by asking you to look through the syllabus to answer some questions
+1. Introduce ourselves to each other one-on-one through a "meet the staff" activity.
+
+The concept check must be submitted by Thursday 1/15. You have until Friday 1/30 to complete the "meet the staff" activity.
+
+
+<!--
     CC1 Running Time
 
     CC2 Heaps
