@@ -10,7 +10,7 @@ title: Tasks
 All exercises will be submitted and graded on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1208996).
 
 Some exercises may require submitting to multiple gradescope assignments (e.g. if there is a programming component as well as a written component). The assignment instructions will make it clear when this is the case.
-<!--
+
 
 ## Exercise 0
 
@@ -22,14 +22,15 @@ The objectives of this exercise are to:
 - Use Java generics
 - Use benchmarking to study the running time of algorithms
 
-This assignment has two main parts. The first involves implementing some data structures. The second involves analyzing the running times of your implementations using benchmarking. Each part will have a separate Gradescope submission, which will combine together to count as your exercise 0 grade.
+This assignment has three main parts. The first involves setting up your java programming environment. The second involves implementing some data structures. The third involves analyzing the running times of your implementations using benchmarking. There is no deliverable for part 1. Parts 2 and 3 each have a separate Gradescope submission, which will combine together to count as your exercise 0 grade.
 
 For this exercise, you will need:
 
 - [Starter Code](/files/exercises/ex0.zip) - which contains various classes that will be needed for this assignment.
-- [Specification](https://docs.google.com/document/d/1XPi2Dz6aA4RoyY7O6Nb_NgQugoh-jxo1LU_S_-81gQc/edit?usp=sharing) - which contains all instructions for what to do for this assignment.
-- [Benchmarking Worksheet](https://docs.google.com/document/d/1pE0milOwzq8jrCcaxSedM7jRHBMyynQ9WapZuUsBOe0/edit?usp=sharing) - which you will copy and complete for the benchmarking portion of the assignment.
+- [Specification](https://docs.google.com/document/d/e/2PACX-1vREnpEvlsTQpkNX5wwHHIpAvwnPKN7sG-GQFsek39qXZj4QOng2ZxMhfJOZRec3jw/pub) - which contains all instructions for what to do for this assignment.
+- [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
 
+<!--
 ## Exercise 1
 
 The objectives of this exercise are to:
