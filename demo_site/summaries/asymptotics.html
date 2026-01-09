@@ -47,8 +47,10 @@
         <li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
         <li><a href="#o-omega-theta"><span class="toc-section-number">2</span> O, <span class="math inline">\Omega</span>, <span class="math inline">\Theta</span></a><ul>
         <li><a href="#formal-definitions"><span class="toc-section-number">2.1</span> Formal Definitions</a></li>
-        <li><a href="#intuition"><span class="toc-section-number">2.2</span> Intuition</a></li>
-        <li><a href="#examples"><span class="toc-section-number">2.3</span> Examples</a></li>
+        <li><a href="#intuition"><span class="toc-section-number">2.2</span> Intuition</a><ul>
+        <li><a href="#achieving-greater-than-less-than-and-equal-to"><span class="toc-section-number">2.2.1</span> Achieving greater than, less than, and equal to</a></li>
+        </ul></li>
+        <li><a href="#example-proofs"><span class="toc-section-number">2.3</span> Example Proofs</a></li>
         <li><a href="#dropping-constants"><span class="toc-section-number">2.4</span> Dropping Constants</a></li>
         <li><a href="#dropping-non-dominant-terms"><span class="toc-section-number">2.5</span> Dropping Non-Dominant Terms</a></li>
         </ul></li>
@@ -90,12 +92,20 @@
       <h2 id="formal-definitions"><span class="header-section-number">2.1</span> Formal Definitions</h2>
       <p>Here we present the formal definitions of <span class="math inline">O</span>, <span class="math inline">\Omega</span>, and <span class="math inline">\Theta</span>:</p>
       <ul>
-      <li>We define <span class="math inline">f(n) \in O(g(n))</span> provided that <span class="math inline">\exists c&gt;0</span> and <span class="math inline">\exists n_0\in \mathbb{N}</span> such that <span class="math inline">\forall n \geq n_0 f(n)\leq c \cdot g(n)</span>.</li>
-      <li>We define <span class="math inline">f(n) \in \Omega(g(n))</span> provided that <span class="math inline">\exists c&gt;0</span> and <span class="math inline">\exists n_0\in \mathbb{N}</span> such that <span class="math inline">\forall n \geq n_0 f(n)\geq c \cdot g(n)</span>.</li>
+      <li>We define <span class="math inline">f(n) \in O(g(n))</span> provided that <span class="math inline">\exists c&gt;0</span> and <span class="math inline">\exists n_0\in \mathbb{N}</span> such that <span class="math inline">\forall n \geq n_0</span> it is true that <span class="math inline">f(n)\leq c \cdot g(n)</span>.</li>
+      <li>We define <span class="math inline">f(n) \in \Omega(g(n))</span> provided that <span class="math inline">\exists c&gt;0</span> and <span class="math inline">\exists n_0\in \mathbb{N}</span> such that <span class="math inline">\forall n \geq n_0</span> it is true that <span class="math inline">f(n)\geq c \cdot g(n)</span>.</li>
       <li>We define <span class="math inline">f(n) \in \Theta(g(n))</span> provided that <span class="math inline">f(n)\in O(g(n))</span> and <span class="math inline">f(n)\in \Omega(g(n))</span>.</li>
       </ul>
       <h2 id="intuition"><span class="header-section-number">2.2</span> Intuition</h2>
-      <h2 id="examples"><span class="header-section-number">2.3</span> Examples</h2>
+      <p>Let’s now discuss the inuition for how these definitions give us some of the properties we’ve mentioned to be desireable.</p>
+      <h3 id="achieving-greater-than-less-than-and-equal-to"><span class="header-section-number">2.2.1</span> Achieving greater than, less than, and equal to</h3>
+      <p>We mentioned that <span class="math inline">f(n)\in O(g(n))</span> acts like <q><span class="math inline">f(n) \leq g(n)</span></q>, <span class="math inline">f(n)\in \Omega(g(n))</span> acts like <q><span class="math inline">f(n) \geq g(n)</span></q>, and <span class="math inline">f(n)\in \Theta(g(n))</span> acts like <q><span class="math inline">f(n) \approx g(n)</span></q>. Here’s where we can see these relationships in the formal definitions:</p>
+      <ul>
+      <li><strong><span class="math inline">O</span></strong>: Ignoring all of the quatifiers for now, we see that the definition of <span class="math inline">O</span> concludes with <span class="math inline">f(n)\leq c \cdot g(n)</span>. We are therefore checking that the value of <span class="math inline">f(n)</span> is less than or equal to <span class="math inline">g(n)</span>, directly corresponding to that intuitive notion.</li>
+      <li><strong><span class="math inline">\Omega</span></strong>: Ignoring all of the quatifiers for now, we see that the definition of <span class="math inline">\Omega</span> concludes with <span class="math inline">f(n)\geq c \cdot g(n)</span>. We are therefore checking that the value of <span class="math inline">f(n)</span> is less than or equal to <span class="math inline">g(n)</span>, directly corresponding to that intuitive notion.</li>
+      <li><strong><span class="math inline">\Theta</span></strong>: we say that <span class="math inline">f(n)\in \Theta(g(n))</span> provided it is both <span class="math inline">O(g(n))</span> and <span class="math inline">\Omega(g(n))</span>. Mapping back to the intuitions of <span class="math inline">O</span> and <span class="math inline">\Omega</span>, this means <q><span class="math inline">f(n) \leq g(n)</span></q> and <q><span class="math inline">f(n) \geq g(n)</span></q>. Similar to when we’re comparing numbers, the only way that something can be both <span class="math inline">\leq</span> and <span class="math inline">\geq</span> another thing is if they are equal.</li>
+      </ul>
+      <h2 id="example-proofs"><span class="header-section-number">2.3</span> Example Proofs</h2>
       <h2 id="dropping-constants"><span class="header-section-number">2.4</span> Dropping Constants</h2>
       <h2 id="dropping-non-dominant-terms"><span class="header-section-number">2.5</span> Dropping Non-Dominant Terms</h2>
       <h1 id="common-misconceptions"><span class="header-section-number">3</span> Common Misconceptions</h1>
@@ -106,7 +116,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-09 10:36</p>
+        <p>Last updated 2026-01-09 10:47</p>
   </footer>
 </body>
 </html>

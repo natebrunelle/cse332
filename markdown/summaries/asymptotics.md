@@ -55,11 +55,12 @@ We mentioned that $f(n)\in O(g(n))$ acts like "$f(n) \leq g(n)$", $f(n)\in \Omeg
 - **$\Theta$**: we say that $f(n)\in \Theta(g(n))$ provided it is both $O(g(n))$ and $\Omega(g(n))$. Mapping back to the intuitions of $O$ and $\Omega$, this means "$f(n) \leq g(n)$" and "$f(n) \geq g(n)$". Similar to when we're comparing numbers, the only way that something can be both $\leq$ and $\geq$ another thing is if they are equal.
 
 
+### Ignoring Small Inputs
 
-## Example Proofs
+### Dropping Constants
 
-## Dropping Constants
+### Dropping Non-Dominant Terms
 
-## Dropping Non-Dominant Terms
+# Example Proofs
 
 # Common Misconceptions
