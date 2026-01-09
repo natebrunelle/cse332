@@ -29,7 +29,15 @@ Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. 
     -  Some examples of functions that belong to this set are $n$, $2n$, $0.5 \cdot n$, $n^2$, $n \log n$, $2^n$, etc.
 
 - **$\Theta(n)$ is the set of all functions which are asymptotically tight bounded by $g(n)=n$**.
- 
+
     - Some examples of functions that belong to this set are $n$, $2n$, $0.5 \cdot n$, $n-5$, etc.
 
 (Totally optional aside if you want to geek out about math notation with me for a bit. The formal type of $O$, $\Omega$, $\Theta$ themselves is something like "functions mapping functions to sets of functions", and we could write their type as $(\mathbb{N} \rightarrow \mathbb{N}) \rightarrow \mathcal{P}(\mathbb{N} \rightarrow \mathbb{N})$ which would read something like "a function whose domain is functions mapping natural numbers to natural numbers and whose co-domain is the powerset of functions mapping natural numbers to natural numbers".)
+
+## Intuition
+
+## Examples
+
+## Dropping Constants
+
+## Dropping Non-Dominant Terms
