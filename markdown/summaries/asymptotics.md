@@ -18,6 +18,12 @@ This is the process we want to end up with, but we need definitions that formali
 
 We now will present the formal definitions of $O$, $\Omega$, and $\Theta$, and discuss why they result in the comparison process above.
 
-Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. When we look at $O(n)$, that is actually a *set of functions*, specifically, **$O(n)$ is the set of all functions which are asymptotically upper bounded by $g(n)=n$**. Some examples of functions that would belong to this set are $n$, $2n$, $0.5\cdot n$, $\sqrt(n)$, $1$, $\log n$, etc. This identity of $O(n)$ as a set is why we mentioned above that $f(n)\in O(g(n))$ was notationally more correct. Similarly, **$\Omega(n)$ is the set of all functions which are asymptotically lower bounded by $g(n)=n$**, and would include functions liked $n$, $2n$, $0.5 \cdot n$, $n^2$, $n \log n$, $2^n$, etc. Finally, **$\Theta(n)$ is the set of all functions which are asymptotically tight bounded by $g(n)=n$**, and would include functions like $n$, $2n$, $0.5 \cdot n$, $n-5$, etc.
+Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. When we look $O(n)$, $\Omega(n)$, and $\Theta(n)$, thes each are actually a *set of functions*, specifically: 
+- **$O(n)$ is the set of all functions which are asymptotically upper bounded by $g(n)=n$**. 
+    - Some examples of functions that belong to this set are $n$, $2n$, $0.5\cdot n$, $\sqrt(n)$, $1$, $\log n$, etc.
+- **$\Omega(n)$ is the set of all functions which are asymptotically lower bounded by $g(n)=n$**. 
+    -  Some examples of functions that belong to this set are $n$, $2n$, $0.5 \cdot n$, $n^2$, $n \log n$, $2^n$, etc.
+- **$\Theta(n)$ is the set of all functions which are asymptotically tight bounded by $g(n)=n$**. 
+    - Some examples of functions that belong to this set are $n$, $2n$, $0.5 \cdot n$, $n-5$, etc.
 
-(Totally optional aside if you want to geek out about math notation with me for a bit. The formal type of $O$, $\Omega$, $\Theta$ themselves is something like "functions mapping functions to sets of functions", and we could write their type as $(\mathbb{N} \rightarrow \mathbb{N}) \rightarrow \mathcal{P}(\mathbb{N} \rightarrow \mathbb{N})$)
+(Totally optional aside if you want to geek out about math notation with me for a bit. The formal type of $O$, $\Omega$, $\Theta$ themselves is something like "functions mapping functions to sets of functions", and we could write their type as $(\mathbb{N} \rightarrow \mathbb{N}) \rightarrow \mathcal{P}(\mathbb{N} \rightarrow \mathbb{N})$ which would read something like "a function whose domain is functions mapping natural numbers to natural numbers and whose co-domain is the powerset of functions mapping natural numbers to natural numbers".)

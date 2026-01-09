@@ -44,7 +44,8 @@
           <li class="nav-header">Table of Contents</li>
         </ul>
         <ul>
-        <li><a href="#definitions"><span class="toc-section-number">1</span> Definitions</a></li>
+        <li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+        <li><a href="#formal-definitions"><span class="toc-section-number">2</span> Formal Definitions</a></li>
         </ul>
         </div>
       </div>
@@ -52,7 +53,7 @@
             <!--<blockquote style="background-color:#fbb; font-size:150%">This page is from a previous offering of the course. It has been left up for archival purposes.</blockquote>-->
       <!--<blockquote style="background-color:#fbb; font-size:150%">This page is under construction. Any content you see now is subject to change until the first day of class. Expect some links to be broken until that time.</blockquote>--> 
       <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
-      <h1 id="definitions"><span class="header-section-number">1</span> Definitions</h1>
+      <h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
       <p>In our <a href="summaries/runningtime.md">last topic summary</a> we discussed why and how we represent running times as a function and gave high level descriptions of the tools we could use to compare those functions. To give a brief refresher:</p>
       <ul>
       <li>If we want to say that some function <span class="math inline">f(n)</span> is <q>less than or equal to</q> another function <span class="math inline">g(n)</span>, we’ll write <span class="math inline">f(n)\in O(g(n))</span> or <span class="math inline">f(n)=O(g(n))</span> (the former is notationally more correct, but the latter is more commonly used). This is read as <q><span class="math inline">f(n)</span> is big-oh of <span class="math inline">g(n)</span></q>.</li>
@@ -60,6 +61,11 @@
       <li>If we want to say that some function <span class="math inline">f(n)</span> is <q>asymptotically equal to</q> another function <span class="math inline">g(n)</span>, we’ll write <span class="math inline">f(n)\in \Theta(g(n))</span> or <span class="math inline">f(n)=\Theta(g(n))</span> . This is read as <q><span class="math inline">f(n)</span> is big-theta of <span class="math inline">g(n)</span></q>.</li>
       </ul>
       <p>In all of these cases, we want to be comparing functions in the way we saw them in our prior courses (cse 123, cse 143, or equivalent). That is, we want our definitions to allow us to compare functions by dropping non-dominant terms, ignoring constants, and then looking only at long-term behavior. This means we would compare <span class="math inline">f(n)=11n^2-20n+8</span> with <span class="math inline">g(n)=\frac{n^3}{10} - 50</span> by simplifying <span class="math inline">f(n)</span> to be <span class="math inline">f(n)\approx n^2</span> and simplifying <span class="math inline">g(n)</span> to be <span class="math inline">g(n)\approx n^3</span>, thus concluding that <span class="math inline">f(n)=O(g(n))</span> or <span class="math inline">g(n)=\Omega(f(n))</span>.</p>
+      <p>This is the process we want to end up with, but we need definitions that formalize this. This is because we want to be able to use this process even when the functions are not so easy to compare. For example, this process still makes it unclear how we would compare <span class="math inline">f(n) = (\log n)^2</span> with <span class="math inline">g(n)=\sqrt(n)</span>.</p>
+      <h1 id="formal-definitions"><span class="header-section-number">2</span> Formal Definitions</h1>
+      <p>We now will present the formal definitions of <span class="math inline">O</span>, <span class="math inline">\Omega</span>, and <span class="math inline">\Theta</span>, and discuss why they result in the comparison process above.</p>
+      <p>Firstly, let’s talk about what <em>type</em> of thing <span class="math inline">O</span>, <span class="math inline">\Omega</span>, and <span class="math inline">\Theta</span> are. When we look at <span class="math inline">O(n)</span>, that is actually a <em>set of functions</em>, specifically, <strong><span class="math inline">O(n)</span> is the set of all functions which are asymptotically upper bounded by <span class="math inline">g(n)=n</span></strong>. Some examples of functions that would belong to this set are <span class="math inline">n</span>, <span class="math inline">2n</span>, <span class="math inline">0.5\cdot n</span>, <span class="math inline">\sqrt(n)</span>, <span class="math inline">1</span>, <span class="math inline">\log n</span>, etc. This identity of <span class="math inline">O(n)</span> as a set is why we mentioned above that <span class="math inline">f(n)\in O(g(n))</span> was notationally more correct. Similarly, <strong><span class="math inline">\Omega(n)</span> is the set of all functions which are asymptotically lower bounded by <span class="math inline">g(n)=n</span></strong>, and would include functions liked <span class="math inline">n</span>, <span class="math inline">2n</span>, <span class="math inline">0.5 \cdot n</span>, <span class="math inline">n^2</span>, <span class="math inline">n \log n</span>, <span class="math inline">2^n</span>, etc. Finally, <strong><span class="math inline">\Theta(n)</span> is the set of all functions which are asymptotically tight bounded by <span class="math inline">g(n)=n</span></strong>, and would include functions like <span class="math inline">n</span>, <span class="math inline">2n</span>, <span class="math inline">0.5 \cdot n</span>, <span class="math inline">n-5</span>, etc.</p>
+      <p>(Totally optional aside if you want to geek out about math notation with me for a bit. The formal type of <span class="math inline">O</span>, <span class="math inline">\Omega</span>, <span class="math inline">\Theta</span> themselves is something like <q>functions mapping functions to sets of functions</q>, and we could write their type as <span class="math inline">(\mathbb{N} \rightarrow \mathbb{N}) \rightarrow \mathcal{P}(\mathbb{N} \rightarrow \mathbb{N})</span>)</p>
             </div>
     </div>
   </div>
@@ -67,7 +73,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-09 07:17</p>
+        <p>Last updated 2026-01-09 07:55</p>
   </footer>
 </body>
 </html>
