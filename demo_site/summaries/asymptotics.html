@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>CSE332 - Topic Summary - Asymptotic Notation</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+  <link rel="stylesheet" href="../style.css?v=2" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <style type="text/css">.katex { font-size: inherit; }</style>
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">CSE 332 &ndash; Topic Summary - Asymptotic Notation</span>
+        <ul class="nav pull-right doc-info">
+                    <li><p class="navbar-text"><a href="../index.html">Home</a></p></li>
+          <li><p class="navbar-text"><a href="../syllabus.html">Syllabus</a></p></li>
+          <li><p class="navbar-text"><a href="../calendar.html">Calendar</a></p></li>
+          <li><p class="navbar-text"><a href="../tasks.html">Tasks</a></p></li>
+          <li><p class="navbar-text"><a href="../summaries.html">Summaries</a></p></li>
+          <li><p class="navbar-text"><a href="../oh.html">Office Hours</a></p></li>
+          <li><p class="navbar-text"><a href="../staff.html">Staff</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div id="TOC" class="span3">
+        <div class="well toc">
+        <ul>
+          <li class="nav-header">Table of Contents</li>
+        </ul>
+        <ul>
+        <li><a href="#definitions"><span class="toc-section-number">1</span> Definitions</a></li>
+        </ul>
+        </div>
+      </div>
+            <div class="span9">
+            <!--<blockquote style="background-color:#fbb; font-size:150%">This page is from a previous offering of the course. It has been left up for archival purposes.</blockquote>-->
+      <!--<blockquote style="background-color:#fbb; font-size:150%">This page is under construction. Any content you see now is subject to change until the first day of class. Expect some links to be broken until that time.</blockquote>--> 
+      <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
+      <h1 id="definitions"><span class="header-section-number">1</span> Definitions</h1>
+      <p>In our <a href="summaries/runningtime.md">last topic summary</a> we discussed why and how we represent running times as a function and gave high level descriptions of the tools we could use to compare those functions. To give a brief refresher:</p>
+      <ul>
+      <li>If we want to say that some function <span class="math inline">f(n)</span> is <q>less than or equal to</q> another function <span class="math inline">g(n)</span>, we’ll write <span class="math inline">f(n)\in O(g(n))</span> or <span class="math inline">f(n)=O(g(n))</span> (the former is notationally more correct, but the latter is more commonly used). This is read as <q><span class="math inline">f(n)</span> is big-oh of <span class="math inline">g(n)</span></q>.</li>
+      <li>If we want to say that some function <span class="math inline">f(n)</span> is <q>greater than or equal to</q> another function <span class="math inline">g(n)</span>, we’ll write <span class="math inline">f(n)\in \Omega(g(n))</span> or <span class="math inline">f(n)=\Omega(g(n))</span> . This is read as <q><span class="math inline">f(n)</span> is big-omega of <span class="math inline">g(n)</span></q>.</li>
+      <li>If we want to say that some function <span class="math inline">f(n)</span> is <q>asymptotically equal to</q> another function <span class="math inline">g(n)</span>, we’ll write <span class="math inline">f(n)\in \Theta(g(n))</span> or <span class="math inline">f(n)=\Theta(g(n))</span> . This is read as <q><span class="math inline">f(n)</span> is big-theta of <span class="math inline">g(n)</span></q>.</li>
+      </ul>
+      <p>In all of these cases, we want to be comparing functions in the way we saw them in our prior courses (cse 123, cse 143, or equivalent). That is, we want our definitions to allow us to compare functions by dropping non-dominant terms, ignoring constants, and then looking only at long-term behavior. This means we would compare <span class="math inline">f(n)=11n^2-20n+8</span> with <span class="math inline">g(n)=\frac{n^3}{10} - 50</span> by simplifying <span class="math inline">f(n)</span> to be <span class="math inline">f(n)\approx n^2</span> and simplifying <span class="math inline">g(n)</span> to be <span class="math inline">g(n)\approx n^3</span>, thus concluding that <span class="math inline">f(n)=O(g(n))</span> or <span class="math inline">g(n)=\Omega(f(n))</span>.</p>
+            </div>
+    </div>
+  </div>
+  <footer>
+          Copyright © 2026 Nathan Brunelle.
+              <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
+      </p>
+        <p>Last updated 2026-01-09 07:17</p>
+  </footer>
+</body>
+</html>

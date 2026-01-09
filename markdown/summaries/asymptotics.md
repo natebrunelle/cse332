@@ -2,7 +2,7 @@
 title: Topic Summary - Asymptotic Notation
 ...
 
-# Definitions
+# Introduction
 
 In our [last topic summary](summaries/runningtime.md) we discussed why and how we represent running times as a function and gave high level descriptions of the tools we could use to compare those functions. To give a brief refresher:
 
@@ -11,3 +11,13 @@ In our [last topic summary](summaries/runningtime.md) we discussed why and how w
 - If we want to say that some function $f(n)$ is "asymptotically equal to" another function $g(n)$, we'll write $f(n)\in \Theta(g(n))$ or $f(n)=\Theta(g(n))$ . This is read as "$f(n)$ is big-theta of $g(n)$".
 
 In all of these cases, we want to be comparing functions in the way we saw them in our prior courses (cse 123, cse 143, or equivalent). That is, we want our definitions to allow us to compare functions by dropping non-dominant terms, ignoring constants, and then looking only at long-term behavior. This means we would compare $f(n)=11n^2-20n+8$ with $g(n)=\frac{n^3}{10} - 50$ by simplifying $f(n)$ to be $f(n)\approx n^2$ and simplifying $g(n)$ to be $g(n)\approx n^3$, thus concluding that $f(n)=O(g(n))$ or $g(n)=\Omega(f(n))$.
+
+This is the process we want to end up with, but we need definitions that formalize this. This is because we want to be able to use this process even when the functions are not so easy to compare. For example, this process still makes it unclear how we would compare $f(n) = (\log n)^2$ with $g(n)=\sqrt(n)$.
+
+# Formal Definitions
+
+We now will present the formal definitions of $O$, $\Omega$, and $\Theta$, and discuss why they result in the comparison process above.
+
+Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. When we look at $O(n)$, that is actually a *set of functions*, specifically, **$O(n)$ is the set of all functions which are asymptotically upper bounded by $g(n)=n$**. Some examples of functions that would belong to this set are $n$, $2n$, $0.5\cdot n$, $\sqrt(n)$, $1$, $\log n$, etc. This identity of $O(n)$ as a set is why we mentioned above that $f(n)\in O(g(n))$ was notationally more correct. Similarly, **$\Omega(n)$ is the set of all functions which are asymptotically lower bounded by $g(n)=n$**, and would include functions liked $n$, $2n$, $0.5 \cdot n$, $n^2$, $n \log n$, $2^n$, etc. Finally, **$\Theta(n)$ is the set of all functions which are asymptotically tight bounded by $g(n)=n$**, and would include functions like $n$, $2n$, $0.5 \cdot n$, $n-5$, etc.
+
+(Totally optional aside if you want to geek out about math notation with me for a bit. The formal type of $O$, $\Omega$, $\Theta$ themselves is something like "functions mapping functions to sets of functions", and we could write their type as $(\mathbb{N} \rightarrow \mathbb{N}) \rightarrow \mathcal{P}(\mathbb{N} \rightarrow \mathbb{N})$)

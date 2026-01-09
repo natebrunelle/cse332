@@ -181,7 +181,7 @@
       <p>In most cases, there will be a clear choice of one or a few operations that is best according to all three considerations above. There may be times, however, when different considerations may lead you to select different operations. We’ll just ignore that circumstance for this class. In case you’re curious what we’d do with this dilemma, though… typically in this situation we would give our audience a running time for each choice of operation, that person would then determine which operation they migh care more about based on their application.</p>
       <h1 id="comparing-running-times"><span class="header-section-number">4</span> Comparing running times</h1>
       <p>Now that we have a definition of what a running time is, we need a way to compare algorithms by their running times to see which is faster. This means that we need to have some way of comparing <em>functions</em> to determine which is the larger function. To do this we will use a concept that you should have seen in your prerequisite courses - asymptotic notation.</p>
-      <p>Asymptotic notation is used to compare functions based on their long term rate of growth. Put overly simplistically, when using asymptotic notation, we will determine that the bigger function is the one that has larger output for really big inputs. This means that when comparing functions, we will completely ignore their behavior on <q>small</q> inputs.</p>
+      <p>Asymptotic notation is used to compare functions based on their long term rate of growth. Put overly simplistically, when using asymptotic notation, we will determine that the bigger function is the one that has larger output for really big inputs. This means that when comparing functions, we will completely ignore their behavior on <q>small</q> inputs. (We prefer this because when comparing algorithms, both will likely be reasonable fast on small inputs, so the efficiency difference is most important when inputs become large.)</p>
       <p>In addition to ignoring small inputs, we’ll also ignore constant coefficients of the output. This is because of the peculiar way we selected the running time function for our algorithms. For example, if I only selected the most frequent operation when expressing my running time, but you counted all of the most frequent 3 operations, then it would be misleading to say that your algorithm took 3 times as long just because we counted differently. Because it would get tedious to exactly communicate the exact operations that were counted, and because different computers might take different amounts of time to do the same operation anyway, we’ll have better results by just ignoring constant coefficients so that we’d consider running times that are off by a factor of 3 (for example) to simply be the same running time.</p>
       <p>For now, in this reading, we will only give high-level descriptions of our asymptotic notation. In the next one we’ll work with more precise definitions.</p>
       <ul>
@@ -196,7 +196,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-09 06:55</p>
+        <p>Last updated 2026-01-09 07:41</p>
   </footer>
 </body>
 </html>
