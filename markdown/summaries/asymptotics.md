@@ -14,7 +14,7 @@ In all of these cases, we want to be comparing functions in the way we saw them 
 
 This is the process we want to end up with, but we need definitions that formalize this. This is because we want to be able to use this process even when the functions are not so easy to compare. For example, this process still makes it unclear how we would compare $f(n) = (\log n)^2$ with $g(n)=\sqrt n$.
 
-# Formal Definitions
+# O, $\Omega$, $\Theta$
 
 We now will present the formal definitions of $O$, $\Omega$, and $\Theta$, and discuss why they result in the comparison process above.
 
@@ -34,6 +34,14 @@ Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. 
 
 (Totally optional aside if you want to geek out about math notation with me for a bit. The formal type of $O$, $\Omega$, $\Theta$ themselves is something like "functions mapping functions to sets of functions", and we could write their type as $(\mathbb{N} \rightarrow \mathbb{N}) \rightarrow \mathcal{P}(\mathbb{N} \rightarrow \mathbb{N})$ which would read something like "a function whose domain is functions mapping natural numbers to natural numbers and whose co-domain is the powerset of functions mapping natural numbers to natural numbers".)
 
+## Formal Definitions
+
+Here we present the formal definitions of $O$, $\Omega$, and $\Theta$:
+
+- We define $f(n) \in O(g(n))$ provided that $\exists c>0$ and $\exists n_0\in \mathbb{N}$ such that $\forall n \geq n_0 f(n)\leq c \cdot g(n)$.
+- We define $f(n) \in \Omega(g(n))$ provided that $\exists c>0$ and $\exists n_0\in \mathbb{N}$ such that $\forall n \geq n_0 f(n)\geq c \cdot g(n)$.
+- We define $f(n) \in \Theta(g(n))$ provided that $f(n)\in O(g(n))$ and $f(n)\in \Omega(g(n))$.
+
 ## Intuition
 
 ## Examples
@@ -41,3 +49,5 @@ Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. 
 ## Dropping Constants
 
 ## Dropping Non-Dominant Terms
+
+# Common Misconceptions
