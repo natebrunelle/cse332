@@ -12,7 +12,7 @@ In our [last topic summary](summaries/runningtime.md) we discussed why and how w
 
 In all of these cases, we want to be comparing functions in the way we saw them in our prior courses (cse 123, cse 143, or equivalent). That is, we want our definitions to allow us to compare functions by dropping non-dominant terms, ignoring constants, and then looking only at long-term behavior. This means we would compare $f(n)=11n^2-20n+8$ with $g(n)=\frac{n^3}{10} - 50$ by simplifying $f(n)$ to be $f(n)\approx n^2$ and simplifying $g(n)$ to be $g(n)\approx n^3$, thus concluding that $f(n)=O(g(n))$ or $g(n)=\Omega(f(n))$.
 
-This is the process we want to end up with, but we need definitions that formalize this. This is because we want to be able to use this process even when the functions are not so easy to compare. For example, this process still makes it unclear how we would compare $f(n) = (\log n)^2$ with $g(n)=\sqrt(n)$.
+This is the process we want to end up with, but we need definitions that formalize this. This is because we want to be able to use this process even when the functions are not so easy to compare. For example, this process still makes it unclear how we would compare $f(n) = (\log n)^2$ with $g(n)=\sqrt n$.
 
 # Formal Definitions
 
@@ -22,7 +22,7 @@ Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. 
 
 - **$O(n)$ is the set of all functions which are asymptotically upper bounded by $g(n)=n$**. 
 
-    - Some examples of functions that belong to this set are $n$, $2n$, $0.5\cdot n$, $\sqrt(n)$, $1$, $\log n$, etc.
+    - Some examples of functions that belong to this set are $n$, $2n$, $0.5\cdot n$, $\sqrt n$, $1$, $\log n$, etc.
 
 - **$\Omega(n)$ is the set of all functions which are asymptotically lower bounded by $g(n)=n$**. 
 
