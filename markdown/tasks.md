@@ -216,7 +216,7 @@ The concept check must be submitted by Thursday 1/15. You have until Friday 1/30
 
 ## CC1 Running Time
 
-Concept Check 1 is available in Gradescope! This concept check applies to the running times and asymptotic complexity. This concept check references content covered in class on 1/7 and 1/9. You can additionally view the summaries on [running time](/summaries/runningtime.html) and asymptotic complexity (which is still in the final stages of being written, and so will be posted on 1/9).
+Concept Check 1 is available in Gradescope! This concept check applies to the running times and asymptotic complexity. This concept check references content covered in class on 1/7 and 1/9. You can additionally view the summaries on [running time](/summaries/runningtime.html) and [asymptotic complexity](/summaries/asymptotics.html).
 
 Remember, you have unlimited attempts at concept checks! You'll know the answer is correct when a explanation box pops up explaining the answer to you. Pleaes reach out via Ed, office hours, or in section if you have any questions, concerns, or confusions!
 
