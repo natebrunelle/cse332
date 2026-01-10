@@ -65,9 +65,28 @@ All three of these definitions enable this in the same way. Each definition has 
 
 We want our definitions ot have the property that constant coefficients and non-dominant terms have no impact on the asymptotic growth. In other words, we want a function like $\frac{1}{5}n^2-13n-8$ to be considered asymptotically the same as $20n^2 + 100n + 500$. This behavior is accomplished using the constant value $c$ in the definition.
 
+Let's first look at how $c$ allows us to ignore constant coefficients. Suppose we want to compare $f(n)=5n^3$ to $g(n)=2n^3$. Because our definition of $O$ allows us to multiply $g(n)$ by a $c$, we could pick $c=3$ to conclude $f(n)\leq c \cdot g(n)$, since we would have $5 n^3 \leq 3 \cdot 2 n^3$ and so $f(n)=O(g(n))$. Using the choice of $c=1$ we could show $f(n)= \Omega(g(n))$ since we would have $5n^3 \geq 2n^3$. Together, this means that $f(n)=\Theta(g(n))$. From these examples, we can see that two functions that differ only by a constant coefficient can be shown to grow at the same asymptotic rate using the constant $c$ in the definition. For this reason, we are able to ignore constant coefficients in asymptotic analysis.
 
-### Bringing it all together
+Next let's see how $c$ allows us to ignore non-dominant terms. Intuitively, what we'll see is that adding a non-dominant term makes *less* of a difference asymptotically than changing a constant coefficient on the dominant term. Therefore, since we understand that we can ignore constant coefficients, we can also ignore non-dominant terms. 
+
+Let's see an example of this. Suppose we want to compare $f(n)=2n^2 + 8n + 3$ with $g(n)=n^2$. Let's start by showing that $f(n)=O(g(n))$. To do this we need $f(n)\leq c \cdot g(n)$. To help ourselves out, we'll first identify a new function $f'(n)$ such that $f(n)\leq f'(n)$ and $f'(n)$ differs from $g(n)$ by only a constant coefficient. Let's start with $f(n)=2n^2 + 8n + 3$. For any value of $n \geq 1$ $n^2 \geq n$ and $n^2 \geq 1$ so $2n^2 + 8n + 3 \geq 2n^2 + 8n^2 + 3n^2$ and so $f(n)\leq 13n^2. We can now use $f'(n)=13n^2$, and since that differs from $g(n)$ by only a constant factor, we can conclude $f(n)=O(g(n))$.
+
+Let's now show $f(n)=\Omega(g(n))$ for $f(n)=2n^2 + 8n + 3$ and $g(n)=n^2$. In this case we need $f(n) \geq g(n)$, so for our choice of $f'(n)$ we want $f(n)\geq f'(n)$ and we want $f'(n)$ to differ from $g(n)$ by only a constant factor. In this case we can select $f'(n)=2n^2$ by just dropping the non-dominant terms since they only could increase the value.
+
+
 
 # Example Proofs
+
+Now that we've seen how our definitions operate, let's see some example proofs of $O$, $\Omega$ and $\Theta$. The definitions of $O$ and $\Omega$ require showing that there exists values $c$ and $n_0$ which cause the statements $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ (for $O$) or $\forall n \geq n_0 . f(n)\geq c \cdot g(n)$ (for $\Omega$) to be true. Therefore a complete proof only needs to prove any one choice of $c$ paired with $n_0$, then demonstrate the target inequality holds for every value of $n$ that's at least $n_0$. The important thing to note is that you do not need to justify how or why you selected your $c$ and $n_0$ pair, you just need to defend that they work. In the examples below we'll show you how I (Nathan) would go about identifying the pair, then I'll show you how I would prove that my choice works.
+
+## Big-Oh Proofs
+
+For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and $g(n)$.
+
+### $f(n)=4n^2 + 8n + 10$, $g(n)=\frac{1}{4} n^3$
+
+```
+test test $n^2$
+```
 
 # Common Misconceptions
