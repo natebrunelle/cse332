@@ -124,7 +124,12 @@
       <p>For each of these we’ll show <span class="math inline">f(n)=O(g(n))</span> for different choices of <span class="math inline">f(n)</span> and <span class="math inline">g(n)</span>.</p>
       <h3 id="fn4n2-8n-10-gnfrac14-n3"><span class="header-section-number">3.1.1</span> <span class="math inline">f(n)=4n^2 + 8n + 10</span>, <span class="math inline">g(n)=\frac{1}{4} n^3</span></h3>
       <blockquote>
-      <p>test test <span class="math inline">n^2</span></p>
+      <p><strong>Nathan’s scratch paper</strong> Because we’re showing <span class="math inline">O</span>, we want <span class="math inline">f(n)\leq c \cdot g(n)</span>. Comparing the two functions, <span class="math inline">g(n)</span> seems to have the larger dominant term, so my strategy will be to identify a function <span class="math inline">f&#39;(n)</span> where it’s clear that <span class="math inline">f(n) \leq f&#39;(n)</span> and <span class="math inline">f&#39;(n)\leq g(n)</span>. Specifically, I will pick <span class="math inline">f&#39;(n)</span> to have the form <span class="math inline">k n^2</span> so that it will be easy to compare <span class="math inline">f(n)</span> with <span class="math inline">f&#39;(n)</span> and easy to compare <span class="math inline">f&#39;(n)</span> with <span class="math inline">g(n)</span>. Because for any value of <span class="math inline">n\geq 1</span> we have <span class="math inline">n^2\geq n</span> and <span class="math inline">n^2 \geq 1</span> I can pick <span class="math inline">f&#39;(n)=22n^2</span>, because it’s clear that <span class="math inline">4n^2 + 8n + 10 &lt; 22n^2</span> (by subsituting <span class="math inline">8n^2</span> for <span class="math inline">8n</span> and <span class="math inline">10n^2</span> for <span class="math inline">10</span>).</p>
+      <p>Now we need to get <span class="math inline">f&#39;(n)\leq c\cdot g(n)</span>. We could take two strategies to do this. We could either try to select an <span class="math inline">n_0</span> so that <span class="math inline">c\cdot g(n)</span> <q>overtakes</q> <span class="math inline">f&#39;(n)</span>, or we could select a value of <span class="math inline">c</span> so that this becomes true for all choices of <span class="math inline">n</span> (or we could mix these). To me, it seems easier to select <span class="math inline">c</span>, so I’ll go with that. Since the coefficient within <span class="math inline">f&#39;(n)</span> is <span class="math inline">22</span> and the coefficient in <span class="math inline">g(n)</span> is <span class="math inline">\frac{1}{4}</span>, I’ll pick <span class="math inline">c=88</span> so that <span class="math inline">c\cdot g(n)=22n^3</span>, making it clearly larger that <span class="math inline">f&#39;(n)</span> and therefore larger than <span class="math inline">f(n)</span>.</p>
+      </blockquote>
+      <p>Now we have our selection of <span class="math inline">n_0=1</span> and <span class="math inline">c=88</span>. Let’s use those to show <span class="math inline">f(n)= O(g(n))</span>.</p>
+      <blockquote>
+      <p><strong>Proof</strong>:</p>
       </blockquote>
       <h1 id="common-misconceptions"><span class="header-section-number">4</span> Common Misconceptions</h1>
             </div>
@@ -134,7 +139,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-10 07:50</p>
+        <p>Last updated 2026-01-10 08:18</p>
   </footer>
 </body>
 </html>

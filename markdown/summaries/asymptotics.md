@@ -88,11 +88,70 @@ For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and 
 > **Nathan's scratch paper**
 > Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. Comparing the two functions, $g(n)$ seems to have the larger dominant term, so my strategy will be to identify a function $f'(n)$ where it's clear that $f(n) \leq f'(n)$ and $f'(n)\leq g(n)$. Specifically, I will pick $f'(n)$ to have the form $k n^2$ so that it will be easy to compare $f(n)$ with $f'(n)$ and easy to compare $f'(n)$ with $g(n)$. Because for any value of $n\geq 1$ we have $n^2\geq n$ and $n^2 \geq 1$ I can pick $f'(n)=22n^2$, because it's clear that $4n^2 + 8n + 10 < 22n^2$ (by subsituting $8n^2$ for $8n$ and $10n^2$ for $10$). 
 > 
->Now we need to get $f'(n)\leq c\cdot g(n)$. We could take two strategies to do this. We could either try to select an $n_0$ so that $c\cdot g(n)$ "overtakes" $f'(n)$, or we could select a value of $c$ so that this becomes true for all choices of $n$ (or we could mix these). To me, it seems easier to select $c$, so I'll go with that. Since the coefficient within $f'(n)$ is $22$ and the coefficient in $g(n)$ is $\frac{1}{4}$, I'll pick $c=88$ so that $c\cdot g(n)=22n^3$, making it clearly larger that $f'(n)$ and therefore larger than $f(n)$.
+>Now we need to get $f'(n)\leq c\cdot g(n)$. We could take two strategies to do this. We could either try to select an $n_0$ so that $c\cdot g(n)$ "overtakes" $f'(n)$, or we could select a value of $c$ so that this becomes true for all choices of $n$ (or we could mix these). To me, it seems easier to select $c$, so I'll go with that. Since the coefficient within $f'(n)$ is $22$ and the coefficient in $g(n)$ is $\frac{1}{4}$, I'll pick $c=88$ so that $c\cdot g(n)=22n^3$, making it clearly larger than $f'(n)$ and therefore larger than $f(n)$.
 
 Now we have our selection of $n_0=1$ and $c=88$. Let's use those to show $f(n)= O(g(n))$.
 
-> **Proof**:
+> **Proof**: $f(n) = O(g(n))$
+> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=88$. We now need to show that whenever $n\geq 1$ we have that $4n^2+8n+10 \leq 22\cdot \frac{1}{4} n^3$. Observe that for $n \geq 1$ we have that $n^2 \geq 1$ and also $n^2 \geq n$. therefore $4n^2 + 8n + 10 \leq 4n^2 + 8n^2 + 10n^2 = 22n^2$. We can also see for $n\geq 1$ tht $n^3 \geq n^2$ and so $22n^2 \leq 22n^3 = g(n)$. Therefore we have $f(n)\leq c\cdot g(n)$, and we can conclude $f(n) = O(g(n))$.
+
+
+### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
+
+> **Nathan's scratch paper**
+> Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. We can't exactly use the same strategy as before to convert all pieces $f(n)$ to like terms because we're subtracting $8n$ (the argument we used above to do this relied on the fact that replacing $n^2$ gave us a larger value, but replacing $n^2$ for $n$ here gives us a smaller value). But keeping in mind that if $f(n) \leq f'(n)$ and $f'(n)\leq c\cdot g(n)$, it's sufficient to substitute $f(n)$ with something larger. In this case, we can just drop the $-8n$ since it only makes $f(n)$ smaller. In other words, it will be good enough to show $4n^2+10 \leq c \cdot g(n)$. Now we can use the same trick as the previous example, and let $c=14$ with $n_0=1$.
+
+Now we have our selection of $n_0=1$ and $c=14$. Let's use those to show $f(n)= O(g(n))$.
+
+> **Proof**: $f(n) = O(g(n))$
+> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=14$. We now need to show that whenever $n\geq 1$ we have that $4n^2-8n+10 \leq 14\cdot 2 n^2$. Because $4n^2-8n+10 \leq 4n^2+10$, it's sufficient to show $4n^2+10 \leq 14\cdot 2 n^2$. We proceed by algebra:
+> $4n^2+10 \leq 14\cdot 2 n^2$
+> $4n^2+10 \leq 28 n^2$
+> $10 \leq 24n^2$
+> The last expression is true for all $n>1$ because $10 \leq 24(1)^2$, and the right hand side increases with $n$ whereas the left hand side is constant.
+> Therefore we have $f(n)\leq c\cdot g(n)$, and we can conclude $f(n) = O(g(n))$.
+
+Notice for this last proof that exactly the same argument would have worked with $c=5$. For the sake of the proof, though, we don't care which choices of $c$ and $n_0$ are used so long as they're successful. If you want to try to fine the smallest choices, you're welcome to, but all we care about is a successful proof.
+
+## Big-Omega Proofs
+
+Next we'll show $f(n)=\Omega(g(n))$. These proofs will operate in exactly the same way, we just need our inequality to face the opposite direction.
+
+
+### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
+
+> **Nathan's scratch paper**
+> Because we're showing $\Omega$, we want $f(n)\geq c \cdot g(n)$. Let's try to use the strategy we applied before, which is to get more things into like terms while only making $f(n)$ smaller. In this case, dropping the $10$ makes it smaller, so we now have $4n^2-8n$. Now we *could* try to just replace $n$ with $n^2$ since that would make the expression smaller ($-8n^2$ is smaller than $-8n$). However, that makes our expression negative, and the output needs to be a natural number by definition of $\Omega$. Instead, we can now use $n_0$. The insight we'll apply is that for large enough values of $n$ we can be sure that $-8n \geq -n^2$, so we can replace $4n^2-8n$ with $3n^2$ to get a smaller function. All we need to do now is figure out how large $n$ needs to be before this occurs. Here, we can use the value $8$, since once $n > 8$ multiplying by $n$ gives a larger value than multiplying by $8$.
+> At this point we have that $f(n)=4n^2-8n+10 \geq 3n^2$, and clearly $3n^2 \geq 2n^2=g(n)$, so everything should work out for $c=1$ and $n_0=8$. 
+
+
+> **Proof**: $f(n) = \Omega(g(n))$
+> By definition of $\Omega$, it's sufficient to show $\forall n \geq n_0 . f(n)\geq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=8$ and $c=1$. We now need to show that whenever $n\geq 8$ we have that $4n^2-8n+10 \geq 1\cdot 2 n^2$. Certainly $4n^2-8n+10 \geq 4n^2-8n$, so it's sufficient to show $4n^2-8n \geq 2n^2$. We can proceed using algebra:
+> $4n^2-8n \geq 2n^2$
+> $2n^2-4n \geq n^2$
+> $4n-8 \geq n$
+> $3n-8 \geq 0$
+> $3n \geq 8$
+> Note that whenever $n\geq 8$ we have that $3n \geq 8$, so we have $f(n) \geq c\cdot g(n)$ and therefore $f(n) = \Omega(g(n))$.
+
+Again, we could have chosen a smaller value for $n_0$ and the same proof would still work (namely, we could have chosen 3), but we don't care! Our choice was still sucessful!
+
+## Big-Theta Proofs
+
+Next we'll show $f(n)=\Theta(g(n))$. To do this, we just have to do one of each of the proofs above! We need to show both that $f(n)=O(g(n))$ and $f(n)=\Omega(g(n))$. Importantly, these two proofs can be done completely independently. That is, we don't need to use the same choice of $c$ and $n_0$ for each, we can use different ones!
+
+
+### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
+
+> **Proof**: $f(n) = \Theta(g(n))$
+> We showed above that $f(n) = O(g(n))$ and that $f(n)=\Omega(g(n))$, therefore $f(n) = \Theta(g(n))$.
 
 
 # Common Misconceptions
+
+There are many misconceptions that pop up with $O$, $\Omega$, and $\Theta$, and many of these misconceptions are seeded by or reinforced by various problem solving resources that are broadly available (such as interview prep resources, etc.). Below we have a table of misconceptions, and a discussion of how to correct them.
+
+|   Misconception   |  Discussion | 
+| ----------------- | ----------- |
+| $O$ means "worst case" and $\Omega$ means "best case" | This is probably *the* most common misconception. I believe that this stems from the (correct) understanding that $O$ means "less than or equal to" and $\Omega$ means "greater than or equal to". The misconception comes in, though, because of a misunderstanding of what exactly we're comparing. When using $O$ and $\Omega$ we're comparing two functions, not necessarily two running times. So if we say that the worst case running time of our algorithm is $O(n)$ we're saying "The function which we identified using a worst case runtime analysis is asymptotically upper bounded by the function $g(n)=n$." We are not saying "the algorithm takes up to linear time to run". As such, it totally makes sense to say something like "the best case running time of this algorithm is $O(n)$" because in that case we're saying that we performed a best case analysis on the algorithm, arrived at some function, and found that the resulting function was upper bounded by the function $g(n)=n$.
+| Asymptotic analysis is the act of placing a running time into one of several "buckets" | There are relatively few running times that comprise an overwhelming majority of practical algorithms. These include constant, logarithmic, linear, log-linear, quadratic, cubic, and exponential. Those, though, are not the only running times possible. Fundamentally, asymptotic analysis is a tool for comparing functions. As such, we can define $O(g(n))$ for *any* function $g(n)$. For example, $O(2n)$ totally makes sense (it just so happens to be the same set as $O(n)$), as does $O(n^{(log n)^2}).
