@@ -85,8 +85,7 @@ For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and 
 
 ### $f(n)=4n^2 + 8n + 10$, $g(n)=\frac{1}{4} n^3$
 
-```
-test test $n^2$
-```
+> test test $n^2$
+
 
 # Common Misconceptions
