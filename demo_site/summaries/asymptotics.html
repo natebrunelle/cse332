@@ -183,7 +183,11 @@
       </tr>
       <tr class="even">
       <td>Asymptotic analysis is the act of placing a running time into one of several <q>buckets</q></td>
-      <td>There are relatively few running times that comprise an overwhelming majority of practical algorithms. These include constant, logarithmic, linear, log-linear, quadratic, cubic, and exponential. Those, though, are not the only running times possible. Fundamentally, asymptotic analysis is a tool for comparing functions. As such, we can define <span class="math inline">O(g(n))</span> for <em>any</em> function <span class="math inline">g(n)</span>. For example, <span class="math inline">O(2n)</span> totally makes sense (it just so happens to be the same set as <span class="math inline">O(n)</span>), as does $O(n^{(log n)^2}).</td>
+      <td>There are relatively few running times that comprise an overwhelming majority of practical algorithms. These include constant, logarithmic, linear, log-linear, quadratic, cubic, and exponential. Those, though, are not the only running times possible. Fundamentally, asymptotic analysis is a tool for comparing functions. As such, we can define <span class="math inline">O(g(n))</span> for <em>any</em> function <span class="math inline">g(n)</span>. For example, <span class="math inline">O(2n)</span> totally makes sense (it just so happens to be the same set as <span class="math inline">O(n)</span>), as does <span class="math inline">O(n^{(log n)^2})</span>.</td>
+      </tr>
+      <tr class="odd">
+      <td>Either <span class="math inline">f(n)=O(g(n))</span> or <span class="math inline">f(n)=\Omega(g(n))</span></td>
+      <td>Earlier we drew an analogy between asymptotic analysis of functions and comparisons of numbers when we discussed the intuition for the definition of <span class="math inline">\Theta</span>. There are some ways, though, where the comparisons of functions behave in ways that are quite different from comparisons of numbers. For example, for any pair of numbers <span class="math inline">x</span> and <span class="math inline">y</span> at least one of the following statements will be true: <span class="math inline">x \geq y</span> or <span class="math inline">y \geq x</span>. The same cannot be said of comparing functions. That is, we can find functions <span class="math inline">f(n)</span> and <span class="math inline">g(n)</span> such that neither <span class="math inline">f(n)=O(g(n))</span> nor <span class="math inline">f(n)=\Omega(g(n))</span>. For example, we can consider <span class="math inline">f(n)= n^2 \sin(n)</span> and <span class="math inline">g(n)=n</span>. For these functions, there is never any point where one function is forevermore greater that the other. This is because <span class="math inline">sin(n)</span> is always going to be continuously moving between <span class="math inline">0</span> and <span class="math inline">1</span>, making <span class="math inline">f(n)</span> continuously moving between <span class="math inline">0</span> and <span class="math inline">n^2</span>. This means that for any choice of <span class="math inline">n_0</span> and any choice of <span class="math inline">c&gt;0</span> we’ll be able to find a value of <span class="math inline">n&gt;n_0</span> such that <span class="math inline">f(n)&gt;c\cdot g(n)</span> (e.g. an input where <span class="math inline">\sin(n)\approx 1</span>) and one such that <span class="math inline">f(n)&lt;c \cdot g(n)</span> (e.g. an input where $(n)0).</td>
       </tr>
       </tbody>
       </table>
@@ -194,7 +198,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-10 12:34</p>
+        <p>Last updated 2026-01-10 12:46</p>
   </footer>
 </body>
 </html>
