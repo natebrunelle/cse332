@@ -110,6 +110,7 @@
       <p>Another property we mentioned that these definitions should have is that they ignore small inputs. This was important because we might have an algorithm which is very fast for small inputs, but then scales poorly as the input size grows. In such a situation we would likely prefer the algorithm which scales better, so we hope to ignore these little input sizes.</p>
       <p>All three of these definitions enable this in the same way. Each definition has the requirement that <span class="math inline">\exists n_0\in \mathbb{N}</span>. We can interpret this <span class="math inline">n_0</span> (pronounced <q>n sub zero</q> or <q>n naught</q>) as the size where we stop ignoring. In other words, we’re going to ignore all input sizes smaller than this chosen value <span class="math inline">n_0</span>. The definitions enforce this ignoring by conditioning <span class="math inline">f(n)\leq c \cdot g(n)</span> and <span class="math inline">f(n)\geq c \cdot g(n)</span> on <span class="math inline">n \geq n_0</span>. In other words, the definitions only need the target inequality to hold for values of <span class="math inline">n</span> that are larger than <span class="math inline">n_0</span>, all the smaller values are ignored.</p>
       <h3 id="dropping-constants-and-non-dominant-terms"><span class="header-section-number">2.2.3</span> Dropping Constants and Non-Dominant Terms</h3>
+      <p>We want our definitions ot have the property that constant coefficients and non-dominant terms have no impact on the asymptotic growth. In other words, we want a function like <span class="math inline">\frac{1}{5}n^2-13n-8</span> to be considered asymptotically the same as <span class="math inline">20n^2 + 100n + 500</span>.</p>
       <h3 id="bringing-it-all-together"><span class="header-section-number">2.2.4</span> Bringing it all together</h3>
       <h1 id="example-proofs"><span class="header-section-number">3</span> Example Proofs</h1>
       <h1 id="common-misconceptions"><span class="header-section-number">4</span> Common Misconceptions</h1>
@@ -120,7 +121,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-09 11:06</p>
+        <p>Last updated 2026-01-09 11:24</p>
   </footer>
 </body>
 </html>

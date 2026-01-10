@@ -31,19 +31,19 @@ For this exercise, you will need:
 - [Specification](https://docs.google.com/document/d/e/2PACX-1vREnpEvlsTQpkNX5wwHHIpAvwnPKN7sG-GQFsek39qXZj4QOng2ZxMhfJOZRec3jw/pub) - which contains all instructions for what to do for this assignment.
 - [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
 
-<!--
+
 ## Exercise 1
 
 The objectives of this exercise are to:
 
 - Gain experience identifying running times of given code
 - Use the formal definitions of big-Oh, big-Omega, and big-Theta
-- See examples of what changes to function do/don't change their asymptotic behavior
+- See examples of what changes to functions do/don't change their asymptotic behavior
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
 
-
+<!--
 ## Exercise 2
 
 The objectives of this exercise are to:
@@ -203,7 +203,7 @@ We do not intend for these to be time-consuming, but instead hope that they will
 
 ## CC0 Getting to know you
 
-Concept check 0 is available on the course web page! There is not specific course material referenced by this concept check. Instead, this concept check is intended to do the following:
+Concept check 0 is available in Gradescope! There is not specific course material referenced by this concept check. Instead, this concept check is intended to do the following:
 
 1. Introduce you to how concept checks will work in this course
 1. Give you an opportunity to introduce yourself to us by providing some info
@@ -213,8 +213,15 @@ Concept check 0 is available on the course web page! There is not specific cours
 The concept check must be submitted by Thursday 1/15. You have until Friday 1/30 to complete the "meet the staff" activity.
 
 
+
+## CC1 Running Time
+
+Concept Check 1 is available in Gradescope! This concept check applies to the running times and asymptotic complexity. This concept check references content covered in class on 1/7 and 1/9. You can additionally view the summaries on [running time](/summaries/runningtime.html) and asymptotic complexity (which is still in the final stages of being written, and so will be posted on 1/9).
+
+Remember, you have unlimited attempts at concept checks! You'll know the answer is correct when a explanation box pops up explaining the answer to you. Pleaes reach out via Ed, office hours, or in section if you have any questions, concerns, or confusions!
+
+
 <!--
-    CC1 Running Time
 
     CC2 Heaps
 
