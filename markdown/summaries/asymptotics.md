@@ -85,7 +85,14 @@ For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and 
 
 ### $f(n)=4n^2 + 8n + 10$, $g(n)=\frac{1}{4} n^3$
 
-> test test $n^2$
+> **Nathan's scratch paper**
+> Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. Comparing the two functions, $g(n)$ seems to have the larger dominant term, so my strategy will be to identify a function $f'(n)$ where it's clear that $f(n) \leq f'(n)$ and $f'(n)\leq g(n)$. Specifically, I will pick $f'(n)$ to have the form $k n^2$ so that it will be easy to compare $f(n)$ with $f'(n)$ and easy to compare $f'(n)$ with $g(n)$. Because for any value of $n\geq 1$ we have $n^2\geq n$ and $n^2 \geq 1$ I can pick $f'(n)=22n^2$, because it's clear that $4n^2 + 8n + 10 < 22n^2$ (by subsituting $8n^2$ for $8n$ and $10n^2$ for $10$). 
+> 
+>Now we need to get $f'(n)\leq c\cdot g(n)$. We could take two strategies to do this. We could either try to select an $n_0$ so that $c\cdot g(n)$ "overtakes" $f'(n)$, or we could select a value of $c$ so that this becomes true for all choices of $n$ (or we could mix these). To me, it seems easier to select $c$, so I'll go with that. Since the coefficient within $f'(n)$ is $22$ and the coefficient in $g(n)$ is $\frac{1}{4}$, I'll pick $c=88$ so that $c\cdot g(n)=22n^3$, making it clearly larger that $f'(n)$ and therefore larger than $f(n)$.
+
+Now we have our selection of $n_0=1$ and $c=88$. Let's use those to show $f(n)= O(g(n))$.
+
+> **Proof**:
 
 
 # Common Misconceptions
