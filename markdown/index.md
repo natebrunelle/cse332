@@ -9,6 +9,7 @@ Handy links:
 - [Ed Board](https://edstem.org/us/courses/90035)
 - [Lecture Recordings](https://canvas.uw.edu/courses/1861793/external_tools/21130)
 - [Extension Request](https://forms.gle/XeR2iRYCcK54MGCB6) (requires login with your  CSE id)
+- [Math Identities Quick Reference](/files/math_identities_quick_reference.pdf) (for keeping commonly-used prerequisite content handy)
 
 # Course Description
 
