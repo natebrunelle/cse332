@@ -99,7 +99,37 @@ For a node at index $i$, here's how we can calculate the index of the following 
 
 ## Insert and Extract Algorithms
 
+Since we've fully described how we're representing our data, let's discuss our algorithms for the priority queue ADT operations. 
 
+### Insert
+
+When inserting an element, the structure property of heaps designates a unique position that must be created in the heap. Namely, if the last level of the heap is not full then after adding a new item the new position must be the leftmost available slot of that last level. If the last level of the heap is full, then the new position must be the leftmost on the next level.
+
+While the structure property designates a specific new position, we cannot necessarily just put the new item there. The heap property requires each node's priority be less than or equal to its children. It could be that the newly-added item has a priority smaller than the parent of the new position we were required to create. In this case, we must rearrange values of the heap in order to maintain the heap property.
+
+The idea of our algorithm is as follows:
+1. Place the new item at the position dictated by the structure property
+1. Compare that item's priority with that of it's parent. If the new item has a lower priority than its parent then swap the new item's position with that of its parent.
+1. Repeat the previous step (comare the new item with its parent, swap less than) until either the new item's priority value is greater than or equal to its parent, or the new item becomes the new root.
+
+Keeping in mind that the tree itself is represented using an array, this results in the following near-Java code:
+
+```
+public void insert(T item){
+    if(this.size() == arr.length){
+        resize();  // replace with a new larger array, copy over the old array's contents
+    }
+    arr[size+1] = item; // because we're 1-indexing, we need to use index size+1
+    size++;
+    int currIndex = size; // the index currently holding the new item
+    while(currIndex//2 > 0 && arr[currIndex].priority < arr[currIndex//2]){ // as long as the new value is not the root and it violates the heap property with its parent
+        T oldParent = arr[currIndex//2]; // save the parent
+        arr[currIndex//2]= arr[currIndex]; // move the new item to the parent's position
+        arr[currIndex] = oldParent; // move the parent to the new item's former position
+        currIndex = currIndex // 2; // update the index of the new item
+    }
+}
+```
 
 ### Percolate Up and Down
 
