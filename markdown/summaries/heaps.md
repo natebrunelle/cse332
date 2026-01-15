@@ -94,7 +94,7 @@ For a node at index $i$, here's how we can calculate the index of the following 
 
 - Its left child: $2i$
 - Its right child: $2i+1$
-- Its parent $$\lfloor \frac{i}{2}\rfloor$$
+- Its parent $\lfloor \frac{i}{2}\rfloor$
 - Its left sibling: $i-1$ (this requires that $i$ is itself a right child)
 - Its right sibling: $i+1$ (this requires that $i$ is itself a left child)
 
