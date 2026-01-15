@@ -118,10 +118,13 @@
       <li>This shape will help us to achieve the <span class="math inline">\Theta(\log n)</span> worst case running times for insert and extract</li>
       <li>This shape will help us to represent the tree using an array</li>
       </ol>
-      <p>To help understand the requirements, here are a few <em>valid</em> tree shapes:</p>
-      <p>TODO!</p>
-      <p>Here are a few trees that are <em>not</em> a valid shape:</p>
-      <p>TODO!</p>
+      <!--To help understand the requirements, here are a few *valid* tree shapes:
+      
+      TODO!
+      
+      Here are a few trees that are *not* a valid shape:
+      
+      TODO!-->
       <h2 id="somewhat-ordering-the-array"><span class="header-section-number">2.2</span> Somewhat Ordering the Array</h2>
       <p>In addition to requiring a particular shape to the tree, heaps also require restrictions on where certain values may appear. For a min heap (i.e. one where the most important element has the lowest priority value) the following property must be true of every node in the tree:</p>
       <p><strong>Min Heap Property</strong>: For every node in the tree, the priority value of that node must be less than or equal to that of its children.</p>
@@ -130,8 +133,9 @@
       <h2 id="the-tree-representation-using-an-array"><span class="header-section-number">2.3</span> The Tree Representation Using an Array</h2>
       <p>Now let’s discuss how we can represent our heap using an array. When you learned about binary trees in your prerequisite course, you likely used nodes where each stored the value it contains and then had a reference to two other nodes representing its left and right children. For heaps we will store our values in an array, and then identify a node’s left and right children by doing arithmetic on array indices.</p>
       <p>To represent our heap as an array we will leverage the heap structure property. The structure property is so strict that all trees of the same size <em>must</em> have the same shape. This is because there is a unique position that must be added to accommodate that new node. To represent our tree using an array, we will designate that the position added when adding the <span class="math inline">i</span>th node will be stored at index <span class="math inline">i</span>. In summary, we can identify each node’s index by <q>counting off</q> one level at a time, and then left-to-right within a level. The structure property insures that this assignment will never skip nodes and will never skip array indices. We will always start the <q>counting off</q> from the root. We could decide to start that count with the number <span class="math inline">0</span> (thereby putting the root at index <span class="math inline">0</span> of the array), however the arithmetic we’ll need to apply to the array indices in order to navigate the tree is a bit easier if we start of with <span class="math inline">1</span> instead (thereyby not using index <span class="math inline">0</span> of the array at all).</p>
-      <p>Here’s an example of how we can store a heap using an array:</p>
-      <p>TODO</p>
+      <!--Here's an example of how we can store a heap using an array:
+      
+      TODO-->
       <p>For a node at index <span class="math inline">i</span>, here’s how we can calculate the index of the following other nodes in relation to <span class="math inline">i</span>:</p>
       <ul>
       <li>Its left child: <span class="math inline">2i</span></li>
@@ -236,7 +240,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-15 14:57</p>
+        <p>Last updated 2026-01-15 14:58</p>
   </footer>
 </body>
 </html>
