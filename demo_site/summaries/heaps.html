@@ -74,12 +74,16 @@
       <p>In this section we introduced a new ADT called a <em>priority queue</em>. As a reminder, the queue ADT allows for insertion and removal where the only item that may be removed is the least frequently added (yielding the <q>first in first out</q> behavior). In this way, a queue operates like a checkout line at a store where each shopper joins the line behind the person who arrived before them so that the one who had been there the longest is the next to be served.</p>
       <p>For a priority queue, instead of removing the least frequently added item, we will remove the most important item. We can think of this as a line where more important people are allowed to cut in front of less important people. For example, in an emergency room someone with an urgent need would see a doctor before someone with a less serious condition. In this case the urgency of the patient’s condition would determine the order that we service those waiting.</p>
       <p>With this motivation, here’s how we’ll define the priority queue ADT:</p>
-      <pre><code>- Notion: A collection of items along with their priority levels
-      - Operations:
-          - insert: adds a new element into the priority queue along with a given priority value
-          - extract: deletes and returns the most important element according to its priority value
-          - increaseKey: changes the priority value of the given element to make it larger
-          - decreaseKey: changes the priority value of the given element to make it smaller</code></pre>
+      <ul>
+      <li>Notion: A collection of items along with their priority levels</li>
+      <li>Operations:
+      <ul>
+      <li>insert: adds a new element into the priority queue along with a given priority value</li>
+      <li>extract: deletes and returns the most important element according to its priority value</li>
+      <li>increaseKey: changes the priority value of the given element to make it larger</li>
+      <li>decreaseKey: changes the priority value of the given element to make it smaller</li>
+      </ul></li>
+      </ul>
       <p><strong>Convention</strong>: By convention for priority queues we understand the item with the <em>smallest</em> priority value to be the <q>most important</q>, and it is therefore what gets returned by the extract operation. This comes from the idea that priorities are communicated as rankings in the English language, and so saying <q>you’re my number one priority</q> is saying <q>you’re the most important to me</q>. We can also define priority queues so that the item with the largest priority value is the most important with only trivial changes. Because of this convention, though, all the examples below consider the smaller priority values more important.</p>
       <h2 id="priority-queues-using-lists"><span class="header-section-number">1.1</span> Priority Queues Using Lists</h2>
       <p>Next we can look at some examples of data structures for priority queues. With the queue ADT, we were able to effectively use list-like approaches for designing out data structures, so let’s try that same thing here. This can give us to better understand the challenges of creating a priority queue data structure, and help us to see what we might need to do to improve upon some relatively more straight forward approaches.</p>
@@ -143,12 +147,12 @@
       <p>Keeping in mind that the tree itself is represented using an array, this results in the following near-Java code:</p>
       <pre><code>public void insert(T item){
           if(this.size() == arr.length){
-              resize();  // replace with a new larger array, copy over the old array&#39;s contents
+              resize();  // replace with a larger array, copy over the contents
           }
-          arr[size+1] = item; // because we&#39;re 1-indexing, we need to use index size+1
+          arr[size+1] = item; // we&#39;re 1-indexing so we need to use size+1
           size++;
-          int currIndex = size; // the index currently holding the new item
-          while(currIndex//2 &gt; 0 &amp;&amp; arr[currIndex].priority &lt; arr[currIndex//2]){ // as long as the new value is not the root and it violates the heap property with its parent
+          int currIndex = size; // tindex currently holding the new item
+          while(currIndex//2 &gt; 0 &amp;&amp; arr[currIndex].priority &lt; arr[currIndex//2]){ // until the new item is either the root or its priority is larger than its parent&#39;s
               T oldParent = arr[currIndex//2]; // save the parent
               arr[currIndex//2]= arr[currIndex]; // move the new item to the parent&#39;s position
               arr[currIndex] = oldParent; // move the parent to the new item&#39;s former position
@@ -166,7 +170,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-15 13:14</p>
+        <p>Last updated 2026-01-15 13:25</p>
   </footer>
 </body>
 </html>

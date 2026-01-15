@@ -124,12 +124,24 @@ public void insert(T item){
     int currIndex = size; // tindex currently holding the new item
     while(currIndex//2 > 0 && arr[currIndex].priority < arr[currIndex//2]){ // until the new item is either the root or its priority is larger than its parent's
         T oldParent = arr[currIndex//2]; // save the parent
-        arr[currIndex//2]= arr[currIndex]; // move the new item to the parent's position
-        arr[currIndex] = oldParent; // move the parent to the new item's former position
-        currIndex = currIndex // 2; // update the index of the new item
+        arr[currIndex//2]= arr[currIndex]; // move item to the parent's position
+        arr[currIndex] = oldParent; // move the parent to item's former position
+        currIndex = currIndex // 2; // update the index of item
     }
 }
 ```
+
+### Extract
+
+When extracting, the priority queue ADT requires that the item in the root of the heap be the one removed. However, the structure property of the heap requires that the position that be removed from the tree is the right-most node on the bottom-most level. In order to reconcile this, we will take a similar approach to what we saw with insert -- we will first make a change to satisfy the structure property, and then we'll rearrange values to satisfy the heap property. So what we'll the take the right-most item of the last level (i.e. the item in the position that must be eliminated), move that to become the new root (eliminating the item at the root, so that the tree contains all the correct elements), and then swap the item we just moved with its children until we've restored the heap property. 
+
+Here are the overall steps:
+
+1. Save the value of the current root
+2. Move the item in the last index of the array to index 1 (overwriting and taking the place of the old root)
+3. Compare the new roots priority with that of its children. If any child has a smaller priority than the parent, swap the parent with the smaller child.
+4. Repeat the previous step (if smaller than either child, swap with smaller child) until either the value we're moving is smaller than both of its children, or until it becomes a leaf in the tree.
+
 
 ### Percolate Up and Down
 
