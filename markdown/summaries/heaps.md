@@ -60,13 +60,13 @@ There are two motives for this:
 1. This shape will help us to achieve the $\Theta(\log n)$ worst case running times for insert and extract
 1. This shape will help us to represent the tree using an array
 
-To help understand the requirements, here are a few *valid* tree shapes:
+<!--To help understand the requirements, here are a few *valid* tree shapes:
 
 TODO!
 
 Here are a few trees that are *not* a valid shape:
 
-TODO!
+TODO!-->
 
 ## Somewhat Ordering the Array
 
@@ -84,9 +84,9 @@ Now let's discuss  how we can represent our heap using an array. When you learne
 
 To represent our heap as an array we will leverage the heap structure property. The structure property is so strict that all trees of the same size *must* have the same shape. This is because there is a unique position that must be added to accommodate that new node. To represent our tree using an array, we will designate that the position added when adding the $i$th node will be stored at index $i$. In summary, we can identify each node's index by "counting off" one level at a time, and then left-to-right within a level. The structure property insures that this assignment will never skip nodes and will never skip array indices. We will always start the "counting off" from the root. We could decide to start that count with the number $0$ (thereby putting the root at index $0$ of the array), however the arithmetic we'll need to apply to the array indices in order to navigate the tree is a bit easier if we start of with $1$ instead (thereyby not using index $0$ of the array at all).
 
-Here's an example of how we can store a heap using an array:
+<!--Here's an example of how we can store a heap using an array:
 
-TODO
+TODO-->
 
 For a node at index $i$, here's how we can calculate the index of the following other nodes in relation to $i$:
 
