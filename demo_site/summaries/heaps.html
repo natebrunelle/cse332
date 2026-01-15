@@ -144,7 +144,12 @@
       <h3 id="insert"><span class="header-section-number">2.4.1</span> Insert</h3>
       <p>When inserting an element, the structure property of heaps designates a unique position that must be created in the heap. Namely, if the last level of the heap is not full then after adding a new item the new position must be the leftmost available slot of that last level. If the last level of the heap is full, then the new position must be the leftmost on the next level.</p>
       <p>While the structure property designates a specific new position, we cannot necessarily just put the new item there. The heap property requires each node’s priority be less than or equal to its children. It could be that the newly-added item has a priority smaller than the parent of the new position we were required to create. In this case, we must rearrange values of the heap in order to maintain the heap property.</p>
-      <p>The idea of our algorithm is as follows: 1. Place the new item at the position dictated by the structure property 1. Compare that item’s priority with that of it’s parent. If the new item has a lower priority than its parent then swap the new item’s position with that of its parent. 1. Repeat the previous step (comare the new item with its parent, swap less than) until either the new item’s priority value is greater than or equal to its parent, or the new item becomes the new root.</p>
+      <p>The idea of our algorithm is as follows:</p>
+      <ol type="1">
+      <li>Place the new item at the position dictated by the structure property</li>
+      <li>Compare that item’s priority with that of it’s parent. If the new item has a lower priority than its parent then swap the new item’s position with that of its parent.</li>
+      <li>Repeat the previous step (comare the new item with its parent, swap less than) until either the new item’s priority value is greater than or equal to its parent, or the new item becomes the new root.</li>
+      </ol>
       <p>Keeping in mind that the tree itself is represented using an array, this results in the following near-Java code:</p>
       <pre><code>public void insert(T item){
           if(this.size() == arr.length){
@@ -180,7 +185,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-15 13:41</p>
+        <p>Last updated 2026-01-15 13:44</p>
   </footer>
 </body>
 </html>

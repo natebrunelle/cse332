@@ -113,6 +113,7 @@ The idea of our algorithm is as follows:
 1. Compare that item's priority with that of it's parent. If the new item has a lower priority than its parent then swap the new item's position with that of its parent.
 1. Repeat the previous step (comare the new item with its parent, swap less than) until either the new item's priority value is greater than or equal to its parent, or the new item becomes the new root.
 
+<!--
 Keeping in mind that the tree itself is represented using an array, this results in the following near-Java code:
 
 ```
@@ -131,6 +132,7 @@ public void insert(T item){
     }
 }
 ```
+-->
 
 ### Extract
 
@@ -139,17 +141,91 @@ When extracting, the priority queue ADT requires that the item in the root of th
 Here are the overall steps:
 
 1. Save the value of the current root
-2. Move the item in the last index of the array to index 1 (overwriting and taking the place of the old root)
-3. Compare the new roots priority with that of its children. If any child has a smaller priority than the parent, swap the parent with the smaller child.
-4. Repeat the previous step (if smaller than either child, swap with smaller child) until either the value we're moving is smaller than both of its children, or until it becomes a leaf in the tree.
+1. Move the item in the last index of the array to index 1 (overwriting and taking the place of the old root)
+1. Compare the new roots priority with that of its children. If any child has a smaller priority than the parent, swap the parent with the smaller child.
+1. Repeat the previous step (if smaller than either child, swap with smaller child) until either the value we're moving is smaller than both of its children, or until it becomes a leaf in the tree.
+1. Return the saved value of the original root 
 
+We'll leave the java code for extract for you to draft as part of your homework.
 
-### Percolate Up and Down
 
 
 ### Running time analysis
 
+Now let's look at the running time of these operations. When identifying the running time, we will use the number of items currently in the heap as our measure for input size (i.e. this will be the value $n$ in our running time function). To measure the running time we will count comparisons (an operation where we compare the priorities of two items in the heap to detect which is larger/smaller).
+
+When inserting, in the worst case the newly added item will become the new root of the heap. In this case the item will be compared to each of its ancestors (nodes along the path from the root to the original location of the new node) exactly once. This means that the number of comparisons will be linear in the height of the tree.
+
+We see a similar story when extracting. In the worst case the item moved to the root will end up back on the deepest level of the heap. In this case the item will be compared to each node along the path from the root to the final destination, plus each sibling of those nodes. This means that the number of comparisons will again be linear in the height of the tree (this time it will be 2 times the height of the tree).
+
+To determine our worst case running time for both algorithms, all we need to do now is determine the height of the tree relative to the number of items the heap contains. To do this, let's begin by approaching this in the opposite direction. We'll start by fixing the height of the tree, then using that to identify how many items might be in the heap.
+
+Suppose we have a heap that has height $h$. Because of the structure property, we know that all of the first $h-1$ levels must be completely full. A binary tree with $h-1$ levels, all completely full, will contain exactly $2^{h}-1$ nodes (given by the geometric series $1+2+4+8+16+...+2^{h-1}$). The final layer may then have between $1$ and $2^h$ nodes in the tree. This means that the number of nodes in a tree of height $h$ must be between $2^h$ and $2^{h+1}$. 
+
+We can this use this observation to derive the height from the number of nodes. Suppose we have $n$ nodes. We can identify an upper bound on the height of the tree by finding the smallest value of $h$ such that $n\leq 2^h$. Solving for $h$ we have $h = \lceil log_2(n) \rceil$. This means that the height of a heap is $\Theta(\log(n))$, where $n$ is the number of items it contains.
+
+Finally, we can see that because each of insert and extract are linear in terms of the height of the tree, their running times must be worst case $\Theta(\log n)$.
+
+### Percolate Up and Down
+
+Within the insert and extract algorithms there are two subroutines that are *very* helpful when manipulating heaps. 
+
+In insert we had a problem where a item was somewhere deep in the tree (near to a leaf), and it's possible that it belongs somewhere shallower (near to the root) in order to restore the heap property. In this case we repeatedly swapped that potentially misplaced item with its parent until the heap property was restored. This procedure is given the name **percolate up**. The percolate up procedure can be started from any item in the tree. The idea is that if there is some item that we believe might be too deep (i.e. it might have a priority value smaller than its parent), then we can begin swapping it upward until it's in the right position.
+
+With extract we had the opposite problem. After moving the last item into the root's position we had a item that was shallow that might need to go deeper in order to restore the heap property. In this case we repeated swapped that item with its smaller child until the heap property was restored. We call this procedure **percolate down**.  If there is some item that we believe might be too shallow in the tree (i.e. it might have a priority value larger than one of its children's), then we can begin swapping it downward until it's in the right position.
+
+With these subroutines, we can then rephrase the algorithm for insert as:
+
+1. Place the new item at the position dictated by the structure property
+1. Percolate up beginning from that item
+
+and the algorithm or extract as:
+
+1. Save the value of the current root
+1. Move the item in the last index of the array to index 1 (overwriting and taking the place of the old root)
+1. Percolate down starting from index 1
+1. Return the saved value of the original root 
+
+
+Observe that both of these procedures' worst case running times are linear in the height of the tree, and therefore $\Theta(\log n)$.
+
+
 ### Increase/Decrease Key
 
+There are two more priority queue ADT operations that we have thus far ignored - increase and decrease key. The idea here is that if I want to change the priority value of an item, we might need to rearrange items to restore the heap property.
+
+If we want to increase the priority value of an item then we will call *increase key*. Increasing the priority value will result a item potentially being too high in the heap (too near a root). This is because we previously knew that the item's priority was at least that of its parent, and no more than those of its children. If we increase the priority value then it must still be at least that of its parent, but it might not be less than or equal to its children any longer. For this reason, we will need to percolate down on the item whose priority changed.
+
+If we want to decrease the priority value of an item then we will call *decrease key*. This has the opposite effect. It could now be that the item is too low in the tree because it's priority may have fallen below that of its parent. Therefore we want to percolate up on that item.
+
+# Max Heaps
+
+Thus far our entire discussion has focussed on heaps where the minimum priority value is considered the most important. This means that the heap property insures that each item's priority is not more than its childrens', and that the root holds the minimum priority value. When we arrange elements in this way we call the data structure a min heap.
+
+All of our discussion is equally valid if we reverse all of our inequalities. We could have defined our heap such that the largest priority value is considered most important, and therefore would be stored at the root. Such a heap is called a **max heap**. Max heaps are exactly the same as min heaps except the they must enforce the **max heap property**, which states that the priority each item in the heap must be *greater than or equal to* its children's.
+
+Be advised! The increase/decrease key operations in a max heap cause percolation to happen in the opposite direction compared to a min heap.
+
 # Floyd's Build Heap Method
+
+Suppose we have a collection of items, and we want to create a new heap containing all of those items. We could certainly do this by simply adding all of the items into the heap one-by-one. If there are $n$ items to insert, and each insert operation in a heap requires $\log n$ time, the running time of this process is $\Theta(n \log n)$. It turns out there is a way we can build a heap containing a set of elements in linear time! This algorithm is called **Floyd's Build Heap Method**.
+
+Let's start by describing the algorithm, and then we'll evaluated the running time.
+
+Here's how the algorithm operates:
+
+1. Create an array of length $n+1$.
+1. Add all the items into the array in any arbitrary order from indices $1$ to $n$.
+1. For each index in the array, starting from index $n$ and going down to index $1$, percolate down starting with that item.
+
+At first this might look no different from the naive "insert into the heap one at a time" algorithm because we're still doing a percolation per item in the heap. There is one very important observation about a binary tree that makes Floyd's method more efficient, though. That is that binary trees are much bigger on the bottom compared to the top. In a completely full heap for example (i.e. one where every level is completely full), half of the nodes are leaves, one quarter of the nodes are in the second-from-last level, one eighth of the nodes are in the third-from-last level, and so on. By working from back to front in the array, and percolating down, we ensure that the majority of items (the leaves) have less distance to travel when percolating, because they're already close to the bottom.
+
+Now let's do a more formal analysis of the running time. Because the first $\frac{n}{2}$ nodes are already leaves, percolating down requires $0$ comparisons. For the next $\frac{n}{2}$ nodes, each must participate in $2$ comparisons each in the worst case (each node must be compared with both of its children). For the next $\frac{n}{4}$ nodes, each must participate in $4$ comparisons in the worst case (each must be compared to its children, and then if we swap the children of the node we swapped with). The next $\frac{n}{8}$ nodes, each must participate in $6$ comparisons in the worst case. Continuing this process, the worst case number of comparisons is given by the series $\frac{2n}{2}+\frac{4n}{4}+\frac{6n}{8}+\frac{8n}{16}+\frac{10n}{32}+...$, where we have one term per level of the tree. Or expressed using sigma notation $\sum_{i=1}^{\log_2 n}\frac{2in}{2^i}$.
+
+Let's now figure out what this sums to. Let's being with some rearranging.
+
+$\sum_{i=1}^{\log_2 n}\frac{2in}{2^i} = \sum_{i=1}^{\log_2 n}2n\frac{i}{2^i} = 2n \sum_{i=1}^{\log_2 n}\frac{i}{2^i}$
+
+It turns out that this will be easier to analyze if we consider this as an infinite series. So far we've expressed the running time as $2n\sum_{i=1}^{\log_2 n}\frac{i}{2^i}$, and we can be certain that the following sum is an upper bound on the running time: $2n\sum_{i=1}^{\infty}\frac{i}{2^i}$. We're going to skip the calculus on this, but the series $\sum_{i=1}^{\infty}\frac{i}{2^i}$ converges to $2$, and so our running time is upper bounded by $4n$, giving a worst case running time of $O(n)$. Because we upper bounded our running time by swapping out a finite series for an infinite series we only have an upper bound at the moment. We can easily establish that the running time is also $\Omega(n)$ because the first time in this summation is itself $n$. Therefore our final running time is $\Theta(n)$.
+
 
