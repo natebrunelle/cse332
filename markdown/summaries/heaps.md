@@ -97,14 +97,9 @@ For a node at index $i$, here's how we can calculate the index of the following 
 - Its right sibling: $i+1$ (this requires that $i$ is itself a left child)
 
 
-
-## Description of a Binary Min/Max Heap
-
-We have now described all the components of a binary heap, now we bring them all together at once.
-
-
-
 ## Insert and Extract Algorithms
+
+
 
 ### Percolate Up and Down
 

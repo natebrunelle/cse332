@@ -27,8 +27,8 @@ This assignment has three main parts. The first involves setting up your java pr
 For this exercise, you will need:
 
 - [cse332 VSCode Profile](files/exercises/cse332-Java.code-profile) *(right click to download)* - Our recommended configuration profile for VSCode. This disables gen-AI tools for you. 
-- [Starter Code](/files/exercises/ex0.zip) - which contains various classes that will be needed for this assignment.
-- [Specification](https://docs.google.com/document/d/e/2PACX-1vREnpEvlsTQpkNX5wwHHIpAvwnPKN7sG-GQFsek39qXZj4QOng2ZxMhfJOZRec3jw/pub) - which contains all instructions for what to do for this assignment.
+- [EX00 Starter Code](/files/exercises/ex0.zip) - which contains various classes that will be needed for this assignment.
+- [EX00 Specification](https://docs.google.com/document/d/e/2PACX-1vREnpEvlsTQpkNX5wwHHIpAvwnPKN7sG-GQFsek39qXZj4QOng2ZxMhfJOZRec3jw/pub) - which contains all instructions for what to do for this assignment.
 - [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
 
 
@@ -43,8 +43,25 @@ The objectives of this exercise are to:
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
 
-<!--
 ## Exercise 2
+
+The objectives of this exercise are to:
+
+- Implement the binary heap data structure
+- See how to modify the binary heap data structure to add new operations efficiently
+- Apply the binary heap data structure towards the creation of a new data structure
+
+
+This is a programming exercise which you will submit to gradescope. There is no written component to this exercise, your code is your only submission. 
+
+For this exercise, you will need:
+
+- [EX02 Starter Code](/files/exercises/ex2.zip) - which contains various classes that will be needed for this assignment.
+- [EX02 Specification](https://docs.google.com/document/d/e/2PACX-1vT3Qw5qeDziA3UjNkrQm0LoPlxfWUZOaAc_kb8bO67_3sEoE5vQhBYyq6HkRH8RmA/pub) - which contains all instructions for what to do for this assignment.
+
+
+<!--
+## Exercise 3
 
 The objectives of this exercise are to:
 
@@ -52,22 +69,6 @@ The objectives of this exercise are to:
 - See examples of how different changes to recurrence relations do/don't change their asymptotic behavior
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
-
-
-## Exercise 3
-
-The objectives of this exercise are to:
-
-- Understand the binary heap data structure by implementing it
-- See how to modify the binary heap data structure to add new operations efficiently
-- Apply the binary heap data structure to create a new data structure
-
-This is a programming exercise which you will submit to gradescope. There is no written component to this exercise, your code is your only submission. 
-
-For this exercise, you will need:
-
-- [Starter Code](/files/exercises/ex3.zip) - which contains various classes that will be needed for this assignment.
-- [Specification](https://docs.google.com/document/d/1SbbdYO2JoFF0dbpY7hD6ufnpCCRUhN6I/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which contains all instructions for what to do for this assignment.
 
 ## Exercise 4
 
