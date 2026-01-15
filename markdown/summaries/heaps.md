@@ -108,6 +108,7 @@ When inserting an element, the structure property of heaps designates a unique p
 While the structure property designates a specific new position, we cannot necessarily just put the new item there. The heap property requires each node's priority be less than or equal to its children. It could be that the newly-added item has a priority smaller than the parent of the new position we were required to create. In this case, we must rearrange values of the heap in order to maintain the heap property.
 
 The idea of our algorithm is as follows:
+
 1. Place the new item at the position dictated by the structure property
 1. Compare that item's priority with that of it's parent. If the new item has a lower priority than its parent then swap the new item's position with that of its parent.
 1. Repeat the previous step (comare the new item with its parent, swap less than) until either the new item's priority value is greater than or equal to its parent, or the new item becomes the new root.
