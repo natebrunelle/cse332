@@ -19,6 +19,8 @@ With this motivation, here's how we'll define the priority queue ADT:
 
 **Convention**: By convention for priority queues we understand the item with the *smallest* priority value to be the "most important", and it is therefore what gets returned by the extract operation. This comes from the idea that priorities are communicated as rankings in the English language, and so saying "you're my number one priority" is saying "you're the most important to me". We can also define priority queues so that the item with the largest priority value is the most important with only trivial changes. Because of this convention, though, all the examples below consider the smaller priority values more important.
 
+**Analogy Limitation**: There is one way that the emergency room and line cutting analogies are *unlike* the priority queue ADT. In both of these analogies it's most likely going to be the case that among people with the same level of priority that they are serviced in first-in-first-out order. In a priority queue, however, we will allow for items with same priority to be extracted in *any* order.
+
 ## Priority Queues Using Lists
 
 Next we can look at some examples of data structures for priority queues. With the queue ADT, we were able to effectively use list-like approaches for designing out data structures, so let's try that same thing here. This can give us to better understand the challenges of creating a priority queue data structure, and help us to see what we might need to do to improve upon some relatively more straight forward approaches.
@@ -46,7 +48,7 @@ From these two examples it appears that there's a tradeoff in our data structure
 
 # Binary Heap Data Structure
 
-In impelementation, our binary heap data structure will store elements in an array, but manipulate the positions of elements as if they were stored in a binary tree. In other words, it will be representing a tree using an array. To describe this data structure we will first describe it as a tree, then later describe how we represent the tree using an array.
+In implementation, our binary heap data structure will store elements in an array, but manipulate the positions of elements as if they were stored in a binary tree. In other words, it will be representing a tree using an array. To describe this data structure we will first describe it as a tree, then later describe how we represent the tree using an array.
 
 ## The Shape of the Tree
 
