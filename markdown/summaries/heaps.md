@@ -42,7 +42,7 @@ Because we need to keep our array sorted, we need to be very careful about where
 
 ### Lessons
 
-From these two examples it appears that there's a tradeoff in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the motivate for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only *somewhat* ordered so that we can have sublinear running time for *both* insert and extract. Specifically, we will achieve running times of $\Theta(\log n)$ for both insert and extract.
+From these two examples it appears that there's a tradeoff in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the insight for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only *somewhat* ordered so that we can have sublinear running time for *both* insert and extract. Specifically, we will achieve running times of $\Theta(\log n)$ for both insert and extract.
 
 # Binary Heap Data Structure
 
