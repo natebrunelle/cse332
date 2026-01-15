@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>CSE332 - Topic Summary - Priority Queues and Heaps</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+  <link rel="stylesheet" href="../style.css?v=2" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <style type="text/css">.katex { font-size: inherit; }</style>
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">CSE 332 &ndash; Topic Summary - Priority Queues and Heaps</span>
+        <ul class="nav pull-right doc-info">
+                    <li><p class="navbar-text"><a href="../index.html">Home</a></p></li>
+          <li><p class="navbar-text"><a href="../syllabus.html">Syllabus</a></p></li>
+          <li><p class="navbar-text"><a href="../calendar.html">Calendar</a></p></li>
+          <li><p class="navbar-text"><a href="../tasks.html">Tasks</a></p></li>
+          <li><p class="navbar-text"><a href="../summaries.html">Summaries</a></p></li>
+          <li><p class="navbar-text"><a href="../oh.html">Office Hours</a></p></li>
+          <li><p class="navbar-text"><a href="../staff.html">Staff</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div id="TOC" class="span3">
+        <div class="well toc">
+        <ul>
+          <li class="nav-header">Table of Contents</li>
+        </ul>
+        <ul>
+        <li><a href="#priority-queue-adt"><span class="toc-section-number">1</span> Priority Queue ADT</a><ul>
+        <li><a href="#priority-queues-using-lists"><span class="toc-section-number">1.1</span> Priority Queues Using Lists</a><ul>
+        <li><a href="#unsorted-array-priority-queue"><span class="toc-section-number">1.1.1</span> Unsorted Array Priority Queue</a></li>
+        <li><a href="#sortest-array-priority-queue"><span class="toc-section-number">1.1.2</span> Sortest Array Priority Queue</a></li>
+        <li><a href="#lessons"><span class="toc-section-number">1.1.3</span> Lessons</a></li>
+        </ul></li>
+        </ul></li>
+        <li><a href="#binary-heap-data-structure"><span class="toc-section-number">2</span> Binary Heap Data Structure</a><ul>
+        <li><a href="#the-shape-of-the-tree"><span class="toc-section-number">2.1</span> The Shape of the Tree</a></li>
+        </ul></li>
+        </ul>
+        </div>
+      </div>
+            <div class="span9">
+            <!--<blockquote style="background-color:#fbb; font-size:150%">This page is from a previous offering of the course. It has been left up for archival purposes.</blockquote>-->
+      <!--<blockquote style="background-color:#fbb; font-size:150%">This page is under construction. Any content you see now is subject to change until the first day of class. Expect some links to be broken until that time.</blockquote>--> 
+      <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
+      <h1 id="priority-queue-adt"><span class="header-section-number">1</span> Priority Queue ADT</h1>
+      <p>In this section we introduced a new ADT called a <em>priority queue</em>. As a reminder, the queue ADT allows for insertion and removal where the only item that may be removed is the least frequently added (yielding the <q>first in first out</q> behavior). In this way, a queue operates like a checkout line at a store where each shopper joins the line behind the person who arrived before them so that the one who had been there the longest is the next to be served.</p>
+      <p>For a priority queue, instead of removing the least frequently added item, we will remove the most important item. We can think of this as a line where more important people are allowed to cut in front of less important people. For example, in an emergency room someone with an urgent need would see a doctor before someone with a less serious condition. In this case the urgency of the patient’s condition would determine the order that we service those waiting.</p>
+      <p>With this motivation, here’s how we’ll define the priority queue ADT:</p>
+      <pre><code>- Notion: A collection of items along with their priority levels
+      - Operations:
+          - insert: adds a new element into the priority queue along with a given priority value
+          - extract: deletes and returns the most important element according to its priority value
+          - increaseKey: changes the priority value of the given element to make it larger
+          - decreaseKey: changes the priority value of the given element to make it smaller</code></pre>
+      <p><strong>Convention</strong>: By convention for priority queues we understand the item with the <em>smallest</em> priority value to be the <q>most important</q>, and it is therefore what gets returned by the extract operation. This comes from the idea that priorities are communicated as rankings in the English language, and so saying <q>you’re my number one priority</q> is saying <q>you’re the most important to me</q>. We can also define priority queues so that the item with the largest priority value is the most important with only trivial changes. Because of this convention, though, all the examples below consider the smaller priority values more important.</p>
+      <h2 id="priority-queues-using-lists"><span class="header-section-number">1.1</span> Priority Queues Using Lists</h2>
+      <p>Next we can look at some examples of data structures for priority queues. With the queue ADT, we were able to effectively use list-like approaches for designing out data structures, so let’s try that same thing here. This can give us to better understand the challenges of creating a priority queue data structure, and help us to see what we might need to do to improve upon some relatively more straight forward approaches.</p>
+      <h3 id="unsorted-array-priority-queue"><span class="header-section-number">1.1.1</span> Unsorted Array Priority Queue</h3>
+      <p>First, let’s look at what we might do if we just store the elements (and priorities) in an unsorted array. In this case we might have a field that we could call <em>back</em> to indicate the index of the last item in the array. From here we could use the following algorithms for the priority queue ADT operations insert and extract:</p>
+      <ul>
+      <li>insert: add the item and its priority into the array at the index referenced by <em>back</em>, resizing if necessary. Then increment <em>back</em>.</li>
+      <li>extract: iterating from index 0 of the array up through index <em>back</em>, save the index and priority of the item with the smallest priority seen so far. Return the corresponding item, and remove it from the array by shifting all elements after it over by 1 index.</li>
+      </ul>
+      <p>Because we do not care to impose any kind of ordering of the elements in our array, our insert algorithm runs in constant time. However, because we have no indication for where we might find the item with smallest priority, the extract operation requires linear time.</p>
+      <h3 id="sortest-array-priority-queue"><span class="header-section-number">1.1.2</span> Sortest Array Priority Queue</h3>
+      <p>Because priority queues require removing items in a sorted order, perhaps we could improve our data structure by requiring the items be stored in descending order (largest priority value at index 0, smallest at index <span class="math inline">n-1</span>). In this data structure we will also have the field <em>back</em> that indicates the index of the last item in the array (in this case this will be the one with the smallest priority value). Here’s what insert and extract might look like in this case:</p>
+      <ul>
+      <li>insert: starting from index 0, check to see if the new item has higher priority than the one at that current index, if not then check the next index, repeat until we reach an item with lower priority or until we reach <em>back</em>. Next insert the new item at the current index by shifting all items after that index over by one position. Increment back. Resize if necessary.</li>
+      <li>extract: because we sorted in descending order, the index <em>back</em> has the minimum priority. Decrement the value of <em>back</em> and retun the value at the index <em>back</em>.</li>
+      </ul>
+      <p>Because we need to keep our array sorted, we need to be very careful about where we add values into our array, and so the running time of insert is linear time. On the other hand, extract requires only constant time because we know exactly where the element with minimum priority might be.</p>
+      <h3 id="lessons"><span class="header-section-number">1.1.3</span> Lessons</h3>
+      <p>From these two examples it appears that there’s a tradeoff in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the motivate for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only <em>somewhat</em> ordered so that we can have sublinear running time for <em>both</em> insert and extract.</p>
+      <h1 id="binary-heap-data-structure"><span class="header-section-number">2</span> Binary Heap Data Structure</h1>
+      <p>In impelementation, our binary heap data structure will store elements in an array, but manipulate the positions of elements as if they were stored in a binary tree. In other words, it will be representing a tree using an array. To describe this data structure we will first describe it as a tree, then later describe how we represent the tree using an array.</p>
+      <h2 id="the-shape-of-the-tree"><span class="header-section-number">2.1</span> The Shape of the Tree</h2>
+      <p>Binary heaps have <em>very</em> strict requirements on the shape of the tree that stores the elements. Specifically, it requires that:</p>
+      <ul>
+      <li>Every level of the tree be <em>completely full</em> before any items may be included on the next level</li>
+      <li>If the last level is only partiallly full, the items <em>must</em> be filled in from left to right (so for example the left child of the left-most node of the second from last level must be the first to be filled in).</li>
+      </ul>
+            </div>
+    </div>
+  </div>
+  <footer>
+          Copyright © 2026 Nathan Brunelle.
+              <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
+      </p>
+        <p>Last updated 2026-01-15 07:41</p>
+  </footer>
+</body>
+</html>

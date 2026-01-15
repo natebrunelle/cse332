@@ -42,7 +42,7 @@ Because we need to keep our array sorted, we need to be very careful about where
 
 ### Lessons
 
-From these two examples it appears that there's a tradeoff in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the motivate for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only *somewhat* ordered so that we can have sublinear running time for *both* insert and extract.
+From these two examples it appears that there's a tradeoff in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the motivate for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only *somewhat* ordered so that we can have sublinear running time for *both* insert and extract. Specifically, we will achieve running times of $\Theta(\log n)$ for both insert and extract.
 
 # Binary Heap Data Structure
 
@@ -50,7 +50,68 @@ In impelementation, our binary heap data structure will store elements in an arr
 
 ## The Shape of the Tree
 
-Binary heaps have *very* strict requirements on the shape of the tree that stores the elements. Specifically, it requires that:
+Binary heaps have *very* strict requirements on the structure of the tree that stores the elements. Specifically, the *structure property* of a heap requires:
 
 - Every level of the tree be *completely full* before any items may be included on the next level
-- If the last level is only partiallly full, the items *must* be filled in from left to right (so for example the left child of the left-most node of the second from last level must be the first to be filled in).
+- If the last level is only partially full, the items *must* be filled in from left to right (so for example the left child of the left-most node of the second from last level must be the first to be filled in).
+
+There are two motives for this:
+
+1. This shape will help us to achieve the $\Theta(\log n)$ worst case running times for insert and extract
+1. This shape will help us to represent the tree using an array
+
+To help understand the requirements, here are a few *valid* tree shapes:
+
+TODO!
+
+Here are a few trees that are *not* a valid shape:
+
+TODO!
+
+## Somewhat Ordering the Array
+
+In addition to requiring a particular shape to the tree, heaps also require restrictions on where certain values may appear. For a min heap (i.e. one where the most important element has the lowest priority value) the following property must be true of every node in the tree:
+
+**Min Heap Property**: For every node in the tree, the priority value of that node must be less than or equal to that of its children.
+
+This heap property ensures that for every node, the priority of the value held there is the smallest of all nodes in its subtree. This is because if there was any node within a subtree with a smaller priority value then that node or one of its ancestors must violate the heap property with its parent. Since this applies to all nodes, that implies that the overall root of the heap *must* contain the element with the smallest priority. Therefore this heap property gives us one of the advantages of a sorted array in that we know exactly where to find the most important item.
+
+The heap property also doesn't require our array to be *too* sorted. Note that the heap property only enforces a priority relationship between a node and any values in its subtree. It does not have any restrictions on how a node's priority value might relate to those of nodes in different branches of the tree (e.g. "cousin" nodes or "aunt/uncle" nodes). The result here will be that it does not require too much effort to maintain the heap property when adding/removing items from the heap (at least, it requires much less effort than maintaining a total ordering). Namely, since the heap property can be checked by just checking how parents relat to children, the heap property ensures that we need to do only a constant number of operations per level of the tree to restore the heap property after any insert/extract operation. The shape property then guarantees that the tree will not have many levels. The combination of these two rules therefore enables our fast ($\Theta(\log n)$) running time for each operation.
+
+## The Tree Representation Using an Array
+
+Now let's discuss  how we can represent our heap using an array. When you learned about binary trees in your prerequisite course, you likely used nodes where each stored the value it contains  and then had a reference to two other nodes representing its left and right children. For heaps we will store our values in an array, and then identify a node's left and right children by doing arithmetic on array indices.
+
+To represent our heap as an array we will leverage the heap structure property. The structure property is so strict that all trees of the same size *must* have the same shape. This is because there is a unique position that must be added to accommodate that new node. To represent our tree using an array, we will designate that the position added when adding the $i$th node will be stored at index $i$. In summary, we can identify each node's index by "counting off" one level at a time, and then left-to-right within a level. The structure property insures that this assignment will never skip nodes and will never skip array indices. We will always start the "counting off" from the root. We could decide to start that count with the number $0$ (thereby putting the root at index $0$ of the array), however the arithmetic we'll need to apply to the array indices in order to navigate the tree is a bit easier if we start of with $1$ instead (thereyby not using index $0$ of the array at all).
+
+Here's an example of how we can store a heap using an array:
+
+TODO
+
+For a node at index $i$, here's how we can calculate the index of the following other nodes in relation to $i$:
+
+- Its left child: $2i$
+- Its right child: $2i+1$
+- Its parent $$\lfloor \frac{i}{2}\rfloor$$
+- Its left sibling: $i-1$ (this requires that $i$ is itself a right child)
+- Its right sibling: $i+1$ (this requires that $i$ is itself a left child)
+
+
+
+## Description of a Binary Min/Max Heap
+
+We have now described all the components of a binary heap, now we bring them all together at once.
+
+
+
+## Insert and Extract Algorithms
+
+### Percolate Up and Down
+
+
+### Running time analysis
+
+### Increase/Decrease Key
+
+# Floyd's Build Heap Method
+
