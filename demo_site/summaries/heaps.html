@@ -56,9 +56,10 @@
         <li><a href="#somewhat-ordering-the-array"><span class="toc-section-number">2.2</span> Somewhat Ordering the Array</a></li>
         <li><a href="#the-tree-representation-using-an-array"><span class="toc-section-number">2.3</span> The Tree Representation Using an Array</a></li>
         <li><a href="#insert-and-extract-algorithms"><span class="toc-section-number">2.4</span> Insert and Extract Algorithms</a><ul>
-        <li><a href="#percolate-up-and-down"><span class="toc-section-number">2.4.1</span> Percolate Up and Down</a></li>
-        <li><a href="#running-time-analysis"><span class="toc-section-number">2.4.2</span> Running time analysis</a></li>
-        <li><a href="#increasedecrease-key"><span class="toc-section-number">2.4.3</span> Increase/Decrease Key</a></li>
+        <li><a href="#insert"><span class="toc-section-number">2.4.1</span> Insert</a></li>
+        <li><a href="#percolate-up-and-down"><span class="toc-section-number">2.4.2</span> Percolate Up and Down</a></li>
+        <li><a href="#running-time-analysis"><span class="toc-section-number">2.4.3</span> Running time analysis</a></li>
+        <li><a href="#increasedecrease-key"><span class="toc-section-number">2.4.4</span> Increase/Decrease Key</a></li>
         </ul></li>
         </ul></li>
         <li><a href="#floyds-build-heap-method"><span class="toc-section-number">3</span> Floyd’s Build Heap Method</a></li>
@@ -134,9 +135,29 @@
       <li>Its right sibling: <span class="math inline">i+1</span> (this requires that <span class="math inline">i</span> is itself a left child)</li>
       </ul>
       <h2 id="insert-and-extract-algorithms"><span class="header-section-number">2.4</span> Insert and Extract Algorithms</h2>
-      <h3 id="percolate-up-and-down"><span class="header-section-number">2.4.1</span> Percolate Up and Down</h3>
-      <h3 id="running-time-analysis"><span class="header-section-number">2.4.2</span> Running time analysis</h3>
-      <h3 id="increasedecrease-key"><span class="header-section-number">2.4.3</span> Increase/Decrease Key</h3>
+      <p>Since we’ve fully described how we’re representing our data, let’s discuss our algorithms for the priority queue ADT operations.</p>
+      <h3 id="insert"><span class="header-section-number">2.4.1</span> Insert</h3>
+      <p>When inserting an element, the structure property of heaps designates a unique position that must be created in the heap. Namely, if the last level of the heap is not full then after adding a new item the new position must be the leftmost available slot of that last level. If the last level of the heap is full, then the new position must be the leftmost on the next level.</p>
+      <p>While the structure property designates a specific new position, we cannot necessarily just put the new item there. The heap property requires each node’s priority be less than or equal to its children. It could be that the newly-added item has a priority smaller than the parent of the new position we were required to create. In this case, we must rearrange values of the heap in order to maintain the heap property.</p>
+      <p>The idea of our algorithm is as follows: 1. Place the new item at the position dictated by the structure property 1. Compare that item’s priority with that of it’s parent. If the new item has a lower priority than its parent then swap the new item’s position with that of its parent. 1. Repeat the previous step (comare the new item with its parent, swap less than) until either the new item’s priority value is greater than or equal to its parent, or the new item becomes the new root.</p>
+      <p>Keeping in mind that the tree itself is represented using an array, this results in the following near-Java code:</p>
+      <pre><code>public void insert(T item){
+          if(this.size() == arr.length){
+              resize();  // replace with a new larger array, copy over the old array&#39;s contents
+          }
+          arr[size+1] = item; // because we&#39;re 1-indexing, we need to use index size+1
+          size++;
+          int currIndex = size; // the index currently holding the new item
+          while(currIndex//2 &gt; 0 &amp;&amp; arr[currIndex].priority &lt; arr[currIndex//2]){ // as long as the new value is not the root and it violates the heap property with its parent
+              T oldParent = arr[currIndex//2]; // save the parent
+              arr[currIndex//2]= arr[currIndex]; // move the new item to the parent&#39;s position
+              arr[currIndex] = oldParent; // move the parent to the new item&#39;s former position
+              currIndex = currIndex // 2; // update the index of the new item
+          }
+      }</code></pre>
+      <h3 id="percolate-up-and-down"><span class="header-section-number">2.4.2</span> Percolate Up and Down</h3>
+      <h3 id="running-time-analysis"><span class="header-section-number">2.4.3</span> Running time analysis</h3>
+      <h3 id="increasedecrease-key"><span class="header-section-number">2.4.4</span> Increase/Decrease Key</h3>
       <h1 id="floyds-build-heap-method"><span class="header-section-number">3</span> Floyd’s Build Heap Method</h1>
             </div>
     </div>
@@ -145,7 +166,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-15 12:48</p>
+        <p>Last updated 2026-01-15 13:14</p>
   </footer>
 </body>
 </html>

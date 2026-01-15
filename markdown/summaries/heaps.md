@@ -10,12 +10,12 @@ For a priority queue, instead of removing the least frequently added item, we wi
 
 With this motivation, here's how we'll define the priority queue ADT:
 
-    - Notion: A collection of items along with their priority levels
-    - Operations:
-        - insert: adds a new element into the priority queue along with a given priority value
-        - extract: deletes and returns the most important element according to its priority value
-        - increaseKey: changes the priority value of the given element to make it larger
-        - decreaseKey: changes the priority value of the given element to make it smaller
+- Notion: A collection of items along with their priority levels
+- Operations:
+    - insert: adds a new element into the priority queue along with a given priority value
+    - extract: deletes and returns the most important element according to its priority value
+    - increaseKey: changes the priority value of the given element to make it larger
+    - decreaseKey: changes the priority value of the given element to make it smaller
 
 **Convention**: By convention for priority queues we understand the item with the *smallest* priority value to be the "most important", and it is therefore what gets returned by the extract operation. This comes from the idea that priorities are communicated as rankings in the English language, and so saying "you're my number one priority" is saying "you're the most important to me". We can also define priority queues so that the item with the largest priority value is the most important with only trivial changes. Because of this convention, though, all the examples below consider the smaller priority values more important.
 
@@ -117,12 +117,12 @@ Keeping in mind that the tree itself is represented using an array, this results
 ```
 public void insert(T item){
     if(this.size() == arr.length){
-        resize();  // replace with a new larger array, copy over the old array's contents
+        resize();  // replace with a larger array, copy over the contents
     }
-    arr[size+1] = item; // because we're 1-indexing, we need to use index size+1
+    arr[size+1] = item; // we're 1-indexing so we need to use size+1
     size++;
-    int currIndex = size; // the index currently holding the new item
-    while(currIndex//2 > 0 && arr[currIndex].priority < arr[currIndex//2]){ // as long as the new value is not the root and it violates the heap property with its parent
+    int currIndex = size; // tindex currently holding the new item
+    while(currIndex//2 > 0 && arr[currIndex].priority < arr[currIndex//2]){ // until the new item is either the root or its priority is larger than its parent's
         T oldParent = arr[currIndex//2]; // save the parent
         arr[currIndex//2]= arr[currIndex]; // move the new item to the parent's position
         arr[currIndex] = oldParent; // move the parent to the new item's former position
