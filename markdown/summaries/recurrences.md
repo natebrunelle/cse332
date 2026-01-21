@@ -126,4 +126,10 @@ This substitution will then repeat until the argument to $T$ is $1$, since this 
 
 ## The Tree Method
 
-Next we'll look at how we can take the "repeated substitution" approach and apply a bit more structure to it so that we can use it as a tool for solving more complex recurrence relations. We will call this procedure the **Tree Method**.
+Next we'll look at how we can take the "repeated substitution" approach and apply a bit more structure to it so that we can use it as a tool for solving more complex recurrence relations. We will call this procedure the **Tree Method**. Essentially, the tree method works by performing this repeated subsitution, but making each subtitution (i.e. stackframe in the recursion) a node in a tree.
+
+Let's start by reexpressing our repeated substitution of $T(n)=T(n-1)+1$ in this way. The root of our tree will correspond to the stackframe for our original invocation of the algorithm, that in which the input size is $n$. That stackframe makes one recursive call on an input of size $n-1$, which makes another recursive call on an input size $n-2$, which makes another with size $n-3$, etc. This chain of invocations continues until we reach a base case. As per our discussion earlier, the length of this chain is therefore $n-1$. All that remains is to identify the total amount of work done within each stackframe, and then add those together. In our recurrences $f(n)$ represents the non-recursive work done in a stackframe with input size $n$, and in this case $f(n)=1$. This tells us we need to add $1$ for each stackframe in our chain, therefore giving a running time of $n-1 = \Theta(n)$. 
+
+We depict this procedure graphically below:
+
+We represent each stackframe as a square, write the input size for that stackframe within the square, and then write the non-recursive work done in that stackframe next to each square. Our objective is to sum together all the values written next to the squares:

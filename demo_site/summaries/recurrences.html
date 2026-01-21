@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>CSE332 - Topic Summary - Recurrences</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+  <link rel="stylesheet" href="../style.css?v=2" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <style type="text/css">.katex { font-size: inherit; }</style>
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">CSE 332 &ndash; Topic Summary - Recurrences</span>
+        <ul class="nav pull-right doc-info">
+                    <li><p class="navbar-text"><a href="../index.html">Home</a></p></li>
+          <li><p class="navbar-text"><a href="../syllabus.html">Syllabus</a></p></li>
+          <li><p class="navbar-text"><a href="../calendar.html">Calendar</a></p></li>
+          <li><p class="navbar-text"><a href="../tasks.html">Tasks</a></p></li>
+          <li><p class="navbar-text"><a href="../summaries.html">Summaries</a></p></li>
+          <li><p class="navbar-text"><a href="../oh.html">Office Hours</a></p></li>
+          <li><p class="navbar-text"><a href="../staff.html">Staff</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div id="TOC" class="span3">
+        <div class="well toc">
+        <ul>
+          <li class="nav-header">Table of Contents</li>
+        </ul>
+        <ul>
+        <li><a href="#identifying-a-recurrence"><span class="toc-section-number">1</span> Identifying A Recurrence</a><ul>
+        <li><a href="#divide-and-conquer-example"><span class="toc-section-number">1.1</span> Divide and Conquer Example</a></li>
+        <li><a href="#chip-and-conquer-example"><span class="toc-section-number">1.2</span> Chip and Conquer Example</a></li>
+        </ul></li>
+        <li><a href="#solving-recurrences"><span class="toc-section-number">2</span> Solving Recurrences</a><ul>
+        <li><a href="#the-tree-method"><span class="toc-section-number">2.1</span> The Tree Method</a></li>
+        </ul></li>
+        </ul>
+        </div>
+      </div>
+            <div class="span9">
+            <!--<blockquote style="background-color:#fbb; font-size:150%">This page is from a previous offering of the course. It has been left up for archival purposes.</blockquote>-->
+      <!--<blockquote style="background-color:#fbb; font-size:150%">This page is under construction. Any content you see now is subject to change until the first day of class. Expect some links to be broken until that time.</blockquote>--> 
+      <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
+      <p>In this section we will discuss a method for performing running time analysis of recursive algorithms. To summarize the approach, here’s what we’ll do:</p>
+      <ol type="1">
+      <li>A running time analysis of an algorithm is a function. For our recursive algorithm, we’ll identify a recursive running time function. Such a function is called a <strong>recurrence relation</strong>.</li>
+      <li>Next we will <q>solve</q> the recurrence relation, which in our case means converting it into an asymptotically equivalent non-recursive function.</li>
+      </ol>
+      <p>For step 2 of this process, there are many ways to do this. We’ll focus on just one way in the course. We’ll use a method called the <strong>tree method</strong>.</p>
+      <h1 id="identifying-a-recurrence"><span class="header-section-number">1</span> Identifying A Recurrence</h1>
+      <p>First, let’s see how we can express the running time of an algorithm as a recurrence relation. Any recursive algorithm is going to have the following parts:</p>
+      <ol type="1">
+      <li>Base case: Check if the input is small enough to constitute a base case, if so then solve it using an iterative approach</li>
+      <li>Prepare for recursion: Perform interative steps of computation in preparation for recursive calls</li>
+      <li>Recursive calls: Invoke the algorithm recursively on one or more smaller inputs</li>
+      <li>Use recursive results: Perform iterative steps of comutation using the results from the recursive calls</li>
+      </ol>
+      <p>We can then apply our standard running time analysis process to these steps as follows:</p>
+      <ul>
+      <li>We can recognize that the base case does not occur in every recursive invocation, and when it does happen its running time is always constant (base case size must be a constant, and any procedure run on a constant-sized input takes only constant time).</li>
+      <li>The remaining three steps all happen sequentially for one another, so we can add together their running times.</li>
+      <li>The recursive invocations are just like invoking another function, so we want to use the running time of that function in that place.</li>
+      </ul>
+      <p>Therefore, if we use <span class="math inline">T(n)</span> to represent the running time of our algorithm, our analysis of the generic recursive procedure above will look something like:</p>
+      <ol type="1">
+      <li>Base case: Let <span class="math inline">k</span> be the base case size. If <span class="math inline">n\leq k</span> then the running time is the constant <span class="math inline">c</span>. So <span class="math inline">T(k)=c</span></li>
+      <li>Prepare for recursion: This code is iterative, so we can use our standard process for running time analysis. Call the resulting running time function <span class="math inline">p(n)</span>.</li>
+      <li>Recursive calls: Each recursive call will happen on a smaller input. If we want to recurse on inputs of size <span class="math inline">x_1</span>, <span class="math inline">x_2</span>, …, <span class="math inline">x_a</span> then we can write the running time of this portion as <span class="math inline">T(x_1)+T(x_2)+...+T(x_a)</span>.</li>
+      <li>Use recursive results: Again, this is iterative, so we can use our standard proces. Call the resulting running time function <span class="math inline">r(n)</span>.</li>
+      </ol>
+      <p>All together, we therefore get the following running time:</p>
+      <p><span class="math inline">T(n)=p(n)+T(x_1)+T(x_2)+...+T(x_a)+r(n)</span> where <span class="math inline">T(k)=c</span>.</p>
+      <p>This is now a recursive running time function for our algorithm, i.e. a recurrence relation.</p>
+      <p>For most algorithms each of <span class="math inline">x_1, x_2, ..., x_a</span> will be of the same size. If we call this <span class="math inline">x</span> then our recurrence could be expressed as :</p>
+      <p><span class="math inline">T(n)=p(n) + aT(x) + r(n)</span> where <span class="math inline">T(k)=c</span>.</p>
+      <p>Furthermore, we can introduce the function <span class="math inline">f(n)=p(n)+r(n)</span> to express all of the iterative work being done in one stack frame, giving us:</p>
+      <p><span class="math inline">T(n)=aT(x) + f(n)</span> where <span class="math inline">T(k)=c</span>.</p>
+      <p>Finally, for most algorithms the value of <span class="math inline">x</span> is either going to be some fraction of <span class="math inline">n</span> (called a <q>divide and conquer</q> pattern) or it will be a constant reduction in size (called a <q>chip and conquer</q> pattern), and so our recurrence would be one of the following:</p>
+      <ul>
+      <li>Divide and Conquer: <span class="math inline">T(n)=aT(\frac{n}{b}) + f(n)</span> where <span class="math inline">T(k)=c</span>.</li>
+      <li>Chip and Conquer: <span class="math inline">T(n)=aT(n-b) + f(n)</span> where <span class="math inline">T(k)=c</span>.</li>
+      </ul>
+      <p>In this class nearly all of our recurrence relations will take one of these two shapes, so we’ll focus on that going forward.</p>
+      <h2 id="divide-and-conquer-example"><span class="header-section-number">1.1</span> Divide and Conquer Example</h2>
+      <p>Now let’s see an example of this process being applied to a recursive algorithm. Consider the following algorithm which finds the sum of all elements in a list recursively:</p>
+      <pre><code>public int sum(int[] list){
+          return sum_helper(list, 0, list.size);
+      }
+      private int sum_helper(int[] list, int low, int high){
+          if (low == high){ return 0; }
+          if (low == high-1){ return list[low]; }
+          int middle = (high+low)/2;
+          return sum_helper(list, low, middle) + sum_helper(list, middle, high);
+      }</code></pre>
+      <p>For this algorithm, each stack frame is responsible for summing the values in the list between the index low (inclusive) and high (exclusive). If the distance between low and high is 0 then there are no elements in that region, so it returns 0. If the distance between low and high is 1 then there is exactly one element in that region, so it returns that element. Otherwise it divides the region in half, recursively sums the two halves, and adds those results together.</p>
+      <p>For this algorithm our input size will be measured by the distance between low and high (it is initially <span class="math inline">n</span>, as that is the size of the original list). The operations we’ll count are additions between elements of the list.</p>
+      <p>Let’s now assign each step of this algorithm to our generic pattern above:</p>
+      <ol type="1">
+      <li>Base case: When the input is size <span class="math inline">0</span> or <span class="math inline">1</span>, in either case there are no additions being done, so <span class="math inline">T(1)=T(0)=0</span>.</li>
+      <li>Prepare for recursion: For this step we calculate the index that is half way between low and high, there are no additions done among elements of the list here, so <span class="math inline">p(n)=0</span>.</li>
+      <li>Recursive calls: There are two recursive calls, each one on a region half the size of the original, so the running time is <span class="math inline">T(\frac{n}{2})+T(\frac{n}{2})</span> or <span class="math inline">2T(\frac{n}{2})</span>.</li>
+      <li>Use recursive results: This one happens to be on the same line as the recursive calls. This is the step of adding together the results of the recursive calls. This is now an addition between elements of the list, so <span class="math inline">r(n)=1</span>.</li>
+      </ol>
+      <p>Overall this gives us the recurrence relation:</p>
+      <p><span class="math inline">T(n)=2T(\frac{n}{2}) + 1</span> where <span class="math inline">T(1)=T(0)=0</span>. Note that this follows our divide and conquer pattern!</p>
+      <h2 id="chip-and-conquer-example"><span class="header-section-number">1.2</span> Chip and Conquer Example</h2>
+      <p>Next we consider this recursive algorithm, which also sums a list recursively:</p>
+      <pre><code>public int sum(int[] list){
+          return sum_helper(list, 0, list.size);
+      }
+      private int sum_helper(int[] list, int low, int high){
+          if (low == high){ return 0; }
+          if (low == high-1){ return list[low]; }
+          return list[low] + sum_helper(list, low+1, high) ;
+      }</code></pre>
+      <p>As with the previous algorithm, each stack frame is responsible for summing the values in the list between the index low (inclusive) and high (exclusive). If the distance between low and high is 0 then there are no elements in that region, so it returns 0. If the distance between low and high is 1 then there is exactly one element in that region, so it returns that element. The difference here is that instead of dividing the region in half, this algorithm recursively finds the sum of the region excluding the index low, then adds the value at that index to the result.</p>
+      <p>As before, our input size will be measured by the distance between low and high (it is initially <span class="math inline">n</span>, as that is the size of the original list). The operations we’ll count are additions between elements of the list.</p>
+      <p>Let’s now assign each step of this algorithm to our generic pattern above:</p>
+      <ol type="1">
+      <li>Base case: When the input is size <span class="math inline">0</span> or <span class="math inline">1</span>, in either case there are no additions being done, so <span class="math inline">T(1)=T(0)=0</span>.</li>
+      <li>Prepare for recursion: For this step we calculate the index that is half way between low and high, there are no additions done among elements of the list here, so <span class="math inline">p(n)=0</span>.</li>
+      <li>Recursive calls: There is one recursive call, each one on a region one smaller than the original, so the running time is <span class="math inline">T(n-1)</span>.</li>
+      <li>Use recursive results: This one happens to be on the same line as the recursive call. This is the step of adding the value at index low to the result of the recursive call. This is now an addition between elements of the list, so <span class="math inline">r(n)=1</span>.</li>
+      </ol>
+      <p>Overall this gives us the recurrence relation:</p>
+      <p><span class="math inline">T(n)=T(n-1) + 1</span> where <span class="math inline">T(1)=T(0)=0</span>. Note that this follows our chip and conquer pattern!</p>
+      <h1 id="solving-recurrences"><span class="header-section-number">2</span> Solving Recurrences</h1>
+      <p>Now that we’ve seen how to identify a recursive running time function for our recursive algorithms, let’s wee how we can solve them. Let’s start with our chip an conquer recurrence <span class="math inline">T(n)=T(n-1)+1</span>.</p>
+      <p>Our goal is to rexpress this recurrence so that we have an equivalent function (at least asymptotically) that is expressed non-recursively. With that in mind, let’s start by trying to simplify the recurrence.</p>
+      <p>Ultimately we want to know the value of <span class="math inline">T(n)</span> in terms of <span class="math inline">n</span>. Our definition of <span class="math inline">T(n)</span> tells us that <span class="math inline">T(n)=T(n-1)+1</span>. We could then reapply the definition of <span class="math inline">T</span> to identify the value of <span class="math inline">T(n-1)</span>, giving us <span class="math inline">T(n)=(T(n-2)+1)+1</span>. We can repeat this process over and over again, replacing <span class="math inline">T(x)</span> with <span class="math inline">T(x-1)+1</span>:</p>
+      <p><span class="math inline">T(n)=T(n-1)+1=T(n-2)+1+1=T(n-3)+1+1+1=T(n-4)+1+1+1+1...</span>.</p>
+      <p>This substitution will then repeat until the argument to <span class="math inline">T</span> is <span class="math inline">1</span>, since this is our base case. In the end we therefore get <span class="math inline">T(n)=T(1)+1+1+1+1...+1</span> where we have accumulated a <span class="math inline">+1</span> term for each substitution we did until reaching our base case. To find our running time, we just need to figure out the number of substitutions we had to do. Recalling back to the recursive algorithm this came from, this matches the length of the chain of stack frames we have from our original input of size <span class="math inline">n</span> to our base case of size <span class="math inline">1</span>. To idenify this number we need to answer the question <q>How many times must we subtract <span class="math inline">1</span> from <span class="math inline">n</span> until we reach the value <span class="math inline">1</span>?</q>. The answer to this should be the value of <span class="math inline">i</span> such that <span class="math inline">n-i=1</span>, and so solving for <span class="math inline">i</span> we get <span class="math inline">n-1</span>. This tells us that <span class="math inline">T(n)</span> through repeated substitution becomes <span class="math inline">n-1</span> ones added together, and so our running time is <span class="math inline">\Theta(n)</span>.</p>
+      <h2 id="the-tree-method"><span class="header-section-number">2.1</span> The Tree Method</h2>
+      <p>Next we’ll look at how we can take the <q>repeated substitution</q> approach and apply a bit more structure to it so that we can use it as a tool for solving more complex recurrence relations. We will call this procedure the <strong>Tree Method</strong>.</p>
+            </div>
+    </div>
+  </div>
+  <footer>
+          Copyright © 2026 Nathan Brunelle.
+              <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
+      </p>
+        <p>Last updated 2026-01-21 09:21</p>
+  </footer>
+</body>
+</html>
