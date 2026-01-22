@@ -128,8 +128,45 @@ This substitution will then repeat until the argument to $T$ is $1$, since this 
 
 Next we'll look at how we can take the "repeated substitution" approach and apply a bit more structure to it so that we can use it as a tool for solving more complex recurrence relations. We will call this procedure the **Tree Method**. Essentially, the tree method works by performing this repeated subsitution, but making each subtitution (i.e. stackframe in the recursion) a node in a tree.
 
-Let's start by reexpressing our repeated substitution of $T(n)=T(n-1)+1$ in this way. The root of our tree will correspond to the stackframe for our original invocation of the algorithm, that in which the input size is $n$. That stackframe makes one recursive call on an input of size $n-1$, which makes another recursive call on an input size $n-2$, which makes another with size $n-3$, etc. This chain of invocations continues until we reach a base case. As per our discussion earlier, the length of this chain is therefore $n-1$. All that remains is to identify the total amount of work done within each stackframe, and then add those together. In our recurrences $f(n)$ represents the non-recursive work done in a stackframe with input size $n$, and in this case $f(n)=1$. This tells us we need to add $1$ for each stackframe in our chain, therefore giving a running time of $n-1 = \Theta(n)$. 
+### Chip and Conquer
+
+Let's start by reexpressing our repeated substitution of $T(n)=T(n-1)+1$ in this way. The root of our tree will correspond to the stackframe for our original invocation of the algorithm, that in which the input size is $n$. That stackframe makes one recursive call on an input of size $n-1$, which makes another recursive call on an input size $n-2$, which makes another with size $n-3$, etc. This chain of invocations continues until we reach a base case. As per our discussion earlier, the length of this chain is therefore $n-1$. All that remains is to identify the total amount of work done within each stackframe, and then add those together. In our recurrences $f(n)$ represents the non-recursive work done in a stackframe with input size $n$, and in this case $f(n)=1$. This tells us we need to add $1$ for each stackframe in our chain, therefore giving a running time of $n-1 = \Theta(n)$. We call this the "tree method" because we'll see that this "chain" of stackframes is actually a tree with no branches. One we analyze our divide and conquer recurrence we'll see that our tree has branches because each stackframe has multiple recursive calls.
 
 We depict this procedure graphically below:
 
-We represent each stackframe as a square, write the input size for that stackframe within the square, and then write the non-recursive work done in that stackframe next to each square. Our objective is to sum together all the values written next to the squares:
+<img src="files/chip_conquer_tree.png" alt="A graphical depiction of the repeated substitution process described above. There is a chain of boxes. The top-most box has the value n inside of it to represent the input size. It is connected to a box with the value n-1 inside representing a recursive call on an input of size n-1, that is connected to another box of size n-2. There are then ellispes to represent this pattern continuing until finally reaching a base case box which has an input of size 1. Each box has a number 1 written next to it to indicate that there is a constant amount of non-recursive work done by each box. The length of the chain of boxes is n-1." height="150"/>
+
+We represent each stackframe as a square, write the input size for that stackframe within the square, and then write the non-recursive work done in that stackframe next to each square. Our objective is to sum together all the values written next to the squares.
+
+The following describes the general process we can use to solve chip and conquer recurrences using the tree method:
+
+To solve a recurrence of the form $T(n)=aT(n-b)+f(n)$:
+
+1. Use the recurrence to draw a tree
+    - $a$ is the branching factor of the tree (e.g. if $a=2$ then it's a binary tree)
+    - Subtract $b$ from the parent's input size to get each child's input size
+    - The height of the tree is $\frac{n}{b}$.
+1. Work done per node is given by applying $f(n)$ to that node's input size, write that value beside each node.
+1. Add the total work done across all nodes
+    - Express the work per level $i$ as an expression using $i$
+    - Write a series adding the work per level for $i=0$ through $i=\frac{n}{b}$.
+    - Solve the series
+1. Simplify the sum asymptotically
+
+For reasons we'll get to later in this reading, It is important that the correct values of $a$ and $b$ are chosen in order to get the right asymptotic running time. It is also important to get the function $f(n)$ asymptotically correct (i.e. you can use any other function $g(n)$ here so long as $g(n)=\Theta(f(n))$ and get the same result). The exact size and running time of the base cases will never make a difference in an asymptotic analysis.
+
+
+### Divide and Conquer
+
+Now let's see how we can use our tree method to solve the divide and conquer recurrence $T(n)=2T(\frac{n}{2}) + 1$ where $T(1)=T(0)=0$. Let's use the process from above. As before, we will start with the stackframe where the input is of size $n$. That stackframe then invokes *two* recursive calls, each on an input of size $\frac{n}{2}$. Each of those then also invokes *two* recursive calls, each on an input of size $\frac{n}{4}$. This means after two rounds we have seven total stack frames: one root, two at depth 1, and four at depth 2. Overall, each level of the tree will have twice as many nodes as the prior level (each node invokes two recursive calls), and the input size to each will be half the size as those on the prior level. Each stackframe will then do one addition operation.
+
+We can depict this relationship among stackframes like this:
+
+<img src="files/divide_conquer_tree.png" alt="A graphical depiction of the tree method applied to the divide and conquer recurrence T(n)=2T(n/2)+1. There is a binary tree of boxes. The top-most box has the value n inside of it to represent the input size. It is connected to two boxes with the value n/2 inside each representing a recursive call on an input of size n/2, each of those are themselves connected to two boxes of size n/4. There are then ellispes to represent this pattern continuing until finally reaching base case boxes which each have an input of size 1. Each box has a number 1 written next to it to indicate that there is a constant amount of non-recursive work done by each box. The height of the tree of boxes is lg(n) (i.e log base 2 of n)." height="150"/>
+
+Let's see why the height of this tree is $log_2(n)$. Similar to the chip-and-conquer recurrence, the height of the tree is determined by the distance from our root to our leaves, because this is the number of times we must shrink our original input of size $n$ before we reach the base case. For this algorithm we shrink our input by cutting it in half, so we need to determine how many times we must cut $n$ in half before we get to the value $1$. If we cut $n$ in half $i$ times we will have the value $\frac{n}{2^i}$.  This means that we need to find the value of $i$ such that $\frac{n}{2^i}=1$. Solving for $i$ we get $i=\log_2(n)$.
+
+Now that we have the structure of our tree, we again need to add the total work done among all of the stackframes, meaning we want to sum together all of the values that we wrote down next to the boxes in the tree. The easiest way to do this is generally to first find the sum per-level, then use that to identify a pattern to express the work done at each level $i$ as a function involving $i$. Then we can write a series summing the work-per-level for $i=0$ up to $i=log_2(n)$.
+
+For this tree, the amount of work done on level $i$ is equal to the number of nodes in that level. Since we double at each level, the number of nodes on level $i$ is $2^i$. This means our running time should be the solution to the series $\sum_{i=0}^{log_2 n} 2^i$.
+
