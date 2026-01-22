@@ -168,5 +168,34 @@ Let's see why the height of this tree is $log_2(n)$. Similar to the chip-and-con
 
 Now that we have the structure of our tree, we again need to add the total work done among all of the stackframes, meaning we want to sum together all of the values that we wrote down next to the boxes in the tree. The easiest way to do this is generally to first find the sum per-level, then use that to identify a pattern to express the work done at each level $i$ as a function involving $i$. Then we can write a series summing the work-per-level for $i=0$ up to $i=log_2(n)$.
 
-For this tree, the amount of work done on level $i$ is equal to the number of nodes in that level. Since we double at each level, the number of nodes on level $i$ is $2^i$. This means our running time should be the solution to the series $\sum_{i=0}^{log_2 n} 2^i$.
+For this tree, the amount of work done on level $i$ is equal to the number of nodes in that level. Since we double at each level, the number of nodes on level $i$ is $2^i$. This means our running time should be the solution to the series $\sum_{i=0}^{\log_2 n} 2^i$. Using our geometric series formula, this is $\frac{2^{\log_2 n}-1}{2-1}=n$. Therefore the running time is $\Theta(n)$.
+
+The following describes the general process we can use to solve divide and conquer recurrences using the tree method:
+
+To solve a recurrence of the form $T(n)=aT(\frac{n}{b})+f(n)$:
+
+1. Use the recurrence to draw a tree
+    - $a$ is the branching factor of the tree (e.g. if $a=2$ then it's a binary tree)
+    - Divide the parent's input size by $b$to get each child's input size
+    - The height of the tree is $\log_b n$.
+1. Work done per node is given by applying $f(n)$ to that node's input size, write that value beside each node.
+1. Add the total work done across all nodes
+    - Express the work per level $i$ as an expression using $i$
+    - Write a series adding the work per level for $i=0$ through $i=\log_b n$.
+    - Solve the series
+1. Simplify the sum asymptotically
+
+# What's important
+
+When doing any sort of running time analysis it will be helpful to have an idea of what aspects of your analysis may vs. may not impact your overall asymptotic answer. The following aspects of a recurrence relation **do** matter (meaning changing them may result in a different asymptotic solution):
+
+1. The coefficient on the recursive call. In other words, $T_1(n)=a_1T_1(\frac{n}{b})+f(n)$ might be different from $T_2(n)=a_2T_2(\frac{n}{b})+f(n)$ if $a_1\neq a_2$.
+1. The argument to the recursive call. In other words, $T_1(n)=aT_1(\frac{n}{b_1})+f(n)$ might be different from $T_2(n)=aT_2(\frac{n}{b_2})+f(n)$ if $a_1\neq a_2$.
+1. The asymptotic behavior of $f(n)$. In other words, $T_1(n)=aT_1(\frac{n}{b})+f_1(n)$ might be different from $T_2(n)=aT_2(\frac{n}{b})+f_2(n)$ if $f_1(n) \neq \Theta(f_2(n))$.
+
+ The following aspects of a recurrence relation **do not** matter (meaning changing them may result in a different asymptotic solution):
+
+ 1. The constant factors and non-dominant terms of $f(n). In other words, $T_1(n)=aT_1(\frac{n}{b})+f_1(n)$ will have the same result as $T_2(n)=aT_2(\frac{n}{b})+f_2(n)$ if $f_1(n) = \Theta(f_2(n))$
+ 1. The size of the base cases. If we evaluate the recurrence using a base case of $T(1)$ vs. a base case of $T(2)$ then the running time will be the same asymptotically.
+ 1. The running time of the base cases. If we use $T(2)=8$ or $T(2)=100$ we'll get the same result asymptotically.
 
