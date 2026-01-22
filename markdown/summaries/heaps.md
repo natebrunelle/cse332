@@ -4,9 +4,9 @@ title: Topic Summary - Priority Queues and Heaps
 
 # Priority Queue ADT
 
-In this section we introduced a new ADT called a *priority queue*. As a reminder, the queue ADT allows for insertion and removal where the only item that may be removed is the least frequently added (yielding the "first in first out" behavior). In this way, a queue operates like a checkout line at a store where each shopper joins the line behind the person who arrived before them so that the one who had been there the longest is the next to be served.
+In this section we introduced a new ADT called a **priority queue**. As a reminder, the *queue* ADT allows for insertion and removal where the only item that may be removed is the least frequently added (yielding the "first in first out" behavior). In this way, a queue operates like a checkout line at a store where each shopper joins the line behind the person who arrived before them so that the one who had been there the longest is the next to be served.
 
-For a priority queue, instead of removing the least frequently added item, we will remove the most important item. We can think of this as a line where more important people are allowed to cut in front of less important people. For example, in an emergency room someone with an urgent need would see a doctor before someone with a less serious condition. In this case the urgency of the patient's condition would determine the order that we service those waiting.
+For a *priority queue*, instead of removing the least frequently added item, we will remove the most important item. We can think of this as a line where more important people are allowed to cut in front of less important people. For example, in an emergency room someone with an urgent need would see a doctor before someone with a less serious condition. In this case the urgency of the patient's condition would determine the order that we service those waiting.
 
 With this motivation, here's how we'll define the priority queue ADT:
 
@@ -31,9 +31,9 @@ First, let's look at what we might do if we just store the elements (and priorit
 - insert: add the item and its priority into the array at the index referenced by *back*, resizing if necessary. Then increment *back*.
 - extract: iterating from index 0 of the array up through index *back*, save the index and priority of the item with the smallest priority seen so far. Return the corresponding item, and remove it from the array by shifting all elements after it over by 1 index.
 
-Because we do not care to impose any kind of ordering of the elements in our array, our insert algorithm runs in constant time. However, because we have no indication for where we might find the item with smallest priority, the extract operation requires linear time.
+Because we do not care to impose any kind of ordering of the elements in our array, our insert algorithm runs in constant time (amortized). However, because we have no indication for where we might find the item with smallest priority, the extract operation requires linear time.
 
-### Sortest Array Priority Queue
+### Sorted Array Priority Queue
 
 Because priority queues require removing items in a sorted order, perhaps we could improve our data structure by requiring the items be stored in descending order (largest priority value at index 0, smallest at index $n-1$). In this data structure we will also have the field *back* that indicates the index of the last item in the array (in this case this will be the one with the smallest priority value). Here's what insert and extract might look like in this case:
 
@@ -78,7 +78,7 @@ In addition to requiring a particular shape to the tree, heaps also require rest
 
 This heap property ensures that for every node, the priority of the value held there is the smallest of all nodes in its subtree. This is because if there was any node within a subtree with a smaller priority value then that node or one of its ancestors must violate the heap property with its parent. Since this applies to all nodes, that implies that the overall root of the heap *must* contain the element with the smallest priority. Therefore this heap property gives us one of the advantages of a sorted array in that we know exactly where to find the most important item.
 
-The heap property also doesn't require our array to be *too* sorted. Note that the heap property only enforces a priority relationship between a node and any values in its subtree. It does not have any restrictions on how a node's priority value might relate to those of nodes in different branches of the tree (e.g. "cousin" nodes or "aunt/uncle" nodes). The result here will be that it does not require too much effort to maintain the heap property when adding/removing items from the heap (at least, it requires much less effort than maintaining a total ordering). Namely, since the heap property can be checked by just checking how parents relat to children, the heap property ensures that we need to do only a constant number of operations per level of the tree to restore the heap property after any insert/extract operation. The shape property then guarantees that the tree will not have many levels. The combination of these two rules therefore enables our fast ($\Theta(\log n)$) running time for each operation.
+The heap property also doesn't require our array to be *too* sorted. Note that the heap property only enforces a priority relationship between a node and any values in its subtree. It does not have any restrictions on how a node's priority value might relate to those of nodes in different branches of the tree (e.g. "cousin" nodes or "aunt/uncle" nodes). The result here will be that it does not require too much effort to maintain the heap property when adding/removing items from the heap (at least, it requires much less effort than maintaining a total ordering). Namely, since the heap property can be checked by just checking how parents relate to children, the heap property ensures that we need to do only a constant number of operations per level of the tree to restore the heap property after any insert/extract operation. The shape property then guarantees that the tree will not have many levels. The combination of these two rules therefore enables our fast ($\Theta(\log n)$) running time for each operation.
 
 ## The Tree Representation Using an Array
 
@@ -145,10 +145,8 @@ Here are the overall steps:
 1. Save the value of the current root
 1. Move the item in the last index of the array to index 1 (overwriting and taking the place of the old root)
 1. Compare the new roots priority with that of its children. If any child has a smaller priority than the parent, swap the parent with the smaller child.
-1. Repeat the previous step (if smaller than either child, swap with smaller child) until either the value we're moving is smaller than both of its children, or until it becomes a leaf in the tree.
+1. Repeat the previous step (if smaller than any child, swap with the smallest child) until either the value we're moving is smaller than both of its children, or until it becomes a leaf in the tree.
 1. Return the saved value of the original root 
-
-We'll leave the java code for extract for you to draft as part of your homework.
 
 
 
@@ -222,7 +220,7 @@ Here's how the algorithm operates:
 
 At first this might look no different from the naive "insert into the heap one at a time" algorithm because we're still doing a percolation per item in the heap. There is one very important observation about a binary tree that makes Floyd's method more efficient, though. That is that binary trees are much bigger on the bottom compared to the top. In a completely full heap for example (i.e. one where every level is completely full), half of the nodes are leaves, one quarter of the nodes are in the second-from-last level, one eighth of the nodes are in the third-from-last level, and so on. By working from back to front in the array, and percolating down, we ensure that the majority of items (the leaves) have less distance to travel when percolating, because they're already close to the bottom.
 
-Now let's do a more formal analysis of the running time. Because the first $\frac{n}{2}$ nodes are already leaves, percolating down requires $0$ comparisons. For the next $\frac{n}{2}$ nodes, each must participate in $2$ comparisons each in the worst case (each node must be compared with both of its children). For the next $\frac{n}{4}$ nodes, each must participate in $4$ comparisons in the worst case (each must be compared to its children, and then if we swap the children of the node we swapped with). The next $\frac{n}{8}$ nodes, each must participate in $6$ comparisons in the worst case. Continuing this process, the worst case number of comparisons is given by the series $\frac{2n}{2}+\frac{4n}{4}+\frac{6n}{8}+\frac{8n}{16}+\frac{10n}{32}+...$, where we have one term per level of the tree. Or expressed using sigma notation $\sum_{i=1}^{\log_2 n}\frac{2in}{2^i}$.
+Now let's do a more formal analysis of the running time. Because the first $\frac{n}{2}$ nodes are already leaves, percolating down requires $0$ comparisons. For the next $\frac{n}{4}$ nodes, each must participate in $2$ comparisons each in the worst case (each node must be compared with both of its children). For the next $\frac{n}{4}$ nodes, each must participate in $4$ comparisons in the worst case (each must be compared to its children, and then if we swap the children of the node we swapped with). The next $\frac{n}{8}$ nodes, each must participate in $6$ comparisons in the worst case. Continuing this process, the worst case number of comparisons is given by the series $\frac{2n}{2}+\frac{4n}{4}+\frac{6n}{8}+\frac{8n}{16}+\frac{10n}{32}+...$, where we have one term per level of the tree. Or expressed using sigma notation $\sum_{i=1}^{\log_2 n}\frac{2in}{2^i}$.
 
 Let's now figure out what this sums to. Let's being with some rearranging.
 
