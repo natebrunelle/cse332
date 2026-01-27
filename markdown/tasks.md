@@ -225,14 +225,21 @@ Concept Check 1 is available in Gradescope! This concept check applies to the ru
 Remember, you have unlimited attempts at concept checks! You'll know the answer is correct when a explanation box pops up explaining the answer to you. Pleaes reach out via Ed, office hours, or in section if you have any questions, concerns, or confusions!
 
 
+
+
+## CC2 Heaps
+
+ This concept check applies to priority queues and heaps. This concept check references content covered in class on 1/12 and 1/14. You can additionally view the summaries on [heaps](/summaries/heaps.html).
+
+## CC3 Recurrences
+
+This concept check applies to priority queues and heaps. This concept check references content covered in class on 1/16 and 1/21. You can additionally view the summaries on [recurrence relations](/summaries/recurrences.html).
+
+## CC4 AVL Trees
+
+This concept check applies to dictionaries and AVL Trees. This concept check references content covered in class on 1/23 and 1/26. A content summary will be posted shortly.
+
 <!--
-
-    CC2 Heaps
-
-    CC3 Recurrences
-
-    CC4 AVL Trees
-
     CC5 Hash Tables
 
     CC6 Sorting
