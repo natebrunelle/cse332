@@ -70,13 +70,13 @@ The objectives of this exercise are to:
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-<!--
+
 ## Exercise 4
 
 The objectives of this exercise are to:
 
 - Identify the relationships between binary search trees and AVL trees by implementing AVL trees as a subclass of binary search trees (and thereby inheriting methods whenever possible).
-- Develop familiarity with the AVLTree data structure by implementing it. In particular: understanding what information needs to be maintained in order to preserve the structure property (height of subtrees differs by 0 or 1), using that information to correctly identify to perform rotation operations.
+- Develop familiarity with the AVLTree data structure by implementing it. In particular: identify what information needs to be maintained in order to preserve the structure property (height of subtrees differs by 0 or 1), use that information to correctly identify to perform rotation operations.
 - Highlight the advantages of using an ordered dictionary data structure (like a binary search tree) by using one to implement a new data structure
 
 
@@ -84,8 +84,10 @@ This is a programming exercise which you will submit to gradescope. There is no 
 
 For this exercise, you will need:
 
-- [Starter Code](/files/exercises/ex4.zip) - which contains various classes that will be needed for this assignment.
-- [Specification](https://docs.google.com/document/d/1KtUWudDpbsfZzelucVnVnGlsUzpQ4Z0_7vWeSMpPNiU/edit?usp=sharing) - which contains all instructions for what to do for this assignment.
+- [EX04 Starter Code](/files/exercises/ex4.zip) - which contains various classes that will be needed for this assignment.
+- [EX04 Specification](https://docs.google.com/document/d/e/2PACX-1vTJvQ8aANiFmo-8otc_JW17mz-bqDYaojMSwkSzjgzQOrwwo3G38RWWFz810V13ig/pub) - which contains all instructions for what to do for this assignment.
+
+<!--
 
 ## Exercise 5
 
