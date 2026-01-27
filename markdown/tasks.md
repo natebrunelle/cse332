@@ -225,8 +225,6 @@ Concept Check 1 is available in Gradescope! This concept check applies to the ru
 Remember, you have unlimited attempts at concept checks! You'll know the answer is correct when a explanation box pops up explaining the answer to you. Pleaes reach out via Ed, office hours, or in section if you have any questions, concerns, or confusions!
 
 
-
-
 ## CC2 Heaps
 
  This concept check applies to priority queues and heaps. This concept check references content covered in class on 1/12 and 1/14. You can additionally view the summaries on [heaps](/summaries/heaps.html).
@@ -268,7 +266,7 @@ This concept check applies to dictionaries and AVL Trees. This concept check ref
 
 # Exams
 
-The course staff will scann, upload and grade exams on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1208996).
+The course staff will scan, upload and grade exams on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1208996).
 
 ## Exam 1
 
