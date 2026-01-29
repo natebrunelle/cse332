@@ -9,3 +9,4 @@ We provide a summary write-up for many of the topics covered in lecture. These a
 - [Asymptotics](/summaries/asymptotics.html): This summary covers material discussed in the 1/9 lecture and the 1/12 lecture. It will be most relevant for exercise 1.
 - [Heaps](/summaries/heaps.html): This summary covers material discussed in the 1/12 lecture, the 1/14 lecture, and the 1/16 lecture. It will be most relevant for exercise 2.
 - [Recurrences](/summaries/recurrences.html): This summary covers material discussed in the 1/16 lecturee, the 1/21 lecture, and the 1/22 section. It will be most relevant for exercise 3.
+- [AVL Trees](/summaries/avl.html): This summary covers material discussed in the 1/23 lecture, 1/26 lecture, and 1/29 section. It will be most relevant for exercise 4.

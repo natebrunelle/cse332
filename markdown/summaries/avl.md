@@ -172,8 +172,75 @@ A right-left rotation is the mirror image of a left-right rotation. It has the o
 After performing both rotations the node c becomes the root of the tree. The right child of c is the node b, and the left child of c is a (the former root). The right subtree of b is unchanged, and the left subtree of b is y (the former right subtree of c). The left subtree of a is unchanged, and the right subtree of a is x (the former left subtree of c). Because we have split the original subtrees of c, we have lifted both subtrees up by 1 level in exchange for lowering w (the original left subtree of a)." height="150"/>
 
 
+## AVL Tree Insert
 
-## Justifying Logarithmic Running Time
+We now have all of the tools necessary in order to completely define our insert algorithm for AVL trees, which proceeds as follows:
 
+1. First perform a BST insert, which will either update the value associated with the given key, or else create a new node with the given key-value pair.
+1. If the key was already present in the tree, and we therefore updated the value associated with it, we did not modify the tree and therefore are finished with the insert.
+1. We we added a new node (which will always be a leaf) then we may have caused the AVL tree to become unbalanced, and so we must check for unbalance and perhaps perform rotations.
+1. Starting from the new leaf and moving one level at a time toward the root, check to see if any node is a "problem node", meaning that the heights of its left and right subtrees differ by more than 1.
+1. If the current node is a problem node, identify where the new node was added relative to that problem node:
+    - If the new node was added to the left-left subtree then do a right rotation.
+    - If the new node was added to the right-right subtree then do a left rotation.
+    - If the new node was added to the left-right subtree then do a left-right double rotation.
+    - If the new node was added to the right-left subtree then do a right-left double rotation.
+
+To evaluate the running time of this algorithm we observe the following:
+
+- A BST insert is linear in the height of the tree
+- Supposing there is a height field within each node that is correctly maintained, step 4 requires only constant time per level
+- Step 5 also requires constant time because each rotation requires only updating references and height fields for the nodes $a$, $b$, and $c$ (in the case of a double rotation only).
+
+Overall, the running time of an AVL tree insert is *also* linear in the height of the tree.
+
+## AVL Tree Delete
+
+The AVL tree delete algorithm proceeds as follows:
+
+1. First perform a BST delete. If the key was not present then we do not modify the tree and therefore can return without any further steps. If the key was present then we removed a node from the tree, and so we may have caused the AVL tree to become unbalanced, and so we must check for unbalance and perhaps perform rotations.
+1. Starting from the parent of the node whose *postition* was removed (if the key-value pair removed had either 0 or 1 child then we start from the parent of that node, if the key-value pair removed had two children then we start from the parent of where we found the largest node on the left) and moving one level at a time toward the root, check to see if any node is a "problem node", meaning that the heights of its left and right subtrees differ by more than 1.
+1. If the current node is a problem node, identify where the node was removed relative to that problem node:
+    - If the node was removed from the left-left subtree then do a left rotation.
+    - If the node was removed from the right-right subtree then do a right rotation.
+    - If the node was removed from the left-right subtree then do a right-left double rotation.
+    - If the node was removed from the right-left subtree then do a left-right double rotation.
+
+Note that the cases for rotations are exactly the opposite of inserting relative to where the change happened (they are the same relative to which subtree was too tall/short).
+
+Similar to inserting, we still do constant work per level of the tree, and so the running time is linear in the tree's height.
+
+## Justifying Logarithmic Height
+
+Now that we have established that, like with binary search trees, AVL tree operations run in linear time relative to the tree's height, all that remains to justify our logarithm running time is an argument to show that the height of an AVL tree is logarithmic in terms of the number of nodes it contains.
+
+Similar to what we did with heaps, we will begin by first fixing the height of the tree to $h$, and then identifying the minimum number of nodes that tree could contain. Because our running time is linear in the trees height, this will serve as a worst case analysis because that maximizes the height relative to the number of nodes.
+
+We will define the function $M(h)$ to return the minimum number of nodes in an AVL tree of height $h$. We can define $M(h)$ using a recurrence relation as follows:
+
+$M(h) = M(h-1)+ M(h-2) + 1$.
+
+$M(-1)=0, M(0)=1$
+
+
+Let's discuss how we derived this. First of all, a tree of height $-1$ must have $0$ nodes and a tree of height $0$ must have exactly $1$ node, giving the base cases of the recurrence. 
+
+For the recursive we're saying that we can form the minimum-sized AVL tree of height $h$ by first finding the minimum-sized AVL tree of height $h-1$ (which will have $M(h-1)$ nodes) and of height $h-2$ (which will have $M(h-2)$ nodes). Then we connect those together with a shared parent node (thus we add $1$). This must be the minimum because for a tree to be height $h$ at least one subtree of the root must have height $h-1$, and the other subtree must then have height $h-1$ or lower. Because an AVL tree requires that the height of sibling subtrees may differ by no more than $1$, the minimum height of the other subtree is $h-2$. 
+
+From here, we can get an asymptotic lower bound on $M(h)$ by comparing it to the Fibbonacci sequence.
+
+The $n$th Fibbonacci number can be calculated following the recurrence:
+
+$F(n)=F(n-1)+F(n-2)$
+
+$F(0)=0, F(1)=1$
+
+We can observe that for all values of $x\geq 0$ it holds that $M(x)\geq F(x)$. This would be best justified using induction. We'll skip a formal inductive proof and instead just provide a sketch of the argument. The inequality holds true for the base cases, and then for each application of the recursive case the $M$ recurrence grows by 1 more than the Fibbonacci recurrence does.
+
+We can then approximate the value of the $n$th Fibonacci number as $F(n)\approx \phi^n$ where $\phi=\frac{1=\sqrt{5}}{2}\approx 1.62$ is the golden ratio. 
+
+Because $M(x)\geq F(x)$, we can lower bound the minimum number of nodes in a tree of height $h$ as $\phi^h$. Because the running time of our AVL tree operations are $\Theta(h)$, we can define an upper bound on worst case the running time in terms of $n$ by setting $n=\phi^h$, then solving for $h$. This gives a worst case running time of $O(\log_\phi n)\O(\log n)$.
+
+We can also get a $\Omega$ bound on the worst case running time by observing that the maximum number of nodes in a tree of height $h$ is $2^{h+1}-1$. Setting $n=2^{h+1}-1$ and solving for $h$ gives $h=\log_2{n+1}-1$, and so the worst case running time is $\Omega(\log n)$. Because the running time is both $O(\log n)$ and $\Omega(\log n)$, we conclude the worst case running time is $\Theta(\log n)$. 
 
 
