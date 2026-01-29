@@ -89,3 +89,91 @@ Finally we could define a delete algorithm as follows:
 For each of the algorithms, we must do only a constant number of operations per level of the tree. This means that the running time should be linear in terms of the tree's height. The problem is, in the worst case the height of the tree might be linear in the number of nodes. Overall, this means our worst-case running time is $\Theta(n)$ just like all of the other data structure options above.
 
 That being said, just a minor modification of binary search trees will allow us to achive $\Theta(\log n)$ running times for all operations. Since the binary search tree operations are all linear in the tree's height, if can modify our insert and delete algorithms in order to *guarantee* that the height of the tree is logarithmic in its size, then suddenly all running times will be $\Theta(\log n)$.
+
+# AVL Trees
+
+## Definition
+
+An **AVL Tree** (named for its designers Georgy Adelson-Velsky and Evgenii Landis) is a type of *balanced binary search tree* data structure (sometimes it's also called a *self-balancing binary search tree*). This type of data structure is one where items are stored in a binary search tree, but nodes may be moved around when new nodes are added/removed in order to keep the tree's height low. 
+
+Specifically an AVL tree maintains the property that for each node, the height of it's left subtree and the height of its right subtree may differ by no more than 1. When we add/remove a node, and as a result this property no longer holds, we move nodes around using a process called "rotation" in order to restore this balance property.
+
+### Aside: Tree Height
+
+We define the height of a tree to be the *maximum* distance from the root to a leaf. When measuring "distance" there are two ways I've seen to do this. The first is to count the number of nodes in the path from the root (inclusive) to the deepest leaf (inclusive). The second is to count the number of edges in that path (which gives the same result as being exclusive of either the path's start or end). To highlight the difference, the first option would suggest that a one-node tree has height 1, wherease the second options would suggest that a one-node tree has height 0.  Since we would want an empty tree's height to be smaller than that of a one-node tree, the first option would suggest that a zero-node tree has height 0, and the second would suggest that a zero-node tree has height -1. Poking around various sources, my impression is that the second option (height is the count of edges) is actually the more commonly used, and so that's what we presented in lecture. That being said, either choice made consistently will result in identical behavior of an AVL trees.
+
+The height of a tree can be computed as follows:
+
+- The height of an empty tree is -1
+- The height of a non-empty tree is one more than the maximum of the height of its left subtree and its right subtree.
+
+Or in Java code:
+
+```
+public int height(Node root){
+    if (root == null){
+        return -1;
+    }
+    return Math.max(height(root.left), height(root.right)) + 1;
+}
+```
+
+## AVL Tree Opertions
+
+AVL trees are a special case of binary search trees because all items it contains follow the binary search property (that for each node, its left subtree only contains smaller items, and its right subtree only contains larger items). Because of this, all "read-only" binary search tree operations (operations that navigate but do not modify the tree) can be used for an AVL tree without making any change. Namely, the AVL tree **find** algorithm is exactly the binary search tree find algorithm presented above.
+
+For the operations which do modify the tree, we will begin by performing the binary search tree algorithm for that operation, and then afterwards perform rotations in the case that the tree is no longer balanced, meaning there is some node whose subtree's heights differ by more than 1. We will refer to a node whose subtrees are not balanced as a *problem node*.
+
+
+When we modify the tree, there are four different types of rotations we may do. The choice depends on where in the tree we made the change relative to the problem node.
+
+### Right Rotation
+
+A right rotation has the effect of lifting the "left-left" subtree and dropping the "right-right" subtree of the problem node. The left-left subtree is the one rooted at problem node's left child's left child. In other words, we can navigate to the left-left subtree from the problem node by going left twice. In the images below, the left-left subtree is the one labelled $x$. The right-right subtree is the one reached by going right twice from the problem node, and it is labelled $z$.
+
+The image below depicts a right rotation. Observe that before the rotation the problem node $a$ is the root of the subtree. After the rotation its left child $b$ becomes the root, and $a$ becomes its right child. We call this a right rotation because the nodes shifted in a counter-clockwise direction.
+
+<img src="files/right_rotation.png" alt="An illustration of a right rotation. Initially, the problem node is labelled a. Its left subtree is rooted at a node labelled b, and it has a height of h+2. Its right subtree is labelled z and has a height of h. The left subtree of b is labelled x and has height h+1. The right subtree of b is labelled y and has a height of h. After performing a right rotation the node b becomes the root of the tree. The right child of b is the node a (the former root), and the left child of b is unchanged. The left subtree of a is y (the former right subtree of b), and the right subtree of a is unchanged. Because x has height h+1 and y and z had height h, both subtrees of b now have height h+1, making the tree balanced." height="150"/>
+
+Notice that before the rotation, the node $a$ was not balanced because its left subtree's height was two more than its right subtree's. We successfully rebalanced the tree by taking the tallest subtree ($x$, the left-left subtree of $a$) and moving it so it became a direct child of the root.
+
+Also note that the rotation is guaranteed to preserve the binary search tree ordering property. From the original tree we know that the values must be in the order $x < b < y < a < z$. After the rotation we have $x$ to the left of $b$, $y$ to the left of $a$, $a$ to the right of $b$, and $z$ to the right of $a$, all of which are consistent with that ordering.
+
+
+
+### Left Rotation
+
+A left rotation has the effect of lifting the "right-right" subtree and dropping the "left-left" subtree of the problem node.
+
+The image below depicts a left rotation. Observe that before the rotation the problem node $a$ is the root of the subtree. After the rotation its right child $b$ becomes the root, and $a$ becomes its left child. We call this a left rotation because the nodes shifted in a clockwise direction.
+
+<img src="files/left_rotation.png" alt="An illustration of a left rotation. Initially, the problem node is labelled a. Its right subtree is rooted at a node labelled b, and it has a height of h+2. Its left subtree is labelled x and has a height of h. The right subtree of b is labelled z and has height h+1. The left subtree of b is labelled y and has a height of h. After performing a left rotation the node b becomes the root of the tree. The left child of b is the node a (the former root), and the right child of b is unchanged. The right subtree of a is y (the former left subtree of b), and the left subtree of a is unchanged. Because z has height h+1 and y and z had height h, both subtrees of b now have height h+1, making the tree balanced." height="150"/>
+
+This rotation is exactly the mirror image of a right rotation, and so behaves following the exact same intuition.
+
+### Left-Right Rotation
+
+We saw above that a left rotation raises the right-right subtree of the problem node and a right rotation raises the left-left subtree. Neither rotation impacts the level of the left-right or right-left subtrees of the problem node. To impact those subtrees we'll need to use two rotations. We call this left-right rotation and the right-left rotation to follow *double rotations*, and intuitively they operate similarly to each other. Because we know that a left rotation overall raises the right side of the tree, and a right rotation raises the left side, we will use a combination of each to raise the "middle" subtrees. 
+
+A left-right rotation has the effect of lifting the left-right subtree of the problem node (this is the subtree we get to by going from the problem node, to its left child, then to the child's right subtree) in exchange for lowering the right subtree of the problem node. To do this we will first do a left rotation on the problem node's left child. This has the impact of lifting the left-right subtree of the problem node, but comes at the expense of lowering the left-left subtree of the problem node. Because in this case it was the problem node's left subtree that was too low, this may not have actually fixed the unbalance. To ensure the tree is balanced we will now do a right rotation at the problem node to lift that left-left subtree an lower the right-right subtree.
+
+The image below depicts a left-right rotation. Observe that before the rotation the problem node $a$ is the root of the subtree. After the rotation the node $c$, which is left-right grandchild of $a$, becomes the root of the subtree. The left-left subtree ends at exactly the same level as where it started. The right-right subtree is lower than it was previously. The original left-right subtree has been "split". The overall impact is that all nodes in the left-right subtree are higher than they were before the double rotation and the right subtree of the problem node is lower, therefore balancing the tree.
+
+<img src="files/leftright_rotation.png" alt="An illustration of a left-right rotation. Initially, the problem node is labelled a. Its left subtree is rooted at a node labelled b, and it has a height of h+2. Its right subtree is labelled z and has a height of h. The left subtree of b is labelled w and has height h. The right child of b is labelled c, and its subtree has height h+1. The left and right subtrees of c are labelled x and y respectively, and at least one of those subtrees has height h (the other could also be height h, or it could be height h-1). To balance the tree we perform a left rotation at b (the left child of a) then a right rotation at a.
+After performing both rotations the node c becomes the root of the tree. The left child of c is the node b, and the right child of c is a (the former root). The left subtree of b is unchanged, and the right subtree of b is x (the former left subtree of c). The right subtree of a is unchanged, and the left subtree of a is y (the former right subtree of c). Because we have split the original subtrees of c, we have lifted both subtrees up by 1 level in exchange for lowering z (the original right subtree of a)." height="150"/>
+
+Because a left-right rotation is simply a left rotation followed by a right rotation, and we already established that both left and right rotations preserve the binary search tree ordering property, a left-right rotation will do so as well.
+
+### Right-Left Rotation
+
+A right-left rotation is the mirror image of a left-right rotation. It has the overall effect of lifting the right-left subtree of the problem node in exchange for lowering the left subtree of the problem node. It operates by first doing a right rotation on the right child of $a$, and then doing a left rotation on $a$.
+
+<img src="files/rightleft_rotation.png" alt="An illustration of a left-right rotation. Initially, the problem node is labelled a. Its right subtree is rooted at a node labelled b, and it has a height of h+2. Its left subtree is labelled w and has a height of h. The right subtree of b is labelled z and has height h. The left child of b is labelled c, and its subtree has height h+1. The left and right subtrees of c are labelled x and y respectively, and at least one of those subtrees has height h (the other could also be height h, or it could be height h-1). To balance the tree we perform a right rotation at b (the right child of a) then a left rotation at a.
+After performing both rotations the node c becomes the root of the tree. The right child of c is the node b, and the left child of c is a (the former root). The right subtree of b is unchanged, and the left subtree of b is y (the former right subtree of c). The left subtree of a is unchanged, and the right subtree of a is x (the former left subtree of c). Because we have split the original subtrees of c, we have lifted both subtrees up by 1 level in exchange for lowering w (the original left subtree of a)." height="150"/>
+
+
+
+## Justifying Logarithmic Running Time
+
+
+
