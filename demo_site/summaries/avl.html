@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>CSE332 - Topic Summary - AVL Trees</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+  <link rel="stylesheet" href="../style.css?v=2" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <style type="text/css">.katex { font-size: inherit; }</style>
+</head>
+<body>
+    <div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <span class="doc-title">CSE 332 &ndash; Topic Summary - AVL Trees</span>
+        <ul class="nav pull-right doc-info">
+                    <li><p class="navbar-text"><a href="../index.html">Home</a></p></li>
+          <li><p class="navbar-text"><a href="../syllabus.html">Syllabus</a></p></li>
+          <li><p class="navbar-text"><a href="../calendar.html">Calendar</a></p></li>
+          <li><p class="navbar-text"><a href="../tasks.html">Tasks</a></p></li>
+          <li><p class="navbar-text"><a href="../summaries.html">Summaries</a></p></li>
+          <li><p class="navbar-text"><a href="../oh.html">Office Hours</a></p></li>
+          <li><p class="navbar-text"><a href="../staff.html">Staff</a></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+    <div class="row">
+            <div id="TOC" class="span3">
+        <div class="well toc">
+        <ul>
+          <li class="nav-header">Table of Contents</li>
+        </ul>
+        <ul>
+        <li><a href="#dictionary-adt"><span class="toc-section-number">1</span> Dictionary ADT</a><ul>
+        <li><a href="#dictionaries-using-lists"><span class="toc-section-number">1.1</span> Dictionaries Using Lists</a></li>
+        <li><a href="#dictionaries-using-a-heap"><span class="toc-section-number">1.2</span> Dictionaries Using a Heap</a></li>
+        <li><a href="#dictionaries-using-binary-search-trees"><span class="toc-section-number">1.3</span> Dictionaries Using Binary Search Trees</a></li>
+        </ul></li>
+        </ul>
+        </div>
+      </div>
+            <div class="span9">
+            <!--<blockquote style="background-color:#fbb; font-size:150%">This page is from a previous offering of the course. It has been left up for archival purposes.</blockquote>-->
+      <!--<blockquote style="background-color:#fbb; font-size:150%">This page is under construction. Any content you see now is subject to change until the first day of class. Expect some links to be broken until that time.</blockquote>--> 
+      <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
+      <h1 id="dictionary-adt"><span class="header-section-number">1</span> Dictionary ADT</h1>
+      <p>In this section we introduced a new ADT called a <strong>dictionary</strong>. A dictionary should hold a collection of key-value pairs. The idea is that keys are used to refer to values in this collection similar to how variables refer to values in a program. In the dictionary we can use a key to obtain its associated value, update a key so that it is associated with a new value. Depending on the programming language this ADT may have a different name. In python it’s referred to as a dictionary, in Java it’s called a map, in php it’s called an associative array, and in JavaScript it’s simply called an <q>Object</q>.</p>
+      <p>Here’s how we’ll define the dictionary ADT:</p>
+      <ul>
+      <li>Notion: A collection of key-value pairs</li>
+      <li>Operations:
+      <ul>
+      <li>insert: Given a key-value pair, if there is already a key-value pair corresponding to the given key, update the dictionary so that the key is associated with the given value. Otherwise add the new given key-value pair.</li>
+      <li>find: Given a key, return the value it is already associated with, if there is one. If there is no key-value pair for that key then return a default value (e.g. null).</li>
+      <li>delete: given a key, remove that key-value pair from the collection.</li>
+      </ul></li>
+      </ul>
+      <p>For our first dictionary data structure we will assume that keys can be compared. That is, there is some way that we can compare two keys to determine which is <q>larger</q>. For example, in Java we would need the type of the keys to implement the Comparable interface so that we could use the compareTo method to determine which is larger. Our next dictionary data structure will not have this requirement.</p>
+      <h2 id="dictionaries-using-lists"><span class="header-section-number">1.1</span> Dictionaries Using Lists</h2>
+      <p>Similar to what we saw with priority queues, we can first explore how we might attempt to design a data structure for the dictionary ADT using a form of sequential storage like an array or a chain of linked nodes (like a linked list).</p>
+      <p>Suppose we plan to store all of our key-value pairs in an <strong>ordered array</strong>. When doing this, we may have the following algorithms for the ADT operations:</p>
+      <ul>
+      <li>insert: Perform a binary search for the given key. If it is present then update the value. Otherwise insert the key at the appropriate index. The binary search can be done in <span class="math inline">\Theta(\log n)</span> time, but adding a new key-value pair may require <span class="math inline">\Theta(n)</span> time in the worst case to shift all the element in the array to make room.</li>
+      <li>find: Perform a binary search for the given key. If it is found then return it, otherwise return the default value. This requires <span class="math inline">\Theta(\log n)</span> time in the worst case.</li>
+      <li>delete: Perform a binary search for the given key. If it is found the remove the key-value pair from the array by shifting all elements to overwrite it. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      </ul>
+      <p>Suppose we instead use an <strong>unordered array</strong>:</p>
+      <ul>
+      <li>insert: Do a lineary search through the array for the given key. If it is present the update its value. Otherwise add the new key-value pair at the end of the array. This requires <span class="math inline">\Theta(n)</span> time in the worst case. because of the need to search for if the key is already present.</li>
+      <li>find: Do a linear search through the array for the given key. If found return its value, otherwise return the default value. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      <li>delete: Do a linear search through the array for the given key. If it is found the remove the key-value pair from the array by shifting all elements to overwrite it. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      </ul>
+      <p>Suppose we use <strong>ordered linked nodes</strong>:</p>
+      <ul>
+      <li>insert: Do a linear search through the array for the given key. If you come across the key then update its value. If you come across a key larger than the key then add a new node before it for the new key-value pair. If you come to the end of the chain then add the new key-value pair to the end (it must be the largest key). This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      <li>find: Do a linear search through the array for the given key. If you come across the key then return its value. If you come across a key larger than the key or you come to the end of the chain then return the default value. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      <li>delete: Do a linear search through the array for the given key. If you come across the key then remove that node. If you come across a key larger than the key or you come to the end of the chain then the key was not present so return without making a change. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      </ul>
+      <p>Finally, suppose we use <strong>unordered linked nodes</strong>:</p>
+      <ul>
+      <li>insert: Do a linear search through the array for the given key. If you come across the key then update its value. If you come to the end of the chain then add the new key-value pair to the end. This requies <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      <li>find: Do a linear search through the array for the given key. If you come across the key then return its value. If you come to the end of the chain then return the default value. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      <li>delete: Do a linear search through the array for the given key. If you come across the key then remove that node. If you come to the end of the chain then the key was not present so return without making a change. This requires <span class="math inline">\Theta(n)</span> time in the worst case.</li>
+      </ul>
+      <p>Notice that all of the approaches above require <span class="math inline">\Theta(n)</span> time for all operations, with the exception of the find operation for an ordered array which requires <span class="math inline">\Theta(\log n)</span> time.</p>
+      <h2 id="dictionaries-using-a-heap"><span class="header-section-number">1.2</span> Dictionaries Using a Heap</h2>
+      <p>Since we now know of this nifty new heap data structure for priority queues, let’s consider whether we can apply it as a dictionary data structure as well. We’ll suppose we’re using a min heap, but we could make a parallel argument for max heaps.</p>
+      <p>The first thing to note is that the running times of insert and delete must be <em>at least</em> that of find. This is because both of insert and delete have different behavior depending on whether or not the given key is already present, and so they must do a find somewhere as a subroutine. For this reason, we will first consider the find operation for heaps.</p>
+      <p>At first, heaps may seem promising as a dictionar data structure. If the key we want to find is <span class="math inline">\leq</span> the smallest key used so far, then we can do our insert in <span class="math inline">\Theta(\log n)</span> time (constant if it is equal to the smallest key, logarithmic if we need to insert a new node that will become the root). Let’s consider, though, what happens if we want to do an insert operation where the key is <span class="math inline">\geq</span> the largest key currently present. The heap property guarantees every node is smaller than (or equal to) its children. This property allows for the largest item to appear as <em>any</em> leaf in the tree. Since there are <span class="math inline">\frac{n}{2}</span> leaves in a heap, our find algoritm must check at least <span class="math inline">\frac{n}{2}</span> locations to ensure the key is not already present. This means our worst case running time for find must be <span class="math inline">\Omega(n)</span>, and so heaps do no better than any of the list-based options above.</p>
+      <h2 id="dictionaries-using-binary-search-trees"><span class="header-section-number">1.3</span> Dictionaries Using Binary Search Trees</h2>
+      <p>We saw above that efficient finds are a prerequisite for efficient inserts and deletes, and that ordering (in our sorted array) helped to make find more efficient. Next let’s consider a data structure that maintains ordering to help keep finds efficient, but potentially addresses the challenge of sorted arrays (the need to shift elements when inserting/deleting). For this we’ll use a **binary search tree*. The binary search tree should make find efficient because we will only need to explore one branch per node. Because we represent the tree using linked nodes, it should also make inserting/deleting a node more efficient since this largely involves updating references rather that shifting around contents.</p>
+      <p>So first, let’s look at what a find algorithm would look like:</p>
+      <ol type="1">
+      <li>If the current node is null then the key does not exist in the dictionary, so return the default value.</li>
+      <li>If the key is equal to the current node, return the associated value.</li>
+      <li>If the key is less than the current node, return the result of recursively searching the left subtree</li>
+      <li>Otherwise the key is greater than the current node, return the result of recursively searching on the right subtree</li>
+      </ol>
+      <p>We could then define an insert algorithm as follows:</p>
+      <ol type="1">
+      <li>If the current node is null then the key does not exist in the dictionary, so create a new node with the given key-value pair at the current location.</li>
+      <li>If the key is equal to the current node, update the associated value.</li>
+      <li>If the key is less than the current node, recursively insert the key-value pair into the left subtree</li>
+      <li>Otherwise the key is greater than the current node, recursively insert the key-value pair into the right subtree</li>
+      </ol>
+      <p>Notice that since we only create new nodes when we reach an empty location of the tree, every new node will be a leaf.</p>
+      <p>Finally we could define a delete algorithm as follows:</p>
+      <ol type="1">
+      <li>If the current node is null then the key does not exist in the dictionary, return without making any changes.</li>
+      <li>If the key is equal to the current node then delete the current node.:
+      <ol type="1">
+      <li>If the current node is a leaf then set its parent reference to null</li>
+      <li>If the current node has one child then set its parent reference to its child</li>
+      <li>If the current node has two children then first delete the largest (i.e. right-most) key from the left subtree, then update the current node’s key-value pair to become the key-value pair just deleted. (Note that because the largest key from the left subtree must not have a right child it either has 0 or 1 child, and so we can use one of the first two cases above to delete that node.)</li>
+      </ol></li>
+      <li>If the key is less than the current node, recursively delete the key-value pair from the left subtree</li>
+      <li>Otherwise the key is greater than the current node, recursively delete the key-value pair from the right subtree</li>
+      </ol>
+      <p>For each of the algorithms, we must do only a constant number of operations per level of the tree. This means that the running time should be linear in terms of the tree’s height. The problem is, in the worst case the height of the tree might be linear in the number of nodes. Overall, this means our worst-case running time is <span class="math inline">\Theta(n)</span> just like all of the other data structure options above.</p>
+      <p>That being said, just a minor modification of binary search trees will allow us to achive <span class="math inline">\Theta(\log n)</span> running times for all operations. Since the binary search tree operations are all linear in the tree’s height, if can modify our insert and delete algorithms in order to <em>guarantee</em> that the height of the tree is logarithmic in its size, then suddenly all running times will be <span class="math inline">\Theta(\log n)</span>.</p>
+            </div>
+    </div>
+  </div>
+  <footer>
+          Copyright © 2026 Nathan Brunelle.
+              <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
+      </p>
+        <p>Last updated 2026-01-28 11:37</p>
+  </footer>
+</body>
+</html>
