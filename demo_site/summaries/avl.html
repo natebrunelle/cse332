@@ -59,7 +59,9 @@
         <li><a href="#left-right-rotation"><span class="toc-section-number">2.2.3</span> Left-Right Rotation</a></li>
         <li><a href="#right-left-rotation"><span class="toc-section-number">2.2.4</span> Right-Left Rotation</a></li>
         </ul></li>
-        <li><a href="#justifying-logarithmic-running-time"><span class="toc-section-number">2.3</span> Justifying Logarithmic Running Time</a></li>
+        <li><a href="#avl-tree-insert"><span class="toc-section-number">2.3</span> AVL Tree Insert</a></li>
+        <li><a href="#avl-tree-delete"><span class="toc-section-number">2.4</span> AVL Tree Delete</a></li>
+        <li><a href="#justifying-logarithmic-height"><span class="toc-section-number">2.5</span> Justifying Logarithmic Height</a></li>
         </ul></li>
         </ul>
         </div>
@@ -187,7 +189,59 @@
       <p>A right-left rotation is the mirror image of a left-right rotation. It has the overall effect of lifting the right-left subtree of the problem node in exchange for lowering the left subtree of the problem node. It operates by first doing a right rotation on the right child of <span class="math inline">a</span>, and then doing a left rotation on <span class="math inline">a</span>.</p>
       <p><img src="files/rightleft_rotation.png" alt="An illustration of a left-right rotation. Initially, the problem node is labelled a. Its right subtree is rooted at a node labelled b, and it has a height of h+2. Its left subtree is labelled w and has a height of h. The right subtree of b is labelled z and has height h. The left child of b is labelled c, and its subtree has height h+1. The left and right subtrees of c are labelled x and y respectively, and at least one of those subtrees has height h (the other could also be height h, or it could be height h-1). To balance the tree we perform a right rotation at b (the right child of a) then a left rotation at a.
       After performing both rotations the node c becomes the root of the tree. The right child of c is the node b, and the left child of c is a (the former root). The right subtree of b is unchanged, and the left subtree of b is y (the former right subtree of c). The left subtree of a is unchanged, and the right subtree of a is x (the former left subtree of c). Because we have split the original subtrees of c, we have lifted both subtrees up by 1 level in exchange for lowering w (the original left subtree of a)." height="150"/></p>
-      <h2 id="justifying-logarithmic-running-time"><span class="header-section-number">2.3</span> Justifying Logarithmic Running Time</h2>
+      <h2 id="avl-tree-insert"><span class="header-section-number">2.3</span> AVL Tree Insert</h2>
+      <p>We now have all of the tools necessary in order to completely define our insert algorithm for AVL trees, which proceeds as follows:</p>
+      <ol type="1">
+      <li>First perform a BST insert, which will either update the value associated with the given key, or else create a new node with the given key-value pair.</li>
+      <li>If the key was already present in the tree, and we therefore updated the value associated with it, we did not modify the tree and therefore are finished with the insert.</li>
+      <li>We we added a new node (which will always be a leaf) then we may have caused the AVL tree to become unbalanced, and so we must check for unbalance and perhaps perform rotations.</li>
+      <li>Starting from the new leaf and moving one level at a time toward the root, check to see if any node is a <q>problem node</q>, meaning that the heights of its left and right subtrees differ by more than 1.</li>
+      <li>If the current node is a problem node, identify where the new node was added relative to that problem node:
+      <ul>
+      <li>If the new node was added to the left-left subtree then do a right rotation.</li>
+      <li>If the new node was added to the right-right subtree then do a left rotation.</li>
+      <li>If the new node was added to the left-right subtree then do a left-right double rotation.</li>
+      <li>If the new node was added to the right-left subtree then do a right-left double rotation.</li>
+      </ul></li>
+      </ol>
+      <p>To evaluate the running time of this algorithm we observe the following:</p>
+      <ul>
+      <li>A BST insert is linear in the height of the tree</li>
+      <li>Supposing there is a height field within each node that is correctly maintained, step 4 requires only constant time per level</li>
+      <li>Step 5 also requires constant time because each rotation requires only updating references and height fields for the nodes <span class="math inline">a</span>, <span class="math inline">b</span>, and <span class="math inline">c</span> (in the case of a double rotation only).</li>
+      </ul>
+      <p>Overall, the running time of an AVL tree insert is <em>also</em> linear in the height of the tree.</p>
+      <h2 id="avl-tree-delete"><span class="header-section-number">2.4</span> AVL Tree Delete</h2>
+      <p>The AVL tree delete algorithm proceeds as follows:</p>
+      <ol type="1">
+      <li>First perform a BST delete. If the key was not present then we do not modify the tree and therefore can return without any further steps. If the key was present then we removed a node from the tree, and so we may have caused the AVL tree to become unbalanced, and so we must check for unbalance and perhaps perform rotations.</li>
+      <li>Starting from the parent of the node whose <em>postition</em> was removed (if the key-value pair removed had either 0 or 1 child then we start from the parent of that node, if the key-value pair removed had two children then we start from the parent of where we found the largest node on the left) and moving one level at a time toward the root, check to see if any node is a <q>problem node</q>, meaning that the heights of its left and right subtrees differ by more than 1.</li>
+      <li>If the current node is a problem node, identify where the node was removed relative to that problem node:
+      <ul>
+      <li>If the node was removed from the left-left subtree then do a left rotation.</li>
+      <li>If the node was removed from the right-right subtree then do a right rotation.</li>
+      <li>If the node was removed from the left-right subtree then do a right-left double rotation.</li>
+      <li>If the node was removed from the right-left subtree then do a left-right double rotation.</li>
+      </ul></li>
+      </ol>
+      <p>Note that the cases for rotations are exactly the opposite of inserting relative to where the change happened (they are the same relative to which subtree was too tall/short).</p>
+      <p>Similar to inserting, we still do constant work per level of the tree, and so the running time is linear in the tree’s height.</p>
+      <h2 id="justifying-logarithmic-height"><span class="header-section-number">2.5</span> Justifying Logarithmic Height</h2>
+      <p>Now that we have established that, like with binary search trees, AVL tree operations run in linear time relative to the tree’s height, all that remains to justify our logarithm running time is an argument to show that the height of an AVL tree is logarithmic in terms of the number of nodes it contains.</p>
+      <p>Similar to what we did with heaps, we will begin by first fixing the height of the tree to <span class="math inline">h</span>, and then identifying the minimum number of nodes that tree could contain. Because our running time is linear in the trees height, this will serve as a worst case analysis because that maximizes the height relative to the number of nodes.</p>
+      <p>We will define the function <span class="math inline">M(h)</span> to return the minimum number of nodes in an AVL tree of height <span class="math inline">h</span>. We can define <span class="math inline">M(h)</span> using a recurrence relation as follows:</p>
+      <p><span class="math inline">M(h) = M(h-1)+ M(h-2) + 1</span>.</p>
+      <p><span class="math inline">M(-1)=0, M(0)=1</span></p>
+      <p>Let’s discuss how we derived this. First of all, a tree of height <span class="math inline">-1</span> must have <span class="math inline">0</span> nodes and a tree of height <span class="math inline">0</span> must have exactly <span class="math inline">1</span> node, giving the base cases of the recurrence.</p>
+      <p>For the recursive we’re saying that we can form the minimum-sized AVL tree of height <span class="math inline">h</span> by first finding the minimum-sized AVL tree of height <span class="math inline">h-1</span> (which will have <span class="math inline">M(h-1)</span> nodes) and of height <span class="math inline">h-2</span> (which will have <span class="math inline">M(h-2)</span> nodes). Then we connect those together with a shared parent node (thus we add <span class="math inline">1</span>). This must be the minimum because for a tree to be height <span class="math inline">h</span> at least one subtree of the root must have height <span class="math inline">h-1</span>, and the other subtree must then have height <span class="math inline">h-1</span> or lower. Because an AVL tree requires that the height of sibling subtrees may differ by no more than <span class="math inline">1</span>, the minimum height of the other subtree is <span class="math inline">h-2</span>.</p>
+      <p>From here, we can get an asymptotic lower bound on <span class="math inline">M(h)</span> by comparing it to the Fibbonacci sequence.</p>
+      <p>The <span class="math inline">n</span>th Fibbonacci number can be calculated following the recurrence:</p>
+      <p><span class="math inline">F(n)=F(n-1)+F(n-2)</span></p>
+      <p><span class="math inline">F(0)=0, F(1)=1</span></p>
+      <p>We can observe that for all values of <span class="math inline">x\geq 0</span> it holds that <span class="math inline">M(x)\geq F(x)</span>. This would be best justified using induction. We’ll skip a formal inductive proof and instead just provide a sketch of the argument. The inequality holds true for the base cases, and then for each application of the recursive case the <span class="math inline">M</span> recurrence grows by 1 more than the Fibbonacci recurrence does.</p>
+      <p>We can then approximate the value of the <span class="math inline">n</span>th Fibonacci number as <span class="math inline">F(n)\approx \phi^n</span> where <span class="math inline">\phi=\frac{1=\sqrt{5}}{2}\approx 1.62</span> is the golden ratio.</p>
+      <p>Because <span class="math inline">M(x)\geq F(x)</span>, we can lower bound the minimum number of nodes in a tree of height <span class="math inline">h</span> as <span class="math inline">\phi^h</span>. Because the running time of our AVL tree operations are <span class="math inline">\Theta(h)</span>, we can define an upper bound on worst case the running time in terms of <span class="math inline">n</span> by setting <span class="math inline">n=\phi^h</span>, then solving for <span class="math inline">h</span>. This gives a worst case running time of <span class="math inline">O(\log_\phi n)\O(\log n)</span>.</p>
+      <p>We can also get a <span class="math inline">\Omega</span> bound on the worst case running time by observing that the maximum number of nodes in a tree of height <span class="math inline">h</span> is <span class="math inline">2^{h+1}-1</span>. Setting <span class="math inline">n=2^{h+1}-1</span> and solving for <span class="math inline">h</span> gives <span class="math inline">h=\log_2{n+1}-1</span>, and so the worst case running time is <span class="math inline">\Omega(\log n)</span>. Because the running time is both <span class="math inline">O(\log n)</span> and <span class="math inline">\Omega(\log n)</span>, we conclude the worst case running time is <span class="math inline">\Theta(\log n)</span>.</p>
             </div>
     </div>
   </div>
@@ -195,7 +249,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-29 11:09</p>
+        <p>Last updated 2026-01-29 11:57</p>
   </footer>
 </body>
 </html>
