@@ -42,7 +42,7 @@ At the conclusion of this course, a successful student will be able to:
     - The operations associated with each
     - The resource complexity of each operation (time and space)
     - When each can and should be used
-    - The tradeoffs among different choices of abstract data type
+    - The trade-offs among different choices of abstract data type
 - Use graph terminology with fluency
 - Identify and justify the resource complexity of the covered graph algorithms
 - Solve new graph problems by using or modifying a pre-existing graph algorithm
@@ -107,7 +107,7 @@ Instructor and TA office hours will be available to assist you in understanding 
 Our TAs are critical to the operation of this course, and are responsible for a number of activities (office hours, grading, staff meetings, leading section, personal prep, etc.). Because variety of tasks they are involved in, office hours is a limited resource. As such, we have some expectations in place designed to most equitably provide office hours to students in the course:
 
 -  When there is a queue in office hours, we will limit each student-TA interaction to addressing just a *single* question. To ask multiple questions you will need to re-enter the queue. The reason for this policy is to help as many students as quickly as possible, since after a first round of assistance you will have an opportunity to make more progress on your own before your turn comes up again. I recommend arriving prepared with the question that is your biggest "blocker" to progress.
-- Work-in-progress code is often difficult for a third-party to read. Be prepared to help the course staff member to understand your approach by explaining your high-level approach, knowing what portions of your code as responsible for each step of that high-level approach, and providing as much information as you have about where you think the error might be occuring. 
+- Work-in-progress code is often difficult for a third-party to read. Be prepared to help the course staff member to understand your approach by explaining your high-level approach, knowing what portions of your code as responsible for each step of that high-level approach, and providing as much information as you have about where you think the error might be occurring. 
 - For clarification questions or high-level conceptual questions, consider using the Ed Message Board first. Your question may already be answered there, and even if not then you may get an answer faster compared to going to office hours. If what you ask is something that would be more effective to discuss in office hours, we'll let you know that, too!
 
 

@@ -32,7 +32,7 @@ For each ADT, here are some data structures that we discussed either in this cou
 
 From here, we can start making a distinction between the notion of an ADT and a data structure. For starters, an ADT is a more general idea. In particular, an ADT encapsulates how we would use a particular data type. 
 
-For example, as experienced programmers we immediately understand some of the ways that we might interact with a list. We know lists may contain duplicate elements, that elements are maintained in some sequence, and that there are certian operations we can do on the list (e.g. add, remove, indexing).
+For example, as experienced programmers we immediately understand some of the ways that we might interact with a list. We know lists may contain duplicate elements, that elements are maintained in some sequence, and that there are certain operations we can do on the list (e.g. add, remove, indexing).
 
 For this class, **defining an ADT requires providing two things**:
 1. The notion of what the ADT represents
