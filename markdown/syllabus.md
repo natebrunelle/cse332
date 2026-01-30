@@ -50,7 +50,7 @@ Although we believe nearly all students will benefit from attending all classes,
 
 All assignments will be posted and submitted either in class (for exams) or on Gradescope. All grading will be conducted on Gradescope. You will be asked to perform three kinds of evaluations:
 
-- **Exercises**: These are intended to help you to gain experience and familiarity with course concepts by applying them to novel scenarios beyond those presented in lecture and section. These will sometimes be written assignments, but most will be programming tasks (perhaps paired with written activities). You will have at least one exercise due per week. Several weeks will have two excercises due. In all cases the exercises will be released as soon as you can reasonably begin making progress on them, and you will have roughtly one week to complete them.
+- **Exercises**: These are intended to help you to gain experience and familiarity with course concepts by applying them to novel scenarios beyond those presented in lecture and section. These will sometimes be written assignments, but most will be programming tasks (perhaps paired with written activities). You will have at least one exercise due per week. Several weeks will have two exercises due. In all cases the exercises will be released as soon as you can reasonably begin making progress on them, and you will have roughly one week to complete them.
 - **Concept Checks**: These are intended to help you to identify conceptual gaps or misconceptions on course content early so that they may more easily be corrected. Each concept check will relate to just one course topic. Each course topic may be covered in one or across several lectures. Each concept checks is due on the day of the first section the occurs after we finish discussing the concept in lecture. For example, if we finish discussing a concept on a Friday, the concept check for that topic will be due on the following Thursday. The intention is that you are able to attempt the concept check, then ask questions in section before the deadline.
 - **Exams**: These are timed and proctored in-class and close-resource exams.These are intended to evaluate the quality of your learning of the most important topics in the course, and to motivate you to study, review, and retroactively reflect upon all that you've learned. Lists of topics and links to past exams will be provided in advance of each exam.
 
@@ -93,7 +93,7 @@ To ensure that we can respond to these requests before the deadline, please subm
 
 We acknowledge that professors and TAs are people (glad to get that confession off of my chest!), and people make mistakes. For this reason, you are able to request regrades on exercises and the midterm within either one week of your grade being returned or by Wednesday March 18, whichever date is sooner. You will only have 48 hours to submit regrade requests for the final exam.
 
-Please only submit a regrade request if you believe the rubric was misapplied to your submission or if there was a keying error for the task. In the case of a misapplication of the rubric, identify specifically what in your submission demonstrates the misapplication and suggest how you believe the rubric should be correctly applied. In the case of a keying error, state and justify why you believe your answer should be considered correct. Rubrics are produced and revised throughout the grading process to ensure they reflect the learning objectives of the course and can be applied equitably to all submissions. As such, disagreement with the existance or weighting of a rubric item is not considered a valid reason for a regrade request.
+Please only submit a regrade request if you believe the rubric was misapplied to your submission or if there was a keying error for the task. In the case of a misapplication of the rubric, identify specifically what in your submission demonstrates the misapplication and suggest how you believe the rubric should be correctly applied. In the case of a keying error, state and justify why you believe your answer should be considered correct. Rubrics are produced and revised throughout the grading process to ensure they reflect the learning objectives of the course and can be applied equitably to all submissions. As such, disagreement with the existence or weighting of a rubric item is not considered a valid reason for a regrade request.
 
 # Miscellanea
 
@@ -129,7 +129,7 @@ For Exercises and Programming Projects you may use external materials with the f
 
 "Whiteboard Only" collaboration is meant to convey the type of discussion where participants gather around a whiteboard to solve a problem together, without taking any notes from their discussion, and then erasing the whiteboard before they disperse. 
 
-In particular, you may discuss tasks and their solutions, but the only thing you may take away from your discussion is your brain. This means you may not produce any records or artifacts from your collaborations, including: notes, screenshots, photos, figures, code, audio/video recordings, documents (inluding google docs), links, or any other digital or tangible thing. Nor may you share any files, links, etc. with other students outside of a collaboration session. Any substantially similar expression of the same solution can only occur if collaboration extends beyond "whiteboard only", and so will be considered as evidence of a policy violation.
+In particular, you may discuss tasks and their solutions, but the only thing you may take away from your discussion is your brain. This means you may not produce any records or artifacts from your collaborations, including: notes, screenshots, photos, figures, code, audio/video recordings, documents (including google docs), links, or any other digital or tangible thing. Nor may you share any files, links, etc. with other students outside of a collaboration session. Any substantially similar expression of the same solution can only occur if collaboration extends beyond "whiteboard only", and so will be considered as evidence of a policy violation.
 
 
 ## Personal accommodations
@@ -140,7 +140,7 @@ The University of Washington strives to provide accessibility to all students. I
 require an accommodation to fully access this course, please work with the Disability Resources for Students (DRS). If you are unsure if you require an accommodation, or
 to learn more about their services, begin by visiting [the DRS website](https://depts.washington.edu/uwdrs/).
 For this course, we ask that students with special circumstances let us know as soon as possible, preferably
-during the **first week of class** or as soon as accomodations are approved.
+during the **first week of class** or as soon as accommodations are approved.
 
 ### Religious observances
 
@@ -152,7 +152,7 @@ weeks of this course using the Religious Accommodations Request form.
 
 ### Safe Environment
 
-I am dedicated to providing a safe and equitable learning enironment for all students. To that end, it is vital that you know two values that I hold as critically important:
+I am dedicated to providing a safe and equitable learning environment for all students. To that end, it is vital that you know two values that I hold as critically important:
 
 1. Power-based violence is not to be tolerated
 1. Everyone has a responsibility to do their part to maintain a safe community in the classroom and on campus.
