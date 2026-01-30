@@ -6,7 +6,7 @@ title: Topic Summary - Asymptotic Notation
 
 In our [last topic summary](runningtime.html) we discussed why and how we represent running times as a function and gave high level descriptions of the tools we could use to compare those functions. To give a brief refresher:
 
-- If we want to say that some function $f(n)$ is "less than or equal to" another function $g(n)$, we'll write $f(n)\in O(g(n))$ or $f(n)=O(g(n))$ (the former is notationally more correct, but the latter is more commonly used). This is read as "$f(n)$ is big-oh of $g(n)$".
+- If we want to say that some function $f(n)$ is "less than or equal to" another function $g(n)$, we'll write $f(n)\in O(g(n))$ or $f(n)=O(g(n))$ (the former is more correct in terms of notation, but the latter is more commonly used). This is read as "$f(n)$ is big-oh of $g(n)$".
 - If we want to say that some function $f(n)$ is "greater than or equal to" another function $g(n)$, we'll write $f(n)\in \Omega(g(n))$ or $f(n)=\Omega(g(n))$ . This is read as "$f(n)$ is big-omega of $g(n)$".
 - If we want to say that some function $f(n)$ is "asymptotically equal to" another function $g(n)$, we'll write $f(n)\in \Theta(g(n))$ or $f(n)=\Theta(g(n))$ . This is read as "$f(n)$ is big-theta of $g(n)$".
 
@@ -18,7 +18,7 @@ This is the process we want to end up with, but we need definitions that formali
 
 We now will present the formal definitions of $O$, $\Omega$, and $\Theta$, and discuss why they result in the comparison process above.
 
-Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. When we look $O(n)$, $\Omega(n)$, and $\Theta(n)$, thes each are actually a *set of functions*, specifically: 
+Firstly, let's talk about what *type* of thing $O$, $\Omega$, and $\Theta$ are. When we look $O(n)$, $\Omega(n)$, and $\Theta(n)$, these each are actually a *set of functions*, specifically: 
 
 - **$O(n)$ is the set of all functions which are asymptotically upper bounded by $g(n)=n$**. 
 
@@ -44,14 +44,14 @@ Here we present the formal definitions of $O$, $\Omega$, and $\Theta$:
 
 ## Intuition
 
-Let's now discuss the inuition for how these definitions give us some of the properties we've mentioned to be desireable.
+Let's now discuss the intuition for how these definitions give us some of the properties we've mentioned to be desirable.
 
 ### Achieving greater than, less than, and equal to
 
 We mentioned that $f(n)\in O(g(n))$ acts like "$f(n) \leq g(n)$", $f(n)\in \Omega(g(n))$ acts like "$f(n) \geq g(n)$", and $f(n)\in \Theta(g(n))$ acts like "$f(n) \approx g(n)$". Here's where we can see these relationships in the formal definitions:
 
-- **$O$**: Ignoring all of the quatifiers for now, we see that the definition of $O$ concludes with $f(n)\leq c \cdot g(n)$. We are therefore checking that the value of $f(n)$ is less than or equal to $g(n)$, directly corresponding to that intuitive notion.
-- **$\Omega$**: Ignoring all of the quatifiers for now, we see that the definition of $\Omega$ concludes with $f(n)\geq c \cdot g(n)$. We are therefore checking that the value of $f(n)$ is greater than or equal to $g(n)$, directly corresponding to that intuitive notion.
+- **$O$**: Ignoring all of the quantifiers for now, we see that the definition of $O$ concludes with $f(n)\leq c \cdot g(n)$. We are therefore checking that the value of $f(n)$ is less than or equal to $g(n)$, directly corresponding to that intuitive notion.
+- **$\Omega$**: Ignoring all of the quantifiers for now, we see that the definition of $\Omega$ concludes with $f(n)\geq c \cdot g(n)$. We are therefore checking that the value of $f(n)$ is greater than or equal to $g(n)$, directly corresponding to that intuitive notion.
 - **$\Theta$**: we say that $f(n)\in \Theta(g(n))$ provided it is both $O(g(n))$ and $\Omega(g(n))$. Mapping back to the intuitions of $O$ and $\Omega$ this means "$f(n) \leq g(n)$" and "$f(n) \geq g(n)$" respectively. Similar to when we're comparing numbers, the only way that something can be both $\leq$ and $\geq$ another thing is if they are equal. *(Important, because of the way we're comparing, we're not saying that $f(n)$ and $g(n)$ give the same output, just that in the long term their outputs are of similar magnitude.)*
 
 
@@ -63,7 +63,7 @@ All three of these definitions enable this in the same way. Each definition has 
 
 ### Dropping Constants and Non-Dominant Terms
 
-We want our definitions ot have the property that constant coefficients and non-dominant terms have no impact on the asymptotic growth. In other words, we want a function like $\frac{1}{5}n^2-13n-8$ to be considered asymptotically the same as $20n^2 + 100n + 500$. This behavior is accomplished using the constant value $c$ in the definition.
+We want our definitions to have the property that constant coefficients and non-dominant terms have no impact on the asymptotic growth. In other words, we want a function like $\frac{1}{5}n^2-13n-8$ to be considered asymptotically the same as $20n^2 + 100n + 500$. This behavior is accomplished using the constant value $c$ in the definition.
 
 Let's first look at how $c$ allows us to ignore constant coefficients. Suppose we want to compare $f(n)=5n^3$ to $g(n)=2n^3$. Because our definition of $O$ allows us to multiply $g(n)$ by a $c$, we could pick $c=3$ to conclude $f(n)\leq c \cdot g(n)$, since we would have $5 n^3 \leq 3 \cdot 2 n^3$ and so $f(n)=O(g(n))$. Using the choice of $c=1$ we could show $f(n)= \Omega(g(n))$ since we would have $5n^3 \geq 2n^3$. Together, this means that $f(n)=\Theta(g(n))$. From these examples, we can see that two functions that differ only by a constant coefficient can be shown to grow at the same asymptotic rate using the constant $c$ in the definition. For this reason, we are able to ignore constant coefficients in asymptotic analysis.
 
@@ -86,14 +86,14 @@ For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and 
 ### $f(n)=4n^2 + 8n + 10$, $g(n)=\frac{1}{4} n^3$
 
 > **Nathan's scratch paper**
-> Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. Comparing the two functions, $g(n)$ seems to have the larger dominant term, so my strategy will be to identify a function $f'(n)$ where it's clear that $f(n) \leq f'(n)$ and $f'(n)\leq g(n)$. Specifically, I will pick $f'(n)$ to have the form $k n^2$ so that it will be easy to compare $f(n)$ with $f'(n)$ and easy to compare $f'(n)$ with $g(n)$. Because for any value of $n\geq 1$ we have $n^2\geq n$ and $n^2 \geq 1$ I can pick $f'(n)=22n^2$, because it's clear that $4n^2 + 8n + 10 < 22n^2$ (by subsituting $8n^2$ for $8n$ and $10n^2$ for $10$). 
+> Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. Comparing the two functions, $g(n)$ seems to have the larger dominant term, so my strategy will be to identify a function $f'(n)$ where it's clear that $f(n) \leq f'(n)$ and $f'(n)\leq g(n)$. Specifically, I will pick $f'(n)$ to have the form $k n^2$ so that it will be easy to compare $f(n)$ with $f'(n)$ and easy to compare $f'(n)$ with $g(n)$. Because for any value of $n\geq 1$ we have $n^2\geq n$ and $n^2 \geq 1$ I can pick $f'(n)=22n^2$, because it's clear that $4n^2 + 8n + 10 < 22n^2$ (by substituting $8n^2$ for $8n$ and $10n^2$ for $10$). 
 > 
 >Now we need to get $f'(n)\leq c\cdot g(n)$. We could take two strategies to do this. We could either try to select an $n_0$ so that $c\cdot g(n)$ "overtakes" $f'(n)$, or we could select a value of $c$ so that this becomes true for all choices of $n$ (or we could mix these). To me, it seems easier to select $c$, so I'll go with that. Since the coefficient within $f'(n)$ is $22$ and the coefficient in $g(n)$ is $\frac{1}{4}$, I'll pick $c=88$ so that $c\cdot g(n)=22n^3$, making it clearly larger than $f'(n)$ and therefore larger than $f(n)$.
 
 Now we have our selection of $n_0=1$ and $c=88$. Let's use those to show $f(n)= O(g(n))$.
 
 > **Proof**: $f(n) = O(g(n))$
-> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=88$. We now need to show that whenever $n\geq 1$ we have that $4n^2+8n+10 \leq 22\cdot \frac{1}{4} n^3$. Observe that for $n \geq 1$ we have that $n^2 \geq 1$ and also $n^2 \geq n$. therefore $4n^2 + 8n + 10 \leq 4n^2 + 8n^2 + 10n^2 = 22n^2$. We can also see for $n\geq 1$ tht $n^3 \geq n^2$ and so $22n^2 \leq 22n^3 = g(n)$. Therefore we have $f(n)\leq c\cdot g(n)$, and we can conclude $f(n) = O(g(n))$.
+> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=88$. We now need to show that whenever $n\geq 1$ we have that $4n^2+8n+10 \leq 22\cdot \frac{1}{4} n^3$. Observe that for $n \geq 1$ we have that $n^2 \geq 1$ and also $n^2 \geq n$. therefore $4n^2 + 8n + 10 \leq 4n^2 + 8n^2 + 10n^2 = 22n^2$. We can also see for $n\geq 1$ that $n^3 \geq n^2$ and so $22n^2 \leq 22n^3 = g(n)$. Therefore we have $f(n)\leq c\cdot g(n)$, and we can conclude $f(n) = O(g(n))$.
 
 
 ### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
@@ -134,7 +134,7 @@ Next we'll show $f(n)=\Omega(g(n))$. These proofs will operate in exactly the sa
 > $3n \geq 8$
 > Note that whenever $n\geq 8$ we have that $3n \geq 8$, so we have $f(n) \geq c\cdot g(n)$ and therefore $f(n) = \Omega(g(n))$.
 
-Again, we could have chosen a smaller value for $n_0$ and the same proof would still work (namely, we could have chosen 3), but we don't care! Our choice was still sucessful!
+Again, we could have chosen a smaller value for $n_0$ and the same proof would still work (namely, we could have chosen 3), but we don't care! Our choice was still successful!
 
 ## Big-Theta Proofs
 
