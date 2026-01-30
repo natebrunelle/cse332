@@ -38,7 +38,7 @@ Because we do not care to impose any kind of ordering of the elements in our arr
 Because priority queues require removing items in a sorted order, perhaps we could improve our data structure by requiring the items be stored in descending order (largest priority value at index 0, smallest at index $n-1$). In this data structure we will also have the field *back* that indicates the index of the last item in the array (in this case this will be the one with the smallest priority value). Here's what insert and extract might look like in this case:
 
 - insert: starting from index 0, check to see if the new item has higher priority than the one at that current index, if not then check the next index, repeat until we reach an item with lower priority or until we reach *back*. Next insert the new item at the current index by shifting all items after that index over by one position. Increment back. Resize if necessary.
-- extract: because we sorted in descending order, the index *back* has the minimum priority. Decrement the value of *back* and retun the value at the index *back*.
+- extract: because we sorted in descending order, the index *back* has the minimum priority. Decrement the value of *back* and return the value at the index *back*.
 
 Because we need to keep our array sorted, we need to be very careful about where we add values into our array, and so the running time of insert is linear time. On the other hand, extract requires only constant time because we know exactly where the element with minimum priority might be. 
 
@@ -84,7 +84,7 @@ The heap property also doesn't require our array to be *too* sorted. Note that t
 
 Now let's discuss  how we can represent our heap using an array. When you learned about binary trees in your prerequisite course, you likely used nodes where each stored the value it contains  and then had a reference to two other nodes representing its left and right children. For heaps we will store our values in an array, and then identify a node's left and right children by doing arithmetic on array indices.
 
-To represent our heap as an array we will leverage the heap structure property. The structure property is so strict that all trees of the same size *must* have the same shape. This is because there is a unique position that must be added to accommodate that new node. To represent our tree using an array, we will designate that the position added when adding the $i$th node will be stored at index $i$. In summary, we can identify each node's index by "counting off" one level at a time, and then left-to-right within a level. The structure property insures that this assignment will never skip nodes and will never skip array indices. We will always start the "counting off" from the root. We could decide to start that count with the number $0$ (thereby putting the root at index $0$ of the array), however the arithmetic we'll need to apply to the array indices in order to navigate the tree is a bit easier if we start of with $1$ instead (thereyby not using index $0$ of the array at all).
+To represent our heap as an array we will leverage the heap structure property. The structure property is so strict that all trees of the same size *must* have the same shape. This is because there is a unique position that must be added to accommodate that new node. To represent our tree using an array, we will designate that the position added when adding the $i$th node will be stored at index $i$. In summary, we can identify each node's index by "counting off" one level at a time, and then left-to-right within a level. The structure property insures that this assignment will never skip nodes and will never skip array indices. We will always start the "counting off" from the root. We could decide to start that count with the number $0$ (thereby putting the root at index $0$ of the array), however the arithmetic we'll need to apply to the array indices in order to navigate the tree is a bit easier if we start of with $1$ instead (thereby not using index $0$ of the array at all).
 
 <!--Here's an example of how we can store a heap using an array:
 
@@ -113,7 +113,7 @@ The idea of our algorithm is as follows:
 
 1. Place the new item at the position dictated by the structure property
 1. Compare that item's priority with that of it's parent. If the new item has a lower priority than its parent then swap the new item's position with that of its parent.
-1. Repeat the previous step (comare the new item with its parent, swap less than) until either the new item's priority value is greater than or equal to its parent, or the new item becomes the new root.
+1. Repeat the previous step (compare the new item with its parent, swap less than) until either the new item's priority value is greater than or equal to its parent, or the new item becomes the new root.
 
 <!--
 Keeping in mind that the tree itself is represented using an array, this results in the following near-Java code:
@@ -200,7 +200,7 @@ If we want to decrease the priority value of an item then we will call *decrease
 
 # Max Heaps
 
-Thus far our entire discussion has focussed on heaps where the minimum priority value is considered the most important. This means that the heap property insures that each item's priority is not more than its childrens', and that the root holds the minimum priority value. When we arrange elements in this way we call the data structure a min heap.
+Thus far our entire discussion has focused on heaps where the minimum priority value is considered the most important. This means that the heap property insures that each item's priority is not more than its children's, and that the root holds the minimum priority value. When we arrange elements in this way we call the data structure a min heap.
 
 All of our discussion is equally valid if we reverse all of our inequalities. We could have defined our heap such that the largest priority value is considered most important, and therefore would be stored at the root. Such a heap is called a **max heap**. Max heaps are exactly the same as min heaps except the they must enforce the **max heap property**, which states that the priority each item in the heap must be *greater than or equal to* its children's.
 
