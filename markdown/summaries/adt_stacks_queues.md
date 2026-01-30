@@ -89,6 +89,6 @@ Below we have some slides stepping through the behavior of the enqueue and deque
 
 ## Circular Array Queue
 
-Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a circular array queue. You may download the source pptx by clicking [this link](files/slides/circular_array_queue.pptx). Note that this does not demonstrate resizing, as this is a challenge we've reserved for exercise 0.
+Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a circular array queue. You may download the source pptx by clicking [this link](files/circular_array_queue.pptx). Note that this does not demonstrate resizing, as this is a challenge we've reserved for exercise 0.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQT_ZBGJSmRZYFv3vQQg7H_GB8POpZkFF8oL8TdZhd6t3CbcJdcD10R8Qf8JAUwwA/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="An embedding of the slide deck linked to above"></iframe>
