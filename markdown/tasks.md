@@ -342,22 +342,22 @@ Overall, here is how I would recommend that you use these sample exams to prepar
 
 Past Exams:
 
-- [CSE 332 24au Midterm](files/cse332-midterm-au24.pdf), [Solution](files/cse332-midterm-au24-soln.pdf)
-- [CSE 332 24su Midterm](files/cse332-midterm-24su.pdf), [Solution](files/cse332-midterm-24su-soln.pdf) 
-- [CSE 332 23au Midterm](files/cse332-midterm-23au.pdf), [Solution](files/cse332-midterm-23au-soln.pdf)
-- [CSE 332 23sp Midterm](files/cse332-midterm-23sp.pdf), [Solution](files/cse332-midterm-23sp-soln.pdf)
-- [CSE 332 23wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-23wi.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-23wi-soln.pdf)
-- [CSE 332 22su Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-22su.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-22su-soln.pdf)
-- [CSE 332 19au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19au-soln.pdf)
-- [CSE 332 19wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19wi.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19wi-soln.pdf)
-- [CSE 332 18au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18au-soln.pdf)
-- [CSE 332 18wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18wi.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18wi-soln.pdf)
-- [CSE 332 17au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-17au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-17au-soln.pdf)
-- [CSE 332 16au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-16au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-16au-soln.pdf)
-- [CSE 332 15wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-15wi-A.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-15wi-A-soln.pdf)
-- [CSE 332 14sp Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp-soln.pdf)
-- [CSE 332 13au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au.pdf), [Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au-soln.pdf)
--->
+- [CSE 332 24au Midterm](files/cse332-midterm-au24.pdf), [CSE 332 24au Midterm Solution](files/cse332-midterm-au24-soln.pdf)
+- [CSE 332 24su Midterm](files/cse332-midterm-24su.pdf), [CSE 332 24su Midterm Solution](files/cse332-midterm-24su-soln.pdf) 
+- [CSE 332 23au Midterm](files/cse332-midterm-23au.pdf), [CSE 332 23au Midterm Solution](files/cse332-midterm-23au-soln.pdf)
+- [CSE 332 23sp Midterm](files/cse332-midterm-23sp.pdf), [CSE 332 23sp Midterm Solution](files/cse332-midterm-23sp-soln.pdf)
+- [CSE 332 23wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-23wi.pdf), [CSE 332 23wi Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-23wi-soln.pdf)
+- [CSE 332 22su Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-22su.pdf), [CSE 332 22su Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-22su-soln.pdf)
+- [CSE 332 19au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19au.pdf), [CSE 332 19au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19au-soln.pdf)
+- [CSE 332 19wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19wi.pdf), [CSE 332 19wi Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19wi-soln.pdf)
+- [CSE 332 18au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18au.pdf), [CSE 332 18au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18au-soln.pdf)
+- [CSE 332 18wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18wi.pdf), [CSE 332 18wi Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-18wi-soln.pdf)
+- [CSE 332 17au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-17au.pdf), [CSE 332 17au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-17au-soln.pdf)
+- [CSE 332 16au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-16au.pdf), [CSE 332 16au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-16au-soln.pdf)
+- [CSE 332 15wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-15wi-A.pdf), [CSE 332 15wi Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-15wi-A-soln.pdf)
+- [CSE 332 14sp Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp.pdf), [CSE 332 14sp Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp-soln.pdf)
+- [CSE 332 13au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au.pdf), [CSE 332 13au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au-soln.pdf)
+
 
 ## Exam 2
 
