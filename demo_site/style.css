@@ -2,7 +2,7 @@
 body {
     margin: 0em;
     font-family: sans-serif;
-    color: #14141414;
+    color: #333333;
     background: #ffffff;
     line-height: 150%;
 }
@@ -16,7 +16,7 @@ p+p {
 }
 
 a {
-    color: #005397;
+    color: #0088cc;
     text-decoration: none;
 }
 
@@ -161,7 +161,7 @@ footer img {
 .nav-header {
     padding: 0.5ex 1ex;
     display: block;
-    color: #525252;
+    color: #999999;
     text-transform: uppercase;
     font-weight: bold;
     text-shadow: 0ex 0.125ex 0ex rgba(255, 255, 255, 0.5);
@@ -172,7 +172,7 @@ footer img {
 /* Header styles */
 .header-section-number,
 .toc-section-number {
-    opacity: 1.0;
+    opacity: 0.5;
 }
 
 .header-section-number:after,

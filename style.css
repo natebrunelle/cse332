@@ -172,7 +172,7 @@ footer img {
 /* Header styles */
 .header-section-number,
 .toc-section-number {
-    opacity: 1.0;
+    opacity: 0.5;
 }
 
 .header-section-number:after,
