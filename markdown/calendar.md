@@ -1,7 +1,9 @@
 ---
 title: Calendar
+toc: false
 ...
 
+# Course Calendar
 
 <style id="schedule-css">
 
