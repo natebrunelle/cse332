@@ -18,12 +18,13 @@ p+p {
 a {
     color: #004FA8;
     text-decoration: underline;
+    text-decoration-color: #AAAAAA;
 }
 
 a:hover,
 a:focus {
     color: #005580;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 /* extras to help floats work properly */
@@ -155,7 +156,7 @@ footer img {
 .toc ul>li>a:hover,
 .toc ul>li>a:focus {
     background-color: #eeeeee;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .nav-header {
