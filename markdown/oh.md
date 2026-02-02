@@ -1,5 +1,6 @@
 ---
 title: Office Hours
+toc: false
 ...
 
 <!--We will have scheduled office hours times. If you have questions outside of office hours, please ask on discord. Follow the Discord Invite link in collab to join our Discord server.
@@ -17,7 +18,7 @@ title: Office Hours
 1. The `#tech-support` channel is intended for questions relating to course structures, e.g. "Where do I go to submit homework" or "The course webpage is down", etc.
 1. This Discord server is serving as replacement for face to face Office Hours and Piazza. If you have a question that you would put into text and get a text response, please ask it in the most relevant text channel. After this, either a fellow student or course staff will answer!-->
 
-# Office Hours Calendar
+# Office Hours Calendar {-}
 
 Course staff will be available to help you at the following times:
 
