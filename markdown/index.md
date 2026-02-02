@@ -2,7 +2,7 @@
 title: Home
 ...
 
-Handy links:
+# Handy links
 
 - [Gradescope for exams+exercises](https://www.gradescope.com/courses/1208996)
 - [Gradescope for Concept Checks](https://www.gradescope.com/courses/1210525)
@@ -31,7 +31,7 @@ The goal of this course is to expand your tool kit for solving a variety of comp
     - Graph Search
     - Shortest Path
     - Minimum Spanning Trees
-- Multithreading and Parallel Algorithms
+- Multi-threading and Parallel Algorithms
 - P and NP complexity Classes
 
 ## Learning Outcomes
@@ -47,7 +47,7 @@ At the conclusion of this course, a successful student will be able to:
 - Identify and justify the resource complexity of the covered graph algorithms
 - Solve new graph problems by using or modifying a pre-existing graph algorithm
 - Analyze a pre-written algorithm to determine its resource complexity
-- Produce programs that make non-trivial use of multithreading
+- Produce programs that make non-trivial use of multi-threading
 - Identify opportunities to accelerate programs using parallelism
 - Identify the characteristics of problems which belong to classes P and NP, then reason about the implications this classification has on the efficiency of solutions to such a problem.
 
