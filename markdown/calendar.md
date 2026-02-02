@@ -2,7 +2,6 @@
 title: Calendar
 ...
 
-# Course Calendar
 
 <style id="schedule-css">
 
