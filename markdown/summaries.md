@@ -2,6 +2,8 @@
 title: Topic Summaries
 ...
 
+# List of Summaries
+
 We provide a summary write-up for many of the topics covered in lecture. These are intended as a slightly different presentation of the same materials, and an opportunity to provide additional discussion or examples that we would not otherwise have time for in class.
 
 - [ADTs, Stacks, and Queues summary](/summaries/adt_stacks_queues.html): This summary covers material discussed in the 1/5 and 1/7 lectures and will be most relevant for exercise 0.

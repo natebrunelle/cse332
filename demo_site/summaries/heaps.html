@@ -105,7 +105,7 @@
       </ul>
       <p>Because we need to keep our array sorted, we need to be very careful about where we add values into our array, and so the running time of insert is linear time. On the other hand, extract requires only constant time because we know exactly where the element with minimum priority might be.</p>
       <h3 id="lessons"><span class="header-section-number">1.1.3</span> Lessons</h3>
-      <p>From these two examples it appears that there’s a tradeoff in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the insight for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only <em>somewhat</em> ordered so that we can have sublinear running time for <em>both</em> insert and extract. Specifically, we will achieve running times of <span class="math inline">\Theta(\log n)</span> for both insert and extract.</p>
+      <p>From these two examples it appears that there’s a trade-off in our data structure design: stricter ordering makes insert harder and extract easier, more relaxed ordering makes insert easier and extract harder. This provides the insight for the binary heap data structure that we will soon introduce for priority queues. In a binary heap we will store our elements in an array, but they will be only <em>somewhat</em> ordered so that we can have sublinear running time for <em>both</em> insert and extract. Specifically, we will achieve running times of <span class="math inline">\Theta(\log n)</span> for both insert and extract.</p>
       <h1 id="binary-heap-data-structure"><span class="header-section-number">2</span> Binary Heap Data Structure</h1>
       <p>In implementation, our binary heap data structure will store elements in an array, but manipulate the positions of elements as if they were stored in a binary tree. In other words, it will be representing a tree using an array. To describe this data structure we will first describe it as a tree, then later describe how we represent the tree using an array.</p>
       <h2 id="the-shape-of-the-tree"><span class="header-section-number">2.1</span> The Shape of the Tree</h2>
@@ -240,7 +240,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-30 14:31</p>
+        <p>Last updated 2026-02-02 07:13</p>
   </footer>
 </body>
 </html>
