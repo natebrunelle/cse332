@@ -16,14 +16,14 @@ p+p {
 }
 
 a {
-    color: #0065B8;
-    text-decoration: none;
+    color: #0058ab;
+    text-decoration: underline;
 }
 
 a:hover,
 a:focus {
     color: #005580;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* extras to help floats work properly */
