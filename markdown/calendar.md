@@ -3,7 +3,7 @@ title: Calendar
 toc: false
 ...
 
-# Course Calendar
+# Course Calendar {-}
 
 <style id="schedule-css">
 
