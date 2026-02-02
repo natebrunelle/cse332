@@ -14,7 +14,7 @@ Both offerings of the course will share the same assignments, deadlines, TA offi
 
 ## Contact
 
-|        | Instructor | TAs |
+|  Info  | Instructor | TAs |
 |--------|------------|-----|
 | Name | Nathan Brunelle | [Profiles](staff.html) |
 | Location | Allen Center (CSE) 434 | [See Calendar](oh.html) |
