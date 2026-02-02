@@ -21,5 +21,5 @@ title: Office Hours
 
 Course staff will be available to help you at the following times:
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&mode=WEEK&src=YnJ1bmVsbGVAY3Mud2FzaGluZ3Rvbi5lZHU&src=Y18yMDI5MmZmMzVlYjhiMGFjOTVkNGFhZWY1ZWNhMzRkY2U5YzRlNDQ0MWY0ODMyOWYyODZmNmEwNDU1YWNlZmUxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%238e24aa&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&mode=WEEK&src=YnJ1bmVsbGVAY3Mud2FzaGluZ3Rvbi5lZHU&src=Y18yMDI5MmZmMzVlYjhiMGFjOTVkNGFhZWY1ZWNhMzRkY2U5YzRlNDQ0MWY0ODMyOWYyODZmNmEwNDU1YWNlZmUxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%238e24aa&color=%230b8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" title="A google calendar displaying TA and instructor office hours"></iframe>
 
