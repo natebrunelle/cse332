@@ -347,10 +347,10 @@ Overall, here is how I would recommend that you use these sample exams to prepar
 
 Past Exams:
 
-- [CSE 332 24au Midterm](files/cse332-midterm-au24.pdf), [CSE 332 24au Midterm Solution](files/cse332-midterm-au24-soln.pdf)
-- [CSE 332 24su Midterm](files/cse332-midterm-24su.pdf), [CSE 332 24su Midterm Solution](files/cse332-midterm-24su-soln.pdf) 
-- [CSE 332 23au Midterm](files/cse332-midterm-23au.pdf), [CSE 332 23au Midterm Solution](files/cse332-midterm-23au-soln.pdf)
-- [CSE 332 23sp Midterm](files/cse332-midterm-23sp.pdf), [CSE 332 23sp Midterm Solution](files/cse332-midterm-23sp-soln.pdf)
+- [CSE 332 24au Midterm](files/midterms/cse332-midterm-au24.pdf), [CSE 332 24au Midterm Solution](files/midterms/cse332-midterm-au24-soln.pdf)
+- [CSE 332 24su Midterm](files/midterms/cse332-midterm-24su.pdf), [CSE 332 24su Midterm Solution](files/midterms/cse332-midterm-24su-soln.pdf) 
+- [CSE 332 23au Midterm](files/midterms/cse332-midterm-23au.pdf), [CSE 332 23au Midterm Solution](files/midterms/cse332-midterm-23au-soln.pdf)
+- [CSE 332 23sp Midterm](files/midterms/cse332-midterm-23sp.pdf), [CSE 332 23sp Midterm Solution](files/midterms/cse332-midterm-23sp-soln.pdf)
 - [CSE 332 23wi Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-23wi.pdf), [CSE 332 23wi Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-23wi-soln.pdf)
 - [CSE 332 22su Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-22su.pdf), [CSE 332 22su Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-22su-soln.pdf)
 - [CSE 332 19au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19au.pdf), [CSE 332 19au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-19au-soln.pdf)
