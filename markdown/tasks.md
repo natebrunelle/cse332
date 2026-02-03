@@ -313,7 +313,7 @@ The exam will cover all material from the beginning of the quarter up through AV
 	- ADT operations
 	- Binary Search Trees: Definition, algorithms and running times of dictionary operations
 	- AVL Trees: Definition, algorithms and running times of dictionary operations (including the definition of rotations and when to do them). The delete operation will NOT be covered.
-- Hash Tables:
+<!--- Hash Tables:
 	- Principles of good hash function design
 	- Insert/Delete/Find using these collision resolution strategies:
 		- Separate Chaining
@@ -322,7 +322,7 @@ The exam will cover all material from the beginning of the quarter up through AV
 		- Double Hashing
 	- Strengths and weaknesses of each collision resolution strategy
 	- Load Factor, including how to calculate it and how it interacts with collision resolution
-	- Rehashing
+	- Rehashing-->
 
 
 ### Past Exams
