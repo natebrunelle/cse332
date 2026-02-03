@@ -87,14 +87,14 @@ For this exercise, you will need:
 - [EX04 Starter Code](/files/exercises/ex4.zip) - which contains various classes that will be needed for this assignment.
 - [EX04 Specification](https://docs.google.com/document/d/e/2PACX-1vTJvQ8aANiFmo-8otc_JW17mz-bqDYaojMSwkSzjgzQOrwwo3G38RWWFz810V13ig/pub) - which contains all instructions for what to do for this assignment.
 
-<!--
+
 
 ## Exercise 5
 
 The objectives of this exercise are: 
 
-- Understand the mechanics of an efficient chaining hash table by implementing one of your own
-- See how to write a good hash function for a new data structure
+- Implement the mechanics of an efficient chaining hash table
+- Write a good hash function for a new object and observe its properties
 - Apply the advantages of a hash table by using it as part of an algorithm that involves a large number of inserts and finds of a large dictionary.
 
 
@@ -102,9 +102,11 @@ This is a programming exercise which you will submit to gradescope. There is no 
 
 For this exercise, you will need:
 
-- [Starter Code](/files/exercises/ex5.zip) - which contains various classes that will be needed for this assignment.
-- [Specification](https://docs.google.com/document/d/11a4RJYJ2gCcA2xYayoMeKQWAJpGMLp5AhAjYJwxLAhA/edit?usp=sharing) - which contains all instructions for what to do for this assignment.
+- [EX05 Starter Code](/files/exercises/ex5.zip) - which contains various classes that will be needed for this assignment.
+- [EX05 Specification](https://docs.google.com/document/d/e/2PACX-1vRd-vpRKB7b5BMMrmwztVoX2BFVYOPkUUnrFNEkrxSX4Uv2YjhN_waQpmt3Tw0uYw/pub) - which contains all instructions for what to do for this assignment.
 
+
+<!--
 ## Exercise 6
 
 The objectives of this exercise are:
@@ -237,9 +239,12 @@ This concept check applies to priority queues and heaps. This concept check refe
 
 This concept check applies to dictionaries and AVL Trees. This concept check references content covered in class on 1/23 and 1/26. A content summary will be posted shortly.
 
-<!--
-    CC5 Hash Tables
 
+## CC5 Hash Tables
+
+This concept check applies to dictionaries and hash tables. This concept check references content covered in class on 1/28, 1/30 and 2/02. A content summary will be posted shortly.
+
+<!--
     CC6 Sorting
 
     CC8 Graph Definitions and Data Structures
