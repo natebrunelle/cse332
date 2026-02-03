@@ -289,7 +289,7 @@ A review session will be held at 5:30pm on Monday February 9, the room is TBD.
 1. Closed book, closed notes except for a 1-page 2-sided reference sheet of your own creation.
 1. No calculators, cell phones, or other electronic devices allowed.
 1. No writing after time is called, make sure you put your name on your paper first.
-1. You will be provided a [reference sheet](files/midterm_reference.pdf) (tentative) during the exam.
+1. You will be provided a [reference sheet](files/midterms/midterm_reference.pdf) (tentative) during the exam.
 
 ### Content
 
