@@ -241,7 +241,7 @@
       <p><span class="math inline">F(0)=0, F(1)=1</span></p>
       <p>We can observe that for all values of <span class="math inline">x\geq 0</span> it holds that <span class="math inline">M(x)\geq F(x)</span>. This would be best justified using induction. We’ll skip a formal inductive proof and instead just provide a sketch of the argument. The inequality holds true for the base cases, and then for each application of the recursive case the <span class="math inline">M</span> recurrence grows by 1 more than the Fibbonacci recurrence does.</p>
       <p>We can then approximate the value of the <span class="math inline">n</span>th Fibonacci number as <span class="math inline">F(n)\approx \phi^n</span> where <span class="math inline">\phi=\frac{1=\sqrt{5}}{2}\approx 1.62</span> is the golden ratio.</p>
-      <p>Because <span class="math inline">M(x)\geq F(x)</span>, we can lower bound the minimum number of nodes in a tree of height <span class="math inline">h</span> as <span class="math inline">\phi^h</span>. Because the running time of our AVL tree operations are <span class="math inline">\Theta(h)</span>, we can define an upper bound on worst case the running time in terms of <span class="math inline">n</span> by setting <span class="math inline">n=\phi^h</span>, then solving for <span class="math inline">h</span>. This gives a worst case running time of <span class="math inline">O(\log_\phi n)\O(\log n)</span>.</p>
+      <p>Because <span class="math inline">M(x)\geq F(x)</span>, we can lower bound the minimum number of nodes in a tree of height <span class="math inline">h</span> as <span class="math inline">\phi^h</span>. Because the running time of our AVL tree operations are <span class="math inline">\Theta(h)</span>, we can define an upper bound on worst case the running time in terms of <span class="math inline">n</span> by setting <span class="math inline">n=\phi^h</span>, then solving for <span class="math inline">h</span>. This gives a worst case running time of <span class="math inline">O(\log_\phi n)=O(\log n)</span>.</p>
       <p>We can also get a <span class="math inline">\Omega</span> bound on the worst case running time by observing that the maximum number of nodes in a tree of height <span class="math inline">h</span> is <span class="math inline">2^{h+1}-1</span>. Setting <span class="math inline">n=2^{h+1}-1</span> and solving for <span class="math inline">h</span> gives <span class="math inline">h=\log_2{n+1}-1</span>, and so the worst case running time is <span class="math inline">\Omega(\log n)</span>. Because the running time is both <span class="math inline">O(\log n)</span> and <span class="math inline">\Omega(\log n)</span>, we conclude the worst case running time is <span class="math inline">\Theta(\log n)</span>.</p>
             </div>
     </div>
@@ -250,7 +250,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-01-29 11:57</p>
+        <p>Last updated 2026-02-05 11:39</p>
   </footer>
 </body>
 </main>
