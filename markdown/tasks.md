@@ -366,7 +366,7 @@ Past Exams:
 
 ## Exam 2
 
-The Final Exam will be held at 12:30pm-2:20pm on March 19. The location is TBD
+The Final Exam will be held at 12:30pm-2:20pm on March 19. The location is [SIG](https://www.washington.edu/maps/#!/sig) 134
 
 <!--
 
