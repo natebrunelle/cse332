@@ -239,7 +239,7 @@ We can observe that for all values of $x\geq 0$ it holds that $M(x)\geq F(x)$. T
 
 We can then approximate the value of the $n$th Fibonacci number as $F(n)\approx \phi^n$ where $\phi=\frac{1=\sqrt{5}}{2}\approx 1.62$ is the golden ratio. 
 
-Because $M(x)\geq F(x)$, we can lower bound the minimum number of nodes in a tree of height $h$ as $\phi^h$. Because the running time of our AVL tree operations are $\Theta(h)$, we can define an upper bound on worst case the running time in terms of $n$ by setting $n=\phi^h$, then solving for $h$. This gives a worst case running time of $O(\log_\phi n)\O(\log n)$.
+Because $M(x)\geq F(x)$, we can lower bound the minimum number of nodes in a tree of height $h$ as $\phi^h$. Because the running time of our AVL tree operations are $\Theta(h)$, we can define an upper bound on worst case the running time in terms of $n$ by setting $n=\phi^h$, then solving for $h$. This gives a worst case running time of $O(\log_\phi n)=O(\log n)$.
 
 We can also get a $\Omega$ bound on the worst case running time by observing that the maximum number of nodes in a tree of height $h$ is $2^{h+1}-1$. Setting $n=2^{h+1}-1$ and solving for $h$ gives $h=\log_2{n+1}-1$, and so the worst case running time is $\Omega(\log n)$. Because the running time is both $O(\log n)$ and $\Omega(\log n)$, we conclude the worst case running time is $\Theta(\log n)$. 
 
