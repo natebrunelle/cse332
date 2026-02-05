@@ -29,7 +29,7 @@ Suppose we plan to store all of our key-value pairs in an **ordered array**. Whe
 
 Suppose we instead use an **unordered array**:
 
-- insert: Do a lineary search through the array for the given key. If it is present the update its value. Otherwise add the new key-value pair at the end of the array. This requires $\Theta(n)$ time  in the worst case. because of the need to search for if the key is already present.
+- insert: Do a linearly search through the array for the given key. If it is present the update its value. Otherwise add the new key-value pair at the end of the array. This requires $\Theta(n)$ time  in the worst case. because of the need to search for if the key is already present.
 - find: Do a linear search through the array for the given key. If found return its value, otherwise return the default value. This requires $\Theta(n)$ time  in the worst case.
 - delete: Do a linear search through the array for the given key. If it is found the remove the key-value pair from the array by shifting all elements to overwrite it. This requires $\Theta(n)$ time in the worst case.
 
@@ -41,7 +41,7 @@ Suppose we use **ordered linked nodes**:
 
 Finally, suppose we use **unordered linked nodes**:
 
-- insert: Do a linear search through the array for the given key. If you come across the key then update its value. If you come to the end of the chain then add the new key-value pair to the end. This requies $\Theta(n)$ time in the worst case.
+- insert: Do a linear search through the array for the given key. If you come across the key then update its value. If you come to the end of the chain then add the new key-value pair to the end. This requires $\Theta(n)$ time in the worst case.
 - find: Do a linear search through the array for the given key. If you come across the key then return its value. If you come to the end of the chain then return the default value. This requires $\Theta(n)$ time in the worst case.
 - delete: Do a linear search through the array for the given key. If you come across the key then remove that node. If you come to the end of the chain then the key was not present so return without making a change. This requires $\Theta(n)$ time in the worst case.
 
@@ -53,7 +53,7 @@ Since we now know of this nifty new heap data structure for priority queues, let
 
 The first thing to note is that the running times of insert and delete must be *at least* that of find. This is because both of insert and delete have different behavior depending on whether or not the given key is already present, and so they must do a find somewhere as a subroutine. For this reason, we will first consider the find operation for heaps.
 
-At first, heaps may seem promising as a dictionar data structure. If the key we want to find is $\leq$ the smallest key used so far, then we can do our insert in $\Theta(\log n)$ time (constant if it is equal to the smallest key, logarithmic if we need to insert a new node that will become the root). Let's consider, though, what happens if we want to do an insert operation where the key is $\geq$ the largest key currently present. The heap property guarantees every node is smaller than (or equal to) its children. This property allows for the largest item to appear as *any* leaf in the tree. Since there are $\frac{n}{2}$ leaves in a heap, our find algoritm must check at least $\frac{n}{2}$ locations to ensure the key is not already present. This means our worst case running time for find must be $\Omega(n)$, and so heaps do no better than any of the list-based options above.
+At first, heaps may seem promising as a dictionary data structure. If the key we want to find is $\leq$ the smallest key used so far, then we can do our insert in $\Theta(\log n)$ time (constant if it is equal to the smallest key, logarithmic if we need to insert a new node that will become the root). Let's consider, though, what happens if we want to do an insert operation where the key is $\geq$ the largest key currently present. The heap property guarantees every node is smaller than (or equal to) its children. This property allows for the largest item to appear as *any* leaf in the tree. Since there are $\frac{n}{2}$ leaves in a heap, our find algorithm must check at least $\frac{n}{2}$ locations to ensure the key is not already present. This means our worst case running time for find must be $\Omega(n)$, and so heaps do no better than any of the list-based options above.
 
 ## Dictionaries Using Binary Search Trees
 
@@ -88,7 +88,7 @@ Finally we could define a delete algorithm as follows:
 
 For each of the algorithms, we must do only a constant number of operations per level of the tree. This means that the running time should be linear in terms of the tree's height. The problem is, in the worst case the height of the tree might be linear in the number of nodes. Overall, this means our worst-case running time is $\Theta(n)$ just like all of the other data structure options above.
 
-That being said, just a minor modification of binary search trees will allow us to achive $\Theta(\log n)$ running times for all operations. Since the binary search tree operations are all linear in the tree's height, if can modify our insert and delete algorithms in order to *guarantee* that the height of the tree is logarithmic in its size, then suddenly all running times will be $\Theta(\log n)$.
+That being said, just a minor modification of binary search trees will allow us to achieve $\Theta(\log n)$ running times for all operations. Since the binary search tree operations are all linear in the tree's height, if can modify our insert and delete algorithms in order to *guarantee* that the height of the tree is logarithmic in its size, then suddenly all running times will be $\Theta(\log n)$.
 
 # AVL Trees
 
@@ -100,7 +100,7 @@ Specifically an AVL tree maintains the property that for each node, the height o
 
 ### Aside: Tree Height
 
-We define the height of a tree to be the *maximum* distance from the root to a leaf. When measuring "distance" there are two ways I've seen to do this. The first is to count the number of nodes in the path from the root (inclusive) to the deepest leaf (inclusive). The second is to count the number of edges in that path (which gives the same result as being exclusive of either the path's start or end). To highlight the difference, the first option would suggest that a one-node tree has height 1, wherease the second options would suggest that a one-node tree has height 0.  Since we would want an empty tree's height to be smaller than that of a one-node tree, the first option would suggest that a zero-node tree has height 0, and the second would suggest that a zero-node tree has height -1. Poking around various sources, my impression is that the second option (height is the count of edges) is actually the more commonly used, and so that's what we presented in lecture. That being said, either choice made consistently will result in identical behavior of an AVL trees.
+We define the height of a tree to be the *maximum* distance from the root to a leaf. When measuring "distance" there are two ways I've seen to do this. The first is to count the number of nodes in the path from the root (inclusive) to the deepest leaf (inclusive). The second is to count the number of edges in that path (which gives the same result as being exclusive of either the path's start or end). To highlight the difference, the first option would suggest that a one-node tree has height 1, whereas the second options would suggest that a one-node tree has height 0.  Since we would want an empty tree's height to be smaller than that of a one-node tree, the first option would suggest that a zero-node tree has height 0, and the second would suggest that a zero-node tree has height -1. Poking around various sources, my impression is that the second option (height is the count of edges) is actually the more commonly used, and so that's what we presented in lecture. That being said, either choice made consistently will result in identical behavior of an AVL trees.
 
 The height of a tree can be computed as follows:
 
@@ -199,7 +199,7 @@ Overall, the running time of an AVL tree insert is *also* linear in the height o
 The AVL tree delete algorithm proceeds as follows:
 
 1. First perform a BST delete. If the key was not present then we do not modify the tree and therefore can return without any further steps. If the key was present then we removed a node from the tree, and so we may have caused the AVL tree to become unbalanced, and so we must check for unbalance and perhaps perform rotations.
-1. Starting from the parent of the node whose *postition* was removed (if the key-value pair removed had either 0 or 1 child then we start from the parent of that node, if the key-value pair removed had two children then we start from the parent of where we found the largest node on the left) and moving one level at a time toward the root, check to see if any node is a "problem node", meaning that the heights of its left and right subtrees differ by more than 1.
+1. Starting from the parent of the node whose *position* was removed (if the key-value pair removed had either 0 or 1 child then we start from the parent of that node, if the key-value pair removed had two children then we start from the parent of where we found the largest node on the left) and moving one level at a time toward the root, check to see if any node is a "problem node", meaning that the heights of its left and right subtrees differ by more than 1.
 1. If the current node is a problem node, identify where the node was removed relative to that problem node:
     - If the node was removed from the left-left subtree then do a left rotation.
     - If the node was removed from the right-right subtree then do a right rotation.
