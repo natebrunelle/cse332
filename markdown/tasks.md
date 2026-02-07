@@ -277,7 +277,7 @@ The course staff will scan, upload and grade exams on this [Gradescope for exerc
 
 The Midterm Exam will be held on Wednesday February 11 during our normal lecture session.
 
-A review session will be held at 5:30pm on Monday February 9, the room is TBD.
+A review session will be held at 5:30pm on Monday February 9, the room is The location is [SIG](https://www.washington.edu/maps/#!/sig) 134.
 
 <!--Here are [sample solutions](files/cse332_midterm_au24_soln.pdf) for the midterm.-->
 
@@ -366,7 +366,7 @@ Past Exams:
 
 ## Exam 2
 
-The Final Exam will be held at 12:30pm-2:20pm on March 19. The location is [SIG](https://www.washington.edu/maps/#!/sig) 134
+The Final Exam will be held at 12:30pm-2:20pm on March 19. 
 
 <!--
 
