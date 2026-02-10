@@ -13,7 +13,7 @@ For step 2 of this process, there are many ways to do this. We'll focus on just 
 
 First, let's see how we can express the running time of an algorithm as a recurrence relation. Any recursive algorithm is going to have the following parts:
 
-1. Base case: Check if the input is small enough to constitute a base case, if so then solve it using an iterative approach
+1. Base case: Check if the input is small enough ($\leq$ some constant) to constitute a base case, if so then solve it using an iterative (i.e. non-recursive) approach
 1. Prepare for recursion: Perform iterative steps of computation in preparation for recursive calls
 1. Recursive calls: Invoke the algorithm recursively on one or more smaller inputs
 1. Use recursive results: Perform iterative steps of computation using the results from the recursive calls
@@ -26,7 +26,7 @@ We can then apply our standard running time analysis process to these steps as f
 
 Therefore, if we use $T(n)$ to represent the running time of our algorithm, our analysis of the generic recursive procedure above will look something like:
 
-1. Base case: Let $k$ be the base case size. If $n\leq k$ then the running time is the constant $c$. So $T(k)=c$
+1. Base case: Let the constant $k$ be the base case size. If $n\leq k$ then the running time is the constant $c$. So $T(k)=c$
 1. Prepare for recursion: This code is iterative, so we can use our standard process for running time analysis. Call the resulting running time function $p(n)$.
 1. Recursive calls: Each recursive call will happen on a smaller input. If we want to recurse on inputs of size $x_1$, $x_2$, ..., $x_a$ then we can write the running time of this portion as $T(x_1)+T(x_2)+...+T(x_a)$.
 1. Use recursive results: Again, this is iterative, so we can use our standard process. Call the resulting running time function $r(n)$.
@@ -120,9 +120,9 @@ Our goal is to express this recurrence so that we have an equivalent function (a
 
 Ultimately we want to know the value of $T(n)$ in terms of $n$. Our definition of $T(n)$ tells us that $T(n)=T(n-1)+1$. We could then reapply the definition of $T$ to identify the value of $T(n-1)$, giving us $T(n)=(T(n-2)+1)+1$. We can repeat this process over and over again, replacing $T(x)$ with $T(x-1)+1$:
 
-$T(n)=T(n-1)+1=T(n-2)+1+1=T(n-3)+1+1+1=T(n-4)+1+1+1+1...$.
+$T(n)=T(n-1)+1=T(n-2)+1+1=T(n-3)+1+1+1=T(n-4)+1+1+1+1+...$.
 
-This substitution will then repeat until the argument to $T$ is $1$, since this is our base case. In the end we therefore get $T(n)=T(1)+1+1+1+1...+1$ where we have accumulated a $+1$ term for each substitution we did until reaching our base case. To find our running time, we just need to figure out the number of substitutions we had to do. Recalling back to the recursive algorithm this came from, this matches the length of the chain of stack frames we have from our original input of size $n$ to our base case of size $1$. To identify this number we need to answer the question "How many times must we subtract $1$ from $n$ until we reach the value $1$?". The answer to this should be the value of $i$ such that $n-i=1$, and so solving for $i$ we get $n-1$. This tells us that $T(n)$ through repeated substitution becomes $n-1$ ones added together, and so our running time is $\Theta(n)$.
+This substitution will then repeat until the argument to $T$ is $1$, since this is our base case. In the end we therefore get $T(n)=T(1)+1+1+1+1+...+1$ where we have accumulated a $+1$ term for each substitution we did until reaching our base case. To find our running time, we just need to figure out the number of substitutions we had to do. Recalling back to the recursive algorithm this came from, this matches the length of the chain of stack frames we have from our original input of size $n$ to our base case of size $1$. To identify this number we need to answer the question "How many times must we subtract $1$ from $n$ until we reach the value $1$?". The answer to this should be the value of $i$ such that $n-i=1$, and so solving for $i$ we get $n-1$. This tells us that $T(n)$ through repeated substitution becomes $n-1$ ones added together, and so our running time is $\Theta(n)$.
 
 ## The Tree Method
 
