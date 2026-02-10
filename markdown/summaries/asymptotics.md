@@ -93,7 +93,7 @@ For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and 
 Now we have our selection of $n_0=1$ and $c=88$. Let's use those to show $f(n)= O(g(n))$.
 
 > **Proof**: $f(n) = O(g(n))$
-> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=88$. We now need to show that whenever $n\geq 1$ we have that $4n^2+8n+10 \leq 22\cdot \frac{1}{4} n^3$. Observe that for $n \geq 1$ we have that $n^2 \geq 1$ and also $n^2 \geq n$. therefore $4n^2 + 8n + 10 \leq 4n^2 + 8n^2 + 10n^2 = 22n^2$. We can also see for $n\geq 1$ that $n^3 \geq n^2$ and so $22n^2 \leq 22n^3 = g(n)$. Therefore we have $f(n)\leq c\cdot g(n)$, and we can conclude $f(n) = O(g(n))$.
+> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=88$. We now need to show that whenever $n\geq 1$ we have that $4n^2+8n+10 \leq 88\cdot \frac{1}{4} n^3$. Observe that for $n \geq 1$ we have that $n^2 \geq 1$ and also $n^2 \geq n$. therefore $4n^2 + 8n + 10 \leq 4n^2 + 8n^2 + 10n^2 = 22n^2$. We can also see for $n\geq 1$ that $n^3 \geq n^2$ and so $22n^2 \leq 22n^3 = g(n)$. Therefore we have $f(n)\leq c\cdot g(n)$, and we can conclude $f(n) = O(g(n))$.
 
 
 ### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
