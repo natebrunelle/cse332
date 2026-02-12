@@ -176,7 +176,7 @@ To solve a recurrence of the form $T(n)=aT(\frac{n}{b})+f(n)$:
 
 1. Use the recurrence to draw a tree
     - $a$ is the branching factor of the tree (e.g. if $a=2$ then it's a binary tree)
-    - Divide the parent's input size by $b$to get each child's input size
+    - Divide the parent's input size by $b$ to get each child's input size
     - The height of the tree is $\log_b n$.
 1. Work done per node is given by applying $f(n)$ to that node's input size, write that value beside each node.
 1. Add the total work done across all nodes
@@ -190,12 +190,12 @@ To solve a recurrence of the form $T(n)=aT(\frac{n}{b})+f(n)$:
 When doing any sort of running time analysis it will be helpful to have an idea of what aspects of your analysis may vs. may not impact your overall asymptotic answer. The following aspects of a recurrence relation **do** matter (meaning changing them may result in a different asymptotic solution):
 
 1. The coefficient on the recursive call. In other words, $T_1(n)=a_1T_1(\frac{n}{b})+f(n)$ might be different from $T_2(n)=a_2T_2(\frac{n}{b})+f(n)$ if $a_1\neq a_2$.
-1. The argument to the recursive call. In other words, $T_1(n)=aT_1(\frac{n}{b_1})+f(n)$ might be different from $T_2(n)=aT_2(\frac{n}{b_2})+f(n)$ if $a_1\neq a_2$.
+1. The argument to the recursive call. In other words, $T_1(n)=aT_1(\frac{n}{b_1})+f(n)$ might be different from $T_2(n)=aT_2(\frac{n}{b_2})+f(n)$ if $b_1\neq b_2$.
 1. The asymptotic behavior of $f(n)$. In other words, $T_1(n)=aT_1(\frac{n}{b})+f_1(n)$ might be different from $T_2(n)=aT_2(\frac{n}{b})+f_2(n)$ if $f_1(n) \neq \Theta(f_2(n))$.
 
  The following aspects of a recurrence relation **do not** matter (meaning changing them may result in a different asymptotic solution):
 
- 1. The constant factors and non-dominant terms of $f(n). In other words, $T_1(n)=aT_1(\frac{n}{b})+f_1(n)$ will have the same result as $T_2(n)=aT_2(\frac{n}{b})+f_2(n)$ if $f_1(n) = \Theta(f_2(n))$
+ 1. The constant factors and non-dominant terms of $f(n)$. In other words, $T_1(n)=aT_1(\frac{n}{b})+f_1(n)$ will have the same result as $T_2(n)=aT_2(\frac{n}{b})+f_2(n)$ if $f_1(n) = \Theta(f_2(n))$
  1. The size of the base cases. If we evaluate the recurrence using a base case of $T(1)$ vs. a base case of $T(2)$ then the running time will be the same asymptotically.
  1. The running time of the base cases. If we use $T(2)=8$ or $T(2)=100$ we'll get the same result asymptotically.
 
