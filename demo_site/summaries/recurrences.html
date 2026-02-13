@@ -191,7 +191,7 @@
       <li>Use the recurrence to draw a tree
       <ul>
       <li><span class="math inline">a</span> is the branching factor of the tree (e.g. if <span class="math inline">a=2</span> then it’s a binary tree)</li>
-      <li>Divide the parent’s input size by <span class="math inline">b</span>to get each child’s input size</li>
+      <li>Divide the parent’s input size by <span class="math inline">b</span> to get each child’s input size</li>
       <li>The height of the tree is <span class="math inline">\log_b n</span>.</li>
       </ul></li>
       <li>Work done per node is given by applying <span class="math inline">f(n)</span> to that node’s input size, write that value beside each node.</li>
@@ -207,12 +207,12 @@
       <p>When doing any sort of running time analysis it will be helpful to have an idea of what aspects of your analysis may vs. may not impact your overall asymptotic answer. The following aspects of a recurrence relation <strong>do</strong> matter (meaning changing them may result in a different asymptotic solution):</p>
       <ol type="1">
       <li>The coefficient on the recursive call. In other words, <span class="math inline">T_1(n)=a_1T_1(\frac{n}{b})+f(n)</span> might be different from <span class="math inline">T_2(n)=a_2T_2(\frac{n}{b})+f(n)</span> if <span class="math inline">a_1\neq a_2</span>.</li>
-      <li>The argument to the recursive call. In other words, <span class="math inline">T_1(n)=aT_1(\frac{n}{b_1})+f(n)</span> might be different from <span class="math inline">T_2(n)=aT_2(\frac{n}{b_2})+f(n)</span> if <span class="math inline">a_1\neq a_2</span>.</li>
+      <li>The argument to the recursive call. In other words, <span class="math inline">T_1(n)=aT_1(\frac{n}{b_1})+f(n)</span> might be different from <span class="math inline">T_2(n)=aT_2(\frac{n}{b_2})+f(n)</span> if <span class="math inline">b_1\neq b_2</span>.</li>
       <li>The asymptotic behavior of <span class="math inline">f(n)</span>. In other words, <span class="math inline">T_1(n)=aT_1(\frac{n}{b})+f_1(n)</span> might be different from <span class="math inline">T_2(n)=aT_2(\frac{n}{b})+f_2(n)</span> if <span class="math inline">f_1(n) \neq \Theta(f_2(n))</span>.</li>
       </ol>
       <p>The following aspects of a recurrence relation <strong>do not</strong> matter (meaning changing them may result in a different asymptotic solution):</p>
       <ol type="1">
-      <li>The constant factors and non-dominant terms of $f(n). In other words, <span class="math inline">T_1(n)=aT_1(\frac{n}{b})+f_1(n)</span> will have the same result as <span class="math inline">T_2(n)=aT_2(\frac{n}{b})+f_2(n)</span> if <span class="math inline">f_1(n) = \Theta(f_2(n))</span></li>
+      <li>The constant factors and non-dominant terms of <span class="math inline">f(n)</span>. In other words, <span class="math inline">T_1(n)=aT_1(\frac{n}{b})+f_1(n)</span> will have the same result as <span class="math inline">T_2(n)=aT_2(\frac{n}{b})+f_2(n)</span> if <span class="math inline">f_1(n) = \Theta(f_2(n))</span></li>
       <li>The size of the base cases. If we evaluate the recurrence using a base case of <span class="math inline">T(1)</span> vs. a base case of <span class="math inline">T(2)</span> then the running time will be the same asymptotically.</li>
       <li>The running time of the base cases. If we use <span class="math inline">T(2)=8</span> or <span class="math inline">T(2)=100</span> we’ll get the same result asymptotically.</li>
       </ol>
@@ -223,7 +223,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-02-10 12:34</p>
+        <p>Last updated 2026-02-12 07:56</p>
   </footer>
 </body>
 </main>
