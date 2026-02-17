@@ -202,7 +202,7 @@ assignments:
         weight: 1
         files: 'something.java'
         
-    EX8 Shortest Paths:
+    EX8 Dijkstras:
         group: programming
         due: 2026-02-25 23:59:00
         writeup: 'https://www.cs.virginia.edu/~njb2b/cs4102/s23/'
