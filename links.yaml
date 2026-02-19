@@ -159,6 +159,9 @@
 2026-02-18:
     slides(pptx): files/slides/lecture17_forkjoin.pptx
     slides(pdf): files/slides/lecture17_forkjoin.pdf
+    slides(a lecture): files/slides/lecture17_forkjoin_inka.pdf
+    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=18650cde-5559-4965-98bd-b3c70158b945
+    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=261c7f64-2a2f-485b-9194-b3c701590f50
 
 2026-02-19:
     fork join starter code: files/section/ForkJoin_StarterCode.zip 
