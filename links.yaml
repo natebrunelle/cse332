@@ -161,5 +161,5 @@
     slides(pdf): files/slides/lecture17_forkjoin.pdf
 
 2026-02-19:
-    fork join starter code: files/slides/ForkJoin_StarterCode.zip 
-    fork join solution code: files/slides/solution_code.zip
+    fork join starter code: files/section/ForkJoin_StarterCode.zip 
+    fork join solution code: files/section/solution_code.zip
