@@ -54,10 +54,10 @@ lectures:
     - Graphs 3 (Shortest path)
     - Parallelism 1 (Fork-Join)
     - Parallelism 2 (Parallel Prefix)
-    - Parallel Analysis & Amdahl's Law
     - Synchronization (Locks)
     - Synchronization (Race Conditions)
     - Synchronization (Deadlock & Wisdom)
+    - Parallel Analysis & Amdahl's Law
     - Minimum Spanning Trees
     - Complexity Classes
     - P, NP, NP-Complete
