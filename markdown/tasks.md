@@ -283,7 +283,7 @@ A review session will be held at 5:30pm on Monday February 9, the room is The lo
 
 <!--Here are [sample solutions](files/cse332_midterm_au24_soln.pdf) for the midterm.-->
 
-# Solutions
+### Solutions
 
 Here you can find [sample solutions for the midterm exam](files/midterms/cse332_midterm_wi26_soln.pdf).
 
