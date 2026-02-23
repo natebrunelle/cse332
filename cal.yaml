@@ -72,7 +72,7 @@ labs:
     - S5 Hashing and Sorting
     - S6 Graphs 
     - S7 Writing parallel Programs
-    - S8 Parallel Prefix Work and Span
+    - S8 Parallel Prefix and Locks
     - S9 Concurrency
     - S10 P/NP & Final Review
 
