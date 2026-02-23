@@ -174,3 +174,7 @@
 2026-02-20:
     slides(pptx): files/slides/lecture18_parallelprefix.pptx
     slides(pdf): files/slides/lecture18_parallelprefix.pdf
+
+2026-02-23:
+    slides(pptx): files/slides/lecture19_concurrency.pptx
+    slides(pdf): files/slides/lecture19_concurrency.pdf
