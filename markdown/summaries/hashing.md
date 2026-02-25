@@ -59,8 +59,8 @@ With all of this in mind, we want a hash function to have all of the following p
 - **Efficient**: The hash function itself should not take much time to run
 
 
-Let's look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. 
+Let's look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. We will assume that each string $s$ has $n$ characters, where $s_i$ is the ascii encoding of the $i$th character in the string.
 
-```
-test
-```
+> **Option 1**: Use the first character
+>
+> For this hash function, we will use $h(s)=s_i$.
