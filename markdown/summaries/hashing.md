@@ -12,8 +12,8 @@ The overall idea of a hash table is to build a dictionary data structure that be
 
 We will store all of our key-value pairs in a an array. Because all computer data can be represented using 1s and 0s, and sequences of 1s and 0s can represent numbers, we can represent each key as a number. Our array will therefore have enough indices such that every possible key is an index in this array. Our dictionary operations can then be defined as follows:
 
-- insert: Considering the given key as an index in the array, set the value at that index to be the one given. In code, this would be something like `arr[(int) key] = value`.
-- find: Considering the given key as an index in the array, return the value found at that index. In code, `return arr[(int) key]`.
+- insert: Considering the given key as an index in the array, set the value at that index to be the one given. In code, this would be something like `arr[(int) key] = (key,value)`.
+- find: Considering the given key as an index in the array, return the value found at that index. In code, `return arr[(int) key].value`.
 - delete: Considering the given key as an index in the array, set the value at that index to be null. In code, `arr[(int) key] = null`.
 
 Now let's see exactly how big our array would need to be in order to implement this data structure. To do this, we'll assume that our keys and values both can be represented using one 64-bit word (the word size for most modern processors). This means that the length of our array will need to be $2^{64}$ indices of 64 bits each, or $64\cdot 2^{64}= 2^6\cdot 2^{64}=2^{70}$ bits, which $2^{67}$ bytes or 128 exabytes of storage.  To put this into perseptive, 1 exabyte in approximately the total amount of data that has been collected cumulatively by the Large Hadron Collider for its entire existance (as of 2025, so 17 years). Clearly, this is just too much to be reasonable.
@@ -26,7 +26,36 @@ The goal of a hash table is to mimic the behavior of this gigantic array, but ha
 But importantly, here's how it will be different:
 
 - The size of the big array depended on the number of *possible keys*, the size of the array in a hash table will depend on the number of keys *actually used*. 
-- We will map keys to indices using something called a *hash function*, which should behave as if we're using the key to select an index of the array at random.
+- We will map keys to integers using something called a *hash function*, which should behave as if we're using the key to select an integer at random.
+- The integer we map to may not necessarily be a valid index of the array, so we will mod the selected integer by the array's length to obtain an index.
 - The number of keys will be greater than the number of indices in the array, and therefore we may have multiple key-value pairs mapping to the same index (due to the pigeonhole principle), so we'll need to have a strategy to account for this.
 
-# Hash Table 
+# Hash Table Ideal
+
+At this point, we'll discuss the overall idea for how a hash table will work. There are still plenty of details that we'll need to fill in, but it will be helpful to see the most basic intention for their behavior as a starting point. For this basic overview, we will ignore the possibility of collisions (multiple keys using the same index) in order to show the "ideal" behavior. All of these operations will need to change once we being accounting for collisions.
+
+A hash table will store key-value pairs in an array. It assumes that we have a hash function, which serves to map keys to an integer. The dictionary operations will behave as follows:
+
+- insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be the one given. In code, this would be something like `arr[hash(key)$arr.length] = (key,value)`.
+- find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, return the value found at that index. In code, `return arr[hash(key)%arr.length]`.
+- delete: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be null. In code, `arr[hash(key)%arr.length] = null`.
+
+This should hopefully appear to you to be quite similar to the opertions for the big array data structure, whith the main changes being that we use the hash function to pick a number and then modulus to pick an index for our hash tables (as opposed to somehow directly using the key itself as an index). This small difference in incredibly important, however. In the big array we always need one index per potential key, regardless of how many keys we actually used. For hash tables we can accommodate any length of the array, meaning we can target the best tradeoff for running time vs. memory usage.
+
+# Designing Hash Functions
+
+Whenever our hash table's behavior matches the "ideal" above, our performance should match that of the big array. That is, if we never have collisions then all operations run in constant time. For this reason, we must take care when designing our hash functions so that they minimize how frequently we have collisions. Remember, it is impossible for us to prevent collisions entirely (because the whole goal is to have fewer indices than keys), but we can take action to make collisions as unlikely as possible.
+
+Because we're not going to know exactly what keys we might see when designing our hash function, the safest way to design our hash function to minimize the number of collisions is to make it look like `hash(key)%arr.length` selects an index of our array completely at random. We cannot literally select a random index, though, because we need to make sure we always select the same index for every key. Wwhen we insert a key-value pair at some index, we need to make sure look at the same index to find it later. If we simply use `Math.Random` to select an index, then the next time we need an index for the same key we will get a different random value.
+
+With all of this in mind, we want a hash function to have all of the following properties:
+- **Consistent**: Equal keys should hash to the same integer
+- **Uniform**: Should use every index of a fixed-sized array, and use each index at a roughly equal rate
+- **Effective**: It should behave as if the selection of an integer was random. This can be achieved by satisfyig all of:
+    - It is hard to find two unequal keys which hash to the same integer
+    - Given a key, it is hard to find another unequal key which hashes to the same integer
+    - The "avalanche effect": making even a small change to a key results in an arbitrary change to the integer it hashes to
+- **Efficient**: The hash function itself should not take much time to run
+
+
+Let's look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. 

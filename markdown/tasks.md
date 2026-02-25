@@ -259,13 +259,13 @@ This concept check applies to dictionaries and hash tables. This concept check r
 
     CC12 Parallel Prefix
 
-	CC13 Race Conditions and Mutual Exclusion
+	CC13 Identifying Race Conditions
 
-    CC14 Race Conditions and Mutual Exclusion
+    CC14 Locks and Mutual Exclusion
 
-    CC15 Work, Span, and Ahmdal's law
+	CC15 Deadlock
 
-    CC16 Deadlock
+    CC16 Work, Span, and Ahmdal's law
 
     CC17 Minimum Spanning Trees
 -->
