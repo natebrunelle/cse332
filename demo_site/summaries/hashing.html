@@ -89,7 +89,18 @@
       <h1 id="designing-hash-functions"><span class="header-section-number">3</span> Designing Hash Functions</h1>
       <p>Whenever our hash table’s behavior matches the <q>ideal</q> above, our performance should match that of the big array. That is, if we never have collisions then all operations run in constant time. For this reason, we must take care when designing our hash functions so that they minimize how frequently we have collisions. Remember, it is impossible for us to prevent collisions entirely (because the whole goal is to have fewer indices than keys), but we can take action to make collisions as unlikely as possible.</p>
       <p>Because we’re not going to know exactly what keys we might see when designing our hash function, the safest way to design our hash function to minimize the number of collisions is to make it look like <code>hash(key)%arr.length</code> selects an index of our array completely at random. We cannot literally select a random index, though, because we need to make sure we always select the same index for every key. Wwhen we insert a key-value pair at some index, we need to make sure look at the same index to find it later. If we simply use <code>Math.Random</code> to select an index, then the next time we need an index for the same key we will get a different random value.</p>
-      <p>With all of this in mind, we want a hash function to have all of the following properties: - <strong>Consistent</strong>: Equal keys should hash to the same integer - <strong>Uniform</strong>: Should use every index of a fixed-sized array, and use each index at a roughly equal rate - <strong>Effective</strong>: It should behave as if the selection of an integer was random. This can be achieved by satisfyig all of: - It is hard to find two unequal keys which hash to the same integer - Given a key, it is hard to find another unequal key which hashes to the same integer - The <q>avalanche effect</q>: making even a small change to a key results in an arbitrary change to the integer it hashes to - <strong>Efficient</strong>: The hash function itself should not take much time to run</p>
+      <p>With all of this in mind, we want a hash function to have all of the following properties:</p>
+      <ul>
+      <li><strong>Consistent</strong>: Equal keys should hash to the same integer</li>
+      <li><strong>Uniform</strong>: Should use every index of a fixed-sized array, and use each index at a roughly equal rate</li>
+      <li><strong>Effective</strong>: It should behave as if the selection of an integer was random. This can be achieved by satisfyig all of:
+      <ul>
+      <li>It is hard to find two unequal keys which hash to the same integer</li>
+      <li>Given a key, it is hard to find another unequal key which hashes to the same integer</li>
+      <li>The <q>avalanche effect</q>: making even a small change to a key results in an arbitrary change to the integer it hashes to</li>
+      </ul></li>
+      <li><strong>Efficient</strong>: The hash function itself should not take much time to run</li>
+      </ul>
       <p>Let’s look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have.</p>
             </div>
     </div>
@@ -98,7 +109,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-02-25 07:10</p>
+        <p>Last updated 2026-02-25 07:11</p>
   </footer>
 </body>
 </main>

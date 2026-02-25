@@ -60,3 +60,7 @@ With all of this in mind, we want a hash function to have all of the following p
 
 
 Let's look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. 
+
+```
+test
+```
