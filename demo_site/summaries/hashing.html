@@ -47,7 +47,9 @@
         <ul>
         <li><a href="#big-array-dictionary-data-structure"><span class="toc-section-number">1</span> Big Array Dictionary Data Structure</a></li>
         <li><a href="#hash-table-ideal"><span class="toc-section-number">2</span> Hash Table Ideal</a></li>
-        <li><a href="#designing-hash-functions"><span class="toc-section-number">3</span> Designing Hash Functions</a></li>
+        <li><a href="#designing-hash-functions"><span class="toc-section-number">3</span> Designing Hash Functions</a><ul>
+        <li><a href="#good-and-bad-examples"><span class="toc-section-number">3.1</span> Good and Bad Examples</a></li>
+        </ul></li>
         </ul>
         </div>
       </div>
@@ -101,10 +103,23 @@
       </ul></li>
       <li><strong>Efficient</strong>: The hash function itself should not take much time to run</li>
       </ul>
+      <h2 id="good-and-bad-examples"><span class="header-section-number">3.1</span> Good and Bad Examples</h2>
       <p>Let’s look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. We will assume that each string <span class="math inline">s</span> has <span class="math inline">n</span> characters, where <span class="math inline">s_i</span> is the ascii encoding of the <span class="math inline">i</span>th character in the string.</p>
       <blockquote>
       <p><strong>Option 1</strong>: Use the first character</p>
       <p>For this hash function, we will use <span class="math inline">h(s)=s_i</span>.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Option 2</strong>: Sum the characters</p>
+      <p>For this hash function, we will use <span class="math inline">h(s)=\sum_{i=0}^{n-1} s_i</span>.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Option 3</strong>: Sum the characters multiplied by a power of a prime number</p>
+      <p>For this hash function, we will use <span class="math inline">h(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i</span>.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Option 2</strong>: Sum the characters multiplied by a power of a prime number, double the result</p>
+      <p>For this hash function, we will use <span class="math inline">h(s)=2\sum_{i=0}^{n-1} s_i \cdot 31^i</span>.</p>
       </blockquote>
             </div>
     </div>
@@ -113,7 +128,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-02-25 07:16</p>
+        <p>Last updated 2026-02-25 07:20</p>
   </footer>
 </body>
 </main>
