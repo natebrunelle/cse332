@@ -69,10 +69,10 @@ To be a "good" hash function, the function must satisfy *all* of the properties 
 >
 > For this hash function, we will use $h(s)=s_{random.nextInt(n)}$.
 >
-> - **Consistent?**: No! If we run the hash function twice we may get a different result each time. For example, the first time we run $h("silent")$ we might randomly select the index $0$, and so the output would be $115$ (the ascii encoding of the character "s"). The next time we run it we may randomly select the index $3$, and so the output would be $101$ (the ascii encoding of the character "e"). Because running the hash function twice on the same key gave different results, it is not consistent. 
-> - **Uniform?**: No! Some characters are more common than others, so we're more likely to hash to the ascii values of more common characters
-> - **Effective?**: No! The strings "a" and "aa" always hash to the same value, even though they are different strings. It's easy to find more examples (e.g. "aaa", or "b" with "bbbbb", etc.)
-> - **Efficient?**: Yes! this will be a very fast operation
+> - **Consistent?**: No! If we run the hash function twice we may get a different result each time. For example, the first time we run $h(\text{"silent"})$ we might randomly select the index $0$, and so the output would be $115$ (the ascii encoding of the character "s"). The next time we run it we may randomly select the index $3$, and so the output would be $101$ (the ascii encoding of the character "e"). Because running the hash function twice on the same key gave different results, it is not consistent. 
+> - **Uniform?**: No! Some characters are more common than others, so we're more likely to hash to the ascii values of more common characters.
+> - **Effective?**: No! All strings that are just the same character repeated multiple times will be different, but always hash to the same value. For example, the strings "a", "aa", and "aaaaaa" always hash to the same value, even though they are different strings. It's easy to find more examples (e.g. "b" with "bbbbb", etc.).
+> - **Efficient?**: Yes! this will be a very fast operation.
 
 > **Option 1**: Use the first character
 >
@@ -87,9 +87,9 @@ To be a "good" hash function, the function must satisfy *all* of the properties 
 >
 > For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i$.
 >
-> - **Consistent?**: 
-> - **Uniform?**: 
-> - **Effective?**: 
+> - **Consistent?**: Yes! If we apply the hash function to the same string over and over again, we will always get the same result
+> - **Uniform?**: No! Some characters are more common than others, so we're more likely to hash to the ascii values of more common characters.
+> - **Effective?**: No! Any two strings which start with the same character will hash to the same value. For example, the string "banana" hashes to the same value as the string "bagel".
 > - **Efficient?**: 
 
 > **Option 3**: Sum the characters multiplied by a power of a prime number
