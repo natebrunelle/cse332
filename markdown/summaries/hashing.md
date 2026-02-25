@@ -67,7 +67,7 @@ To be a "good" hash function, the function must satisfy *all* of the properties 
 
 > **Option 0**: Use a random character
 >
-> For this hash function, we will use $h(s)=s_{random.nextInt(n)}$.
+> For this hash function, we will use $h_0(s)=s_{random.nextInt(n)}$.
 >
 > - **Consistent?**: No! If we run the hash function twice we may get a different result each time. For example, the first time we run $h(\text{"silent"})$ we might randomly select the index $0$, and so the output would be $115$ (the ascii encoding of the character "s"). The next time we run it we may randomly select the index $3$, and so the output would be $101$ (the ascii encoding of the character "e"). Because running the hash function twice on the same key gave different results, it is not consistent. 
 > - **Uniform?**: No! Some characters are more common than others, so we're more likely to hash to the ascii values of more common characters.
@@ -76,36 +76,45 @@ To be a "good" hash function, the function must satisfy *all* of the properties 
 
 > **Option 1**: Use the first character
 >
-> For this hash function, we will use $h(s)=s_i$.
->
-> - **Consistent?**: 
-> - **Uniform?**: 
-> - **Effective?**: 
-> - **Efficient?**: 
-
-> **Option 2**: Sum the characters
->
-> For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i$.
+> For this hash function, we will use $h_1(s)=s_i$.
 >
 > - **Consistent?**: Yes! If we apply the hash function to the same string over and over again, we will always get the same result
 > - **Uniform?**: No! Some characters are more common than others, so we're more likely to hash to the ascii values of more common characters.
 > - **Effective?**: No! Any two strings which start with the same character will hash to the same value. For example, the string "banana" hashes to the same value as the string "bagel".
-> - **Efficient?**: 
+> - **Efficient?**:  Yes! this will be a very fast operation.
+
+> **Option 2**: Sum the characters
+>
+> For this hash function, we will use $h_2(s)=\sum_{i=0}^{n-1} s_i$.
+>
+> - **Consistent?**: Yes! If we apply the hash function to the same string over and over again, we will always get the same result
+> - **Uniform?**: Probably not. This one is harder to see, but words formed by different combinations of common letter are more likely to appear.
+> - **Effective?**: No! Any two strings which contain the same characters (i.e. anagrams) will hash to the same value. For example, the string "silent" hashes to the same value as the string "listen".
+> - **Efficient?**: Yes! this will be a very fast operation.
 
 > **Option 3**: Sum the characters multiplied by a power of a prime number
 >
-> For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i$.
+> For this hash function, we will use $h_3(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i$.
 >
-> - **Consistent?**: 
-> - **Uniform?**: 
-> - **Effective?**: 
-> - **Efficient?**: 
+> - **Consistent?**: Yes! If we apply the hash function to the same string over and over again, we will always get the same result
+> - **Uniform?**: Yes! As long as the array's length is not exactly 31, we will use all indices, and in equal proportion.
+> - **Effective?**: Yes! Changing any character at any index will change the value we hash to in an unpredictable way.
+> - **Efficient?**: Yes! This is actually pretty efficient. It may not seem so at first due to the exponentiation of $31$, but this could be computed efficiently by repeatedly doing `sum = (sum+s[i])*31` for each character in the string.  
 
 > **Option 4**: Sum the characters multiplied by a power of a prime number, double the result
 >
-> For this hash function, we will use $h(s)=2\sum_{i=0}^{n-1} s_i \cdot 31^i$.
+> For this hash function, we will use $h_4(s)=2\cdot h_3(s)$.
 >
-> - **Consistent?**: 
-> - **Uniform?**: 
-> - **Effective?**: 
-> - **Efficient?**: 
+> - **Consistent?**: Yes! For the same reason option 3 is.
+> - **Uniform?**:  No! we never use odd indices.
+> - **Effective?**: Yes! For the same reason option 3 is.
+> - **Efficient?**: Yes! For the same reason option 3 is.
+
+> **Option 5**: First alphabetize the characters, then apply option 3.
+>
+> For this hash function, we will sort the string by character, for example, the string "banana" would become "aaabnn", then we apply $h(3)$ to that.
+>
+> - **Consistent?**: Yes! For the same reason option 3 is.
+> - **Uniform?**:  Yes! For the same reason option 3 is.
+> - **Effective?**: No! Any two strings which contain the same characters (i.e. anagrams) will hash to the same value. For example, the string "silent" hashes to the same value as the string "listen".
+> - **Efficient?**: Yes! For the same reason option 3 is.

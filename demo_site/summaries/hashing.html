@@ -113,10 +113,10 @@
       <p><strong>Option 0</strong>: Use a random character</p>
       <p>For this hash function, we will use <span class="math inline">h(s)=s_{random.nextInt(n)}</span>.</p>
       <ul>
-      <li><strong>Consistent?</strong>: No! If we run the hash function twice we may get a different result each time. For example, the first time we run <span class="math inline">h(&quot;silent&quot;)</span> we might randomly select the index <span class="math inline">0</span>, and so the output would be <span class="math inline">115</span> (the ascii encoding of the character <q>s</q>). The next time we run it we may randomly select the index <span class="math inline">3</span>, and so the output would be <span class="math inline">101</span> (the ascii encoding of the character <q>e</q>). Because running the hash function twice on the same key gave different results, it is not consistent.</li>
-      <li><strong>Uniform?</strong>: No! Some characters are more common than others, so we’re more likely to hash to the ascii values of more common characters</li>
-      <li><strong>Effective?</strong>: No! The strings <q>a</q> and <q>aa</q> always hash to the same value, even though they are different strings. It’s easy to find more examples (e.g. <q>aaa</q>, or <q>b</q> with <q>bbbbb</q>, etc.)</li>
-      <li><strong>Efficient?</strong>: Yes! this will be a very fast operation</li>
+      <li><strong>Consistent?</strong>: No! If we run the hash function twice we may get a different result each time. For example, the first time we run <span class="math inline">h(\text{&quot;silent&quot;})</span> we might randomly select the index <span class="math inline">0</span>, and so the output would be <span class="math inline">115</span> (the ascii encoding of the character <q>s</q>). The next time we run it we may randomly select the index <span class="math inline">3</span>, and so the output would be <span class="math inline">101</span> (the ascii encoding of the character <q>e</q>). Because running the hash function twice on the same key gave different results, it is not consistent.</li>
+      <li><strong>Uniform?</strong>: No! Some characters are more common than others, so we’re more likely to hash to the ascii values of more common characters.</li>
+      <li><strong>Effective?</strong>: No! All strings that are just the same character repeated multiple times will be different, but always hash to the same value. For example, the strings <q>a</q>, <q>aa</q>, and <q>aaaaaa</q> always hash to the same value, even though they are different strings. It’s easy to find more examples (e.g. <q>b</q> with <q>bbbbb</q>, etc.).</li>
+      <li><strong>Efficient?</strong>: Yes! this will be a very fast operation.</li>
       </ul>
       </blockquote>
       <blockquote>
@@ -133,9 +133,9 @@
       <p><strong>Option 2</strong>: Sum the characters</p>
       <p>For this hash function, we will use <span class="math inline">h(s)=\sum_{i=0}^{n-1} s_i</span>.</p>
       <ul>
-      <li><strong>Consistent?</strong>:</li>
-      <li><strong>Uniform?</strong>:</li>
-      <li><strong>Effective?</strong>:</li>
+      <li><strong>Consistent?</strong>: Yes! If we apply the hash function to the same string over and over again, we will always get the same result</li>
+      <li><strong>Uniform?</strong>: No! Some characters are more common than others, so we’re more likely to hash to the ascii values of more common characters.</li>
+      <li><strong>Effective?</strong>: No! Any two strings which start with the same character will hash to the same value. For example, the string <q>banana</q> hashes to the same value as the string <q>bagel</q>.</li>
       <li><strong>Efficient?</strong>:</li>
       </ul>
       </blockquote>
@@ -166,7 +166,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-02-25 07:37</p>
+        <p>Last updated 2026-02-25 07:41</p>
   </footer>
 </body>
 </main>
