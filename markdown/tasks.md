@@ -257,9 +257,9 @@ This concept check applies to dictionaries and hash tables. This concept check r
 
     CC11 Fork Join
 
-    CC12 Race Conditions and Mutual Exclusion
+    CC12 Parallel Prefix
 
-    CC13 Parallel Prefix
+	CC13 Race Conditions and Mutual Exclusion
 
     CC14 Race Conditions and Mutual Exclusion
 
