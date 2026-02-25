@@ -49,6 +49,7 @@ Whenever our hash table's behavior matches the "ideal" above, our performance sh
 Because we're not going to know exactly what keys we might see when designing our hash function, the safest way to design our hash function to minimize the number of collisions is to make it look like `hash(key)%arr.length` selects an index of our array completely at random. We cannot literally select a random index, though, because we need to make sure we always select the same index for every key. Wwhen we insert a key-value pair at some index, we need to make sure look at the same index to find it later. If we simply use `Math.Random` to select an index, then the next time we need an index for the same key we will get a different random value.
 
 With all of this in mind, we want a hash function to have all of the following properties:
+
 - **Consistent**: Equal keys should hash to the same integer
 - **Uniform**: Should use every index of a fixed-sized array, and use each index at a roughly equal rate
 - **Effective**: It should behave as if the selection of an integer was random. This can be achieved by satisfyig all of:
