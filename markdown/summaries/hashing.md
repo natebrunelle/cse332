@@ -58,9 +58,22 @@ With all of this in mind, we want a hash function to have all of the following p
     - The "avalanche effect": making even a small change to a key results in an arbitrary change to the integer it hashes to
 - **Efficient**: The hash function itself should not take much time to run
 
+## Good and Bad Examples
 
 Let's look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. We will assume that each string $s$ has $n$ characters, where $s_i$ is the ascii encoding of the $i$th character in the string.
 
 > **Option 1**: Use the first character
 >
 > For this hash function, we will use $h(s)=s_i$.
+
+> **Option 2**: Sum the characters
+>
+> For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i$.
+
+> **Option 3**: Sum the characters multiplied by a power of a prime number
+>
+> For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i$.
+
+> **Option 2**: Sum the characters multiplied by a power of a prime number, double the result
+>
+> For this hash function, we will use $h(s)=2\sum_{i=0}^{n-1} s_i \cdot 31^i$.
