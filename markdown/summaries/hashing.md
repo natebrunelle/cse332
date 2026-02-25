@@ -51,6 +51,7 @@ Because we're not going to know exactly what keys we might see when designing ou
 With all of this in mind, we want a hash function to have all of the following properties:
 
 - **Consistent**: Equal keys should hash to the same integer
+    - To be consistent, it must also be deterministic
 - **Uniform**: Should use every index of a fixed-sized array, and use each index at a roughly equal rate
 - **Effective**: It should behave as if the selection of an integer was random. This can be achieved by satisfyig all of:
     - It is hard to find two unequal keys which hash to the same integer
@@ -62,22 +63,49 @@ With all of this in mind, we want a hash function to have all of the following p
 
 Let's look at some examples of potential hash functions for strings, and discuss which of these properties they do/do not have. We will assume that each string $s$ has $n$ characters, where $s_i$ is the ascii encoding of the $i$th character in the string.
 
+To be a "good" hash function, the function must satisfy *all* of the properties above.
+
 > **Option 0**: Use a random character
 >
-> For this hash function, we will use $h(s)=s_{\textit{random.nextInt(n)}}$.
+> For this hash function, we will use $h(s)=s_{random.nextInt(n)}$.
+>
+> - **Consistent?**: No! If we run the hash function twice we may get a different result each time. For example, the first time we run $h("silent")$ we might randomly select the index $0$, and so the output would be $115$ (the ascii encoding of the character "s"). The next time we run it we may randomly select the index $3$, and so the output would be $101$ (the ascii encoding of the character "e"). Because running the hash function twice on the same key gave different results, it is not consistent. 
+> - **Uniform?**: No! Some characters are more common than others, so we're more likely to hash to the ascii values of more common characters
+> - **Effective?**: No! The strings "a" and "aa" always hash to the same value, even though they are different strings. It's easy to find more examples (e.g. "aaa", or "b" with "bbbbb", etc.)
+> - **Efficient?**: Yes! this will be a very fast operation
 
 > **Option 1**: Use the first character
 >
 > For this hash function, we will use $h(s)=s_i$.
+>
+> - **Consistent?**: 
+> - **Uniform?**: 
+> - **Effective?**: 
+> - **Efficient?**: 
 
 > **Option 2**: Sum the characters
 >
 > For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i$.
+>
+> - **Consistent?**: 
+> - **Uniform?**: 
+> - **Effective?**: 
+> - **Efficient?**: 
 
 > **Option 3**: Sum the characters multiplied by a power of a prime number
 >
 > For this hash function, we will use $h(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i$.
+>
+> - **Consistent?**: 
+> - **Uniform?**: 
+> - **Effective?**: 
+> - **Efficient?**: 
 
 > **Option 4**: Sum the characters multiplied by a power of a prime number, double the result
 >
 > For this hash function, we will use $h(s)=2\sum_{i=0}^{n-1} s_i \cdot 31^i$.
+>
+> - **Consistent?**: 
+> - **Uniform?**: 
+> - **Effective?**: 
+> - **Efficient?**: 
