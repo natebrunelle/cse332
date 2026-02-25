@@ -111,7 +111,7 @@
       <p>To be a <q>good</q> hash function, the function must satisfy <em>all</em> of the properties above.</p>
       <blockquote>
       <p><strong>Option 0</strong>: Use a random character</p>
-      <p>For this hash function, we will use <span class="math inline">h(s)=s_{random.nextInt(n)}</span>.</p>
+      <p>For this hash function, we will use <span class="math inline">h_0(s)=s_{random.nextInt(n)}</span>.</p>
       <ul>
       <li><strong>Consistent?</strong>: No! If we run the hash function twice we may get a different result each time. For example, the first time we run <span class="math inline">h(\text{&quot;silent&quot;})</span> we might randomly select the index <span class="math inline">0</span>, and so the output would be <span class="math inline">115</span> (the ascii encoding of the character <q>s</q>). The next time we run it we may randomly select the index <span class="math inline">3</span>, and so the output would be <span class="math inline">101</span> (the ascii encoding of the character <q>e</q>). Because running the hash function twice on the same key gave different results, it is not consistent.</li>
       <li><strong>Uniform?</strong>: No! Some characters are more common than others, so we’re more likely to hash to the ascii values of more common characters.</li>
@@ -121,42 +121,52 @@
       </blockquote>
       <blockquote>
       <p><strong>Option 1</strong>: Use the first character</p>
-      <p>For this hash function, we will use <span class="math inline">h(s)=s_i</span>.</p>
-      <ul>
-      <li><strong>Consistent?</strong>:</li>
-      <li><strong>Uniform?</strong>:</li>
-      <li><strong>Effective?</strong>:</li>
-      <li><strong>Efficient?</strong>:</li>
-      </ul>
-      </blockquote>
-      <blockquote>
-      <p><strong>Option 2</strong>: Sum the characters</p>
-      <p>For this hash function, we will use <span class="math inline">h(s)=\sum_{i=0}^{n-1} s_i</span>.</p>
+      <p>For this hash function, we will use <span class="math inline">h_1(s)=s_i</span>.</p>
       <ul>
       <li><strong>Consistent?</strong>: Yes! If we apply the hash function to the same string over and over again, we will always get the same result</li>
       <li><strong>Uniform?</strong>: No! Some characters are more common than others, so we’re more likely to hash to the ascii values of more common characters.</li>
       <li><strong>Effective?</strong>: No! Any two strings which start with the same character will hash to the same value. For example, the string <q>banana</q> hashes to the same value as the string <q>bagel</q>.</li>
-      <li><strong>Efficient?</strong>:</li>
+      <li><strong>Efficient?</strong>: Yes! this will be a very fast operation.</li>
+      </ul>
+      </blockquote>
+      <blockquote>
+      <p><strong>Option 2</strong>: Sum the characters</p>
+      <p>For this hash function, we will use <span class="math inline">h_2(s)=\sum_{i=0}^{n-1} s_i</span>.</p>
+      <ul>
+      <li><strong>Consistent?</strong>: Yes! If we apply the hash function to the same string over and over again, we will always get the same result</li>
+      <li><strong>Uniform?</strong>: Probably not. This one is harder to see, but words formed by different combinations of common letter are more likely to appear.</li>
+      <li><strong>Effective?</strong>: No! Any two strings which contain the same characters (i.e. anagrams) will hash to the same value. For example, the string <q>silent</q> hashes to the same value as the string <q>listen</q>.</li>
+      <li><strong>Efficient?</strong>: Yes! this will be a very fast operation.</li>
       </ul>
       </blockquote>
       <blockquote>
       <p><strong>Option 3</strong>: Sum the characters multiplied by a power of a prime number</p>
-      <p>For this hash function, we will use <span class="math inline">h(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i</span>.</p>
+      <p>For this hash function, we will use <span class="math inline">h_3(s)=\sum_{i=0}^{n-1} s_i \cdot 31^i</span>.</p>
       <ul>
-      <li><strong>Consistent?</strong>:</li>
-      <li><strong>Uniform?</strong>:</li>
-      <li><strong>Effective?</strong>:</li>
-      <li><strong>Efficient?</strong>:</li>
+      <li><strong>Consistent?</strong>: Yes! If we apply the hash function to the same string over and over again, we will always get the same result</li>
+      <li><strong>Uniform?</strong>: Yes! As long as the array’s length is not exactly 31, we will use all indices, and in equal proportion.</li>
+      <li><strong>Effective?</strong>: Yes! Changing any character at any index will change the value we hash to in an unpredictable way.</li>
+      <li><strong>Efficient?</strong>: Yes! This is actually pretty efficient. It may not seem so at first due to the exponentiation of <span class="math inline">31</span>, but this could be computed efficiently by repeatedly doing <code>sum = (sum+s[i])*31</code> for each character in the string.</li>
       </ul>
       </blockquote>
       <blockquote>
       <p><strong>Option 4</strong>: Sum the characters multiplied by a power of a prime number, double the result</p>
-      <p>For this hash function, we will use <span class="math inline">h(s)=2\sum_{i=0}^{n-1} s_i \cdot 31^i</span>.</p>
+      <p>For this hash function, we will use <span class="math inline">h_4(s)=2\cdot h_3(s)</span>.</p>
       <ul>
-      <li><strong>Consistent?</strong>:</li>
-      <li><strong>Uniform?</strong>:</li>
-      <li><strong>Effective?</strong>:</li>
-      <li><strong>Efficient?</strong>:</li>
+      <li><strong>Consistent?</strong>: Yes! For the same reason option 3 is.</li>
+      <li><strong>Uniform?</strong>: No! we never use odd indices.</li>
+      <li><strong>Effective?</strong>: Yes! For the same reason option 3 is.</li>
+      <li><strong>Efficient?</strong>: Yes! For the same reason option 3 is.</li>
+      </ul>
+      </blockquote>
+      <blockquote>
+      <p><strong>Option 5</strong>: First alphabetize the characters, then apply option 3.</p>
+      <p>For this hash function, we will sort the string by character, for example, the string <q>banana</q> would become <q>aaabnn</q>, then we apply <span class="math inline">h(3)</span> to that.</p>
+      <ul>
+      <li><strong>Consistent?</strong>: Yes! For the same reason option 3 is.</li>
+      <li><strong>Uniform?</strong>: Yes! For the same reason option 3 is.</li>
+      <li><strong>Effective?</strong>: No! Any two strings which contain the same characters (i.e. anagrams) will hash to the same value. For example, the string <q>silent</q> hashes to the same value as the string <q>listen</q>.</li>
+      <li><strong>Efficient?</strong>: Yes! For the same reason option 3 is.</li>
       </ul>
       </blockquote>
             </div>
@@ -166,7 +176,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-02-25 07:41</p>
+        <p>Last updated 2026-02-25 07:58</p>
   </footer>
 </body>
 </main>

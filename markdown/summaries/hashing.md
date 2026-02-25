@@ -118,3 +118,23 @@ To be a "good" hash function, the function must satisfy *all* of the properties 
 > - **Uniform?**:  Yes! For the same reason option 3 is.
 > - **Effective?**: No! Any two strings which contain the same characters (i.e. anagrams) will hash to the same value. For example, the string "silent" hashes to the same value as the string "listen".
 > - **Efficient?**: Yes! For the same reason option 3 is.
+
+## Design Considerations
+
+When designing your hash functions, here are some things to keep in mind.
+
+- To be consistent, you should never use aspects of your keys which are not relevant for determining equivalence. Because we need equal keys to give the same result, any aspect (e.g. field) of your key object which is not used in a `.equals` method should not be used in the hash function. Otherwise, this means we can make a change to the object which does not make it different according to `.equals`, but causes it to hash to a different value
+- To be effective, you should use *all* aspects of the keys which *are* relevant for determining equivalence. If you exclude some aspect of your key which is used in a `.equals` method, then we can make a change to that aspect to change the key without changing the value that is hashes to.
+- Use prime numbers. Because of number theoretic properties that we won't get into, prime numbers result in better uniformity of the values that we hash to.
+
+# Collision Resolution
+
+## Separate Chaining
+
+## Open Addressing
+
+# Running Time Analysis
+
+## Load Factor
+
+# Advice
