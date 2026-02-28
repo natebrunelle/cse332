@@ -159,7 +159,7 @@ For this exercise, you will need:
 - [EX09 Starter Code](/files/exercises/ex9.zip) - which contains various classes and testing files that will be needed for this assignment.
 - [EX09 Specification](https://docs.google.com/document/d/e/2PACX-1vQ7_mYQ4h8lUpohL0_ZeV8p34mvT_ZtFP_dYKL0w-OKPQswFYdpmi_cnCS9uk_oOw/pub) - which contains all instructions for what to do for this assignment
 
-<!--
+
 ## Exercise 10 
 
 The objectives of this exercise are:
@@ -170,7 +170,7 @@ The objectives of this exercise are:
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-
+<!--
 ## Exercise 11
 
 The objectives of thie exercise are:
