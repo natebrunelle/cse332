@@ -233,9 +233,9 @@
       <h3 id="probing-patterns"><span class="header-section-number">4.2.1</span> Probing Patterns</h3>
       <p>A probing pattern refers to which sequence of indices to pick as the alternative. We get different performance behaviors for different choices of probing pattern.</p>
       <h4 id="linear-probing"><span class="header-section-number">4.2.1.1</span> Linear Probing</h4>
-      <p>Linear probing is the simplest probing pattern. Suppose that we want to do a find/insert/delete operation for a given key <code>k</code>, and so we compute <code>h(k) % arr.length</code> to be index <code>i</code>. As long as we see collisions, we will follow the pattern: <code>i</code>, <code>i+1</code>, <code>i+2</code>, etc. This means that the <span class="math inline">j</span>th index we check in the probe sequence is index <code>i</code>+<span class="math inline">j</span>. In other words, we just check the very next index in the arr as we continue probing.</p>
+      <p>Linear probing is the simplest probing pattern. Suppose that we want to do a find/insert/delete operation for a given key <code>k</code>, and so we compute <code>h(k) % arr.length</code> to be index <span class="math inline">i</span>. As long as we see collisions, we will follow the pattern: <span class="math inline">i</span>, <span class="math inline">i+1</span>, <span class="math inline">i+2</span>, etc. This means that the <span class="math inline">j</span>th index we check in the probe sequence is index <span class="math inline">i+j</span>. In other words, we just check the very next index in the arr as we continue probing.</p>
       <h4 id="quadratic-probing"><span class="header-section-number">4.2.1.2</span> Quadratic Probing</h4>
-      <p>Suppose that we want to do a find/insert/delete operation for a given key <code>k</code>, and so we compute <code>h(k) % arr.length</code> to be index <code>i</code>. As long as we see collisions, we will follow the pattern: <code>i</code>, <code>i+1*1</code>, <code>i+2*2</code>, <code>i+3*3</code>, <code>i+4*4</code>, etc. This means that the <span class="math inline">j</span>th index we check in the probe sequence is index <code>i</code>+<span class="math inline">j^2</span>.</p>
+      <p>Suppose that we want to do a find/insert/delete operation for a given key <code>k</code>, and so we compute <code>h(k) % arr.length</code> to be index <span class="math inline">i</span>. As long as we see collisions, we will follow the pattern: <span class="math inline">i</span>, <span class="math inline">i+1*1</span>, <span class="math inline">i+2*2</span>, <span class="math inline">i+3*3</span>, <span class="math inline">i+4*4</span>, etc. This means that the <span class="math inline">j</span>th index we check in the probe sequence is index <span class="math inline">i+j^2</span>.</p>
       <h1 id="running-time-analysis"><span class="header-section-number">5</span> Running Time Analysis</h1>
       <h2 id="load-factor"><span class="header-section-number">5.1</span> Load Factor</h2>
       <h2 id="rehashing"><span class="header-section-number">5.2</span> Rehashing</h2>
@@ -247,7 +247,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-03-02 07:33</p>
+        <p>Last updated 2026-03-02 07:36</p>
   </footer>
 </body>
 </main>

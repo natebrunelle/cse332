@@ -183,7 +183,11 @@ Linear probing is the simplest probing pattern. Suppose that we want to do a fin
 
 #### Quadratic Probing
 
-Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index $i$. As long as we see collisions, we will follow the pattern: $i$, $i+1*1$, $i+2*2$, $i+3*3$, $i+4*4$, etc.  This means that the $j$th index we check in the probe sequence is index $i+j^2$.
+Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index $i$. As long as we see collisions, we will follow the pattern: $i$, $i+1^2$, $i+2^2$, $i+3^2$, $i+4^2$, etc.  This means that the $j$th index we check in the probe sequence is index $i+j^2$.
+
+#### Double Hashing
+
+For this option we will need two hash functions. We will call the primary hash function `h` and the secondary hash function `g` (it may be that `g` is derived from `h`). Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index $i$. As long as we see collisions, we will follow the pattern: $i$, $i+g(k)$, $i+2g(k)$, $i+3g(k)$, $i+4g(k)$, etc.  This means that the $j$th index we check in the probe sequence is index $i+j\cdot g(k)$.
 
 # Running Time Analysis
 
