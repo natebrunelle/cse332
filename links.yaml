@@ -193,5 +193,9 @@
     solution: https://docs.google.com/document/d/1Iw8CESYZMxp7OyxLXJRkVIa5eNOBerun/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
 
 2026-02-27:
-    slides(pptx): files/slides/lecture21_concurrency3_amdahls.pptx
-    slides(pdf): files/slides/lecture21_concurrency3_amdahls.pdf
+    slides(pptx): files/slides/lecture21_concurrency3_analysis.pptx
+    slides(pdf): files/slides/lecture21_concurrency3_analysis.pdf
+
+2026-03-02:
+    slides(pptx): files/slides/lecture22_amdahls_wisdom.pptx
+    slides(pdf): files/slides/lecture22_amdahls_wisdom.pdf

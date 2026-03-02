@@ -52,11 +52,16 @@
         <li><a href="#design-considerations"><span class="toc-section-number">3.2</span> Design Considerations</a></li>
         </ul></li>
         <li><a href="#collision-resolution"><span class="toc-section-number">4</span> Collision Resolution</a><ul>
-        <li><a href="#separate-chaining"><span class="toc-section-number">4.1</span> Separate Chaining</a></li>
-        <li><a href="#open-addressing"><span class="toc-section-number">4.2</span> Open Addressing</a></li>
+        <li><a href="#separate-chaining"><span class="toc-section-number">4.1</span> Separate Chaining</a><ul>
+        <li><a href="#why-linked-lists"><span class="toc-section-number">4.1.1</span> Why Linked Lists?</a></li>
+        </ul></li>
+        <li><a href="#open-addressing"><span class="toc-section-number">4.2</span> Open Addressing</a><ul>
+        <li><a href="#probing-patterns"><span class="toc-section-number">4.2.1</span> Probing Patterns</a></li>
+        </ul></li>
         </ul></li>
         <li><a href="#running-time-analysis"><span class="toc-section-number">5</span> Running Time Analysis</a><ul>
         <li><a href="#load-factor"><span class="toc-section-number">5.1</span> Load Factor</a></li>
+        <li><a href="#rehashing"><span class="toc-section-number">5.2</span> Rehashing</a></li>
         </ul></li>
         <li><a href="#advice"><span class="toc-section-number">6</span> Advice</a></li>
         </ul>
@@ -92,11 +97,16 @@
       <p>At this point, we’ll discuss the overall idea for how a hash table will work. There are still plenty of details that we’ll need to fill in, but it will be helpful to see the most basic intention for their behavior as a starting point. For this basic overview, we will ignore the possibility of collisions (multiple keys using the same index) in order to show the <q>ideal</q> behavior. All of these operations will need to change once we being accounting for collisions.</p>
       <p>A hash table will store key-value pairs in an array. It assumes that we have a hash function, which serves to map keys to an integer. The dictionary operations will behave as follows:</p>
       <ul>
-      <li>insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be the one given. In code, this would be something like <code>arr[hash(key)$arr.length] = (key,value)</code>.</li>
+      <li>insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be the one given. In code, this would be something like <code>arr[hash(key)$arr.length] = (key,value)</code>. If the size of the hash table reaches a fixed ratio with the length of the array, resize the array, and re-insert all key-value pairs.</li>
       <li>find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, return the value found at that index. In code, <code>return arr[hash(key)%arr.length]</code>.</li>
       <li>delete: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be null. In code, <code>arr[hash(key)%arr.length] = null</code>.</li>
       </ul>
-      <p>This should hopefully appear to you to be quite similar to the opertions for the big array data structure, whith the main changes being that we use the hash function to pick a number and then modulus to pick an index for our hash tables (as opposed to somehow directly using the key itself as an index). This small difference in incredibly important, however. In the big array we always need one index per potential key, regardless of how many keys we actually used. For hash tables we can accommodate any length of the array, meaning we can target the best tradeoff for running time vs. memory usage.</p>
+      <p>This should hopefully appear to you to be quite similar to the opertions for the big array data structure, with the main changes being:</p>
+      <ul>
+      <li>We use the hash function to pick a number and then modulus to pick an index for our hash tables (as opposed to somehow directly using the key itself as an index).</li>
+      <li>We will occasionally need to resize the array as we add more key-value pairs. This is because the changes of a collision will go up as more indices of the array are occupied, and so we will resize to keep that probability low.</li>
+      </ul>
+      <p>These small differences are incredibly important. In the big array we always need one index per potential key, regardless of how many keys we actually used. For hash tables we can accommodate any length of the array. The result is that we can use the number of keys <em>actually present</em> in the hash table to select whatever array length gives the best tradeoff for running time vs. memory usage.</p>
       <h1 id="designing-hash-functions"><span class="header-section-number">3</span> Designing Hash Functions</h1>
       <p>Whenever our hash table’s behavior matches the <q>ideal</q> above, our performance should match that of the big array. That is, if we never have collisions then all operations run in constant time. For this reason, we must take care when designing our hash functions so that they minimize how frequently we have collisions. Remember, it is impossible for us to prevent collisions entirely (because the whole goal is to have fewer indices than keys), but we can take action to make collisions as unlikely as possible.</p>
       <p>Because we’re not going to know exactly what keys we might see when designing our hash function, the safest way to design our hash function to minimize the number of collisions is to make it look like <code>hash(key)%arr.length</code> selects an index of our array completely at random. We cannot literally select a random index, though, because we need to make sure we always select the same index for every key. Wwhen we insert a key-value pair at some index, we need to make sure look at the same index to find it later. If we simply use <code>Math.Random</code> to select an index, then the next time we need an index for the same key we will get a different random value.</p>
@@ -186,10 +196,49 @@
       <li>Use prime numbers. Because of number theoretic properties that we won’t get into, prime numbers result in better uniformity of the values that we hash to.</li>
       </ul>
       <h1 id="collision-resolution"><span class="header-section-number">4</span> Collision Resolution</h1>
+      <p>While a good has function will minimize the odds of a collision (i.e. two different keys mapping to the same index after applying the hash function), we will never be able to avoid collisions completely (unless we’re using exabytes of data, I suppose). For this reason, we <em>must</em> have some strategy for resolving collisions. In general, there are two major approaches to this: Separate Chaining and Open Addressing.</p>
       <h2 id="separate-chaining"><span class="header-section-number">4.1</span> Separate Chaining</h2>
+      <p>A separate chaining hash table accounts for collisions by using an array of linked lists rather than an array of key-value pairs. The idea is that instead of storing just one key-value pair at each index, it will store a list of key-value pairs at each index. This way if multiple keys map to the same index we can just store all of those keys at this index.</p>
+      <p>The operations for a separate chaining hash table would be as follows:</p>
+      <ul>
+      <li>insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. If the linked list at that index contains the key already, update the value. Otherwise, add the key-value pair to the linked list. If the size of the hash table reaches a fixed ratio with the length of the array, resize the array, and re-insert all key-value pairs.</li>
+      <li>find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. Check for the key in the linked list at that index, and return the corresponding value if present.</li>
+      <li>delete: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, remove the key-value pair from the linked list at that index.</li>
+      </ul>
+      <h3 id="why-linked-lists"><span class="header-section-number">4.1.1</span> Why Linked Lists?</h3>
+      <p>We use a linked list data structure at each index of the array. Each of these linked list data structures is actually being used as if it were a dictionary data structure because the hash table insert involves an insert operation on the linked list, hash table find involves a find operation on the linked list, and hash table delete involves a delete operation on the linked list. In general, we could use any dictionary data structure at each index of the separate-chaining hash table (array list, binary search tree, AVL tree, another hash table etc.), so why a linked list? Recall that The goal of using a good hash function and occasionally resizing the array is to make collisions rare. This means that a linked list makes the most sense because:</p>
+      <ul>
+      <li>Very often our per-index data structures will be empty, so we want a data structure that does not use much excess space (this excludes array-based data structures like array lists or hash tables)</li>
+      <li>When not empty, our per-index data structure should never contain a large number of elements, so we do not care about the asymptotic running time (so AVL trees or other complex but asymptotically efficient data structures are not helpful)</li>
+      </ul>
+      <p>In summary, linked lists have the best combination of being memory efficient and time efficient for empty or small dictionaries, making them the best choice.</p>
       <h2 id="open-addressing"><span class="header-section-number">4.2</span> Open Addressing</h2>
+      <p>An open addressing hash table (also known as a probing hash table) stores key-value pairs directly in an array of key-value pairs, and accounts for collisions by using a strategy called <q>probing</q> to find an alternative index to store a key-value pair whenever the mapped-to index is occupied. To probe simply means to check sequence of alternative indices</p>
+      <p>The operations for an open-addressing hash table would work as follows:</p>
+      <ul>
+      <li>insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. If the hashed-to index is empty, put the key-value pair at that index. If the hashed-to index contains that key, update the value. If the index contains a key-value pair with a different key then begin probing to check alternative indices. For each index while probing:
+      <ul>
+      <li>If the index contains the given key, update the value and end the probe</li>
+      <li>If the index is empty, add the given key-value pair at that index and end the probe</li>
+      <li>Otherwise continue probing</li>
+      </ul></li>
+      <li>find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. If the hashed-to index contains the given key, return the value. If the index is empty, the key was not present. If the index contains a key-value pair with a different key then begin probing to check alternative indices. For each index while probing:
+      <ul>
+      <li>If the index contains the given key, return the value and end the probe</li>
+      <li>If the index is empty, the key was not present, end the probe</li>
+      <li>Otherwise continue probing</li>
+      </ul></li>
+      <li>delete: This one is a bit complicated, we’ll discuss it below.</li>
+      </ul>
+      <h3 id="probing-patterns"><span class="header-section-number">4.2.1</span> Probing Patterns</h3>
+      <p>A probing pattern refers to which sequence of indices to pick as the alternative. We get different performance behaviors for different choices of probing pattern.</p>
+      <h4 id="linear-probing"><span class="header-section-number">4.2.1.1</span> Linear Probing</h4>
+      <p>Linear probing is the simplest probing pattern. Suppose that we want to do a find/insert/delete operation for a given key <code>k</code>, and so we compute <code>h(k) % arr.length</code> to be index <code>i</code>. As long as we see collisions, we will follow the pattern: <code>i</code>, <code>i+1</code>, <code>i+2</code>, etc. This means that the <span class="math inline">j</span>th index we check in the probe sequence is index <code>i</code>+<span class="math inline">j</span>. In other words, we just check the very next index in the arr as we continue probing.</p>
+      <h4 id="quadratic-probing"><span class="header-section-number">4.2.1.2</span> Quadratic Probing</h4>
+      <p>Suppose that we want to do a find/insert/delete operation for a given key <code>k</code>, and so we compute <code>h(k) % arr.length</code> to be index <code>i</code>. As long as we see collisions, we will follow the pattern: <code>i</code>, <code>i+1*1</code>, <code>i+2*2</code>, <code>i+3*3</code>, <code>i+4*4</code>, etc. This means that the <span class="math inline">j</span>th index we check in the probe sequence is index <code>i</code>+<span class="math inline">j^2</span>.</p>
       <h1 id="running-time-analysis"><span class="header-section-number">5</span> Running Time Analysis</h1>
       <h2 id="load-factor"><span class="header-section-number">5.1</span> Load Factor</h2>
+      <h2 id="rehashing"><span class="header-section-number">5.2</span> Rehashing</h2>
       <h1 id="advice"><span class="header-section-number">6</span> Advice</h1>
             </div>
     </div>
@@ -198,7 +247,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-02-25 08:10</p>
+        <p>Last updated 2026-03-02 07:33</p>
   </footer>
 </body>
 </main>
