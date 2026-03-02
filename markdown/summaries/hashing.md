@@ -36,11 +36,16 @@ At this point, we'll discuss the overall idea for how a hash table will work. Th
 
 A hash table will store key-value pairs in an array. It assumes that we have a hash function, which serves to map keys to an integer. The dictionary operations will behave as follows:
 
-- insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be the one given. In code, this would be something like `arr[hash(key)$arr.length] = (key,value)`.
+- insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be the one given. In code, this would be something like `arr[hash(key)$arr.length] = (key,value)`. If the size of the hash table reaches a fixed ratio with the length of the array, resize the array, and re-insert all key-value pairs.
 - find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, return the value found at that index. In code, `return arr[hash(key)%arr.length]`.
 - delete: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, set the value at that index to be null. In code, `arr[hash(key)%arr.length] = null`.
 
-This should hopefully appear to you to be quite similar to the opertions for the big array data structure, whith the main changes being that we use the hash function to pick a number and then modulus to pick an index for our hash tables (as opposed to somehow directly using the key itself as an index). This small difference in incredibly important, however. In the big array we always need one index per potential key, regardless of how many keys we actually used. For hash tables we can accommodate any length of the array, meaning we can target the best tradeoff for running time vs. memory usage.
+This should hopefully appear to you to be quite similar to the opertions for the big array data structure, with the main changes being:
+
+- We use the hash function to pick a number and then modulus to pick an index for our hash tables (as opposed to somehow directly using the key itself as an index). 
+- We will occasionally need to resize the array as we add more key-value pairs. This is because the changes of a collision will go up as more indices of the array are occupied, and so we will resize to keep that probability low.
+
+These small differences are incredibly important. In the big array we always need one index per potential key, regardless of how many keys we actually used. For hash tables we can accommodate any length of the array. The result is that we can use the number of keys *actually present* in the hash table to select whatever array length gives the best tradeoff for running time vs. memory usage.
 
 # Designing Hash Functions
 
@@ -129,12 +134,61 @@ When designing your hash functions, here are some things to keep in mind.
 
 # Collision Resolution
 
+While a good has function will minimize the odds of a collision (i.e. two different keys mapping to the same index after applying the hash function), we will never be able to avoid collisions completely (unless we're using exabytes of data, I suppose). For this reason, we *must* have some strategy for resolving collisions. In general, there are two major approaches to this: Separate Chaining and Open Addressing.
+
 ## Separate Chaining
 
+A separate chaining hash table accounts for collisions by using an array of linked lists rather than an array of key-value pairs. The idea is that instead of storing just one key-value pair at each index, it will store a list of key-value pairs at each index. This way if multiple keys map to the same index we can just store all of those keys at this index.
+
+The operations for a separate chaining hash table would be as follows: 
+
+- insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. If the linked list at that index contains the key already, update the value. Otherwise, add the key-value pair to the linked list. If the size of the hash table reaches a fixed ratio with the length of the array, resize the array, and re-insert all key-value pairs.
+- find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. Check for the key in the linked list at that index, and return the corresponding value if present.
+- delete: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index, remove the key-value pair from the linked list at that index.
+
+### Why Linked Lists?
+
+We use a linked list data structure at each index of the array. Each of these linked list data structures is actually being used as if it were a dictionary data structure because the hash table insert involves an insert operation on the linked list, hash table find involves a find operation on the linked list, and hash table delete involves a delete operation on the linked list. In general, we could use any dictionary data structure at each index of the separate-chaining hash table (array list, binary search tree, AVL tree, another hash table etc.), so why a linked list? Recall that The goal of using a good hash function and occasionally resizing the array is to make collisions rare. This means that a linked list makes the most sense because:
+
+
+- Very often our per-index data structures will be empty, so we want a data structure that does not use much excess space (this excludes array-based data structures like array lists or hash tables)
+- When not empty, our per-index data structure should never contain a large number of elements, so we do not care about the asymptotic running time (so AVL trees or other complex but asymptotically efficient data structures are not helpful)
+
+In summary, linked lists have the best combination of being memory efficient and time efficient for empty or small dictionaries, making them the best choice.
+
+
 ## Open Addressing
+
+An open addressing hash table (also known as a probing hash table) stores key-value pairs directly in an array of key-value pairs, and accounts for collisions by using a strategy called "probing" to find an alternative index to store a key-value pair whenever the mapped-to index is occupied. To probe simply means to check sequence of alternative indices
+
+The operations for an open-addressing hash table would work as follows: 
+
+- insert: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. If the hashed-to index is empty, put the key-value pair at that index. If the hashed-to index contains that key, update the value. If the index contains a key-value pair with a different key then begin probing to check alternative indices. For each index while probing:
+    - If the index contains the given key, update the value and end the probe
+    - If the index is empty, add the given key-value pair at that index and end the probe
+    - Otherwise continue probing
+- find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. If the hashed-to index contains the given key, return the value. If the index is empty, the key was not present. If the index contains a key-value pair with a different key then begin probing to check alternative indices. For each index while probing:
+    - If the index contains the given key, return the value and end the probe
+    - If the index is empty, the key was not present, end the probe
+    - Otherwise continue probing
+- delete: This one is a bit complicated, we'll discuss it below.
+
+### Probing Patterns
+
+A probing pattern refers to which sequence of indices to pick as the alternative. We get different performance behaviors for different choices of probing pattern.
+
+#### Linear Probing
+
+Linear probing is the simplest probing pattern. Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index `i`. As long as we see collisions, we will follow the pattern: `i`, `i+1`, `i+2`, etc. This means that the $j$th index we check in the probe sequence is index `i`+$j$. In other words, we just check the very next index in the arr as we continue probing.
+
+#### Quadratic Probing
+
+Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index `i`. As long as we see collisions, we will follow the pattern: `i`, `i+1*1`, `i+2*2`, `i+3*3`, `i+4*4`, etc.  This means that the $j$th index we check in the probe sequence is index `i`+$j^2$.
 
 # Running Time Analysis
 
 ## Load Factor
+
+## Rehashing
 
 # Advice
