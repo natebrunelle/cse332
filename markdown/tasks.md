@@ -459,7 +459,7 @@ We have provided links to past exams below. Be advised that in other quarters th
 - [24wi Final](files/finals/cse332_final_wi24.pdf), [24wi Final Solution](files/finals/cse332_final_wi24_soln.pdf)
 - [23au Final](files/finals/cse332-final-23au.pdf), [23au Final Solution](files/finals/cse332-final-23au-soln.pdf)
 - [23wi Final](files/finals/cse332-final-23wi.pdf), [23wi Solution](files/finals/cse332-final-23wi-soln.pdf)
-- [19au Final]files/finals/cse332-final-19au.pdf), [19au Final Solution](files/finals/cse332-final-19au-soln.pdf)
+- [19au Final](files/finals/cse332-final-19au.pdf), [19au Final Solution](files/finals/cse332-final-19au-soln.pdf)
 - [19wi Final](files/finals/cse332-final-19wi.pdf), [19wi Final Solution](files/finals/cse332-final-19wi-soln.pdf)
 - [18au Final](files/finals/cse332-final-18au.pdf), [18au Final Solution](files/finals/cse332-final-18au-soln.pdf)
 - [18wi Final](files/finals/cse332-final-18wi.pdf), [18wi Final Solution](files/finals/cse332-final-18wi-soln.pdf)
