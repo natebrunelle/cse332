@@ -170,7 +170,7 @@ The objectives of this exercise are:
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-<!--
+
 ## Exercise 11
 
 The objectives of thie exercise are:
@@ -182,10 +182,10 @@ This is a programming exercise which you will submit to gradescope. There is no 
 
 For this exercise, you will need:
 
-- [Starter Code](/files/exercises/ex11.zip) - which contains various classes and testing files that will be needed for this assignment.
-- [Specification](https://docs.google.com/document/d/1_JcwNodKM59FZFTIcgfYK2w6GW5_mSyPPDtYi0wexvY/edit?usp=sharing) - which contains all instructions for what to do for this assignment.
+- [EX11 Starter Code](/files/exercises/ex11.zip) - which contains various classes and testing files that will be needed for this assignment.
+- [EX11 Specification](https://docs.google.com/document/d/e/2PACX-1vQo2dVq6zCaE8oSDyLSAqCHUcKHGKeYHEw7RS6lWhIVVlnLxtNtu3-Bmvfr8BZSyg/pub) - which contains all instructions for what to do for this assignment.
 
-
+<!--
 ## Exercise 12
 
 The objectives of this exercise are:
