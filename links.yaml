@@ -186,6 +186,8 @@
 2026-02-25:
     slides(pptx): files/slides/lecture20_concurrency2.pptx
     slides(pdf): files/slides/lecture20_concurrency2.pdf
+    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ab43549-ad66-4d87-8dee-b3c70158bd39
+    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb3cc3a4-804d-4b24-b0c7-b3c701591370
 
 2026-02-26:
     slides: https://docs.google.com/presentation/d/1iwXNjRiAZo_C8M5vLSkhQk7Yt_sVgc9l/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
@@ -195,14 +197,20 @@
 2026-02-27:
     slides(pptx): files/slides/lecture21_concurrency3_analysis.pptx
     slides(pdf): files/slides/lecture21_concurrency3_analysis.pdf
+    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a7402262-302f-495a-960d-b3c70158be6b
+    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8b102eb-8651-42ee-ad11-b3c7015914ad
 
 2026-03-02:
     slides(pptx): files/slides/lecture22_amdahls_wisdom.pptx
     slides(pdf): files/slides/lecture22_amdahls_wisdom.pdf
+    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=31672d4d-4d02-4bf3-b8cb-b3c70158bf79
+    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c6b6606e-087b-4156-af3c-b3c70159163f
 
 2026-03-04:
     slides(pptx): files/slides/lecture23_mst.pptx
     slides(pdf): files/slides/lecture23_mst.pdf
+    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=066bb44b-4cb2-4611-bc7f-b3c70158c0c9
+    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=acc42a6e-261d-495c-aa1b-b3c7015917a8
 
 2026-03-05:
     concurrency slides: https://docs.google.com/presentation/d/1Kemp1CXNvKkgMze7RTuvEtKcgMHwgx0M/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
@@ -216,3 +224,9 @@
 2026-03-06:
     slides(pptx): files/slides/lecture24_complexity.pptx
     slides(pdf): files/slides/lecture24_complexity.pdf
+    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=47befe10-6b3f-47a5-9dd7-b3c70158c231
+    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5a872b76-794c-45b0-9c20-b3c701591965
+
+2026-03-09:
+    slides(pptx): files/slides/lecture25_p_np.pptx
+    slides(pdf): files/slides/lecture25_p_np.pdf
