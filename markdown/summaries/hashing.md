@@ -181,18 +181,64 @@ A probing pattern refers to which sequence of indices to pick as the alternative
 
 Linear probing is the simplest probing pattern. Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index $i$. As long as we see collisions, we will follow the pattern: $i$, $i+1$, $i+2$, etc. This means that the $j$th index we check in the probe sequence is index $i+j$. In other words, we just check the very next index in the arr as we continue probing.
 
+The primary downside of linear probing is that the running time scales poorly as the hash table fills with more key-value pairs due to a phenomenon called **primary clustering**. Consider that we have a value at index $i$ of the hash table. If we have a collision at index $i$ when inserting, that new item will be added at index $i+1$. Now if we have an insert that hashes to index $i$ or $i+1$ then that item will go at index $i+2$. At this point there are 3 different places that cause a new key-value pair to be placed at index $i+3$ (those being $i$, $i+1$, or $i+2$). 
+
+Here's why this is important. Observe that when we have a continiguous segment of our array that is filled with key-value pairs, an insert which hashes to any index in that segment guarantees that this new insert will occur at the index immediately following this segment, thereby growing the size of the filled segment. As a consequence of the segment growing in size, future inserts have a higher likelihood of hashing to an index within this segment. This produces a feedback loop where as a segment grows, we more likely to hash to an index with the segment, which grows the segment, which increases the odds that we hash to within the segment, which means we're more likely to hash to within that segment again. Overall this means that as our table gets more full, our running time may increase dramatically due to this clustering of keys.
+
+To help address this primary clustering concern, we could use an alternative probing pattern where we take large steps away when probing so that we hopefully space apart our key-value pairs when adding them, so we have better running times as our hash table fills. Quadratic probing is one such way to do this.
+
 #### Quadratic Probing
 
 Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index $i$. As long as we see collisions, we will follow the pattern: $i$, $i+1^2$, $i+2^2$, $i+3^2$, $i+4^2$, etc.  This means that the $j$th index we check in the probe sequence is index $i+j^2$.
+
+Notice that each time we need to check another index while probing we looking increasingly farther away. This behavior addresses the primary clustering issue we saw with linear probing. By taking large steps away in our probe path we are unlikely to extend the size of a cluster.
+
+Quadratic probing, while not susceptible to primary clustering, is still susceptible to **secondary clustering**. Even if two differen keys hash to different values, they may map to the same index after we mod by the lenght of the array. For quadratic probing (as with linear probing), two keys which map to the same index will follow the same probe path. We may get better performance if different keys were more likely to follow different probing paths. To achieve this, we could consider double hashing.
 
 #### Double Hashing
 
 For this option we will need two hash functions. We will call the primary hash function `h` and the secondary hash function `g` (it may be that `g` is derived from `h`). Suppose that we want to do a find/insert/delete operation for a given key `k`, and so we compute `h(k) % arr.length` to be index $i$. As long as we see collisions, we will follow the pattern: $i$, $i+g(k)$, $i+2g(k)$, $i+3g(k)$, $i+4g(k)$, etc.  This means that the $j$th index we check in the probe sequence is index $i+j\cdot g(k)$.
 
+Because `g` and `h` are both good hash functions, it is very unlikely that both hash different keys to the same values. This resolves secondary clustering because even when we have two keys map to the same index using `h`, they are very unlikely to follow the same probe path, since that depends on `g`.
+
+One issue we must consider when implementing double hashing, though, is that if `g(k)` is a multiple the length of the array, the probe path will not contain many distinct indices. For example, if `g(k) == arr.length` then $i+j\cdot g(k)=i$ for all choices of $j$ (the same goes for if `g(k) == x*arr.length`). For this reason we want to ensure that `g(k)` is not a multiple of `arr.length`. One way to do this is to say if `g(k)==x*arr.length` then use `g(k)=1` instead.
+
 # Running Time Analysis
 
-## Load Factor
+For our running time analysis we will consider a separate-chaining hash table for simplicity. Running time analysis for open addressing hash tables yields a similar result, but requires more probabilistic analysis to look at things like the expected length of a probing pattern, so we will omit this analysis.
+
+Let's begin by considering the time required for an unsuccessful find operation. We say a find operation is unsuccessful if the key given does not appear in the dictionary (and therefore the operation will return null or some other default value). We use an unsuccessful find for our analysis because this is the worst-case for a find operation (the running time of a successful find is less than or equal to that of an unsuccessful find), and insert and delete each require only a constant amount of work in addition to a find operation.
+
+For a separate-chaining hash table, the find operation would behave as follows (copied from above): 
+
+find: Use the hash function to map the key to an integer, mod that integer by the length of the array to get an index. Check for the key in the linked list at that index, and return the corresponding value if present.
+
+For an unsuccessful find, we must look at all of the key-value pairs in the linked list found at hashed-to index before returning the default value. This means the running time of find is linear in terms of the length of that linked list. In the worst case, it's certainly possible that, for a hash table containing $n$ key-value pairs, the length of the linked list is $n$. This means that the **worst case** running time for find is $\Theta(n)$. 
+
+Provided we have a good hash function, however, this situation is exceptionally unlikely. For this reason, we would be better off looking at the expected running time to get an idea of the time find requires in practice. To find the expected running time we will begin by assuming we have a good hash function, meaning it will behave as though each key is assigned to a random index in the hash table. Now we can look at the expected (i.e. average probabilistically) length of a linked list in this separate chaining hash table.
+
+Suppose that our hash table has $n$ key-value pairs in it. Each of these key-value pairs is then randomly assigned to an index in the array of linked lists. Suppose that the lenght of this array is $\ell$. The expected size of each linked list will then be $\frac{n}{\ell}$ (because the keys should be uniformly distributed for a good hash function). The value $\frac{n}{\ell}$ represents both the expected size of each linked list, and also the average number of key-value pairs per index. We call this value the **load factor** of the hash table. The convention is to represent the load factor using the Greek letter lambda ($\lambda$). 
+
+Because the expected size of the linked list is $\lambda$, the expected running time of an unsuccessful find is also $\lambda$. Since our goal is to have our expected running time be $O(1)$, we need $\lambda = \frac{n}{\ell}$ to be constant, which requires $\ell \leq c\cdot n$ for a constant $c$. In other words, the size of the array holding our linked lists must be linear in the size of the hash table.
+
+As a consequence of this analysis, hash tables will behave in a way similar to array lists. In order to keep $\lambda \leq c$ for a constant $c$, we will need to resize our array whenever $\lambda > c$. This hash table resizing operation is called **rehashing**.
 
 ## Rehashing
 
+When resizing an array list we created a new array whose length was twice that of the original, then copied all items from the old array into the same index of the new array. Because we performed a modulus operation on the hash of our keys to select the index to store each key-value pair at, when we change the size of the array the index for each key-value pair may need to change as well. Therefore we cannot simply move the key-value pair at index $i$ of the old array to index $i$ of the new array. Instead we will need to re compute the index by modding the hash by the new table's length. The rehashing procedure is therefore:
+
+1. If `table.size / arr.lengh > c' then do the following.
+1. create a new array whose length is at least `2*arr.length` (see advice below for more on the length to select), call this `newArr`
+1.  for each key-value pair in the hash table re-insert that key-value pair at the index `h(k) % newArr.length`
+1. set `arr = newArr`
+
 # Advice
+
+Here are some general tips for implementing hash tables:
+
+- Use prime numbers: whenever values used for the hash function share common factors with the length of the array we will lose some uniformity of our hash function. For this reason, it's helpful to use prime numbers inside the hash function as well as for the lengths of the array to minimize the odds of this ocurring
+- Because we want to use prime numbers as the length of our array, and computing prime numbers is expensive, use a pre-computed and hard-coded list of primes as a field in your data structure to use for rehashing. Similar to with array lists, we want the resized array's length to be roughly double that of the original array.
+- If you need the hash table's size to be larger than the largest pre-computed prime, use values of the form $2^k-1$ as your array length, as these values on average tend to have few prime factors (and in fact have a high chance of being prime).
+- When rehashing, you should bound $\lambda$ by the following constants:
+    - For a separate chaining hash table, keep $\lambda < 2$.
+    - For an open addressing hash table, keep $\lambda < \frac{1}{2}$ (observe that we cannot mathematically have a load factor greater than 1 in an open addressing hash table because this would imply that there is more than 1 item per index on average, and so the pigeon hole principle requires at least one index would need to contain at least 2 key-value pairs, which is not possible).
