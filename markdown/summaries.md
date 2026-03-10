@@ -17,4 +17,4 @@ We provide a summary write-up for many of the topics covered in lecture. These a
 
 ## Final Content
 
--[Hash Functions and Hash Tables](/summaries/hashing.html)
+- [Hash Functions and Hash Tables](/summaries/hashing.html)
