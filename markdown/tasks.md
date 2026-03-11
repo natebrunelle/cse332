@@ -372,6 +372,8 @@ Past Exams:
 
 The Final Exam will be held at 12:30pm-2:20pm on March 19. 
 
+A review session for the Final Exam will be held at 4:30pm on March 17 in SIG 134.
+
 
 
 ### Policies
