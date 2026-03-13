@@ -376,6 +376,14 @@ A review session for the Final Exam will be held at 4:30pm on March 17 in SIG 13
 
 
 
+### Midterm Re-takes
+
+As mentioned on Ed, you will have the opportunity to attempt a modified version of any one section from the midterm exam along with the (now non-cumulative) final exam. 
+
+To select which section you would like to take on Thursday 3/19, please complete [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdT_DqCS7CJRjv4UMKfxRuOFwRTQ5TC6QSesR0ZAiVOf85bOA/viewform?usp=dialog) no later than 11:59pm on Tuesday 3/17. The form is set up so that it is editable, so you may change your mind up until that deadline. It will also send you a copy of your response when you submit the form.
+
+Note that the form requires signing in using your CSE ID.
+
 ### Policies
 
 <!--In case you're the type who likes to read the instructions before walking in on exam day, here is the actual [exam cover page](files/final_cover.pdf)!-->
