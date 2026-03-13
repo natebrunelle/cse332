@@ -370,9 +370,9 @@ Past Exams:
 
 ## Exam 2
 
-The Final Exam will be held at 12:30pm-2:20pm on March 19. 
+The Final Exam will be held at 12:30pm-2:20pm on March 19 in [KNE](https://www.washington.edu/maps/#!/kne) 120. 
 
-A review session for the Final Exam will be held at 4:30pm on March 17 in SIG 134.
+A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](https://www.washington.edu/maps/#!/sig) 134.
 
 
 
