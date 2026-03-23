@@ -374,6 +374,10 @@ The Final Exam will be held at 12:30pm-2:20pm on March 19 in [KNE](https://www.w
 
 A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](https://www.washington.edu/maps/#!/sig) 134.
 
+#### Sample solutions
+
+Here is a [link to final exam sample solutions](files/finals/cse332_final_wi26_sols.pdf). 
+
 
 
 ### Midterm Re-takes
@@ -383,6 +387,10 @@ As mentioned on Ed, you will have the opportunity to attempt a modified version 
 To select which section you would like to take on Thursday 3/19, please complete [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdT_DqCS7CJRjv4UMKfxRuOFwRTQ5TC6QSesR0ZAiVOf85bOA/viewform?usp=dialog) no later than 11:59pm on Tuesday 3/17. The form is set up so that it is editable, so you may change your mind up until that deadline. It will also send you a copy of your response when you submit the form.
 
 Note that the form requires signing in using your CSE ID.
+
+#### Sample solutions
+
+Here is a [link to midterm re-take sample solutions](files/finals/cse332_midterm_retake_wi26_sols.pdf). 
 
 ### Policies
 
