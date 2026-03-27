@@ -4,11 +4,11 @@ title: Home
 
 # Handy links
 
-- [Gradescope for exams+exercises](https://www.gradescope.com/courses/1208996)
-- [Gradescope for Concept Checks](https://www.gradescope.com/courses/1210525)
-- [Ed Board](https://edstem.org/us/courses/90035)
-- [Lecture Recordings](https://canvas.uw.edu/courses/1861793/external_tools/21130)
-- [Extension Request](https://forms.gle/XeR2iRYCcK54MGCB6) (requires login with your  CSE id)
+- [Gradescope for exams+exercises](TODO.html)
+- [Gradescope for Concept Checks](TODO.html)
+- [Ed Board](TODO.html)
+- [Lecture Recordings](TODO.html)
+- [Extension Request](TODO.html) (requires login with your  CSE id)
 - [Math Identities Quick Reference](/files/math_identities_quick_reference.pdf) (for keeping commonly-used prerequisite content handy)
 
 # Course Description
@@ -109,5 +109,26 @@ Our TAs are critical to the operation of this course, and are responsible for a 
 -  When there is a queue in office hours, we will limit each student-TA interaction to addressing just a *single* question. To ask multiple questions you will need to re-enter the queue. The reason for this policy is to help as many students as quickly as possible, since after a first round of assistance you will have an opportunity to make more progress on your own before your turn comes up again. I recommend arriving prepared with the question that is your biggest "blocker" to progress.
 - Work-in-progress code is often difficult for a third-party to read. Be prepared to help the course staff member to understand your approach by explaining your high-level approach, knowing what portions of your code as responsible for each step of that high-level approach, and providing as much information as you have about where you think the error might be occurring. 
 - For clarification questions or high-level conceptual questions, consider using the Ed Message Board first. Your question may already be answered there, and even if not then you may get an answer faster compared to going to office hours. If what you ask is something that would be more effective to discuss in office hours, we'll let you know that, too!
+
+# What to expect on the Ed Board
+
+The Ed board serves two primary purposes for this course:
+
+- All course communication (announcements, etc.) will be made through Ed. In the cases of important announcements from the course staff, you will receive an email from Ed. All students are responsible for reading all announcements made on Ed which are also pushed to your email inbox.
+- Ed is also a place to ask and answer questions asynchronously, meaning you do not need to attend office hours to receive a response.
+
+When using Ed as a place for asking/answering questions, here are some guidelines, expectations, and best practices we request that you follow:
+
+- There are several ways you may post on Ed. It's your choice how you wish to post, but here's the options and their considerations:
+    - **Privately**: A private post will be visible by staff only. This is the best choice for inquiries which you know will only apply to you (e.g. a question about a personal circumstance, a question about an assignment that requires explaining a partial solution in order to ask). The downside to a private post is that only staff will see it, and so response times will likely be slower, and the answer will not have the opportunity to benefit other students
+    - **Publicly and Anonymously**: A post where the contents of the post are visible to the entire class, but your name is not (be aware that the staff can see the identity of the poster). Public posts are best for questions that other students may be able to answer or that other students may benefit from having the answer to. For example, questions about course concepts or assignment instructions are most likely best made as public posts. Please do not make public posts that mention assignment solutions, or partial assignment solutions (even after the deadline has passed). The advantages to public posts are that you are more likely to get a faster response (as other students may be able to respond in addition to staff), and you'll be contributing to the course community by adding to a information bank that's available to all other students. Historically, the vast majority of posts fit into this category.
+    - **Publicly and Non-Anonymously**: This category has all of the same benefits of a public anonymous post, but with the added benefit of fame and notoriety among your classmates. This type of post is best suited for posts that require people to know who made them (e.g. coordinating study groups), for people who might like to have hearts or instructor endorsements attributed to them personally.
+- We will have course staff members checking Ed every day of the week, but we do not have the resources for eyes to always be on Ed. Therefore, here are some response timing expectations:
+    - Posts made outside of standard "business hours" should be expected to have slower response times. This applies to posts made early in the mornings, late at night, or over weekends. No staff members will be assigned to watch Ed on university holidays and breaks, so you may not get a response until after the holiday/break has passed.
+    - During the day, course staff members are assigned to check Ed every couple of hours, meaning most questions will have a response time in that range. Some questions may require specific members of the course staff to answer (e.g. questions about course policies or autograders), and therefore may have slower response times.
+- Ed is not necessarily the best tool for all types of questions. For example, some questions may include misconceptions that require follow-up to help address. We encourage you to ask any question you have on Ed, but please recognize for some questions we may respond with a request that you come to office hours for a full response. 
+- **We will not help with debugging over Ed.** Debugging is a skill that all computer science students need to develop an hone, and debugging questions asked over Ed often times turn into staff members doing debugging for you rather than with you. If you have a question about why your code fails to run, or fails to pass certain tests, please attend office hours instead.
+
+
 
 
