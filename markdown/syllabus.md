@@ -142,6 +142,17 @@ to learn more about their services, begin by visiting [the DRS website](https://
 For this course, we ask that students with special circumstances let us know as soon as possible, preferably
 during the **first week of class** or as soon as accommodations are approved.
 
+We have some standard practices for certain DRS accommodations. When you reach out it will be helpful if you can let us know whether these practices satisfy your accommodation needs:
+
+- **Alternative Testing**: students with any kind of alternative testing accommodation (e.g. extra time, reduced distraction environment, breaks excluded from timing, typed answers) should plan to take all proctored assessments at the DRS facility.
+- **Flexible Deadlines**: For deadline flexibility, follow the standard procedures for requesting extensions. For justification of the request, simply indicate "DRS Accommodtion". For accommodations relating to quick turnaround assignments, be advised that most of our assignments will not qualify for quick turnaround (typically defined to be an assignment in which there is less than 1 week between when the course provides everything needed to complete the assignment and the assignment's deadline).
+- **Recordings and Course Materials**: For accommodations relating to access to course materials and lecture recordings:
+    - Lectures will be recorded using Panopto, recordings will be posted on the course calendar
+    - Lecture slides will be made available in both a pdf and pptx format prior to the start of lecture
+    - Section slides and worksheets will be posted on the course calendar
+- **Excused Absenses**: Attendance will not be taken for any activity in this course.
+
+
 ### Religious observances
 
 Washington state law requires that UW develop a policy for accommodation of student absences or
