@@ -6,1136 +6,881 @@ NAME:cse332
 BEGIN:VEVENT
 SUMMARY:Courses begin
 DESCRIPTION:
-DTSTART:20260105
-DTEND:20260106
-DTSTAMP:20260327T134222Z
-UID::20260105-Courses begin@cse332.cs.virginia.edu
+DTSTART:20260330
+DTEND:20260331
+DTSTAMP:20260327T143133Z
+UID::20260330-Courses begin@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Intro; ADTs; Stacks & Queues
-DESCRIPTION:Weiss 3.1-3.7\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture1_intro.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture1_intro.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a10c77d3-fe39-4cdc-bdbd-b3c701589d56>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c49baf43-540e-468b-8b9e-b3c70158f4ef>
+DESCRIPTION:Weiss 3.1-3.7
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260105T140000
-DTEND;TZID=America/New_York:20260105T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260105T140000-Lecture -- Intro; ADTs; Stacks & Queues@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260330T140000
+DTEND;TZID=America/New_York:20260330T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260330T140000-Lecture -- Intro; ADTs; Stacks & Queues@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260106T140000
-DTEND;TZID=America/New_York:20260106T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260106T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260331T140000
+DTEND;TZID=America/New_York:20260331T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260331T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260107T000000
-DTEND;TZID=America/New_York:20260107T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260107T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260401T000000
+DTEND;TZID=America/New_York:20260401T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260401T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Algorithm Analysis 1
-DESCRIPTION:Weiss 2.1-2.4\\; Math Review Weiss 1.1-1.6\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture2_analysis1.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture2_analysis1.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=452c09a5-78aa-4639-9c5d-b3c701589ee2>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f4acfbc4-9390-48c4-8163-b3c70158f734>
+DESCRIPTION:Weiss 2.1-2.4\\; Math Review Weiss 1.1-1.6
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260107T140000
-DTEND;TZID=America/New_York:20260107T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260107T140000-Lecture -- Algorithm Analysis 1@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260401T140000
+DTEND;TZID=America/New_York:20260401T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260401T140000-Lecture -- Algorithm Analysis 1@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lab -- S1 Intros, Java Generics
-DESCRIPTION:slides <https//docs.google.com/presentation/d/1iJQxNMpOEQz_p_qhk8ynfUsiv9WO42nM/edit?usp=drive_link&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1IfT5Hht8UoVa3p-UC49gFGKZ9fKRS7qf/edit?usp=drive_link&ouid=100283603951565118803&rtpof=true&sd=true>\nsolutions <https//docs.google.com/document/d/1NJIK-8dzpdLnEjXuCvKn9xywH_Bq5eqI/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260109T000000
-DTEND;TZID=America/New_York:20260109T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260109T000000-Lab -- S1 Intros, Java Generics@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260403T000000
+DTEND;TZID=America/New_York:20260403T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260403T000000-Lab -- S1 Intros, Java Generics@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Algorithm Analysis 2
-DESCRIPTION:Weiss 2.1-2.4\\; Math Review Weiss 1.1-1.6\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture3_analysis2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture3_analysis2.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d691dcf8-1cc7-4f99-82ca-b3c70158a00b>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ecac903b-afe0-49ad-8ead-b3c70158f9e4>
+DESCRIPTION:Weiss 2.1-2.4\\; Math Review Weiss 1.1-1.6
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260109T140000
-DTEND;TZID=America/New_York:20260109T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260109T140000-Lecture -- Algorithm Analysis 2@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260403T140000
+DTEND;TZID=America/New_York:20260403T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260403T140000-Lecture -- Algorithm Analysis 2@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260110T140000
-DTEND;TZID=America/New_York:20260110T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260110T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260404T140000
+DTEND;TZID=America/New_York:20260404T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260404T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260111T000000
-DTEND;TZID=America/New_York:20260111T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260111T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260405T000000
+DTEND;TZID=America/New_York:20260405T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260405T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260111T140000
-DTEND;TZID=America/New_York:20260111T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260111T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260405T140000
+DTEND;TZID=America/New_York:20260405T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260405T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260112T000000
-DTEND;TZID=America/New_York:20260112T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260112T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260406T000000
+DTEND;TZID=America/New_York:20260406T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260406T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Priority Queues 1 (ADT)
-DESCRIPTION:Weiss 6.1-6.3\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture4_analysis2_pqs.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture4_analysis2_pqs.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture4_analysis2_pqs_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture4_analysis2_pqs_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8a49b464-3d1e-47de-9a33-b3c70158a161>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b33e76ca-33eb-4b14-8a7a-b3c70158fc1a>
+DESCRIPTION:Weiss 6.1-6.3
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260112T140000
-DTEND;TZID=America/New_York:20260112T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260112T140000-Lecture -- Priority Queues 1 (ADT)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260406T140000
+DTEND;TZID=America/New_York:20260406T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260406T140000-Lecture -- Priority Queues 1 (ADT)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260113T140000
-DTEND;TZID=America/New_York:20260113T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260113T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260407T140000
+DTEND;TZID=America/New_York:20260407T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260407T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260114T000000
-DTEND;TZID=America/New_York:20260114T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260114T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260408T000000
+DTEND;TZID=America/New_York:20260408T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260408T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Priority Queues 2 (Binary Heap)
-DESCRIPTION:Weiss 6.4-6.5\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture5_pqs.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture5_pqs.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture5_pqs_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture5_pqs_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ff06f189-9e10-47e8-9d0e-b3c70158a270>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2069eb11-61d9-48d6-9f9d-b3c70158fd51>
+DESCRIPTION:Weiss 6.4-6.5
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260114T140000
-DTEND;TZID=America/New_York:20260114T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260114T140000-Lecture -- Priority Queues 2 (Binary Heap)@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming EX0 Generics
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260114T234400
-DTEND;TZID=America/New_York:20260114T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260114T234400-programming EX0 Generics@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260408T140000
+DTEND;TZID=America/New_York:20260408T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260408T140000-Lecture -- Priority Queues 2 (Binary Heap)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lab -- S2 Algorithm Analysis and Heaps
-DESCRIPTION:slides <https//docs.google.com/presentation/d/1dUfltQG-1R7LI0btU7PZvrM3oCUCTAqM/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1zpZEdCbjYHuI1mp55URxtLNqsnAV6DQW/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsolutions <https//docs.google.com/document/d/1IRYj0tkl_uFEGAPkzXjQxYcqTEr6aqK6/edit?rtpof=true&tab=t.0>\nheaps video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=937e2e14-1ef6-45bb-89bb-b3d3014d5650>
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260116T000000
-DTEND;TZID=America/New_York:20260116T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260116T000000-Lab -- S2 Algorithm Analysis and Heaps@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC0
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260115T234400
-DTEND;TZID=America/New_York:20260115T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260115T234400-programming CC0@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC1
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260115T234400
-DTEND;TZID=America/New_York:20260115T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260115T234400-programming CC1@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC2
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260115T234400
-DTEND;TZID=America/New_York:20260115T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260115T234400-programming CC2@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260410T000000
+DTEND;TZID=America/New_York:20260410T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260410T000000-Lab -- S2 Algorithm Analysis and Heaps@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Recurrences
-DESCRIPTION:slides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture6_recurrences.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture6_recurrences.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture6_recurrences_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture6_recurrences_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ff06f189-9e10-47e8-9d0e-b3c70158a270>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2069eb11-61d9-48d6-9f9d-b3c70158fd51>
+DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260116T140000
-DTEND;TZID=America/New_York:20260116T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260116T140000-Lecture -- Recurrences@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260410T140000
+DTEND;TZID=America/New_York:20260410T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260410T140000-Lecture -- Recurrences@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260117T140000
-DTEND;TZID=America/New_York:20260117T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260117T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260411T140000
+DTEND;TZID=America/New_York:20260411T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260411T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260118T000000
-DTEND;TZID=America/New_York:20260118T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260118T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260412T000000
+DTEND;TZID=America/New_York:20260412T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260412T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260118T140000
-DTEND;TZID=America/New_York:20260118T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260118T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260412T140000
+DTEND;TZID=America/New_York:20260412T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260412T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260119T000000
-DTEND;TZID=America/New_York:20260119T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260119T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:MLK Day (no class)
-DESCRIPTION:
-DTSTART:20260119
-DTEND:20260120
-DTSTAMP:20260327T134222Z
-UID::20260119-MLK Day (no class)@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260120T140000
-DTEND;TZID=America/New_York:20260120T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260120T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260121T000000
-DTEND;TZID=America/New_York:20260121T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260121T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260413T000000
+DTEND;TZID=America/New_York:20260413T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260413T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Dictionaries (ADT & Binary Search Trees)
-DESCRIPTION:Weiss 4.1-4.3\\; 4.6\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture7_recurrences_dictionaries.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture7_recurrences_dictionaries.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture7_recurrences_dictionaries_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture7_recurrences_dictionaries_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4b0c5447-cd03-4735-832f-b3c70158a682>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0b0f9a22-a9b5-4ec0-9d53-b3c701590014>
+DESCRIPTION:Weiss 4.1-4.3\\; 4.6
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260121T140000
-DTEND;TZID=America/New_York:20260121T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260121T140000-Lecture -- Dictionaries (ADT & Binary Search Trees)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260413T140000
+DTEND;TZID=America/New_York:20260413T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260413T140000-Lecture -- Dictionaries (ADT & Binary Search Trees)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX1 Running Time
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260121T234400
-DTEND;TZID=America/New_York:20260121T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260121T234400-programming EX1 Running Time@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260414T140000
+DTEND;TZID=America/New_York:20260414T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260414T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S3 Recurrences
-DESCRIPTION:slides <https//docs.google.com/presentation/d/11jp-4-TdorNt5YPqujKOKu1eeT73h8QQ/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1tC4gTmGOw0fjQK9PcsgBUlC8vUsSilU0/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsolutions <https//docs.google.com/document/d/1rFH-iTQKBrnYyOE2c8-l-7Y4xqY6WFd2/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+SUMMARY: -- 
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260123T000000
-DTEND;TZID=America/New_York:20260123T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260123T000000-Lab -- S3 Recurrences@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC3
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260122T234400
-DTEND;TZID=America/New_York:20260122T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260122T234400-programming CC3@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260415T000000
+DTEND;TZID=America/New_York:20260415T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260415T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Dictionaries (AVL Trees 1)
-DESCRIPTION:Weiss 4.4\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture8_avl.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture8_avl.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture8_avl_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture8_avl_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d5ec1212-b4fa-47e6-a16d-b3c70158a790>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c583d36e-d989-40ab-84bf-b3c70159014d>
+DESCRIPTION:Weiss 4.4
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260123T140000
-DTEND;TZID=America/New_York:20260123T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260123T140000-Lecture -- Dictionaries (AVL Trees 1)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260415T140000
+DTEND;TZID=America/New_York:20260415T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260415T140000-Lecture -- Dictionaries (AVL Trees 1)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX2 Heaps
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260123T234400
-DTEND;TZID=America/New_York:20260123T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260123T234400-programming EX2 Heaps@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260124T140000
-DTEND;TZID=America/New_York:20260124T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260124T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S3 Recurrences
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260125T000000
-DTEND;TZID=America/New_York:20260125T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260125T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260125T140000
-DTEND;TZID=America/New_York:20260125T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260125T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260126T000000
-DTEND;TZID=America/New_York:20260126T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260126T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260417T000000
+DTEND;TZID=America/New_York:20260417T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260417T000000-Lab -- S3 Recurrences@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Dictionaries (AVL Trees 2)
-DESCRIPTION:Weiss 4.4\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture9_avl2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture9_avl2.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture9_avl2_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture9_avl2_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=515cac50-7c31-48a2-aad1-b3c70158aa9f>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9b12b719-5353-49be-bed3-b3c701590292>
+DESCRIPTION:Weiss 4.4
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260126T140000
-DTEND;TZID=America/New_York:20260126T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260126T140000-Lecture -- Dictionaries (AVL Trees 2)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260417T140000
+DTEND;TZID=America/New_York:20260417T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260417T140000-Lecture -- Dictionaries (AVL Trees 2)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260127T140000
-DTEND;TZID=America/New_York:20260127T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260127T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260418T140000
+DTEND;TZID=America/New_York:20260418T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260418T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260128T000000
-DTEND;TZID=America/New_York:20260128T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260128T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260419T000000
+DTEND;TZID=America/New_York:20260419T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260419T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260419T140000
+DTEND;TZID=America/New_York:20260419T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260419T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260420T000000
+DTEND;TZID=America/New_York:20260420T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260420T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Dictionaries (Hashing)
-DESCRIPTION:Weiss 5.1-5.5\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture10_hashtables.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture10_hashtables.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture10_hashtables_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture10_hashtables_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db5c1b02-f223-4bb5-a5c9-b3c70158aee0>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3b5fabf5-436e-4d7c-99e1-b3c701590422>
+DESCRIPTION:Weiss 5.1-5.5
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260128T140000
-DTEND;TZID=America/New_York:20260128T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260128T140000-Lecture -- Dictionaries (Hashing)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260420T140000
+DTEND;TZID=America/New_York:20260420T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260420T140000-Lecture -- Dictionaries (Hashing)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX3 Recurrences
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260128T234400
-DTEND;TZID=America/New_York:20260128T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260128T234400-programming EX3 Recurrences@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260421T140000
+DTEND;TZID=America/New_York:20260421T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260421T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S4 AVL Trees
-DESCRIPTION:video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9f60bc39-8d0f-45cc-9020-b3e101816f22>\nslides <https//docs.google.com/presentation/d/1hQuyM6X8Zxxnit4HvJf_XW76DuiT2Ms8/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1SusueWb6zY7-MpAEbXvjKghGTcpoNT0s/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsolutions <https//docs.google.com/document/d/14weuR5-NxpZvLdxC9wh-cVjECEXi78DE/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+SUMMARY: -- 
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260130T000000
-DTEND;TZID=America/New_York:20260130T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260130T000000-Lab -- S4 AVL Trees@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC4
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260129T234400
-DTEND;TZID=America/New_York:20260129T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260129T234400-programming CC4@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260422T000000
+DTEND;TZID=America/New_York:20260422T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260422T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Dictionaries (Hashing 2)
-DESCRIPTION:Weiss 5.1-5.5\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture11_hashtables2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture11_hashtables2.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture11_hashtables2_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture11_hashtables2_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=886cac98-c8e1-4fbc-80cf-b3c70158b156>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d19d7e78-cba3-4b42-b0f1-b3c7015906e9>
+DESCRIPTION:Weiss 5.1-5.5
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260130T140000
-DTEND;TZID=America/New_York:20260130T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260130T140000-Lecture -- Dictionaries (Hashing 2)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260422T140000
+DTEND;TZID=America/New_York:20260422T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260422T140000-Lecture -- Dictionaries (Hashing 2)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260131T140000
-DTEND;TZID=America/New_York:20260131T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260131T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S4 AVL Trees
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260201T000000
-DTEND;TZID=America/New_York:20260201T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260201T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260201T140000
-DTEND;TZID=America/New_York:20260201T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260201T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260202T000000
-DTEND;TZID=America/New_York:20260202T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260202T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260424T000000
+DTEND;TZID=America/New_York:20260424T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260424T000000-Lab -- S4 AVL Trees@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Sorting 1
-DESCRIPTION:Weiss 7.1-7.3\\; 7.5-7.7\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture12_sorting1.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture12_sorting1.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture12_sorting1_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture12_sorting1_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fb104283-93d1-4be2-8d23-b3c70158b00c>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0a67130-4ea3-4e56-b813-b3c701590593>
+DESCRIPTION:Weiss 7.1-7.3\\; 7.5-7.7
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260202T140000
-DTEND;TZID=America/New_York:20260202T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260202T140000-Lecture -- Sorting 1@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260424T140000
+DTEND;TZID=America/New_York:20260424T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260424T140000-Lecture -- Sorting 1@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260203T140000
-DTEND;TZID=America/New_York:20260203T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260203T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260425T140000
+DTEND;TZID=America/New_York:20260425T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260425T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260204T000000
-DTEND;TZID=America/New_York:20260204T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260204T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260426T000000
+DTEND;TZID=America/New_York:20260426T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260426T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260426T140000
+DTEND;TZID=America/New_York:20260426T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260426T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260427T000000
+DTEND;TZID=America/New_York:20260427T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260427T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Sorting 2
-DESCRIPTION:Weiss 7.8-7.11\nradix sort <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=53fa3283-68f1-4020-93b1-b3e80016ed59>\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture13_sorting2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture13_sorting2.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture13_sorting2_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture13_sorting2_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1942a6a5-f7bc-41bf-9118-b3c70158b2ca>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4857a162-4643-4d42-9a40-b3c701590866>
+DESCRIPTION:Weiss 7.8-7.11
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260204T140000
-DTEND;TZID=America/New_York:20260204T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260204T140000-Lecture -- Sorting 2@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260427T140000
+DTEND;TZID=America/New_York:20260427T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260427T140000-Lecture -- Sorting 2@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S5 Hashing and Sorting
-DESCRIPTION:hashing slides <https//docs.google.com/presentation/d/1wIZ6jmyWeFwcJO0t2C_7Nktz7xnw9w8O/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nhashing worksheet <https//docs.google.com/document/d/1Yq_4R3aLpkjz3NUBWix-ofpFsMkZsvZk/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nhashing solutions <https//docs.google.com/document/d/1c6FVIYtdKTOlKTi07Xie-ViQIUp-rVI5/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsorting slides <https//docs.google.com/presentation/d/13S-9ej0WGadcuUquEqAdGgM8saF_LbCZ/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsorting worksheet <https//docs.google.com/document/d/1T0iZMG07UZx-0jQpWDRIeAfz16SpbfRw/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsorting solutions <https//docs.google.com/document/d/12o-XYP_U6kSL7ein5ASHTUK1yV22oGUw/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260206T000000
-DTEND;TZID=America/New_York:20260206T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260206T000000-Lab -- S5 Hashing and Sorting@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC5
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260205T234400
-DTEND;TZID=America/New_York:20260205T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260205T234400-programming CC5@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260428T140000
+DTEND;TZID=America/New_York:20260428T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260428T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260429T000000
+DTEND;TZID=America/New_York:20260429T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260429T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Graphs 1 (Intro to Graphs)
-DESCRIPTION:Weiss 9.1\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture14_graphs1.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture14_graphs1.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture14_graphs1_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture14_graphs1_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8354ff00-c4d1-483d-8ca6-b3c70158b3e4>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c2995660-3004-4eb1-b38d-b3c7015909b1>
+DESCRIPTION:Weiss 9.1
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260206T140000
-DTEND;TZID=America/New_York:20260206T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260206T140000-Lecture -- Graphs 1 (Intro to Graphs)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260429T140000
+DTEND;TZID=America/New_York:20260429T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260429T140000-Lecture -- Graphs 1 (Intro to Graphs)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX4 AVL
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260206T234400
-DTEND;TZID=America/New_York:20260206T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260206T234400-programming EX4 AVL@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260207T140000
-DTEND;TZID=America/New_York:20260207T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260207T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S5 Hashing and Sorting
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260208T000000
-DTEND;TZID=America/New_York:20260208T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260208T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260208T140000
-DTEND;TZID=America/New_York:20260208T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260208T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260209T000000
-DTEND;TZID=America/New_York:20260209T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260209T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260501T000000
+DTEND;TZID=America/New_York:20260501T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260501T000000-Lab -- S5 Hashing and Sorting@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Graphs 2 (Traversals)
-DESCRIPTION:Weiss 9.2\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture15_graphs2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture15_graphs2.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture15_graphs2_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=12c7c2b7-8f61-429b-8305-b3c70158b50b>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=911180e5-3d7c-4e47-b3e2-b3c701590b27>
+DESCRIPTION:Weiss 9.2
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260209T140000
-DTEND;TZID=America/New_York:20260209T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260209T140000-Lecture -- Graphs 2 (Traversals)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260501T140000
+DTEND;TZID=America/New_York:20260501T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260501T140000-Lecture -- Graphs 2 (Traversals)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260210T140000
-DTEND;TZID=America/New_York:20260210T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260210T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260502T140000
+DTEND;TZID=America/New_York:20260502T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260502T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260211T000000
-DTEND;TZID=America/New_York:20260211T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260211T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260503T000000
+DTEND;TZID=America/New_York:20260503T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260503T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260503T140000
+DTEND;TZID=America/New_York:20260503T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260503T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260504T000000
+DTEND;TZID=America/New_York:20260504T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260504T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Midterm Exam
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260211T140000
-DTEND;TZID=America/New_York:20260211T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260211T140000-Lecture -- Midterm Exam@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260504T140000
+DTEND;TZID=America/New_York:20260504T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260504T140000-Lecture -- Midterm Exam@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S6 Graphs
-DESCRIPTION:slides <https//docs.google.com/presentation/d/1vuaE_48YBSW8MSPwGc6pPLFtznI5uUdb/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1dAombdN62s_wtxnW_PUqQ8OILk1EutK9/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsolutions <https//docs.google.com/document/d/1DXe4OiCLdToDdVZosOYRGL6seGJ3JS_v/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260505T140000
+DTEND;TZID=America/New_York:20260505T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260505T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260213T000000
-DTEND;TZID=America/New_York:20260213T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260213T000000-Lab -- S6 Graphs@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC6
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260212T234400
-DTEND;TZID=America/New_York:20260212T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260212T234400-programming CC6@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC7
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260212T234400
-DTEND;TZID=America/New_York:20260212T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260212T234400-programming CC7@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC8
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260212T234400
-DTEND;TZID=America/New_York:20260212T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260212T234400-programming CC8@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC9
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260212T234400
-DTEND;TZID=America/New_York:20260212T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260212T234400-programming CC9@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260506T000000
+DTEND;TZID=America/New_York:20260506T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260506T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Graphs 3 (Shortest path)
-DESCRIPTION:Weiss 9.3\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture16_graphs3.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture16_graphs3.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture16_graphs3_inka.pdf>\nslides(b lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture16_graphs3_inkb.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2a594735-79c2-4a10-badc-b3c70158b7dc>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ab8772bc-d364-47b6-80e6-b3c701590e0e>
+DESCRIPTION:Weiss 9.3
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260213T140000
-DTEND;TZID=America/New_York:20260213T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260213T140000-Lecture -- Graphs 3 (Shortest path)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260506T140000
+DTEND;TZID=America/New_York:20260506T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260506T140000-Lecture -- Graphs 3 (Shortest path)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX5 Hashing
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260213T234400
-DTEND;TZID=America/New_York:20260213T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260213T234400-programming EX5 Hashing@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260214T140000
-DTEND;TZID=America/New_York:20260214T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260214T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S6 Graphs
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260215T000000
-DTEND;TZID=America/New_York:20260215T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260215T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260215T140000
-DTEND;TZID=America/New_York:20260215T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260215T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260216T000000
-DTEND;TZID=America/New_York:20260216T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260216T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Presidents Day (no class)
-DESCRIPTION:
-DTSTART:20260216
-DTEND:20260217
-DTSTAMP:20260327T134222Z
-UID::20260216-Presidents Day (no class)@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260217T140000
-DTEND;TZID=America/New_York:20260217T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260217T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260218T000000
-DTEND;TZID=America/New_York:20260218T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260218T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260508T000000
+DTEND;TZID=America/New_York:20260508T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260508T000000-Lab -- S6 Graphs@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Parallelism 1 (Fork-Join)
-DESCRIPTION:Grossman 2.1-3.4\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture17_forkjoin.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture17_forkjoin.pdf>\nslides(a lecture) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture17_forkjoin_inka.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=18650cde-5559-4965-98bd-b3c70158b945>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=261c7f64-2a2f-485b-9194-b3c701590f50>
+DESCRIPTION:Grossman 2.1-3.4
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260218T140000
-DTEND;TZID=America/New_York:20260218T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260218T140000-Lecture -- Parallelism 1 (Fork-Join)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260508T140000
+DTEND;TZID=America/New_York:20260508T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260508T140000-Lecture -- Parallelism 1 (Fork-Join)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX6 Sorting
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260218T234400
-DTEND;TZID=America/New_York:20260218T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260218T234400-programming EX6 Sorting@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260509T140000
+DTEND;TZID=America/New_York:20260509T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260509T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S7 Writing parallel Programs
-DESCRIPTION:fork join starter code <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/section/ForkJoin_StarterCode.zip>\nfork join solution code <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/section/solution_code.zip>\ndijkstras slides <https//docs.google.com/presentation/d/1HAKMUzvHD-LoBx7FFwoFT1cRuxyt8xYY/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\ndijkstras worksheet <https//docs.google.com/document/d/1t_uHI5_xtikdPYS2KJBzMq4SKQqC3osB/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\ndijkstras solution <https//docs.google.com/presentation/d/1X8kRWobSh858sAn4V1qjHK2IHCKgO9uQ/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nforkjoin slides <https//docs.google.com/presentation/d/1X8kRWobSh858sAn4V1qjHK2IHCKgO9uQ/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+SUMMARY: -- 
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260220T000000
-DTEND;TZID=America/New_York:20260220T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260220T000000-Lab -- S7 Writing parallel Programs@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260510T000000
+DTEND;TZID=America/New_York:20260510T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260510T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260510T140000
+DTEND;TZID=America/New_York:20260510T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260510T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260511T000000
+DTEND;TZID=America/New_York:20260511T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260511T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Parallelism 2 (Parallel Prefix)
-DESCRIPTION:Grossman 5.1-5.2\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture18_parallelprefix.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture18_parallelprefix.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=af2e2c87-8a8d-470f-838d-b3c70158bab1>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3a476d85-8c6a-49ad-8b4a-b3c7015910ba>
+DESCRIPTION:Grossman 5.1-5.2
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260220T140000
-DTEND;TZID=America/New_York:20260220T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260220T140000-Lecture -- Parallelism 2 (Parallel Prefix)@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming EX7 Graph Traversals
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260220T234400
-DTEND;TZID=America/New_York:20260220T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260220T234400-programming EX7 Graph Traversals@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260511T140000
+DTEND;TZID=America/New_York:20260511T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260511T140000-Lecture -- Parallelism 2 (Parallel Prefix)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260221T140000
-DTEND;TZID=America/New_York:20260221T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260221T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260512T140000
+DTEND;TZID=America/New_York:20260512T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260512T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260222T000000
-DTEND;TZID=America/New_York:20260222T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260222T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260222T140000
-DTEND;TZID=America/New_York:20260222T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260222T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260223T000000
-DTEND;TZID=America/New_York:20260223T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260223T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260513T000000
+DTEND;TZID=America/New_York:20260513T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260513T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Synchronization (Locks)
-DESCRIPTION:Grossman 6\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture19_concurrency.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture19_concurrency.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ce56a751-3524-4a78-9d93-b3c70158bc0d>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3b5a98b7-986a-426c-8a37-b3c70159123c>
+DESCRIPTION:Grossman 6
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260223T140000
-DTEND;TZID=America/New_York:20260223T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260223T140000-Lecture -- Synchronization (Locks)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260513T140000
+DTEND;TZID=America/New_York:20260513T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260513T140000-Lecture -- Synchronization (Locks)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260224T140000
-DTEND;TZID=America/New_York:20260224T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260224T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S7 Writing parallel Programs
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260225T000000
-DTEND;TZID=America/New_York:20260225T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260225T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260515T000000
+DTEND;TZID=America/New_York:20260515T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260515T000000-Lab -- S7 Writing parallel Programs@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Synchronization (Race Conditions)
-DESCRIPTION:Grossman 7.1\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture20_concurrency2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture20_concurrency2.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ab43549-ad66-4d87-8dee-b3c70158bd39>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb3cc3a4-804d-4b24-b0c7-b3c701591370>
+DESCRIPTION:Grossman 7.1
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260225T140000
-DTEND;TZID=America/New_York:20260225T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260225T140000-Lecture -- Synchronization (Race Conditions)@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260515T140000
+DTEND;TZID=America/New_York:20260515T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260515T140000-Lecture -- Synchronization (Race Conditions)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX8 Dijkstras
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260225T234400
-DTEND;TZID=America/New_York:20260225T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260225T234400-programming EX8 Dijkstras@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260516T140000
+DTEND;TZID=America/New_York:20260516T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260516T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S8 Parallel Prefix and Locks
-DESCRIPTION:slides <https//docs.google.com/presentation/d/1iwXNjRiAZo_C8M5vLSkhQk7Yt_sVgc9l/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1pWaEh78wx3yZRv7LbeA94TdjZWRoUcp7/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsolution <https//docs.google.com/document/d/1Iw8CESYZMxp7OyxLXJRkVIa5eNOBerun/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+SUMMARY: -- 
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260227T000000
-DTEND;TZID=America/New_York:20260227T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260227T000000-Lab -- S8 Parallel Prefix and Locks@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260517T000000
+DTEND;TZID=America/New_York:20260517T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260517T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming CC10
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260226T234400
-DTEND;TZID=America/New_York:20260226T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260226T234400-programming CC10@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260517T140000
+DTEND;TZID=America/New_York:20260517T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260517T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming CC11
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260226T234400
-DTEND;TZID=America/New_York:20260226T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260226T234400-programming CC11@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC12
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260226T234400
-DTEND;TZID=America/New_York:20260226T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260226T234400-programming CC12@cse332.cs.virginia.edu
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260518T000000
+DTEND;TZID=America/New_York:20260518T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260518T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Synchronization (Deadlock & Wisdom)
-DESCRIPTION:Grossman 8 & 9\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture21_concurrency3_analysis.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture21_concurrency3_analysis.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a7402262-302f-495a-960d-b3c70158be6b>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8b102eb-8651-42ee-ad11-b3c7015914ad>
+DESCRIPTION:Grossman 8 & 9
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260227T140000
-DTEND;TZID=America/New_York:20260227T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260227T140000-Lecture -- Synchronization (Deadlock & Wisdom)@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming EX9 ForkJoin
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260227T234400
-DTEND;TZID=America/New_York:20260227T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260227T234400-programming EX9 ForkJoin@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260518T140000
+DTEND;TZID=America/New_York:20260518T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260518T140000-Lecture -- Synchronization (Deadlock & Wisdom)@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260228T140000
-DTEND;TZID=America/New_York:20260228T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260228T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260519T140000
+DTEND;TZID=America/New_York:20260519T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260519T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260301T000000
-DTEND;TZID=America/New_York:20260301T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260301T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260301T140000
-DTEND;TZID=America/New_York:20260301T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260301T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260302T000000
-DTEND;TZID=America/New_York:20260302T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260302T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260520T000000
+DTEND;TZID=America/New_York:20260520T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260520T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Parallel Analysis & Amdahl's Law
-DESCRIPTION:Grossman 3.5-4.3\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture22_amdahls_wisdom.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture22_amdahls_wisdom.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=31672d4d-4d02-4bf3-b8cb-b3c70158bf79>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c6b6606e-087b-4156-af3c-b3c70159163f>
+DESCRIPTION:Grossman 3.5-4.3
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260302T140000
-DTEND;TZID=America/New_York:20260302T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260302T140000-Lecture -- Parallel Analysis & Amdahl's Law@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260520T140000
+DTEND;TZID=America/New_York:20260520T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260520T140000-Lecture -- Parallel Analysis & Amdahl's Law@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260303T140000
-DTEND;TZID=America/New_York:20260303T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260303T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S8 Parallel Prefix and Locks
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260304T000000
-DTEND;TZID=America/New_York:20260304T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260304T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260522T000000
+DTEND;TZID=America/New_York:20260522T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260522T000000-Lab -- S8 Parallel Prefix and Locks@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Minimum Spanning Trees
-DESCRIPTION:Weiss 9.5\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture23_mst.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture23_mst.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=066bb44b-4cb2-4611-bc7f-b3c70158c0c9>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=acc42a6e-261d-495c-aa1b-b3c7015917a8>
+DESCRIPTION:Weiss 9.5
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260304T140000
-DTEND;TZID=America/New_York:20260304T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260304T140000-Lecture -- Minimum Spanning Trees@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260522T140000
+DTEND;TZID=America/New_York:20260522T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260522T140000-Lecture -- Minimum Spanning Trees@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lab -- S9 Concurrency
-DESCRIPTION:concurrency slides <https//docs.google.com/presentation/d/1Kemp1CXNvKkgMze7RTuvEtKcgMHwgx0M/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nconcurrency worksheet <https//docs.google.com/document/d/1qItLO2z91fN9_jd0RCvU3adcOVvBWLX8/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nconcurrency solutions <https//docs.google.com/document/d/1mHWlTDfjmOabhu_mUms_LA7slMdbcmyN/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nMST video <https//drive.google.com/file/d/1_FpzNOITLRJiSIeSOr9gg1_Rus1pcnFV/view?usp=sharing>\nMST slides <https//docs.google.com/presentation/d/1Actwd7BjjZdufWrOo8nGMU0Xd1s6I0Fw/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nMST worksheet <https//docs.google.com/document/d/1cvq_Dmg2xtVPBZTKCekB1ccqF0kLaAoc/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nMST solutions <https//docs.google.com/document/d/1l48tXWINKuQQzsbJBFH5hp97C3JUzlpn/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260523T140000
+DTEND;TZID=America/New_York:20260523T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260523T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260306T000000
-DTEND;TZID=America/New_York:20260306T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260306T000000-Lab -- S9 Concurrency@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260524T000000
+DTEND;TZID=America/New_York:20260524T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260524T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming CC13
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260305T234400
-DTEND;TZID=America/New_York:20260305T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260305T234400-programming CC13@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260524T140000
+DTEND;TZID=America/New_York:20260524T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260524T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming CC14
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260305T234400
-DTEND;TZID=America/New_York:20260305T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260305T234400-programming CC14@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC15
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260305T234400
-DTEND;TZID=America/New_York:20260305T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260305T234400-programming CC15@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC16
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260305T234400
-DTEND;TZID=America/New_York:20260305T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260305T234400-programming CC16@cse332.cs.virginia.edu
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260525T000000
+DTEND;TZID=America/New_York:20260525T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260525T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- Complexity Classes
-DESCRIPTION:Weiss 9.6.3 & 9.7\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture24_complexity.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture24_complexity.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=47befe10-6b3f-47a5-9dd7-b3c70158c231>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5a872b76-794c-45b0-9c20-b3c701591965>
+DESCRIPTION:Weiss 9.6.3 & 9.7
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260306T140000
-DTEND;TZID=America/New_York:20260306T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260306T140000-Lecture -- Complexity Classes@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming EX10 Concurrency
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260306T234400
-DTEND;TZID=America/New_York:20260306T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260306T234400-programming EX10 Concurrency@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260525T140000
+DTEND;TZID=America/New_York:20260525T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260525T140000-Lecture -- Complexity Classes@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260307T140000
-DTEND;TZID=America/New_York:20260307T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260307T140000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260526T140000
+DTEND;TZID=America/New_York:20260526T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260526T140000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY: -- 
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260308T000000
-DTEND;TZID=America/New_York:20260308T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260308T000000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260308T140000
-DTEND;TZID=America/New_York:20260308T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260308T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260309T000000
-DTEND;TZID=America/New_York:20260309T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260309T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260527T000000
+DTEND;TZID=America/New_York:20260527T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260527T000000- -- @cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- P, NP, NP-Complete
-DESCRIPTION:Weiss 9.6.3 & 9.7\nslides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture25_p_np.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture25_p_np.pdf>\nA video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=92d30fee-f214-408e-b541-b3c70158c3e9>\nB video <https//uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=576ca1c6-ad02-476c-b0d2-b3c701591b03>
+DESCRIPTION:Weiss 9.6.3 & 9.7
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260309T140000
-DTEND;TZID=America/New_York:20260309T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260309T140000-Lecture -- P, NP, NP-Complete@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260527T140000
+DTEND;TZID=America/New_York:20260527T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260527T140000-Lecture -- P, NP, NP-Complete@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY: -- 
-DESCRIPTION:
-LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260310T140000
-DTEND;TZID=America/New_York:20260310T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260310T140000- -- @cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY: -- 
+SUMMARY:Lab -- S9 Concurrency
 DESCRIPTION:
 LOCATION:Various
-DTSTART;TZID=America/New_York:20260311T000000
-DTEND;TZID=America/New_York:20260311T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260311T000000- -- @cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260529T000000
+DTEND;TZID=America/New_York:20260529T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260529T000000-Lab -- S9 Concurrency@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lecture -- P, NP, NP-Complete 2
-DESCRIPTION:slides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture26_p_np2.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture26_p_np2.pdf>
+DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260311T140000
-DTEND;TZID=America/New_York:20260311T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260311T140000-Lecture -- P, NP, NP-Complete 2@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260529T140000
+DTEND;TZID=America/New_York:20260529T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260529T140000-Lecture -- P, NP, NP-Complete 2@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:programming EX11 MSTs
+SUMMARY: -- 
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260311T234400
-DTEND;TZID=America/New_York:20260311T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260311T234400-programming EX11 MSTs@cse332.cs.virginia.edu
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260530T140000
+DTEND;TZID=America/New_York:20260530T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260530T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260531T000000
+DTEND;TZID=America/New_York:20260531T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260531T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260531T140000
+DTEND;TZID=America/New_York:20260531T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260531T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260601T000000
+DTEND;TZID=America/New_York:20260601T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260601T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lecture -- Finale
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260601T140000
+DTEND;TZID=America/New_York:20260601T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260601T140000-Lecture -- Finale@cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260602T140000
+DTEND;TZID=America/New_York:20260602T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260602T140000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY: -- 
+DESCRIPTION:
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260603T000000
+DTEND;TZID=America/New_York:20260603T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260603T000000- -- @cse332.cs.virginia.edu
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Lecture -- lecture
+DESCRIPTION:
+LOCATION:Gilmer 301
+DTSTART;TZID=America/New_York:20260603T140000
+DTEND;TZID=America/New_York:20260603T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260603T140000-Lecture -- lecture@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lab -- S10 P/NP & Final Review
-DESCRIPTION:slides <https//docs.google.com/presentation/d/1-9eGYQNdGhYHitdgd4pNxritm1VHVht0/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nworksheet <https//docs.google.com/document/d/1f6dD9ekFaqi8f8l6NDVGZrNzL3qPwGrj/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>\nsolutions <https//docs.google.com/document/d/1_WjQRB124oSlpbAIBb56GAUY9aKHocfs/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true>
-LOCATION:Various
-DTSTART;TZID=America/New_York:20260313T000000
-DTEND;TZID=America/New_York:20260313T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260313T000000-Lab -- S10 P/NP & Final Review@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming CC17
 DESCRIPTION:
-DTSTART;TZID=America/New_York:20260312T234400
-DTEND;TZID=America/New_York:20260312T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260312T234400-programming CC17@cse332.cs.virginia.edu
+LOCATION:Various
+DTSTART;TZID=America/New_York:20260605T000000
+DTEND;TZID=America/New_York:20260605T235900
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260605T000000-Lab -- S10 P/NP & Final Review@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Courses end
 DESCRIPTION:
-DTSTART:20260313
-DTEND:20260314
-DTSTAMP:20260327T134222Z
-UID::20260313-Courses end@cse332.cs.virginia.edu
+DTSTART:20260605
+DTEND:20260606
+DTSTAMP:20260327T143133Z
+UID::20260605-Courses end@cse332.cs.virginia.edu
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Lecture -- Finale
-DESCRIPTION:slides(pptx) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture27_fiveworlds.pptx>\nslides(pdf) <https//www.cs.virginia.edu/~njb2b/cs3100/s23/files/slides/lecture27_fiveworlds.pdf>
+SUMMARY:Lecture -- lecture
+DESCRIPTION:
 LOCATION:Gilmer 301
-DTSTART;TZID=America/New_York:20260313T140000
-DTEND;TZID=America/New_York:20260313T145000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260313T140000-Lecture -- Finale@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:programming EX12 P and NP
-DESCRIPTION:
-DTSTART;TZID=America/New_York:20260313T234400
-DTEND;TZID=America/New_York:20260313T235900
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260313T234400-programming EX12 P and NP@cse332.cs.virginia.edu
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Final Exam
-DESCRIPTION:
-LOCATION:NA
-DTSTART;TZID=America/New_York:20260319T123000
-DTEND;TZID=America/New_York:20260319T142000
-DTSTAMP:20260327T134222Z
-UID:;TZID=America/New_York:20260319T123000-Final Exam@cse332.cs.virginia.edu
+DTSTART;TZID=America/New_York:20260605T140000
+DTEND;TZID=America/New_York:20260605T145000
+DTSTAMP:20260327T143133Z
+UID:;TZID=America/New_York:20260605T140000-Lecture -- lecture@cse332.cs.virginia.edu
 END:VEVENT
 END:VCALENDAR
