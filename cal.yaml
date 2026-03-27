@@ -46,21 +46,21 @@ lectures:
     - Dictionaries (Hashing 2)
     - Sorting 1
     - Sorting 2
+    - Sorting 3
     - Graphs 1 (Intro to Graphs)
-    - Graphs 2 (Traversals)
     - Midterm Exam
+    - Graphs 2 (Traversals)
     - Graphs 3 (Shortest path)
-    - Minimum Spanning Trees
     - Parallelism 1 (Fork-Join)
     - Parallelism 2 (Parallel Prefix)
     - Synchronization (Locks)
     - Synchronization (Race Conditions)
     - Synchronization (Deadlock & Wisdom)
     - Parallel Analysis & Amdahl's Law
+    - Minimum Spanning Trees
     - Complexity Classes
     - P, NP, NP-Complete
     - P, NP, NP-Complete 2
-    - Algorithm Lower Bounds
     - Finale
 
 labs:
