@@ -10,10 +10,10 @@ target="$(realpath_py "$here/demo_site")/"
 
 cd "$here"
 
-remote=brunelle@bicycle.cs.washington.edu:/cse/web/courses/cse332/26wi
+remote=brunelle@bicycle.cs.washington.edu:/cse/web/courses/cse332/26sp/temp
 if [ "$#" -gt 0 ] && [ "$1" != 'test' ]
 then
-	remote="$1"@attu.cs.washington.edu:/cse/web/courses/cse332/26wi
+	remote="$1"@attu.cs.washington.edu:/cse/web/courses/cse332/26sp/temp
 fi
 mkdir -p "${target}files"
 
@@ -175,5 +175,5 @@ done
 
 
 
-# rsync --update --compress --recursive --times --verbose -e ssh "$target" "$remote"
+rsync --update --compress --recursive --times --verbose -e ssh "$target" "$remote"
 
