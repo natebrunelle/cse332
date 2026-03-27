@@ -7,7 +7,7 @@ title: Tasks
 
 # Exercises
 
-All exercises will be submitted and graded on this [Gradescope for exercises and exams](TODO.html).
+All exercises will be submitted and graded on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1287206).
 
 Some exercises may require submitting to multiple gradescope assignments (e.g. if there is a programming component as well as a written component). The assignment instructions will make it clear when this is the case.
 
@@ -271,7 +271,7 @@ This concept check applies to dictionaries and hash tables. This concept check r
 
 # Exams
 
-The course staff will scan, upload and grade exams on this [Gradescope for exercises and exams](TODO.html).
+The course staff will scan, upload and grade exams on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1287206).
 
 <!--
 ## Exam 1
