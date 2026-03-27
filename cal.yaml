@@ -46,10 +46,10 @@ lectures:
     - Dictionaries (Hashing 2)
     - Sorting 1
     - Sorting 2
-    - Midterm Exam
     - Graphs 1 (Intro to Graphs)
     - Graphs 2 (Traversals)
     - Graphs 3 (Shortest path)
+    - Midterm Exam
     - Minimum Spanning Trees
     - Parallelism 1 (Fork-Join)
     - Parallelism 2 (Parallel Prefix)
