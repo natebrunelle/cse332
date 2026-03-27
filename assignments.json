@@ -28,7 +28,28 @@
   }
 ,"EX4 AVL":
   {"group":"programming"
+  ,"due":"2026-05-01 23:59"
+  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+  ,"weight":1
+  ,"files":"something.java"
+  }
+,"EX5 Hashing":
+  {"group":"programming"
   ,"due":"2026-05-08 23:59"
+  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+  ,"weight":1
+  ,"files":"something.java"
+  }
+,"EX6 Sorting":
+  {"group":"programming"
+  ,"due":"2026-05-13 23:59"
+  ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
+  ,"weight":1
+  ,"files":"something.java"
+  }
+,"EX7 Graph Traversals":
+  {"group":"programming"
+  ,"due":"2026-05-17 23:59"
   ,"writeup":"https://www.cs.virginia.edu/~njb2b/cs4102/s23/"
   ,"weight":1
   ,"files":"something.java"
