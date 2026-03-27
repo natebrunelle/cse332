@@ -51,13 +51,13 @@ lectures:
     - Midterm Exam
     - Graphs 2 (Traversals)
     - Graphs 3 (Shortest path)
+    - Minimum Spanning Trees
     - Parallelism 1 (Fork-Join)
     - Parallelism 2 (Parallel Prefix)
     - Synchronization (Locks)
     - Synchronization (Race Conditions)
     - Synchronization (Deadlock & Wisdom)
     - Parallel Analysis & Amdahl's Law
-    - Minimum Spanning Trees
     - Complexity Classes
     - P, NP, NP-Complete
     - P, NP, NP-Complete 2
