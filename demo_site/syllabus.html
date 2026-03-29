@@ -9,6 +9,15 @@
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
   <link rel="stylesheet" href="style.css?v=2" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var mathElements = document.getElementsByClassName("math");
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") { katex.render(texText.data, mathElements[i], { displayMode: mathElements[i].classList.contains("display"), throwOnError: false } );
+    }}});</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+  <style type="text/css">.katex { font-size: inherit; }</style>
 </head>
 <main>
 <body>
@@ -69,16 +78,11 @@
       <!--<blockquote style="background-color:#FFD700; font-size:150%">Looking for someone to talk to about CSE332? Try the Study Center in CSE room 006! There's a table there just for working on and discussing CSE332!</blockquote>-->
       <h1 id="logistics"><span class="header-section-number">1</span> Logistics</h1>
       <h2 id="meetings"><span class="header-section-number">1.1</span> Meetings</h2>
-      <p>In Person lectures will be held Mondays, Wednesdays, and Fridays in <a href="https://www.washington.edu/maps/#!/CSE2">CSE2 (Gates Hall)</a> room G20 at 12:30pm-1:20pm and room G10 at 3:30pm-4:20pm.</p>
+      <p>In Person lectures will be held Mondays, Wednesdays, and Fridays in <a href="https://www.washington.edu/maps/#!/CSE2">CSE2 (Gates Hall)</a> room G20 at 12:30pm-1:20pm and room G01 at 3:30pm-4:20pm.</p>
       <p>Lecture attendance is optional, but strongly encouraged. In the event you are unable to attend a lecture, recordings of lectures are automatically posted to Canvas under the Panopto tool.</p>
       <p>Both offerings of the course will share the same assignments, deadlines, TA office hours, etc. I will do my best to cover the same content in lectures on the same days, but since different people may learn different topics at different rates, there may be occasional drift.</p>
       <h2 id="contact"><span class="header-section-number">1.2</span> Contact</h2>
       <table>
-      <colgroup>
-      
-      
-      
-      </colgroup>
       <thead>
       <tr class="header">
       <th>Info</th>
@@ -99,7 +103,7 @@
       </tr>
       <tr class="odd">
       <td>Office Hours</td>
-      <td>MF 1:30pm-3:00pm, W 1:30pm-2:30pm or <a href="https://calendar.app.google/25iRpFtNWqxYx6E98">By Appointment</a></td>
+      <td>MWF 1:30pm-3:00pm or <a href="https://calendar.app.google/25iRpFtNWqxYx6E98">By Appointment</a></td>
       <td><a href="oh.html">See Calendar</a></td>
       </tr>
       <tr class="even">
@@ -135,13 +139,13 @@
       <tbody>
       <tr class="odd">
       <td style="text-align: left;">Exercises</td>
-      <td style="text-align: center;">54%</td>
-      <td style="text-align: left;">There will be 13 total, each counting for 4.5%, with the lowest exercise (other than EX12<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>) grade being dropped.</td>
+      <td style="text-align: center;">56%</td>
+      <td style="text-align: left;">There will be 13 total, each counting for $<span class="math inline">4 \frac{2}{3}</span>%, with the lowest exercise (other than EX12<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>) grade being dropped.</td>
       </tr>
       <tr class="even">
       <td style="text-align: left;">Concept Checks</td>
-      <td style="text-align: center;">6%</td>
-      <td style="text-align: left;">There will be 18 total, each counting for 0.33%.</td>
+      <td style="text-align: center;">4%</td>
+      <td style="text-align: left;">There will be 17 total, each counting for 0.25%, with the lowest being dropped.</td>
       </tr>
       <tr class="odd">
       <td style="text-align: left;">Exams</td>
@@ -249,7 +253,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-03-27 10:21</p>
+        <p>Last updated 2026-03-29 15:04</p>
   </footer>
 </body>
 </main>

@@ -60,7 +60,7 @@ We will consider the grade assigned by the following weighted average (of percen
 
 Task                        Weight  Comments
 -------------------------  -------- ----------------------------------------------
-Exercises                   56%     There will be 13 total, each counting for $$4 \frac{2}{3}$%, with the lowest exercise (other than EX12[^EX12]) grade being dropped.
+Exercises                   56%     There will be 13 total, each counting for $4 \frac{2}{3}$%, with the lowest exercise (other than EX12[^EX12]) grade being dropped.
 Concept Checks              4%      There will be 17 total, each counting for 0.25%, with the lowest being dropped. 
 Exams                       40%     There will be 2 total, a midterm (counting for 15%) and a cumulative final exam (counting for 25%).
 
