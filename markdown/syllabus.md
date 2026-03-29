@@ -6,7 +6,7 @@ title: Syllabus
 
 ## Meetings
 
-In Person lectures will be held Mondays, Wednesdays, and Fridays in [CSE2 (Gates Hall)](https://www.washington.edu/maps/#!/CSE2) room G20 at 12:30pm-1:20pm and room G10 at 3:30pm-4:20pm. 
+In Person lectures will be held Mondays, Wednesdays, and Fridays in [CSE2 (Gates Hall)](https://www.washington.edu/maps/#!/CSE2) room G20 at 12:30pm-1:20pm and room G01 at 3:30pm-4:20pm. 
 
 Lecture attendance is optional, but strongly encouraged. In the event you are unable to attend a lecture, recordings of lectures are automatically posted to Canvas under the Panopto tool.
 
@@ -18,7 +18,7 @@ Both offerings of the course will share the same assignments, deadlines, TA offi
 |--------|------------|-----|
 | Name | Nathan Brunelle | [Profiles](staff.html) |
 | Location | Allen Center (CSE) 434 | [See Calendar](oh.html) |
-| Office Hours | MF 1:30pm-3:00pm, W 1:30pm-2:30pm or [By Appointment](https://calendar.app.google/25iRpFtNWqxYx6E98) | [See Calendar](oh.html) |
+| Office Hours | MWF 1:30pm-3:00pm or [By Appointment](https://calendar.app.google/25iRpFtNWqxYx6E98) | [See Calendar](oh.html) |
 | Email | <a href="mailto:brunelle@cs.washington.edu?subject=CSE332">brunelle@cs.washington.edu</a> | use Ed Discussion Board |
 
 For communication about course content, the Ed Discussion Board is preferred to email.
@@ -60,8 +60,8 @@ We will consider the grade assigned by the following weighted average (of percen
 
 Task                        Weight  Comments
 -------------------------  -------- ----------------------------------------------
-Exercises                   54%     There will be 13 total, each counting for 4.5%, with the lowest exercise (other than EX12[^EX12]) grade being dropped.
-Concept Checks              6%      There will be 18 total, each counting for 0.33%. 
+Exercises                   56%     There will be 13 total, each counting for $$4 \frac{2}{3}$%, with the lowest exercise (other than EX12[^EX12]) grade being dropped.
+Concept Checks              4%      There will be 17 total, each counting for 0.25%, with the lowest being dropped. 
 Exams                       40%     There will be 2 total, a midterm (counting for 15%) and a cumulative final exam (counting for 25%).
 
 [^EX12]: The P vs. NP material will not be included on the final exam, meaning that the ONLY place were that material is assessed is on EX12. For this reason, EX12 is not eligible to be dropped.
