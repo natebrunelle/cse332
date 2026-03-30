@@ -359,7 +359,7 @@ Past Exams:
 
 The Final Exam will be held at 12:30pm-2:20pm on June 11 in [BAG](https://www.washington.edu/maps/#!/bag) 131 (A Section) and [BAG](https://www.washington.edu/maps/#!/bag) 154 (B Section). 
 
-<!-->
+<!--
 A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](https://www.washington.edu/maps/#!/sig) 134.
 
 #### Sample solutions
