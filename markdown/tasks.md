@@ -273,11 +273,13 @@ This concept check applies to dictionaries and hash tables. This concept check r
 
 The course staff will scan, upload and grade exams on this [Gradescope for exercises and exams](https://www.gradescope.com/courses/1287206).
 
-<!--
+
 ## Exam 1
 
-The Midterm Exam will be held on Wednesday February 11 during our normal lecture session.
+The Midterm Exam will be held on Monday May 4 during our normal lecture session.
 
+
+<!--
 ### Midterm Solutions
 
 Here you can find [sample solutions for the midterm exam](files/midterms/cse332_midterm_wi26_soln.pdf).
