@@ -198,7 +198,7 @@ Instructions for this exercise apear in Gradescope. To submit you will provide y
 
 # Concept Checks
 
-All concept checks will be submitted and graded on this [Gradescope for concept checks](TODO.html).
+All concept checks will be submitted and graded on this [Gradescope for concept checks](https://www.gradescope.com/courses/1289351).
 
 Concept checks are submitted on Gradescope. Each is auto-graded, with feedback provided instantaneously. You also have unlimited submissions. This means you can, and should, continuously reattempt each concept check until you receive full credit.
 

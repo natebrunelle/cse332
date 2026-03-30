@@ -5,10 +5,10 @@ title: Home
 # Handy links
 
 - [Gradescope for exams+exercises](https://www.gradescope.com/courses/1287206)
-- [Gradescope for Concept Checks](TODO.html)
+- [Gradescope for Concept Checks](https://www.gradescope.com/courses/1289351)
 - [Ed Board](https://edstem.org/us/courses/97180)
 - [Lecture Recordings](https://canvas.uw.edu/courses/1861793/external_tools/21130)
-- [Extension Request](TODO.html) (requires login with your  CSE id)
+- [Extension Request](https://forms.gle/XgZEgVu5dN1htyDZ6) (requires login with your  CSE id)
 - [Math Identities Quick Reference](/files/math_identities_quick_reference.pdf) (for keeping commonly-used prerequisite content handy)
 
 # Course Description
