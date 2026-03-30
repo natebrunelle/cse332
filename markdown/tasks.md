@@ -353,11 +353,13 @@ Past Exams:
 - [CSE 332 14sp Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp.pdf), [CSE 332 14sp Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp-soln.pdf)
 - [CSE 332 13au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au.pdf), [CSE 332 13au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au-soln.pdf)
 
+-->
 
 ## Exam 2
 
-The Final Exam will be held at 12:30pm-2:20pm on March 19 in [KNE](https://www.washington.edu/maps/#!/kne) 120. 
+The Final Exam will be held at 12:30pm-2:20pm on June 11 in [BAG](https://www.washington.edu/maps/#!/bag) 131 (A Section) and [BAG](https://www.washington.edu/maps/#!/bag) 154 (B Section). 
 
+<!-->
 A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](https://www.washington.edu/maps/#!/sig) 134.
 
 #### Sample solutions
