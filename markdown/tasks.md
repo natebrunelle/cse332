@@ -366,8 +366,9 @@ A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](
 
 Here is a [link to final exam sample solutions](files/finals/cse332_final_wi26_sols.pdf). 
 
+-->
 
-
+<!--
 ### Midterm Re-takes
 
 As mentioned on Ed, you will have the opportunity to attempt a modified version of any one section from the midterm exam along with the (now non-cumulative) final exam. 
