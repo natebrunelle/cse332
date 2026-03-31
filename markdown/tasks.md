@@ -11,7 +11,6 @@ All exercises will be submitted and graded on this [Gradescope for exercises and
 
 Some exercises may require submitting to multiple gradescope assignments (e.g. if there is a programming component as well as a written component). The assignment instructions will make it clear when this is the case.
 
-<!--
 ## Exercise 0
 
 The objectives of this exercise are to: 
@@ -26,12 +25,13 @@ This assignment has three main parts. The first involves setting up your java pr
 
 For this exercise, you will need:
 
-- [cse332 VSCode Profile](files/exercises/cse332-Java.code-profile) *(right click to download)* - Our recommended configuration profile for VSCode. This disables gen-AI tools for you. 
+- <a href="files/exercises/cse332-Java.code-profile" download>cse332 VSCode Profile</a> - Our recommended configuration profile for VSCode. This disables gen-AI tools for you. 
 - [EX00 Starter Code](/files/exercises/ex0.zip) - which contains various classes that will be needed for this assignment.
-- [EX00 Specification](https://docs.google.com/document/d/e/2PACX-1vREnpEvlsTQpkNX5wwHHIpAvwnPKN7sG-GQFsek39qXZj4QOng2ZxMhfJOZRec3jw/pub) - which contains all instructions for what to do for this assignment.
+- [EX00 Specification](https://docs.google.com/document/d/e/2PACX-1vS5KkEPjpYNBXUNfUZk0pOWkgSdn4JM1AhV6K97el5vwbcf89IwJoUETRVO29cyFw/pub) - which contains all instructions for what to do for this assignment.
 - [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
 
 
+<!--
 ## Exercise 1
 
 The objectives of this exercise are to:
