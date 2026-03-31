@@ -25,7 +25,7 @@ This assignment has three main parts. The first involves setting up your java pr
 
 For this exercise, you will need:
 
-- <a href="files/exercises/cse332-Java.code-profile" download>cse332 VSCode Profile</a> - Our recommended configuration profile for VSCode. This disables gen-AI tools for you. 
+- <a href="files/exercises/cse332-Java.code-profile" download>CSE332 VSCode Profile</a> - Our recommended configuration profile for VSCode. This disables gen-AI tools for you. 
 - [EX00 Starter Code](/files/exercises/ex0.zip) - which contains various classes that will be needed for this assignment.
 - [EX00 Specification](https://docs.google.com/document/d/e/2PACX-1vS5KkEPjpYNBXUNfUZk0pOWkgSdn4JM1AhV6K97el5vwbcf89IwJoUETRVO29cyFw/pub) - which contains all instructions for what to do for this assignment.
 - [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
@@ -206,7 +206,7 @@ It will be a viable strategy to simply "guess and check" solutions until you rec
 
 We do not intend for these to be time-consuming, but instead hope that they will result in a net savings of time since they will offer some confidence in your understanding of course materials before you're called upon to apply them in an exercise or exam.
 
-<!--
+
 ## CC0 Getting to know you
 
 Concept check 0 is available in Gradescope! There is not specific course material referenced by this concept check. Instead, this concept check is intended to do the following:
@@ -214,12 +214,12 @@ Concept check 0 is available in Gradescope! There is not specific course materia
 1. Introduce you to how concept checks will work in this course
 1. Give you an opportunity to introduce yourself to us by providing some info
 1. Introduce you to the course by asking you to look through the syllabus to answer some questions
-1. Introduce ourselves to each other one-on-one through a "meet the staff" activity.
+1. Introduce ourselves to each other one-on-one through a "Get to know the staff!" activity.
 
-The concept check must be submitted by Thursday 1/15. You have until Friday 1/30 to complete the "meet the staff" activity.
+The concept check must be submitted by Friday 4/10. You have until Friday 5/1 to complete the "Get to know the staff!" activity.
 
 
-
+<!--
 ## CC1 Running Time
 
 Concept Check 1 is available in Gradescope! This concept check applies to the running times and asymptotic complexity. This concept check references content covered in class on 1/7 and 1/9. You can additionally view the summaries on [running time](/summaries/runningtime.html) and [asymptotic complexity](/summaries/asymptotics.html).
