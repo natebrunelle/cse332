@@ -13,6 +13,8 @@ Some exercises may require submitting to multiple gradescope assignments (e.g. i
 
 ## Exercise 0
 
+Exercise 0 will be available for submission in Gradescope at 8:30pm on March 31.
+
 The objectives of this exercise are to: 
 
 - Set up your Java environment
@@ -209,7 +211,7 @@ We do not intend for these to be time-consuming, but instead hope that they will
 
 ## CC0 Getting to know you
 
-Concept check 0 is available in Gradescope! There is not specific course material referenced by this concept check. Instead, this concept check is intended to do the following:
+Concept check 0 will be available in Gradescope at 4:20pm on March 31. There is not specific course material referenced by this concept check. Instead, this concept check is intended to do the following:
 
 1. Introduce you to how concept checks will work in this course
 1. Give you an opportunity to introduce yourself to us by providing some info
