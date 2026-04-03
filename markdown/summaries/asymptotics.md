@@ -120,7 +120,7 @@ Now we have our selection of $n_0=1$ and $c=14$. Let's use those to show $f(n)= 
 
 Notice for this last proof that exactly the same argument would have worked with $c=5$. For the sake of the proof, though, we don't care which choices of $c$ and $n_0$ are used so long as they're successful. If you want to try to fine the smallest choices, you're welcome to, but all we care about is a successful proof.
 
-### Big-Omega Proofs
+### Big-Omega Proofs - "Squeeze Method"
 
 Next we'll show $f(n)=\Omega(g(n))$. These proofs will operate in exactly the same way, we just need our inequality to face the opposite direction. In other words, we want $f(n) \geq f'(n) \geq c\cdot g(n)$,
 
