@@ -268,7 +268,7 @@ Because this is guess and check, we will not show any scratchwork here. Instead,
 >
 > $\equiv 16x^2 + 64x + 88 \leq 42x^3 + 126x^2 + 126x + 42$
 >
-> $\equiv  0 \leq 42x^2 + 110x^2 + 62x - 46$
+> $\equiv  0 \leq 42x^3 + 110x^2 + 62x - 46$
 >
 > This inequality holds when $x \geq 16$ because then $110x^2 > 46$, and so the right hand side is positive. Therefore by principal of induction, $f(n) \leq c \cdot g(n)$ for all $n\geqn_0$ and thus $f(n) = O(g(n))$.
 
