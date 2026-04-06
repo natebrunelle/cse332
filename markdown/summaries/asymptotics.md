@@ -150,6 +150,7 @@ In these examples we will identify our $c$ and $n_0$ by comparing our functions 
 This strategy uses the following observation:
 
 If $a(n) \in O(g(n))$ for constants $c_a$ and $n_a$, and  $b(n) \in O(g(n))$ for constants $c_b$ and $n_b$, then $f(n)=a(n)+b(n)$ belongs to $O(g(n))$ for constant $c=c_a+c_b$ and $n_0=max(n_a, n_b)$.
+
     - **Proof**: We know that $\forall n\geq n_a$ we have that $a(n) \leq c_a \cdot g(n)$, and similarly $\forall n\geq n_b$ we have that $b(n) \leq c_b \cdot g(n)$. This means that $a(n)+b(n) \leq c_a \cdot g(n) + c_b \cdot g(n) = (c_a+c_b)\cdot g(n)$ for all values of $n$ larger than both $n_a$ and $n_b$ (i.e. larger than the $max(n_a, n_b)$). 
 
 This means if $f(n)$ is the sum of a bunch of other functions, we can asymptotically bound $f(n)$ relative to $g(n)$ by bounding each of the components of $f(n)$. 
