@@ -57,7 +57,7 @@
         <li><a href="#example-proofs"><span class="toc-section-number">3</span> Example Proofs</a><ul>
         <li><a href="#squeeze-method"><span class="toc-section-number">3.1</span> <q>Squeeze Method</q></a><ul>
         <li><a href="#big-oh-proofs---squeeze-method"><span class="toc-section-number">3.1.1</span> Big-Oh Proofs - <q>Squeeze Method</q></a></li>
-        <li><a href="#big-omega-proofs"><span class="toc-section-number">3.1.2</span> Big-Omega Proofs</a></li>
+        <li><a href="#big-omega-proofs---squeeze-method"><span class="toc-section-number">3.1.2</span> Big-Omega Proofs - <q>Squeeze Method</q></a></li>
         </ul></li>
         <li><a href="#big-theta-proofs"><span class="toc-section-number">3.2</span> Big-Theta Proofs</a><ul>
         <li><a href="#fn4n2---8n-10-gn-2n2-2"><span class="toc-section-number">3.2.1</span> <span class="math inline">f(n)=4n^2 - 8n + 10</span>, <span class="math inline">g(n)= 2n^2</span></a></li>
@@ -148,7 +148,7 @@
       <p><strong>Proof</strong>: <span class="math inline">f(n) = O(g(n))</span> By definition of <span class="math inline">O</span>, it’s sufficient to show <span class="math inline">\forall n \geq n_0 . f(n)\leq c \cdot g(n)</span> for a choice of <span class="math inline">c&gt;0</span> and <span class="math inline">n_0</span>. Let <span class="math inline">n_0=1</span> and <span class="math inline">c=14</span>. We now need to show that whenever <span class="math inline">n\geq 1</span> we have that <span class="math inline">4n^2-8n+10 \leq 14\cdot 2 n^2</span>. Because <span class="math inline">4n^2-8n+10 \leq 4n^2+10</span>, it’s sufficient to show <span class="math inline">4n^2+10 \leq 14\cdot 2 n^2</span>. We proceed by algebra: <span class="math inline">4n^2+10 \leq 14\cdot 2 n^2</span> <span class="math inline">4n^2+10 \leq 28 n^2</span> <span class="math inline">10 \leq 24n^2</span> The last expression is true for all <span class="math inline">n&gt;1</span> because <span class="math inline">10 \leq 24(1)^2</span>, and the right hand side increases with <span class="math inline">n</span> whereas the left hand side is constant. Therefore we have <span class="math inline">f(n)\leq c\cdot g(n)</span>, and we can conclude <span class="math inline">f(n) = O(g(n))</span>.</p>
       </blockquote>
       <p>Notice for this last proof that exactly the same argument would have worked with <span class="math inline">c=5</span>. For the sake of the proof, though, we don’t care which choices of <span class="math inline">c</span> and <span class="math inline">n_0</span> are used so long as they’re successful. If you want to try to fine the smallest choices, you’re welcome to, but all we care about is a successful proof.</p>
-      <h3 id="big-omega-proofs"><span class="header-section-number">3.1.2</span> Big-Omega Proofs</h3>
+      <h3 id="big-omega-proofs---squeeze-method"><span class="header-section-number">3.1.2</span> Big-Omega Proofs - <q>Squeeze Method</q></h3>
       <p>Next we’ll show <span class="math inline">f(n)=\Omega(g(n))</span>. These proofs will operate in exactly the same way, we just need our inequality to face the opposite direction. In other words, we want <span class="math inline">f(n) \geq f&#39;(n) \geq c\cdot g(n)</span>,</p>
       <h4 id="fn4n2---8n-10-gn-2n2-1"><span class="header-section-number">3.1.2.1</span> <span class="math inline">f(n)=4n^2 - 8n + 10</span>, <span class="math inline">g(n)= 2n^2</span></h4>
       <blockquote>
@@ -199,7 +199,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-04-03 10:53</p>
+        <p>Last updated 2026-04-03 10:54</p>
   </footer>
 </body>
 </main>

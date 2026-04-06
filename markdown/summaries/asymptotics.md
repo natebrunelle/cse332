@@ -143,6 +143,143 @@ Next we'll show $f(n)=\Omega(g(n))$. These proofs will operate in exactly the sa
 
 Again, we could have chosen a smaller value for $n_0$ and the same proof would still work (namely, we could have chosen 3), but we don't care! Our choice was still successful!
 
+## "By Parts" method
+
+In these examples we will identify our $c$ and $n_0$ by comparing our functions "by parts". This approach can be used for comparing $f(n)$ to $g(n)$ where $f(n)=a(n)+b(n)$ for other functions $a$ and $b$.
+
+This strategy uses the following observation:
+
+If $a(n) \in O(g(n))$ for constants $c_a$ and $n_a$, and  $b(n) \in O(g(n))$ for constants $c_b$ and $n_b$, then $f(n)=a(n)+b(n)$ belongs to $O(g(n))$ for constant $c=c_a+c_b$ and $n_0=max(n_a, n_b)$.
+    - **Proof**: We know that $\forall n\geq n_a$ we have that $a(n) \leq c_a \cdot g(n)$, and similarly $\forall n\geq n_b$ we have that $b(n) \leq c_b \cdot g(n)$. This means that $a(n)+b(n) \leq c_a \cdot g(n) + c_b \cdot g(n) = (c_a+c_b)\cdot g(n)$ for all values of $n$ larger than both $n_a$ and $n_b$ (i.e. larger than the $max(n_a, n_b)$). 
+
+This means if $f(n)$ is the sum of a bunch of other functions, we can asymptotically bound $f(n)$ relative to $g(n)$ by bounding each of the components of $f(n)$. 
+
+It's important to recognize that the this approach is most well-suited for $O$ proofs, it's less helpful for $\Omega$ proofs. Let's look at some $O$ examples first, and then see why it's not a good fit for $\Omega$.
+
+### Big-Oh Proofs - "By Parts Method"
+
+For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and $g(n)$. 
+
+#### $f(n)=4n^2 + 8n + 10$, $g(n)=\frac{1}{4} n^3$
+
+> **Nathan's scratch paper**
+> Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. We can break down $f(n) = f_1(n) + f_2(n) + f_3(n)$ where $f_1(n) = 4n^2$, $f_2(n) = 8n$, and $f_3(n) = 10$. Next we find choices of $c$ and $n_0$ to show that each of $f_1(n)$, $f_2(n)$, and $f_3(n)$ belong to $O(g(n))$.
+>
+> To show $f_1(n) =O(\frac{1}{4}n^3)$ we need to show that $4n^2 \leq c_1 \cdot \frac{1}{4}n^3$. By applying algebra to simplify, this is equivalent to $16 \leq c_1 \cdot n$. This holds true with $c_1=1$ so long as $n \geq 16$, and so we will use $c_1=1$ and $n_1=16$ to show $f_1(n) =O(\frac{1}{4}n^3)$
+>
+> To show $f_2(n) = O(\frac{1}{4}n^3)$ we need to show that $8n \leq c_2 \cdot \frac{1}{4}n^3$. By applying algebra to simplify, this is equivalent to $32 \leq c_3 \cdot n^2$. This holds true with $c_2=1$ so long as $n \geq 6$, and so we will use $c_2=1$ and $n_2=32$ to show $f_3(n) =O(\frac{1}{4}n^3)$
+>
+> Finally, To show $f_3(n) = O(\frac{1}{4}n^3)$ we need to show that $10 \leq c_3 \cdot \frac{1}{4}n^3$. By applying algebra to simplify, this is equivalent to $40 \leq c_3 \cdot n^3$. This holds true with $c_3=40$ for all values of $n \geq 1$, and so we will use $c_3=40$ and $n_3=1$ to show $f_3(n) =O(\frac{1}{4}n^3)$
+>
+> We can now use the previous three results to show $f(n) = O(g(n)). for $n_0$, we will use $max(n_1, n_2, n_3)$, and so $n_0=max(16,6,1) = 16$. For $c$ we will use $c= c_1+c_2+c_3 = 1 + 1 + 40 = 42$.
+
+Now we have our selection of $n_0=16$ and $c=42$. Let's use those to show $f(n)= O(g(n))$.
+
+> **Proof**: $f(n) = O(g(n))$
+> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=16$ and $c=42$. We now need to show that whenever $n\geq 32$ we have that $4n^2+8n+10 \leq 42\cdot \frac{1}{4} n^3$. To demonstrate this, we can break up $42 \cdot \frac{1}{4} n^3$ into parts, so we'll use $g(n) = (1+1+40)\frac{1}{4} n^3$. To now show $f(n) \leq c\cdot g(n)$, it's sufficient to show $4n^2 \leq \frac{1}{4} n^3$, $8n \leq \frac{1}{4} n^3$, and $10 \leq 40 \cdot \frac{1}{4} n^3$. 
+>
+> $4n^2 \leq \frac{1}{4} n^3 \equiv 16 \leq n$, which is true for all $n \geq n_0$
+>
+> $8n \leq \frac{1}{4} n^3 \equiv 32 \leq n^2$, which is true for all $n \geq n_0$
+>
+> $10 \leq 40 \cdot \frac{1}{4} n^3 \equiv 10 \leq 10n^3$, which is true for all $n \geq n_0$.
+
+
+#### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
+
+> **Nathan's scratch paper**
+> Because we're showing $O$, we want $f(n)\leq c \cdot g(n)$. We can break down $f(n) = f_1(n) + f_2(n) + f_3(n)$ where $f_1(n) = 4n^2$, $f_2(n) = -8n$, and $f_3(n) = 10$. Next we find choices of $c$ and $n_0$ to show that each of $f_1(n)$, $f_2(n)$, and $f_3(n)$ belong to $O(g(n))$.
+>
+> To show $f_1(n) =O(2n^2)$ we need to show that $4n^2 \leq c_1 \cdot 2n^2$. By applying algebra to simplify, this is equivalent to $2 \leq c_1$. So therefore this holds true for any $c_1\geq 2$, and for any value of $n \geq 1$. We'll use $c_1=2$ and $n_1=1$.
+>
+> To show $f_2(n) = O(2n^2)$ we need to show that $-8n \leq c_2 \cdot 2n^2$. Because the left hand side is negative, this is true for all values of $c_2\geq 0$ and $n_2 \geq 0$, so we'll pick $c_2=1$ and $n_1 = 0$ (since $c_2$ must be positive according to the definition of $O$).
+>
+> Finally, To show $f_3(n) = O(2n^2)$ we need to show that $10 \leq c_3 \cdot 2n^2$. By applying algebra to simplify, this is equivalent to $5 \leq c_3 \cdot n^2$. This holds true with $c_3=5$ for all values of $n \geq 1$, and so we will use $c_3=5$ and $n_3=1$.
+>
+> We can now use the previous three results to show $f(n) = O(g(n)). for $n_0$, we will use $max(n_1, n_2, n_3)$, and so $n_0=max(1,0,1) = 1$. For $c$ we will use $c= c_1+c_2+c_3 = 2 + 1 + 5 = 8$.
+
+Now we have our selection of $n_0=1$ and $c=8$. Let's use those to show $f(n)= O(g(n))$.
+
+> **Proof**: $f(n) = O(g(n))$
+> By definition of $O$, it's sufficient to show $\forall n \geq n_0 . f(n)\leq c \cdot g(n)$ for a choice of $c>0$ and $n_0$. Let $n_0=1$ and $c=8$. We now need to show that whenever $n\geq 1$ we have that $4n^2-8n+10 \leq 8\cdot 2n^2$. To demonstrate this, we can break up $8 \cdot 2 n^2$ into parts, so we'll use $g(n) = (2+1+5)2 n^2$. To now show $f(n) \leq c\cdot g(n)$, it's sufficient to show $4n^2 \leq 2 \cdot 2 n^2$, $-8n \leq 1\cdot 2 n^2$, and $10 \leq 5 \cdot 2 n^2$. 
+>
+> $4n^2 \leq 2\cdot 2n^2 \equiv 4n^2 \leq 4n^2$, which is true for all $n \geq n_0$
+>
+> $-8n \leq \frac{1}{4} n^3$, which is true for all $n \geq n_0$ because the left hand side is negative while the right hand side is positive.
+>
+> $10 \leq 5 \cdot 2 n^2 \equiv 10 \leq 10n^2$, which is true for all $n \geq n_0$.
+
+### Big-Omega Proofs - "By Parts Method"
+
+Now let's see why it is challenging to use this method for $\Omega$. Let's look at our example from above, and see what happens when we apply the same approach with only our inequalities held.
+
+
+#### $f(n)=4n^2 - 8n + 10$, $g(n)= 2n^2$
+
+> **Nathan's scratch paper**
+> Because we're showing $\Omega$, we want $f(n)\geq c \cdot g(n)$. We can break down $f(n) = f_1(n) + f_2(n) + f_3(n)$ where $f_1(n) = 4n^2$, $f_2(n) = -8n$, and $f_3(n) = 10$. Next we find choices of $c$ and $n_0$ to show that each of $f_1(n)$, $f_2(n)$, and $f_3(n)$ belong to $\Omega(g(n))$.
+>
+> To show $f_1(n) =\Omega(2n^2)$ we need to show that $4n^2 \geq c_1 \cdot 2n^2$. By applying algebra to simplify, this is equivalent to $2 \geq c_1$. So therefore this holds true for any $c_1\leq 2$, and for any value of $n \geq 1$. We'll use $c_1=1$ and $n_1=1$.
+>
+> To show $f_2(n) = \Omega(2n^2)$ we need to show that $-8n \geq c_2 \cdot 2n^2$. Because the left hand side is negative, this actually can never be done! This means we'll need to break things up differently. Forget what we did in the previous step, we'll break up $f(n)$ into $f_1(n)+f_2(n)$ where $f_1(n) = 4n^2 -8n$ and $f_2(n) = 10$. 
+>
+> Now let's skip to our new $f_2(n) = 10$. We'll need to show that $10 \geq c_2 \cdot 2n^2$. Notice that the left hand side is constant, wherease the right hand side is increasing. This means that the only way we could make this true is if $c_2$ is negative, which is not allowed. At this point, though, we're out of options for how to split it up, so we're right back to where we started!
+
+The intuition here is that with asymptotic notation, only the domininant term determines the asymptotic running time. This fits in well with $O$ since the non-dominant terms of $f(n)$ should each be upper-bounded by the dominant term, which should be upper-bounded by $g(n)$, in other words, all of these inequalities are in the same direction. For $\Omega$ all of the non-dominant terms of $f(n)$ are upper-bounded by the dominant term of $f(n)$, which itself is lower bounded by $g(n)$. This means that the non-dominant terms of $f(n)$ may compare to $g(n)$ in any direction, making it so we cannot totally separate them into parts for our proof.
+
+## "Guess and Check" or Induction Method
+
+The last method we'll discuss uses induction. As with any proof by induction, the proof itself is very formulaic making it relatively easy to demonstrate our goal. The key downside to induction though, it is that it is really only useful for showing the answer to be correct, not for helping to find the correct answer in the first place. This is why I've dubbed this the "Guess and Check" method. For this method you'll need to first use some entirely different method to select a value of $c$ and $n_0$ (perhaps a method from above), then you can use induction to demonstrate that this method is correct.
+
+### Big-Oh Proofs - "Guess and Check" Method
+
+For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and $g(n)$. 
+
+Our $O$ proofs by induction will proceed as follows:
+
+- Base case: show that $f(n_0) \leq c \cdot g(n_0)$
+- Inductive step: show that if for some $x\geq n_0$ we have $f(x) \leq c\cdot g(x)$ then $f(x+1) \leq c\cdot g(x+1)$.
+
+Because this is guess and check, we will not show any scratchwork here. Instead, we'll just use a choice of $c$ and $n_0$ from a previous method.
+
+#### $f(n)=4n^2 + 8n + 10$, $g(n)=\frac{1}{4} n^3$
+
+>**Proof**
+>We will apply induction to $\forall n\geq n_0$ we have $f(n) \leq c\cdot g(n)$ using $n_0=16$ and $c=42$.
+>
+> **Base Case:** $f(n_0) \leq c \cdot g(n_0)$
+>
+> We need to show $4n_0^2 + 8n_0 + 10 \leq 42 \cdot \frac{1}{4} n_0^3$. Plugging in $n_0=16$ we get $4n_0^2 + 8n_0 + 10=1162$ and $42 \cdot \frac{1}{4} n_0^3 = 43008$, and so the inequality holds.
+>
+>**Inductive Step: $f(x) \leq c \cdot g(x) \rightarrow f(x+1) \leq c \cdot g(x+1)$
+>
+> We assume $4x^2 + 8x + 10 \leq 42 \cdot \frac{1}{4} x^3$, now we wish to show $4(x+1)^2 +8(x+1) + 10 \leq 42 \cdot \frac{1}{4} (x+1)^3$. Let's begin by simplifying the left hand side.
+>
+> $4(x+1)^2 +8(x+1) + 10 = 4(x^2 + 2x + 1) + 8x + 8 + 10 = 4x^2 + 16x + 22$
+> 
+> And now the right hand side;
+>
+> $42 \cdot \frac{1}{4} (x+1)^3 = \frac{42}{4}(x+1)(x^2 + 2x + 1) = \frac{42}{4}(x^3 + 3x^2 + 3x + 1)$
+>
+> So it is sufficient to show $4x^2 + 16x + 22 \leq \frac{42}{4}(x^3 + 3x^2 + 3x + 1)$. Again, let's simplify with algebra.
+>
+> $4x^2 + 16x + 22 \leq \frac{42}{4}(x^3 + 3x^2 + 3x + 1)$
+>
+> $\equiv 16x^2 + 64x + 88 \leq 42x^3 + 126x^2 + 126x + 42$
+>
+> $\equiv  0 \leq 42x^2 + 110x^2 + 62x - 46$
+>
+> This inequality holds when $x \geq 16$ because then $110x^2 > 46$, and so the right hand side is positive. Therefore by principal of induction, $f(n) \leq c \cdot g(n)$ for all $n\geqn_0$ and thus $f(n) = O(g(n))$.
+
+### Big-Omega Proofs - "Guess and Check" Method
+
+To show $f(n)=\Omega(g(n))$ by induction we proceed as follows:
+
+- Base case: show that $f(n_0) \geq c \cdot g(n_0)$
+- Inductive step: show that if for some $x\geq n_0$ we have $f(x) \geq c\cdot g(x)$ then $f(x+1) \geq c\cdot g(x+1)$.
+
+Note that this is exactly the same as the above, but with the inequality facing a different direction. Due to the similarity, we will omit examples here.
+
 ## Big-Theta Proofs
 
 Next we'll show $f(n)=\Theta(g(n))$. To do this, we just have to do one of each of the proofs above! We need to show both that $f(n)=O(g(n))$ and $f(n)=\Omega(g(n))$. Importantly, these two proofs can be done completely independently. That is, we don't need to use the same choice of $c$ and $n_0$ for each, we can use different ones!
