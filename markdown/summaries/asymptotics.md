@@ -149,9 +149,9 @@ In these examples we will identify our $c$ and $n_0$ by comparing our functions 
 
 This strategy uses the following observation:
 
-If $a(n) \in O(g(n))$ for constants $c_a$ and $n_a$, and  $b(n) \in O(g(n))$ for constants $c_b$ and $n_b$, then $f(n)=a(n)+b(n)$ belongs to $O(g(n))$ for constant $c=c_a+c_b$ and $n_0=max(n_a, n_b)$.
+If $a(n) \in O(g(n))$ for constants $c_a$ and $n_a$, and  $b(n) \in O(g(n))$ for constants $c_b$ and $n_b$, then $f(n)=a(n)+b(n)$ belongs to $O(g(n))$ for constant $c=c_a+c_b$ and $n_0=\max(n_a, n_b)$.
 
-**Proof**: We know that $\forall n\geq n_a$ we have that $a(n) \leq c_a \cdot g(n)$, and similarly $\forall n\geq n_b$ we have that $b(n) \leq c_b \cdot g(n)$. This means that $a(n)+b(n) \leq c_a \cdot g(n) + c_b \cdot g(n) = (c_a+c_b)\cdot g(n)$ for all values of $n$ larger than both $n_a$ and $n_b$ (i.e. larger than the $max(n_a, n_b)$). 
+**Proof**: We know that $\forall n\geq n_a$ we have that $a(n) \leq c_a \cdot g(n)$, and similarly $\forall n\geq n_b$ we have that $b(n) \leq c_b \cdot g(n)$. This means that $a(n)+b(n) \leq c_a \cdot g(n) + c_b \cdot g(n) = (c_a+c_b)\cdot g(n)$ for all values of $n$ larger than both $n_a$ and $n_b$ (i.e. larger than the $\max(n_a, n_b)$). 
 
 This means if $f(n)$ is the sum of a bunch of other functions, we can asymptotically bound $f(n)$ relative to $g(n)$ by bounding each of the components of $f(n)$. 
 
@@ -172,7 +172,7 @@ For each of these we'll show $f(n)=O(g(n))$ for different choices of $f(n)$ and 
 >
 > Finally, To show $f_3(n) = O(\frac{1}{4}n^3)$ we need to show that $10 \leq c_3 \cdot \frac{1}{4}n^3$. By applying algebra to simplify, this is equivalent to $40 \leq c_3 \cdot n^3$. This holds true with $c_3=40$ for all values of $n \geq 1$, and so we will use $c_3=40$ and $n_3=1$ to show $f_3(n) =O(\frac{1}{4}n^3)$
 >
-> We can now use the previous three results to show $f(n) = O(g(n)). for $n_0$, we will use $\max(n_1, n_2, n_3)$, and so $n_0=\max(16,6,1) = 16$. For $c$ we will use $c= c_1+c_2+c_3 = 1 + 1 + 40 = 42$.
+> We can now use the previous three results to show $f(n) = O(g(n))$. for $n_0$, we will use $\max(n_1, n_2, n_3)$, and so $n_0=\max(16,6,1) = 16$. For $c$ we will use $c= c_1+c_2+c_3 = 1 + 1 + 40 = 42$.
 
 Now we have our selection of $n_0=16$ and $c=42$. Let's use those to show $f(n)= O(g(n))$.
 
@@ -197,7 +197,7 @@ Now we have our selection of $n_0=16$ and $c=42$. Let's use those to show $f(n)=
 >
 > Finally, To show $f_3(n) = O(2n^2)$ we need to show that $10 \leq c_3 \cdot 2n^2$. By applying algebra to simplify, this is equivalent to $5 \leq c_3 \cdot n^2$. This holds true with $c_3=5$ for all values of $n \geq 1$, and so we will use $c_3=5$ and $n_3=1$.
 >
-> We can now use the previous three results to show $f(n) = O(g(n)). for $n_0$, we will use $\max(n_1, n_2, n_3)$, and so $n_0=\max(1,0,1) = 1$. For $c$ we will use $c= c_1+c_2+c_3 = 2 + 1 + 5 = 8$.
+> We can now use the previous three results to show $f(n) = O(g(n))$. for $n_0$, we will use $\max(n_1, n_2, n_3)$, and so $n_0=\max(1,0,1) = 1$. For $c$ we will use $c= c_1+c_2+c_3 = 2 + 1 + 5 = 8$.
 
 Now we have our selection of $n_0=1$ and $c=8$. Let's use those to show $f(n)= O(g(n))$.
 
@@ -252,7 +252,7 @@ Because this is guess and check, we will not show any scratchwork here. Instead,
 >
 > We need to show $4n_0^2 + 8n_0 + 10 \leq 42 \cdot \frac{1}{4} n_0^3$. Plugging in $n_0=16$ we get $4n_0^2 + 8n_0 + 10=1162$ and $42 \cdot \frac{1}{4} n_0^3 = 43008$, and so the inequality holds.
 >
->**Inductive Step: $f(x) \leq c \cdot g(x) \rightarrow f(x+1) \leq c \cdot g(x+1)$
+>**Inductive Step**: $f(x) \leq c \cdot g(x) \rightarrow f(x+1) \leq c \cdot g(x+1)$
 >
 > We assume $4x^2 + 8x + 10 \leq 42 \cdot \frac{1}{4} x^3$, now we wish to show $4(x+1)^2 +8(x+1) + 10 \leq 42 \cdot \frac{1}{4} (x+1)^3$. Let's begin by simplifying the left hand side.
 >
