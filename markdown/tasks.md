@@ -33,7 +33,6 @@ For this exercise, you will need:
 - [Benchmarking Worksheet](https://docs.google.com/document/d/1nBTfQBIy1YrpR3_JnO3-ef3afEGemt3G/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which you will copy and complete for the benchmarking portion of the assignment.
 
 
-<!--
 ## Exercise 1
 
 The objectives of this exercise are to:
@@ -45,6 +44,7 @@ The objectives of this exercise are to:
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
 
+<!--
 ## Exercise 2
 
 The objectives of this exercise are to:
