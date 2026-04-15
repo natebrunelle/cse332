@@ -62,7 +62,7 @@ For this exercise, you will need:
 - [EX02 Starter Code](/files/exercises/ex2.zip) - which contains various classes that will be needed for this assignment.
 - [EX02 Specification](https://docs.google.com/document/d/1UEyq0FUgwFdt8rXXWW6ZpiXoBNgSuiZ_/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true) - which contains all instructions for what to do for this assignment.
 
-<!--
+
 
 ## Exercise 3
 
@@ -73,7 +73,7 @@ The objectives of this exercise are to:
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-
+<!--
 ## Exercise 4
 
 The objectives of this exercise are to:
