@@ -325,7 +325,6 @@ The exam will cover all material from the beginning of the quarter up through AV
 	- Binary Search Trees: Definition, algorithms and running times of dictionary operations
 	- AVL Trees: Definition, algorithms and running times of dictionary operations (including the definition of rotations and when to do them). The delete operation will NOT be covered.
 
-<!--
 ### Past Exams
 
 
@@ -359,7 +358,9 @@ Past Exams:
 - [CSE 332 14sp Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp.pdf), [CSE 332 14sp Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-14sp-soln.pdf)
 - [CSE 332 13au Midterm](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au.pdf), [CSE 332 13au Midterm Solution](https://courses.cs.washington.edu/courses/cse332/23sp/exams/oldExams/cse332-midterm-13au-soln.pdf)
 
--->
+
+
+<!--
 
 ## Exam 2
 
