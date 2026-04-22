@@ -286,6 +286,7 @@ The Midterm Exam will be held on Monday May 4 during our normal lecture session.
 ### Midterm Solutions
 
 Here you can find [sample solutions for the midterm exam](files/midterms/cse332_midterm_wi26_soln.pdf).
+-->
 
 
 ### Policies
@@ -294,7 +295,7 @@ Here you can find [sample solutions for the midterm exam](files/midterms/cse332_
 1. Closed book, closed notes except for a 1-page 2-sided reference sheet of your own creation.
 1. No calculators, cell phones, or other electronic devices allowed.
 1. No writing after time is called, make sure you put your name on your paper first.
-1. You will be provided a [reference sheet](files/midterms/midterm_reference.pdf) during the exam.
+1. You will be provided a [math reference sheet](files/midterms/midterm_reference.pdf) during the exam.
 
 ### Content
 
@@ -324,7 +325,7 @@ The exam will cover all material from the beginning of the quarter up through AV
 	- Binary Search Trees: Definition, algorithms and running times of dictionary operations
 	- AVL Trees: Definition, algorithms and running times of dictionary operations (including the definition of rotations and when to do them). The delete operation will NOT be covered.
 
-
+<!--
 ### Past Exams
 
 
