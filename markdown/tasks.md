@@ -73,7 +73,7 @@ The objectives of this exercise are to:
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-<!--
+
 ## Exercise 4
 
 The objectives of this exercise are to:
@@ -88,9 +88,9 @@ This is a programming exercise which you will submit to gradescope. There is no 
 For this exercise, you will need:
 
 - [EX04 Starter Code](/files/exercises/ex4.zip) - which contains various classes that will be needed for this assignment.
-- [EX04 Specification](https://docs.google.com/document/d/e/2PACX-1vTJvQ8aANiFmo-8otc_JW17mz-bqDYaojMSwkSzjgzQOrwwo3G38RWWFz810V13ig/pub) - which contains all instructions for what to do for this assignment.
+- [EX04 Specification](https://docs.google.com/document/d/e/2PACX-1vSJE1ICE6JR0B2sXiuD6LvM6yORlYD6C9RJGE-_WhjgV3gEMNt1TIHLCDKspAX4_A/pub) - which contains all instructions for what to do for this assignment.
 
-
+<!--
 
 ## Exercise 5
 
