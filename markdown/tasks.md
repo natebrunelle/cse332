@@ -281,6 +281,8 @@ The course staff will scan, upload and grade exams on this [Gradescope for exerc
 
 The Midterm Exam will be held on Monday May 4 during our normal lecture session.
 
+We will hold a review session on Thursday April 30 at 4:30pm in [IEB](https://www.washington.edu/maps/#!/ieb) G109.
+
 
 <!--
 ### Midterm Solutions
