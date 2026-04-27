@@ -71,14 +71,9 @@
     slides(pptx): files/slides/lecture12_sorting1.pptx
     slides(pdf): files/slides/lecture12_sorting1.pdf
 
-2026-02-04:
-    radix sort: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=53fa3283-68f1-4020-93b1-b3e80016ed59
+2026-04-27:
     slides(pptx): files/slides/lecture13_sorting2.pptx
     slides(pdf): files/slides/lecture13_sorting2.pdf
-    slides(a lecture): files/slides/lecture13_sorting2_inka.pdf
-    slides(b lecture): files/slides/lecture13_sorting2_inkb.pdf
-    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1942a6a5-f7bc-41bf-9118-b3c70158b2ca
-    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4857a162-4643-4d42-9a40-b3c701590866
 
 2026-02-05:
     hashing slides: https://docs.google.com/presentation/d/1wIZ6jmyWeFwcJO0t2C_7Nktz7xnw9w8O/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
