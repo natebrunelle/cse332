@@ -90,7 +90,7 @@ For this exercise, you will need:
 - [EX04 Starter Code](/files/exercises/ex4.zip) - which contains various classes that will be needed for this assignment.
 - [EX04 Specification](https://docs.google.com/document/d/e/2PACX-1vSJE1ICE6JR0B2sXiuD6LvM6yORlYD6C9RJGE-_WhjgV3gEMNt1TIHLCDKspAX4_A/pub) - which contains all instructions for what to do for this assignment.
 
-<!--
+
 
 ## Exercise 5
 
@@ -108,7 +108,7 @@ For this exercise, you will need:
 - [EX05 Starter Code](/files/exercises/ex5.zip) - which contains various classes that will be needed for this assignment.
 - [EX05 Specification](https://docs.google.com/document/d/e/2PACX-1vRp-SeMy6MlRFuAhSyH1AGKjkFtdehvfKZCLOMKakCSBM7PUAnopZe_h4c8248oLQ/pub) - which contains all instructions for what to do for this assignment.
 
-
+<!--
 
 ## Exercise 6
 
