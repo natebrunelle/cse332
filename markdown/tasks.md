@@ -106,7 +106,7 @@ This is a programming exercise which you will submit to gradescope. There is no 
 For this exercise, you will need:
 
 - [EX05 Starter Code](/files/exercises/ex5.zip) - which contains various classes that will be needed for this assignment.
-- [EX05 Specification](https://docs.google.com/document/d/e/2PACX-1vRd-vpRKB7b5BMMrmwztVoX2BFVYOPkUUnrFNEkrxSX4Uv2YjhN_waQpmt3Tw0uYw/pub) - which contains all instructions for what to do for this assignment.
+- [EX05 Specification](https://docs.google.com/document/d/e/2PACX-1vRp-SeMy6MlRFuAhSyH1AGKjkFtdehvfKZCLOMKakCSBM7PUAnopZe_h4c8248oLQ/pub) - which contains all instructions for what to do for this assignment.
 
 
 
