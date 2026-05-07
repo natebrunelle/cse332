@@ -119,7 +119,7 @@ The objectives of this exercise are:
 
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-<!--
+
 ## Exercise 7
 
 The objectives of this exercise are: 
@@ -133,8 +133,10 @@ This is a programming exercise which you will submit to gradescope. There is no 
 For this exercise, you will need:
 
 - [EX07 Starter Code](/files/exercises/ex7.zip) - which contains various classes and testing files that will be needed for this assignment.
-- [EX07 Specification](https://docs.google.com/document/d/e/2PACX-1vTeTbkM5qcJ3ZfpV07SXR4lHr7CVh6NnHLK1U711Lvt2QhSAarNAVMpcHGw2lLCAw/pub) - which contains all instructions for what to do for this assignment.
+- [EX07 Specification](https://docs.google.com/document/d/e/2PACX-1vTVRcKzcQC9uBzkwDiUy3hx_8Ten7o3ZMw2WpUhJhSp9Tr5VqGdYsdvxFsPNKhXKg/pub) - which contains all instructions for what to do for this assignment.
 
+
+<!--
 ## Exercise 8
 
 The objectives of this exercise are:
