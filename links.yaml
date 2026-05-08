@@ -93,22 +93,19 @@
     slides(pptx): files/slides/lecture15_graphs1.pptx
     slides(pdf): files/slides/lecture15_graphs1.pdf
 
-2026-02-12:
-    slides: https://docs.google.com/presentation/d/1vuaE_48YBSW8MSPwGc6pPLFtznI5uUdb/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    worksheet: https://docs.google.com/document/d/1dAombdN62s_wtxnW_PUqQ8OILk1EutK9/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    solutions: https://docs.google.com/document/d/1DXe4OiCLdToDdVZosOYRGL6seGJ3JS_v/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
+2026-05-07:
+    slides: https://docs.google.com/presentation/d/1XW_frz-enArzHJv2HGzLxunybLRBVF3l/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
+    worksheet: https://docs.google.com/document/d/1HqevDiGI2c28fYbI4qHKn2CUuufD36v5/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
+    solutions: https://docs.google.com/document/d/1IpfttJ-bZaUub-VZPkhylhLf_cf6a1Qj/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
 
 2026-05-06:
     slides(pptx): files/slides/lecture16_graphs2.pptx
     slides(pdf): files/slides/lecture16_graphs2.pdf
 
-2026-02-18:
-    slides(pptx): files/slides/lecture17_forkjoin.pptx
-    slides(pdf): files/slides/lecture17_forkjoin.pdf
-    slides(a lecture): files/slides/lecture17_forkjoin_inka.pdf
-    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=18650cde-5559-4965-98bd-b3c70158b945
-    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=261c7f64-2a2f-485b-9194-b3c701590f50
-
+2026-05-08:
+    slides(pptx): files/slides/lecture16_graphs3.pptx
+    slides(pdf): files/slides/lecture16_graphs3.pdf
+    
 2026-05-14:
     fork join starter code: files/section/ForkJoin_StarterCode.zip 
     fork join solution code: files/section/solution_code.zip
