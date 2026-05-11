@@ -103,8 +103,8 @@
     slides(pdf): files/slides/lecture16_graphs2.pdf
 
 2026-05-08:
-    slides(pptx): files/slides/lecture16_graphs3.pptx
-    slides(pdf): files/slides/lecture16_graphs3.pdf
+    slides(pptx): files/slides/lecture17_graphs3.pptx
+    slides(pdf): files/slides/lecture17_graphs3.pdf
     
 2026-05-14:
     fork join starter code: files/section/ForkJoin_StarterCode.zip 
