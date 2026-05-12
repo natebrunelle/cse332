@@ -136,7 +136,7 @@ For this exercise, you will need:
 - [EX07 Specification](https://docs.google.com/document/d/e/2PACX-1vTVRcKzcQC9uBzkwDiUy3hx_8Ten7o3ZMw2WpUhJhSp9Tr5VqGdYsdvxFsPNKhXKg/pub) - which contains all instructions for what to do for this assignment.
 
 
-<!--
+
 ## Exercise 8
 
 The objectives of this exercise are:
@@ -147,7 +147,7 @@ The objectives of this exercise are:
 
 Instructions for this exercise apear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
-
+<!--
 ## Exercise 9
 
 The objectives of thie exercise are:
