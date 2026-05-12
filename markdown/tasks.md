@@ -289,7 +289,7 @@ We will hold a review session on Thursday April 30 at 4:30pm in [IEB](https://ww
 
 ### Midterm Solutions
 
-Here you can find [sample solutions for the midterm exam](files/midterms/cse332-midterm-26sp-soln.pdf).
+Here you can find [sample solutions for the midterm exam](files/midterms/cse332-midterm-sp26-soln.pdf.pdf).
 
 
 ### Policies
