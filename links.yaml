@@ -114,6 +114,10 @@
     slides(pptx): files/slides/lecture18_graphs4_mst.pptx
     slides(pdf): files/slides/lecture18_graphs4_mst.pdf
 
+2026-05-13:
+    slides(pptx): files/slides/lecture19_forkjoin.pptx
+    slides(pdf): files/slides/lecture19_forkjoin.pdf
+
 2026-02-23:
     slides(pptx): files/slides/lecture19_concurrency.pptx
     slides(pdf): files/slides/lecture19_concurrency.pdf
