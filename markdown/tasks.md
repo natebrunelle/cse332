@@ -147,6 +147,20 @@ The objectives of this exercise are:
 
 Instructions for this exercise apear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
+## Exercise 9
+
+The objectives of thie exercise are:
+
+- Implement a minimum-spanning-tree algorithm
+- Use minimum spanning trees combined with breadth-first-search to solve a clustering problem
+
+This is a programming exercise which you will submit to gradescope. There is no written component to this exercise, your code is your only submission.
+
+For this exercise, you will need:
+
+- [EX09 Starter Code](/files/exercises/ex9.zip) - which contains various classes and testing files that will be needed for this assignment.
+- [EX09 Specification](https://docs.google.com/document/d/e/2PACX-1vRmDAVyBdJ1na46d-8Cp1FzSBweA7N17YbuPAObd-uH3lXTjB4ARPb1wqzPY-q09A/pub) - which contains all instructions for what to do for this assignment.
+
 <!--
 ## Exercise 9
 
@@ -176,19 +190,7 @@ The objectives of this exercise are:
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
 
-## Exercise 11
 
-The objectives of thie exercise are:
-
-- Implement a minimum-spanning-tree algorithm
-- Use minimum spanning trees combined with breadth-first-search to solve a clustering problem
-
-This is a programming exercise which you will submit to gradescope. There is no written component to this exercise, your code is your only submission.
-
-For this exercise, you will need:
-
-- [EX11 Starter Code](/files/exercises/ex11.zip) - which contains various classes and testing files that will be needed for this assignment.
-- [EX11 Specification](https://docs.google.com/document/d/e/2PACX-1vQo2dVq6zCaE8oSDyLSAqCHUcKHGKeYHEw7RS6lWhIVVlnLxtNtu3-Bmvfr8BZSyg/pub) - which contains all instructions for what to do for this assignment.
 
 ## Exercise 12
 

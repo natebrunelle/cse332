@@ -16,7 +16,6 @@ public class PowMod {
         CUTOFF = cutoff;
         PowMod.pow = pow;
         PowMod.mod = mod;
-        POOL.invoke(new PowModTask(arr, 0, arr.length));
     }
 
     public static void sequentialPowMod(int[] arr, int lo, int hi, int pow, int mod) {

@@ -13,7 +13,6 @@ public class Parity {
     public static boolean parallelParityTask(int[] arr, int cutoff) {
         // TODO: Invoke the ForkJoinPool to call the LessThan7Task
         Parity.CUTOFF = cutoff;
-        return POOL.invoke(new ParityTask(arr, 0, arr.length));
     }
 
     public static boolean sequentialParityTask(int[] arr, int lo, int hi) {

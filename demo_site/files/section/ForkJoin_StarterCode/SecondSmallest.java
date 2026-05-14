@@ -15,8 +15,7 @@ public class SecondSmallest {
     public static int parallelSecondSmallest(int[] arr, int cutoff) {
         // TODO: Invoke the ForkJoinPool to call the LessThan7Task
         SecondSmallest.CUTOFF = cutoff;
-        TwoSmallest result = POOL.invoke(new SecondSmallestTask(arr, 0, arr.length));
-        return result.secondSmallest;
+        return 0;
     }
 
     public static TwoSmallest sequentialSecondSmallest(int[] arr, int lo, int hi) {

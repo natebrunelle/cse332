@@ -12,7 +12,6 @@ public class LessThan7 {
     public static int parallelLessThan7(int[] arr, int cutoff) {
         // TODO: Invoke the ForkJoinPool to call the LessThan7Task
         LessThan7.CUTOFF = cutoff;
-        return POOL.invoke(new LessThan7Task(arr, 0, arr.length));
     }
 
     public static int sequentialLessThan7(int[] arr, int lo, int hi) {
