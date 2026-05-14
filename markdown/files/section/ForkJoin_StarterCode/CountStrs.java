@@ -15,7 +15,6 @@ public class CountStrs {
         // TODO: Invoke the ForkJoinPool to call the LessThan7Task
         CountStrs.CUTOFF = cutoff;
         CountStrs.targetStr = targetStr;
-        return POOL.invoke(new CountStrsTask(arr, 0, arr.length));
     }
 
     public static int sequentialCountStrs(String[] arr, int lo, int hi, String targetStr) {
