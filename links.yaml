@@ -118,6 +118,10 @@
     slides(pptx): files/slides/lecture19_forkjoin.pptx
     slides(pdf): files/slides/lecture19_forkjoin.pdf
 
+2026-05-15:
+    slides(pptx): files/slides/lecture20_parallelprefix.pptx
+    slides(pdf): files/slides/lecture20_parallelprefix.pdf
+
 2026-02-23:
     slides(pptx): files/slides/lecture19_concurrency.pptx
     slides(pdf): files/slides/lecture19_concurrency.pdf
