@@ -161,8 +161,7 @@ For this exercise, you will need:
 - [EX09 Starter Code](/files/exercises/ex9.zip) - which contains various classes and testing files that will be needed for this assignment.
 - [EX09 Specification](https://docs.google.com/document/d/e/2PACX-1vRmDAVyBdJ1na46d-8Cp1FzSBweA7N17YbuPAObd-uH3lXTjB4ARPb1wqzPY-q09A/pub) - which contains all instructions for what to do for this assignment.
 
-<!--
-## Exercise 9
+## Exercise 10
 
 The objectives of thie exercise are:
 
@@ -175,10 +174,11 @@ This is a programming exercise which you will submit to gradescope. There is no 
 
 For this exercise, you will need:
 
-- [EX09 Starter Code](/files/exercises/ex9.zip) - which contains various classes and testing files that will be needed for this assignment.
-- [EX09 Specification](https://docs.google.com/document/d/e/2PACX-1vQ7_mYQ4h8lUpohL0_ZeV8p34mvT_ZtFP_dYKL0w-OKPQswFYdpmi_cnCS9uk_oOw/pub) - which contains all instructions for what to do for this assignment
+- [EX09 Starter Code](/files/exercises/ex10.zip) - which contains various classes and testing files that will be needed for this assignment.
+- [EX09 Specification](https://docs.google.com/document/d/e/2PACX-1vS_wzMVHwVe_j0_dSZJe7RArfgJBxIPaaYvC6QT532ZjSfLVBoUu6_0mOo7Az5cCw/pub) - which contains all instructions for what to do for this assignment
 
 
+<!--
 ## Exercise 10 
 
 The objectives of this exercise are:
@@ -365,7 +365,7 @@ Past Exams:
 
 
 
-<!--
+
 
 ## Exam 2
 
