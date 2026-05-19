@@ -174,8 +174,8 @@ This is a programming exercise which you will submit to gradescope. There is no 
 
 For this exercise, you will need:
 
-- [EX09 Starter Code](/files/exercises/ex10.zip) - which contains various classes and testing files that will be needed for this assignment.
-- [EX09 Specification](https://docs.google.com/document/d/e/2PACX-1vS_wzMVHwVe_j0_dSZJe7RArfgJBxIPaaYvC6QT532ZjSfLVBoUu6_0mOo7Az5cCw/pub) - which contains all instructions for what to do for this assignment
+- [EX10 Starter Code](/files/exercises/ex10.zip) - which contains various classes and testing files that will be needed for this assignment.
+- [EX10 Specification](https://docs.google.com/document/d/e/2PACX-1vS_wzMVHwVe_j0_dSZJe7RArfgJBxIPaaYvC6QT532ZjSfLVBoUu6_0mOo7Az5cCw/pub) - which contains all instructions for what to do for this assignment
 
 
 <!--
