@@ -136,12 +136,9 @@
     A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ab43549-ad66-4d87-8dee-b3c70158bd39
     B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb3cc3a4-804d-4b24-b0c7-b3c701591370
 
-
-2026-02-27:
-    slides(pptx): files/slides/lecture21_concurrency3_analysis.pptx
-    slides(pdf): files/slides/lecture21_concurrency3_analysis.pdf
-    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a7402262-302f-495a-960d-b3c70158be6b
-    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8b102eb-8651-42ee-ad11-b3c7015914ad
+2026-05-20:
+    slides(pptx): files/slides/lecture22_concurrency1_mutualexclusion.pptx
+    slides(pdf): files/slides/lecture22_concurrency1_mutualexclusion.pdf
 
 2026-03-02:
     slides(pptx): files/slides/lecture22_amdahls_wisdom.pptx
