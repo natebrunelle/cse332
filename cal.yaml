@@ -53,14 +53,14 @@ lectures:
     - Minimum Spanning Trees
     - Parallelism 1 (Fork-Join)
     - Parallelism 2 (Parallel Prefix)
+    - Parallel Analysis & Amdahl's Law
     - Synchronization (Locks)
     - Synchronization (Race Conditions)
     - Synchronization (Deadlock & Wisdom)
-    - Parallel Analysis & Amdahl's Law
     - Complexity Classes
     - P, NP, NP-Complete
     - P, NP, NP-Complete 2
-    - Finale
+    - Final Exam Review
 
 labs:
     - S1 Intros, Java Generics
