@@ -130,12 +130,6 @@
     slides(pptx): files/slides/lecture21_amdahls_mutualexclusion.pptx
     slides(pdf): files/slides/lecture21_amdahls_mutualexclusion.pdf
 
-2026-02-25:
-    slides(pptx): files/slides/lecture20_concurrency2.pptx
-    slides(pdf): files/slides/lecture20_concurrency2.pdf
-    A video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9ab43549-ad66-4d87-8dee-b3c70158bd39
-    B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bb3cc3a4-804d-4b24-b0c7-b3c701591370
-
 2026-05-20:
     slides(pptx): files/slides/lecture22_concurrency1_mutualexclusion.pptx
     slides(pdf): files/slides/lecture22_concurrency1_mutualexclusion.pdf
@@ -153,13 +147,9 @@
     B video: https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=acc42a6e-261d-495c-aa1b-b3c7015917a8
 
 2026-03-05:
-    concurrency slides: https://docs.google.com/presentation/d/1Kemp1CXNvKkgMze7RTuvEtKcgMHwgx0M/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    concurrency worksheet: https://docs.google.com/document/d/1qItLO2z91fN9_jd0RCvU3adcOVvBWLX8/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    concurrency solutions: https://docs.google.com/document/d/1mHWlTDfjmOabhu_mUms_LA7slMdbcmyN/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    MST video: https://drive.google.com/file/d/1_FpzNOITLRJiSIeSOr9gg1_Rus1pcnFV/view?usp=sharing
-    MST slides: https://docs.google.com/presentation/d/1Actwd7BjjZdufWrOo8nGMU0Xd1s6I0Fw/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    MST worksheet: https://docs.google.com/document/d/1cvq_Dmg2xtVPBZTKCekB1ccqF0kLaAoc/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
-    MST solutions: https://docs.google.com/document/d/1l48tXWINKuQQzsbJBFH5hp97C3JUzlpn/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
+    slides: https://docs.google.com/presentation/d/19baIsoaNkufK-EwGt92-Vj9FwhA5dcGv/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
+    worksheet: https://docs.google.com/document/d/1aq0PLuH1BooBPgN6nxzDu3pYHnoxvx0j/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
+    solutions: https://docs.google.com/document/d/1XEYvmJL4o422veYCLw-DQGnPVHeJDbpU/edit?usp=sharing&ouid=100283603951565118803&rtpof=true&sd=true
 
 2026-03-06:
     slides(pptx): files/slides/lecture24_complexity.pptx
