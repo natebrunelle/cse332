@@ -89,6 +89,7 @@ function upfile_inner() {
             --table-of-contents --toc-depth=3 \
             --css=${prefix}style.css \
             --katex='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/' \
+            --mathml \
             --html-q-tags \
             --template=${here}template.html \
             --variable=year:${datetime:0:4} \
