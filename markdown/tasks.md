@@ -371,27 +371,14 @@ Past Exams:
 
 The Final Exam will be held at 12:30pm-2:20pm on June 11 in [BAG](https://www.washington.edu/maps/#!/bag) 131 (A Section) and [BAG](https://www.washington.edu/maps/#!/bag) 154 (B Section). 
 
-<!--
-A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](https://www.washington.edu/maps/#!/sig) 134.
+A review session for the Final Exam will be held during our last lectures of the quarter on Friday 6/5. We will cover different content in each lecture, and both lectures will be recorded, so it will be worthwhile to watch recordings for any lecture you are unable to attend.
 
+<!--
 #### Sample solutions
 
 Here is a [link to final exam sample solutions](files/finals/cse332_final_wi26_sols.pdf). 
 
 -->
-
-<!--
-### Midterm Re-takes
-
-As mentioned on Ed, you will have the opportunity to attempt a modified version of any one section from the midterm exam along with the (now non-cumulative) final exam. 
-
-To select which section you would like to take on Thursday 3/19, please complete [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdT_DqCS7CJRjv4UMKfxRuOFwRTQ5TC6QSesR0ZAiVOf85bOA/viewform?usp=dialog) no later than 11:59pm on Tuesday 3/17. The form is set up so that it is editable, so you may change your mind up until that deadline. It will also send you a copy of your response when you submit the form.
-
-Note that the form requires signing in using your CSE ID.
-
-#### Sample solutions
-
-Here is a [link to midterm re-take sample solutions](files/finals/cse332_midterm_retake_wi26_sols.pdf). 
 
 ### Policies
 
@@ -403,7 +390,9 @@ Here is a [link to midterm re-take sample solutions](files/finals/cse332_midterm
 
 ### Content
 
-The final exam will cover:
+The final exam is cumulative, and as such all midterm exam content (listed above) is eligible for testing on the final exam.
+
+In addition to the midterm exam content, the final exam will cover:
 
 - Hash Tables
 	- Principles of good hash function design
@@ -417,7 +406,6 @@ The final exam will cover:
 	- Rehashing
 - Sorting
 	- Definitions, procedures, running times, and other properties of these algorithms:
-		- Selection Sort
 		- Insertion Sort
 		- Heap Sort
 		- Merge Sort
@@ -441,15 +429,14 @@ The final exam will cover:
 	- Graph Traversals (breadth-first search and depth-first search)
 	- Dijkstra's Algorithm
 	- Prim's algorithm and Kruskal's Algorithm
-	- Topological Sort
 - Parallelism:
 	- ForkJoin Parallelism
 	- Efficiency analysis (including work, span, perfect linear speedup, and Amdahl's Law)
 	- ForkJoin applications:
 		- Reduce: Parallel sum, max, find, etc.
 		- Map: vector addition, function application, etc.
-	- Parallel Prefix Sum
-	- Parallel Filter
+	- Two-Pass parallel algorithms, e.g. Parallel Prefix Sum
+	- Parallel Filter/Pack
 - Concurrency
 	- Race Conditions:
 		- Data Races
@@ -461,11 +448,11 @@ The final exam will cover:
 		- Critical section size
 		- Deadlock
 
-Note: You will likely be asked to write java code using ForkJoin and/or threads. We will not require your syntax to be perfectly correct, but it should be correct enough that we can verify the code's would be correct if syntax issues were fixed. That is, we expect edge cases and other considerations of an algorithm to be correct, but don't necessarily expect all keywords or semicolons to be perfect.
+Note: You will likely be asked to write java code using ForkJoin and/or threads. We will not require your syntax to be perfectly correct, but it should be correct enough that we can verify your code would be correct if you had access to an IDE to highlight any syntax issues that were present. That is, we expect major algorithmic steps and edge casesto be correct, but don't necessarily expect all keywords or semicolons to be perfect.
 
 ### Past Exams
 
-We have provided links to past exams below. Be advised that in other quarters the final exam has included P/NP content. Your final exam for this quarter will not include that material. Additionally, in some previous quarters Hashing was covered on the midterm, and so the quantity of that content on the exams varies. I recommend that you mostly use these exams to evaluate your preparedness rather than as a study guide.
+We have provided links to past exams below. Be advised that in other quarters the final exam has included P/NP content. Your final exam for this quarter will not include that material. Additionally, in some previous quarters Hashing was covered on the midterm, and so the quantity of that content on the exams varies. You may also find some minor topics that we did not cover in these exams. If something seems unfamiliar, check if that topic appears in the list of content above. I recommend that you mostly use these exams to evaluate your preparedness rather than as a study guide.
 
 
 - [24au Final](files/finals/cse332_final_au24.pdf), [24au Final Solution](files/finals/cse332_final_au24_sols.pdf)
@@ -477,5 +464,3 @@ We have provided links to past exams below. Be advised that in other quarters th
 - [19wi Final](files/finals/cse332-final-19wi.pdf), [19wi Final Solution](files/finals/cse332-final-19wi-soln.pdf)
 - [18au Final](files/finals/cse332-final-18au.pdf), [18au Final Solution](files/finals/cse332-final-18au-soln.pdf)
 - [18wi Final](files/finals/cse332-final-18wi.pdf), [18wi Final Solution](files/finals/cse332-final-18wi-soln.pdf)
-
--->
