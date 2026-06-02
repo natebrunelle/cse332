@@ -189,9 +189,6 @@ The objectives of this exercise are:
 Instructions for this exercise appear in Gradescope. To submit you will provide your answers there (either as a fill-in-the-blank or by uploading your work as an image or pdf).
 
 
-<!--
-
-
 ## Exercise 12
 
 The objectives of this exercise are:
@@ -201,7 +198,6 @@ The objectives of this exercise are:
 - Express how reductions help to result the P=NP question.
 
 Instructions for this exercise apear in Gradescope. To submit you will provide your answers there.
--->
 
 # Concept Checks
 

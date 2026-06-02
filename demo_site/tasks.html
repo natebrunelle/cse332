@@ -60,7 +60,11 @@
         <li><a href="#content"><span class="toc-section-number">3.1.3</span> Content</a></li>
         <li><a href="#past-exams"><span class="toc-section-number">3.1.4</span> Past Exams</a></li>
         </ul></li>
-        <li><a href="#exam-2"><span class="toc-section-number">3.2</span> Exam 2</a></li>
+        <li><a href="#exam-2"><span class="toc-section-number">3.2</span> Exam 2</a><ul>
+        <li><a href="#policies-1"><span class="toc-section-number">3.2.1</span> Policies</a></li>
+        <li><a href="#content-1"><span class="toc-section-number">3.2.2</span> Content</a></li>
+        <li><a href="#past-exams-1"><span class="toc-section-number">3.2.3</span> Past Exams</a></li>
+        </ul></li>
         </ul></li>
         </ul>
         </div>
@@ -364,113 +368,114 @@
       </ul>
       <h2 id="exam-2"><span class="header-section-number">3.2</span> Exam 2</h2>
       <p>The Final Exam will be held at 12:30pm-2:20pm on June 11 in <a href="https://www.washington.edu/maps/#!/bag">BAG</a> 131 (A Section) and <a href="https://www.washington.edu/maps/#!/bag">BAG</a> 154 (B Section).</p>
+      <p>A review session for the Final Exam will be held during our last lectures of the quarter on Friday 6/5. We will cover different content in each lecture, and both lectures will be recorded, so it will be worthwhile to watch recordings for any lecture you are unable to attend.</p>
       <!--
-      A review session for the Final Exam will be held at 4:30pm on March 17 in [SIG](https://www.washington.edu/maps/#!/sig) 134.
-      
       #### Sample solutions
       
       Here is a [link to final exam sample solutions](files/finals/cse332_final_wi26_sols.pdf). 
       
       -->
-      <!--
-      ### Midterm Re-takes
-      
-      As mentioned on Ed, you will have the opportunity to attempt a modified version of any one section from the midterm exam along with the (now non-cumulative) final exam. 
-      
-      To select which section you would like to take on Thursday 3/19, please complete [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdT_DqCS7CJRjv4UMKfxRuOFwRTQ5TC6QSesR0ZAiVOf85bOA/viewform?usp=dialog) no later than 11:59pm on Tuesday 3/17. The form is set up so that it is editable, so you may change your mind up until that deadline. It will also send you a copy of your response when you submit the form.
-      
-      Note that the form requires signing in using your CSE ID.
-      
-      #### Sample solutions
-      
-      Here is a [link to midterm re-take sample solutions](files/finals/cse332_midterm_retake_wi26_sols.pdf). 
-      
-      ### Policies
-      
-      
-      1. Closed book, closed notes except for a 1-page 2-sided reference sheet of your own creation.
-      1. No calculators, cell phones, or other electronic devices allowed.
-      1. No writing after time is called, make sure you put your name on your paper first.
-      1. You will be provided a [reference sheet](files/cse332_final_wi24_reference.pdf) during the exam.
-      
-      ### Content
-      
-      The final exam will cover:
-      
-      - Hash Tables
-          - Principles of good hash function design
-          - Insert/Delete/Find using these collision resolution strategies:
-              - Separate Chaining
-              - Linear Probing
-              - Quadratic Probing
-              - Double Hashing
-          - Strengths and weaknesses of each collision resolution strategy
-          - Load Factor, including how to calculate it and how it interacts with collision resolution
-          - Rehashing
-      - Sorting
-          - Definitions, procedures, running times, and other properties of these algorithms:
-              - Selection Sort
-              - Insertion Sort
-              - Heap Sort
-              - Merge Sort
-              - Quick Sort
-              - Bucket Sort
-              - Radix Sort
-      - Graphs
-          - The definitions of the many terms presented in the graphs section, including: 
-              - node/vertex
-              - edge, edge weight
-              - directed/undirected graph
-              - (in/out) degree
-              - complete graph
-              - simple graph
-              - path, simple path, and cycle
-              - connected graph
-              - DAG
-              - tree
-              - Any other definitions presented in the slides
-          - Graph data structures (adjacency list, adjacency matrix) and the advantages and disadvantages of each.
-          - Graph Traversals (breadth-first search and depth-first search)
-          - Dijkstra's Algorithm
-          - Prim's algorithm and Kruskal's Algorithm
-          - Topological Sort
-      - Parallelism:
-          - ForkJoin Parallelism
-          - Efficiency analysis (including work, span, perfect linear speedup, and Amdahl's Law)
-          - ForkJoin applications:
-              - Reduce: Parallel sum, max, find, etc.
-              - Map: vector addition, function application, etc.
-          - Parallel Prefix Sum
-          - Parallel Filter
-      - Concurrency
-          - Race Conditions:
-              - Data Races
-              - Bad Interleavings
-          - Code Synchronization:
-              - Locks, reentrant locks
-              - Java's Synchronized statement
-              - Lock scheme granularity (coarse vs. fine)
-              - Critical section size
-              - Deadlock
-      
-      Note: You will likely be asked to write java code using ForkJoin and/or threads. We will not require your syntax to be perfectly correct, but it should be correct enough that we can verify the code's would be correct if syntax issues were fixed. That is, we expect edge cases and other considerations of an algorithm to be correct, but don't necessarily expect all keywords or semicolons to be perfect.
-      
-      ### Past Exams
-      
-      We have provided links to past exams below. Be advised that in other quarters the final exam has included P/NP content. Your final exam for this quarter will not include that material. Additionally, in some previous quarters Hashing was covered on the midterm, and so the quantity of that content on the exams varies. I recommend that you mostly use these exams to evaluate your preparedness rather than as a study guide.
-      
-      
-      - [24au Final](files/finals/cse332_final_au24.pdf), [24au Final Solution](files/finals/cse332_final_au24_sols.pdf)
-      - [24su Final](files/finals/cse332_final_su24.pdf), [24su Final Solution](files/finals/cse332_final_su24_soln.pdf)
-      - [24wi Final](files/finals/cse332_final_wi24.pdf), [24wi Final Solution](files/finals/cse332_final_wi24_soln.pdf)
-      - [23au Final](files/finals/cse332-final-23au.pdf), [23au Final Solution](files/finals/cse332-final-23au-soln.pdf)
-      - [23wi Final](files/finals/cse332-final-23wi.pdf), [23wi Final Solution](files/finals/cse332-final-23wi-soln.pdf)
-      - [19au Final](files/finals/cse332-final-19au.pdf), [19au Final Solution](files/finals/cse332-final-19au-soln.pdf)
-      - [19wi Final](files/finals/cse332-final-19wi.pdf), [19wi Final Solution](files/finals/cse332-final-19wi-soln.pdf)
-      - [18au Final](files/finals/cse332-final-18au.pdf), [18au Final Solution](files/finals/cse332-final-18au-soln.pdf)
-      - [18wi Final](files/finals/cse332-final-18wi.pdf), [18wi Final Solution](files/finals/cse332-final-18wi-soln.pdf)
-      
-      -->
+      <h3 id="policies-1"><span class="header-section-number">3.2.1</span> Policies</h3>
+      <ol type="1">
+      <li>Closed book, closed notes except for a 1-page 2-sided reference sheet of your own creation.</li>
+      <li>No calculators, cell phones, or other electronic devices allowed.</li>
+      <li>No writing after time is called, make sure you put your name on your paper first.</li>
+      <li>You will be provided a <a href="files/cse332_final_wi24_reference.pdf">reference sheet</a> during the exam.</li>
+      </ol>
+      <h3 id="content-1"><span class="header-section-number">3.2.2</span> Content</h3>
+      <p>The final exam is cumulative, and as such all midterm exam content (listed above) is eligible for testing on the final exam.</p>
+      <p>In addition to the midterm exam content, the final exam will cover:</p>
+      <ul>
+      <li>Hash Tables
+      <ul>
+      <li>Principles of good hash function design</li>
+      <li>Insert/Delete/Find using these collision resolution strategies:
+      <ul>
+      <li>Separate Chaining</li>
+      <li>Linear Probing</li>
+      <li>Quadratic Probing</li>
+      <li>Double Hashing</li>
+      </ul></li>
+      <li>Strengths and weaknesses of each collision resolution strategy</li>
+      <li>Load Factor, including how to calculate it and how it interacts with collision resolution</li>
+      <li>Rehashing</li>
+      </ul></li>
+      <li>Sorting
+      <ul>
+      <li>Definitions, procedures, running times, and other properties of these algorithms:
+      <ul>
+      <li>Insertion Sort</li>
+      <li>Heap Sort</li>
+      <li>Merge Sort</li>
+      <li>Quick Sort</li>
+      <li>Bucket Sort</li>
+      <li>Radix Sort</li>
+      </ul></li>
+      </ul></li>
+      <li>Graphs
+      <ul>
+      <li>The definitions of the many terms presented in the graphs section, including:
+      <ul>
+      <li>node/vertex</li>
+      <li>edge, edge weight</li>
+      <li>directed/undirected graph</li>
+      <li>(in/out) degree</li>
+      <li>complete graph</li>
+      <li>simple graph</li>
+      <li>path, simple path, and cycle</li>
+      <li>connected graph</li>
+      <li>DAG</li>
+      <li>tree</li>
+      <li>Any other definitions presented in the slides</li>
+      </ul></li>
+      <li>Graph data structures (adjacency list, adjacency matrix) and the advantages and disadvantages of each.</li>
+      <li>Graph Traversals (breadth-first search and depth-first search)</li>
+      <li>Dijkstra’s Algorithm</li>
+      <li>Prim’s algorithm and Kruskal’s Algorithm</li>
+      </ul></li>
+      <li>Parallelism:
+      <ul>
+      <li>ForkJoin Parallelism</li>
+      <li>Efficiency analysis (including work, span, perfect linear speedup, and Amdahl’s Law)</li>
+      <li>ForkJoin applications:
+      <ul>
+      <li>Reduce: Parallel sum, max, find, etc.</li>
+      <li>Map: vector addition, function application, etc.</li>
+      </ul></li>
+      <li>Two-Pass parallel algorithms, e.g. Parallel Prefix Sum</li>
+      <li>Parallel Filter/Pack</li>
+      </ul></li>
+      <li>Concurrency
+      <ul>
+      <li>Race Conditions:
+      <ul>
+      <li>Data Races</li>
+      <li>Bad Interleavings</li>
+      </ul></li>
+      <li>Code Synchronization:
+      <ul>
+      <li>Locks, reentrant locks</li>
+      <li>Java’s Synchronized statement</li>
+      <li>Lock scheme granularity (coarse vs. fine)</li>
+      <li>Critical section size</li>
+      <li>Deadlock</li>
+      </ul></li>
+      </ul></li>
+      </ul>
+      <p>Note: You will likely be asked to write java code using ForkJoin and/or threads. We will not require your syntax to be perfectly correct, but it should be correct enough that we can verify your code would be correct if you had access to an IDE to highlight any syntax issues that were present. That is, we expect major algorithmic steps and edge casesto be correct, but don’t necessarily expect all keywords or semicolons to be perfect.</p>
+      <h3 id="past-exams-1"><span class="header-section-number">3.2.3</span> Past Exams</h3>
+      <p>We have provided links to past exams below. Be advised that in other quarters the final exam has included P/NP content. Your final exam for this quarter will not include that material. Additionally, in some previous quarters Hashing was covered on the midterm, and so the quantity of that content on the exams varies. You may also find some minor topics that we did not cover in these exams. If something seems unfamiliar, check if that topic appears in the list of content above. I recommend that you mostly use these exams to evaluate your preparedness rather than as a study guide.</p>
+      <ul>
+      <li><a href="files/finals/cse332_final_au24.pdf">24au Final</a>, <a href="files/finals/cse332_final_au24_sols.pdf">24au Final Solution</a></li>
+      <li><a href="files/finals/cse332_final_su24.pdf">24su Final</a>, <a href="files/finals/cse332_final_su24_soln.pdf">24su Final Solution</a></li>
+      <li><a href="files/finals/cse332_final_wi24.pdf">24wi Final</a>, <a href="files/finals/cse332_final_wi24_soln.pdf">24wi Final Solution</a></li>
+      <li><a href="files/finals/cse332-final-23au.pdf">23au Final</a>, <a href="files/finals/cse332-final-23au-soln.pdf">23au Final Solution</a></li>
+      <li><a href="files/finals/cse332-final-23wi.pdf">23wi Final</a>, <a href="files/finals/cse332-final-23wi-soln.pdf">23wi Final Solution</a></li>
+      <li><a href="files/finals/cse332-final-19au.pdf">19au Final</a>, <a href="files/finals/cse332-final-19au-soln.pdf">19au Final Solution</a></li>
+      <li><a href="files/finals/cse332-final-19wi.pdf">19wi Final</a>, <a href="files/finals/cse332-final-19wi-soln.pdf">19wi Final Solution</a></li>
+      <li><a href="files/finals/cse332-final-18au.pdf">18au Final</a>, <a href="files/finals/cse332-final-18au-soln.pdf">18au Final Solution</a></li>
+      <li><a href="files/finals/cse332-final-18wi.pdf">18wi Final</a>, <a href="files/finals/cse332-final-18wi-soln.pdf">18wi Final Solution</a></li>
+      </ul>
             </div>
     </div>
   </div>
@@ -478,7 +483,7 @@
           Copyright © 2026 Nathan Brunelle.
               <p>Released under the <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /> CC-BY-NC-SA 4.0</a> license</a>.
       </p>
-        <p>Last updated 2026-05-26 12:16</p>
+        <p>Last updated 2026-06-01 11:34</p>
   </footer>
 </body>
 </main>
