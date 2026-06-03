@@ -293,7 +293,7 @@ Here you can find [sample solutions for the midterm exam](files/midterms/cse332-
 ### Policies
 
 
-1. Closed book, closed notes except for a 1-page 2-sided reference sheet of your own creation.
+1. Closed book, closed notes except for two 1-page 2-sided reference sheets of your own creation.
 1. No calculators, cell phones, or other electronic devices allowed.
 1. No writing after time is called, make sure you put your name on your paper first.
 1. You will be provided a [math reference sheet](files/midterms/midterm_reference.pdf) during the exam.
