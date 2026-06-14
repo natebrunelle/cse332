@@ -367,12 +367,10 @@ The Final Exam will be held at 12:30pm-2:20pm on June 11 in [BAG](https://www.wa
 
 A review session for the Final Exam will be held during our last lectures of the quarter on Friday 6/5. We will cover different content in each lecture, and both lectures will be recorded, so it will be worthwhile to watch recordings for any lecture you are unable to attend.
 
-<!--
+
 #### Sample solutions
 
-Here is a [link to final exam sample solutions](files/finals/cse332_final_wi26_sols.pdf). 
-
--->
+Here is a [link to final exam sample solutions](files/finals/cse332-final_26sp_soln.pdf). 
 
 ### Policies
 
