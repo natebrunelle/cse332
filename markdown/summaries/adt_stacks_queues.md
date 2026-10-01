@@ -36,7 +36,7 @@ For example, as experienced programmers we immediately understand some of the wa
 
 For this class, **defining an ADT requires providing two things**:
 1. The notion of what the ADT represents
-1. The operations that are able to do with the data
+1. The operations that we are able to do with the data
 
 We can then define ADTs for list, set, and queue as follows (note: the list of operations given is not intended to be exhaustive, but should just give an idea of what makes each ADT distinct from the others on this list):
 
@@ -58,7 +58,9 @@ We can then define ADTs for list, set, and queue as follows (note: the list of o
         - dequeue: removes the oldest element from the queue
         - peek: returns the oldest element in the queue
 
-**A data structure is a strategy for satisfying an ADT.** For each of our data structures we will describe how we will represent the contents, and we will describe the algorithms we will use for each operation. The algorithms we design for each operation should correctly update the representation to match the behavior outlined in the ADT.
+
+
+**A data structure is a strategy for satisfying an ADT.** For each of our data structures we will describe how we will represent the contents, and we will describe the algorithms we will use for each operation. The algorithms we design for each operation should correctly update the representation to match the behavior outlined in the ADT. 
 
 For example: 
 - A linked list data structure stores its elements in node objects, then maintains the sequence of elements by adding a reference from each node to the next one in sequence. 
@@ -76,6 +78,8 @@ Between lists and queues we have seen two different designs for data structure d
 
 The final vocabulary term we presented was an **implementation of a data structure**, which is specifically **computer code which puts a data structure into effect**.
 
+When designing data structures it is important to keep your ADT in mind as a guide. If the ADT which we're satisfying is useful, then a data structure that effectively implements that ADT (and nothing more) will also be useful. For example, when building a data structure for a queue, we do not need to care whether we can efficiently perform a list-only operation (such as indexing). List and queue are different ADTs and so it makes sense that we may wish to design distinct data structures to be the best solution for each ADT.
+
 # Review of Queue Data Structures
 
 We'll now provide an illustration of each of the queue data structures presented in class. In exercise 0 you will build stacks which behave similarly to the queue data structures.
@@ -83,12 +87,12 @@ We'll now provide an illustration of each of the queue data structures presented
 ## Linked Nodes Queue
 
 
-Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a linked nodes queue. You may download the source pptx by clicking this link: [linked nodes slides download](files/linked_nodes_queue.pptx).
+Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a linked nodes queue. If you need an accessible version, or wish to keep your own copy, you may download the source pptx by clicking this link: [linked nodes pptx download](files/linked_nodes_queue.pptx).
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRvO7uNIbHZCXEmIe4PvTCN_jpe2g6kwjXVN3x71tCIPec1FOzo2SVEACWvxbG3YQ/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="An embedding of the slide deck linked to above"></iframe>
 
 ## Circular Array Queue
 
-Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a circular array queue. You may download the source pptx by clicking this link: [circular array slides download](files/circular_array_queue.pptx). Note that this does not demonstrate resizing, as this is a challenge we've reserved for exercise 0.
+Below we have some slides stepping through the behavior of the enqueue and dequeue algorithms for a circular array queue. If you need an accessible version, or wish to keep your own copy, you may download the source pptx by clicking this link: [circular array pptx download](files/circular_array_queue.pptx). Note that this does not demonstrate resizing, as this is a challenge we've reserved for exercise 0.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQT_ZBGJSmRZYFv3vQQg7H_GB8POpZkFF8oL8TdZhd6t3CbcJdcD10R8Qf8JAUwwA/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="500" height="294" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="An embedding of the slide deck linked to above"></iframe>

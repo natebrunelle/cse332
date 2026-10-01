@@ -1,0 +1,13 @@
+pages:
+  image: "mattxwang/pandoc-and-python:v2" # https://hub.docker.com/r/mattxwang/pandoc-and-python
+  tags:
+    - Pages
+  only:
+    - main
+  script:
+    - ./update2.sh test
+    - mv demo_site/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 day

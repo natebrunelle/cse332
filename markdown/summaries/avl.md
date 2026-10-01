@@ -4,7 +4,7 @@ title: Topic Summary - AVL Trees
 
 # Dictionary ADT
 
-In this section we introduced a new ADT called a **dictionary**. A dictionary should hold a collection of key-value pairs. The idea is that keys are used to refer to values in this collection similar to how variables refer to values in a program. In the dictionary we can use a key to obtain its associated value, update a key so that it is associated with a new value. Depending on the programming language this ADT may have a different name. In python it's referred to as a dictionary, in Java it's called a map, in php it's called an associative array, and in JavaScript it's simply called an "Object".
+In this section we introduced a new ADT called a **dictionary**. A dictionary should hold a collection of key-value pairs. The idea is that keys are used to access values in this collection similar to how variables access values in a program. In the dictionary we can use a key to obtain its associated value, update a key so that it is associated with a new value. Depending on the programming language, this ADT may have a different name. Some examples: in python it's referred to as a dictionary, in Java it's called a map, in php it's called an associative array, and in JavaScript it's simply called an "Object".
 
 
 Here's how we'll define the dictionary ADT:
@@ -19,9 +19,9 @@ For our first dictionary data structure we will assume that keys can be compared
 
 ## Dictionaries Using Lists
 
-Similar to what we saw with priority queues, we can first explore how we might attempt to design a data structure for the dictionary ADT using a form of sequential storage like an array or a chain of linked nodes (like a linked list).
+Similar to what we saw with priority queues, we can first explore how we might attempt to design a data structure for the dictionary ADT using a form of sequential storage like a resizing array (like an array list) or a chain of linked nodes (like a linked list).
 
-Suppose we plan to store all of our key-value pairs in an **ordered array**. When doing this, we may have the following algorithms for the ADT operations:
+Suppose we plan to store all of our key-value pairs in an **ordered array**, meaning all key-value pairs are stored in an array, where the keys are arranged in ascending order. When doing this, we may have the following algorithms for the ADT operations:
 
 - insert: Perform a binary search for the given key. If it is present then update the value. Otherwise insert the key at the appropriate index. The binary search can be done in $\Theta(\log n)$ time, but adding a new key-value pair may require $\Theta(n)$ time in the worst case to shift all the element in the array to make room.
 - find: Perform a binary search for the given key. If it is found then return it, otherwise return the default value. This requires $\Theta(\log n)$ time in the worst case.
@@ -29,7 +29,7 @@ Suppose we plan to store all of our key-value pairs in an **ordered array**. Whe
 
 Suppose we instead use an **unordered array**:
 
-- insert: Do a linearly search through the array for the given key. If it is present the update its value. Otherwise add the new key-value pair at the end of the array. This requires $\Theta(n)$ time  in the worst case. because of the need to search for if the key is already present.
+- insert: Do a linear search through the array for the given key. If it is present the update its value. Otherwise add the new key-value pair at the end of the array. This requires $\Theta(n)$ time  in the worst case. because of the need to search for if the key is already present.
 - find: Do a linear search through the array for the given key. If found return its value, otherwise return the default value. This requires $\Theta(n)$ time  in the worst case.
 - delete: Do a linear search through the array for the given key. If it is found the remove the key-value pair from the array by shifting all elements to overwrite it. This requires $\Theta(n)$ time in the worst case.
 
@@ -57,14 +57,14 @@ At first, heaps may seem promising as a dictionary data structure. If the key we
 
 ## Dictionaries Using Binary Search Trees
 
-We saw above that efficient finds are a prerequisite for efficient inserts and deletes, and that ordering (in our sorted array) helped to make find more efficient. Next let's consider a data structure that maintains ordering to help keep finds efficient, but potentially addresses the challenge of sorted arrays (the need to shift elements when inserting/deleting). For this we'll use a **binary search tree*. The binary search tree should make find efficient because we will only need to explore one branch per node. Because we represent the tree using linked nodes, it should also make inserting/deleting a node more efficient since this largely involves updating references rather that shifting around contents.
+We saw above that efficient finds are a prerequisite for efficient inserts and deletes, and that ordering (in our sorted array) helped to make find more efficient. Next let's consider a data structure that maintains ordering to help keep finds efficient, but potentially addresses the challenge of sorted arrays (the need to shift elements when inserting/deleting). For this we'll use a **binary search tree**. The binary search tree should make find efficient because we will only need to explore one branch per node. Because we represent the tree using linked nodes, it should also make inserting/deleting a node more efficient since this largely involves updating references rather that shifting around contents.
 
 So first, let's look at what a find algorithm would look like:
 
 1. If the current node is null then the key does not exist in the dictionary, so return the default value.
 1. If the key is equal to the current node, return the associated value.
-1. If the key is less than the current node, return the result of recursively searching the left subtree
-1. Otherwise the key is greater than the current node, return the result of recursively searching on the right subtree
+1. If the key is less than the current node, return the result of a recursive find in the left subtree
+1. Otherwise the key is greater than the current node, return the result of a recursive find in the right subtree
 
 We could then define an insert algorithm as follows:
 
@@ -80,7 +80,7 @@ Finally we could define a delete algorithm as follows:
 1. If the current node is null then the key does not exist in the dictionary, return without making any changes.
 1. If the key is equal to the current node then delete the current node.:
     1. If the current node is a leaf then set its parent reference to null
-    1. If the current node has one child then set its parent reference to its child
+    1. If the current node has one child then set its parent reference to that child
     1. If the current node has two children then first delete the largest (i.e. right-most) key from the left subtree, then update the current node's key-value pair to become the key-value pair just deleted. (Note that because the largest key from the left subtree must not have a right child it either has 0 or 1 child, and so we can use one of the first two cases above to delete that node.)
 1. If the key is less than the current node, recursively delete the key-value pair from the left subtree
 1. Otherwise the key is greater than the current node, recursively delete the key-value pair from the right subtree
@@ -88,7 +88,7 @@ Finally we could define a delete algorithm as follows:
 
 For each of the algorithms, we must do only a constant number of operations per level of the tree. This means that the running time should be linear in terms of the tree's height. The problem is, in the worst case the height of the tree might be linear in the number of nodes. Overall, this means our worst-case running time is $\Theta(n)$ just like all of the other data structure options above.
 
-That being said, just a minor modification of binary search trees will allow us to achieve $\Theta(\log n)$ running times for all operations. Since the binary search tree operations are all linear in the tree's height, if can modify our insert and delete algorithms in order to *guarantee* that the height of the tree is logarithmic in its size, then suddenly all running times will be $\Theta(\log n)$.
+That being said, just a minor modification of binary search trees will allow us to achieve worst case $\Theta(\log n)$ running times for all operations. Since the binary search tree operations are all linear in the tree's height, if can modify our insert and delete algorithms in order to *guarantee* that the height of the tree is logarithmic in its size, then suddenly all running times will be $\Theta(\log n)$.
 
 # AVL Trees
 
@@ -110,11 +110,11 @@ The height of a tree can be computed as follows:
 Or in Java code:
 
 ```
-public int height(Node root){
-    if (root == null){
+public int height(Node curr){
+    if (curr == null){
         return -1;
     }
-    return Math.max(height(root.left), height(root.right)) + 1;
+    return Math.max(height(curr.left), height(curr.right)) + 1;
 }
 ```
 
